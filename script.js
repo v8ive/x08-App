@@ -5,6 +5,10 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 function initializeApp() {
+    if (history.scrollRestoration) {
+        history.scrollRestoration = 'manual';
+    }
+
     // --- New Feature: Preloader ---
     const preloader = document.getElementById('preloader');
     window.addEventListener('load', () => {
@@ -46,7 +50,6 @@ function initializeApp() {
 
     const linksModal = document.getElementById('links-modal');
     const socialModal = document.getElementById('social-modal');
-    const shareButton = document.querySelector('.share-button');
     const modalTitle = document.getElementById('modal-title');
     const modalLinksContainer = document.getElementById('modal-links');
     const socialModalLinksContainer = socialModal.querySelector('.modal-links');
@@ -56,6 +59,9 @@ function initializeApp() {
     const themeToggle = document.getElementById('theme-toggle-checkbox');
     const body = document.body;
     const mainContent = document.querySelector('.main-content');
+    const mainNav = document.querySelector('.main-nav');
+    const logoLink = document.querySelector('.logo-container a');
+
 
     // Global Player Elements
     const globalPlayer = document.getElementById('global-player');
@@ -129,7 +135,16 @@ function initializeApp() {
         updateThemeColor(newTheme);
     });
 
-    const createSocialLinkElement = (url, iconClass, text, platformClass, isDropdown = false) => {
+    const debounce = (func, delay) => {
+        let timeout;
+        return function(...args) {
+            const context = this;
+            clearTimeout(timeout);
+            timeout = setTimeout(() => func.apply(context, args), delay);
+        };
+    };
+
+    const createSocialLinkElement = (url, iconClass, text, platformClass) => {
         const linkElement = document.createElement('a');
         linkElement.href = url;
         linkElement.target = '_blank';
@@ -140,14 +155,10 @@ function initializeApp() {
         icon.className = iconClass + ' social-icon';
         linkElement.appendChild(icon);
 
-        if (isDropdown) {
-            const nameSpan = document.createElement('span');
-            nameSpan.className = 'platform-name';
-            nameSpan.textContent = text;
-            linkElement.appendChild(nameSpan);
-        } else {
-             linkElement.appendChild(document.createTextNode(` ${text}`));
-        }
+        const nameSpan = document.createElement('span');
+        nameSpan.className = 'platform-name';
+        nameSpan.textContent = text;
+        linkElement.appendChild(nameSpan);
        
         return linkElement;
     };
@@ -165,17 +176,25 @@ function initializeApp() {
             'Pandora': { url: social_links.pandora, icon: 'fab fa-pandora', class: 'pandora' }
         };
 
+        let delay = 0;
         for (const [platform, data] of Object.entries(platforms)) {
             if (data.url) {
-                const linkElement = createSocialLinkElement(data.url, data.icon, platform, data.class, true);
+                const linkElement = createSocialLinkElement(data.url, data.icon, platform, data.class);
+                linkElement.style.setProperty('--animation-delay', `${delay}s`);
                 socialsDropdown.appendChild(linkElement);
+                delay += 0.05;
             }
         }
 
         socialsToggleBtn.addEventListener('click', () => {
-            socialsToggleBtn.classList.toggle('active');
-            socialsDropdown.classList.toggle('active');
-            socialsToggleBtn.setAttribute('aria-expanded', socialsDropdown.classList.contains('active'));
+            const isActive = socialsDropdown.classList.contains('active');
+            socialsToggleBtn.classList.toggle('active', !isActive);
+            socialsDropdown.classList.toggle('active', !isActive);
+            socialsToggleBtn.setAttribute('aria-expanded', !isActive);
+    
+            if (window.innerWidth <= 768) {
+                document.body.style.overflow = !isActive ? 'hidden' : '';
+            }
         });
     };
     
@@ -264,7 +283,7 @@ function initializeApp() {
                 const searchTerm = searchBar.value;
                 const url = searchTerm ? `/discography?search=${encodeURIComponent(searchTerm)}` : '/discography';
                 history.pushState({ page: 'discography', search: searchTerm }, '', url);
-                handleRouting();
+                handleRouting(true);
             });
             viewAllContainer.appendChild(viewAllBtn);
         }
@@ -553,7 +572,7 @@ function initializeApp() {
                 const searchTerm = videoSearchBar.value;
                 const url = searchTerm ? `/videos?search=${encodeURIComponent(searchTerm)}` : '/videos';
                 history.pushState({ page: 'videos', search: searchTerm }, '', url);
-                handleRouting();
+                handleRouting(true);
             });
             viewAllContainer.appendChild(viewAllBtn);
         }
@@ -814,7 +833,7 @@ function initializeApp() {
             const index = parseInt(container.dataset.index, 10);
             const songTitle = albums[index].title.toLowerCase().replace(/\s+/g, '-');
             history.pushState({ songIndex: index }, '', `/song/${encodeURIComponent(songTitle)}`);
-            renderSongPage(index);
+            handleRouting(true);
         }
     }
 
@@ -828,11 +847,15 @@ function initializeApp() {
         const searchTerm = e.target.value.toLowerCase();
         
         if (type === 'discography') {
+            const isFullPage = window.location.pathname.startsWith('/discography');
             const filtered = albums.filter(a => !a.comingSoon && a.title.toLowerCase().includes(searchTerm));
-            renderAlbums(filtered, window.location.pathname.startsWith('/discography'));
+            renderAlbums(filtered, isFullPage);
+            if (isFullPage) debouncedUpdateURL(type, searchTerm);
         } else if (type === 'videos') {
+            const isFullPage = window.location.pathname.startsWith('/videos');
             const filtered = albums.filter(a => a.musicVideoId && a.title.toLowerCase().includes(searchTerm));
-            renderVideoGallery(filtered, window.location.pathname.startsWith('/videos'));
+            renderVideoGallery(filtered, isFullPage);
+            if (isFullPage) debouncedUpdateURL(type, searchTerm);
         }
         
         setupScrollAnimations();
@@ -978,7 +1001,6 @@ function initializeApp() {
 
         mainContent.style.display = 'none';
         songPage.classList.add('active');
-        songPage.scrollTop = 0;
         
         // Add event listeners for the new tabs
         const tabNav = songPage.querySelector('.tab-nav');
@@ -1037,10 +1059,7 @@ function initializeApp() {
                 songPage.observer.disconnect();
             }
             history.pushState(null, '', '/');
-            mainContent.style.display = 'flex';
-            songPage.classList.remove('active');
-            songPage.style.removeProperty('--song-bg-image');
-            resetMetaTags();
+            handleRouting(true);
         });
 
         songPage.querySelectorAll('.song-page-play-btn').forEach(btn => {
@@ -1115,7 +1134,7 @@ function initializeApp() {
             const song = albums[currentSongIndex];
             const songTitle = song.title.toLowerCase().replace(/\s+/g, '-');
             history.pushState({ songIndex: currentSongIndex }, '', `/song/${encodeURIComponent(songTitle)}`);
-            renderSongPage(currentSongIndex);
+            handleRouting(true);
         }
     });
     playerCloseBtn.addEventListener('click', closePlayer);
@@ -1271,27 +1290,6 @@ function initializeApp() {
     progressBarBg.addEventListener('mousedown', startSeeking);
     progressBarBg.addEventListener('touchstart', startSeeking, { passive: false });
 
-    const openSocialModal = () => {
-        socialModalLinksContainer.innerHTML = '';
-        const allPlatforms = {
-            'Spotify': { url: social_links.spotify, icon: 'fab fa-spotify', class: 'spotify' },
-            'YouTube': { url: social_links.youtube, icon: 'fab fa-youtube', class: 'youtube' },
-            'SoundCloud': { url: social_links.soundcloud, icon: 'fab fa-soundcloud', class: 'soundcloud' },
-            'Tidal': { url: social_links.tidal, icon: 'fa-brands fa-tidal', class: 'tidal' },
-            'Apple Music': { url: social_links.apple, icon: 'fa-brands fa-itunes-note', class: 'apple' },
-            'Amazon Music': { url: social_links.amazon, icon: 'fab fa-amazon', class: 'amazon' },
-            'iHeartRadio': { url: social_links.iheart, icon: 'fa-solid fa-radio', class: 'iheart' },
-            'Pandora': { url: social_links.pandora, icon: 'fab fa-pandora', class: 'pandora' }
-        };
-        for (const [platform, data] of Object.entries(allPlatforms)) {
-             if (data.url) {
-                const linkElement = createSocialLinkElement(data.url, data.icon, platform, data.class, false);
-                socialModalLinksContainer.appendChild(linkElement);
-             }
-        }
-        socialModal.classList.add('active');
-    };
-
     modalCloseBtns.forEach(btn => {
         btn.addEventListener('click', () => {
             closeModal(linksModal);
@@ -1303,19 +1301,23 @@ function initializeApp() {
         if (e.target === linksModal) closeModal(linksModal);
         if (e.target === socialModal) closeModal(socialModal);
         
-        // Close dropdown if clicking outside
-        const isSocialsToggle = e.target.closest('.socials-toggle-btn');
-        const isDropdown = e.target.closest('.socials-dropdown-container');
-        if (!isSocialsToggle && !isDropdown && socialsDropdown.classList.contains('active')) {
-            socialsToggleBtn.classList.remove('active');
-            socialsDropdown.classList.remove('active');
-            socialsToggleBtn.setAttribute('aria-expanded', 'false');
+        // Close dropdown if clicking outside (desktop only)
+        if (window.innerWidth > 768) {
+            const isSocialsToggle = e.target.closest('.socials-toggle-btn');
+            const isDropdown = e.target.closest('.socials-dropdown-container');
+            if (!isSocialsToggle && !isDropdown && socialsDropdown.classList.contains('active')) {
+                socialsToggleBtn.classList.remove('active');
+                socialsDropdown.classList.remove('active');
+                socialsToggleBtn.setAttribute('aria-expanded', 'false');
+            }
         }
     });
-
-    shareButton.addEventListener('click', openSocialModal);
     
-    const handleRouting = () => {
+    const handleRouting = (isPushState = false) => {
+        if (isPushState) {
+            window.scrollTo(0, 0);
+        }
+
         const path = window.location.pathname;
         const params = new URLSearchParams(window.location.search);
         const searchTerm = params.get('search') || '';
@@ -1374,6 +1376,37 @@ function initializeApp() {
             setupScrollAnimations();
         }
     };
+
+    logoLink.addEventListener('click', (e) => {
+        e.preventDefault();
+        if (window.location.pathname !== '/') {
+            history.pushState({ page: 'home' }, '', '/');
+            handleRouting(true);
+        } else {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    });
+
+    mainNav.addEventListener('click', (e) => {
+        const navLink = e.target.closest('.nav-link');
+        if (navLink) {
+            e.preventDefault();
+            const href = navLink.getAttribute('href');
+
+            if (window.location.pathname === href) return;
+
+            // Close mobile socials dropdown if it's open
+            if (window.innerWidth <= 768 && socialsDropdown.classList.contains('active')) {
+                socialsToggleBtn.classList.remove('active');
+                socialsDropdown.classList.remove('active');
+                socialsToggleBtn.setAttribute('aria-expanded', 'false');
+                document.body.style.overflow = '';
+            }
+
+            history.pushState({ page: href.substring(1) }, '', href);
+            handleRouting(true);
+        }
+    });
 
     window.addEventListener('popstate', (e) => {
         handleRouting();
