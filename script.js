@@ -378,11 +378,12 @@ function initializeApp() {
         upcomingReleasesSection.style.display = 'block';
         upcoming.sort((a,b) => new Date(a.releaseDate) - new Date(b.releaseDate));
 
-        upcoming.forEach(song => {
+        upcoming.forEach((song, index) => {
             const originalIndex = albums.indexOf(song);
             const upcomingItem = document.createElement('div');
             upcomingItem.classList.add('album-item', 'coming-soon-item', 'reveal-on-scroll');
             upcomingItem.dataset.index = originalIndex;
+            upcomingItem.style.setProperty('--stagger-index', index);
 
             upcomingItem.innerHTML = `
                 <img src="${song.img}" alt="${song.title}" class="album-item-img">
@@ -1062,7 +1063,7 @@ function initializeApp() {
             }, { duration: 500, fill: "forwards" });
         });
 
-        const interactiveElements = document.querySelectorAll('a, button, .album-item, .toggle-label, .slider-btn, .pagination-dot, .progress-bar-bg, .artist-logo');
+        const interactiveElements = document.querySelectorAll('a, button, .album-item, .toggle-label, .slider-btn, .pagination-dot, .progress-bar-bg');
         interactiveElements.forEach(el => {
             el.addEventListener('mouseenter', () => {
                 cursorDot.classList.add('hovered');
@@ -1097,7 +1098,7 @@ function initializeApp() {
             rootMargin: '0px 0px -50px 0px'
         });
 
-        const elementsToReveal = document.querySelectorAll('.section-title, .latest-release-container, .featured-songs-slider, .upcoming-releases-container, .discography-header, .album-item');
+        const elementsToReveal = document.querySelectorAll('.reveal-on-scroll');
         elementsToReveal.forEach(el => {
             observer.observe(el);
         });
@@ -1111,8 +1112,10 @@ function initializeApp() {
     handleRouting();
     playerInfoBtn.disabled = true;
     
+    // Initialize new features
     setupCursorFollower();
     
+    // Add reveal-on-scroll to static elements before observing
     document.querySelectorAll('.section-title, .latest-release-container, .featured-songs-slider, #upcoming-releases-section > .section-title, .discography-header').forEach(el => el.classList.add('reveal-on-scroll'));
     setupScrollAnimations();
 }
