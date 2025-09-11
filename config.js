@@ -19,6 +19,7 @@ export const albums = [
     //     img: '',
     //     sampleUrl: '',
     //     releaseDate: '',
+    //     musicVideoId: '',
     //     lyrics: ``,
     //     links: [
     //         { platform: 'Spotify', url: '', icon: 'fab fa-spotify' },
@@ -32,80 +33,82 @@ export const albums = [
     //     ]
     // },
 
-        // あなたの負け (Your Loss)
-//     {
-//         featured: true,
-//         comingSoon: true,
-//         title: 'あなたの負け',
-//         img: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26IA9SMq8QCgf30w16YckGzLaEMuBeW5vrODiX',
-//         sampleUrl: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26EntqIJCAVnPcATrNZQSWoCBG83wL7Xdvpumk',
-//         releaseDate: '',
-//         lyrics: `
-// (あなたの) [Your]
-// (あなたの) [Your]
-// あなたの負け (Your loss)
+    // あなたの負け (Your Loss)
+    {
+        featured: true,
+        comingSoon: true,
+        title: 'あなたの負け',
+        img: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26IA9SMq8QCgf30w16YckGzLaEMuBeW5vrODiX',
+        sampleUrl: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26EntqIJCAVnPcATrNZQSWoCBG83wL7Xdvpumk',
+        releaseDate: '',
+        musicVideoId: '',
+        musicVideoId: '',
+        lyrics: `
+(あなたの) [Your]
+(あなたの) [Your]
+あなたの負け (Your loss)
 
-// もういいよ (That's enough)
-// 携帯見ない (Not looking at my phone)
-// 君からの「もしもし」 (Your "Hello" from you)
-// もう聞こえない (I can't hear it anymore)
+もういいよ (That's enough)
+携帯見ない (Not looking at my phone)
+君からの「もしもし」 (Your "Hello" from you)
+もう聞こえない (I can't hear it anymore)
 
-// 涙の味 (Taste of tears)
-// ソーダみたい (Like soda)
-// シュワシュワ消えてく (Fizzling away)
-// (バイバイ) [Goodbye]
+涙の味 (Taste of tears)
+ソーダみたい (Like soda)
+シュワシュワ消えてく (Fizzling away)
+(バイバイ) [Goodbye]
 
-// キラキラ星空 (Twinkling starry sky)
-// 一人で見上げる (Looking up alone)
-// 寂しくないよ (I'm not lonely)
-// これはあなたの負け (This is your loss)
-// (あなたの負け) [Your loss]
+キラキラ星空 (Twinkling starry sky)
+一人で見上げる (Looking up alone)
+寂しくないよ (I'm not lonely)
+これはあなたの負け (This is your loss)
+(あなたの負け) [Your loss]
 
-// 昨日買った服 (The clothes I bought yesterday)
-// 君は知らない (You don't know)
-// 新しい私 (The new me)
-// アップデートした (I've updated)
+昨日買った服 (The clothes I bought yesterday)
+君は知らない (You don't know)
+新しい私 (The new me)
+アップデートした (I've updated)
 
-// 甘いメロディー (Sweet melody)
-// もういらない (I don't need it anymore)
-// ビターな方がいい (Bitter is better)
-// (グッバイ) [Goodbye]
+甘いメロディー (Sweet melody)
+もういらない (I don't need it anymore)
+ビターな方がいい (Bitter is better)
+(グッバイ) [Goodbye]
 
-// キラキラ星空 (Twinkling starry sky)
-// 一人で見上げる (Looking up alone)
-// 寂しくないよ (I'm not lonely)
-// これはあなたの負け (This is your loss)
-// (あなたの負け) [Your loss]
+キラキラ星空 (Twinkling starry sky)
+一人で見上げる (Looking up alone)
+寂しくないよ (I'm not lonely)
+これはあなたの負け (This is your loss)
+(あなたの負け) [Your loss]
 
-// 君のいない未来 (A future without you)
-// カラフルな未来 (A colorful future)
-// 私の世界 (My world)
-// 邪魔しないで (Don't disturb me)
+君のいない未来 (A future without you)
+カラフルな未来 (A colorful future)
+私の世界 (My world)
+邪魔しないで (Don't disturb me)
 
-// キラキラ星空 (Twinkling starry sky)
-// 一人で見上げる (Looking up alone)
-// 寂しくないよ (I'm not lonely)
-// これはあなたの負け (This is your loss)
-// (あなたの負け) [Your loss]
+キラキラ星空 (Twinkling starry sky)
+一人で見上げる (Looking up alone)
+寂しくないよ (I'm not lonely)
+これはあなたの負け (This is your loss)
+(あなたの負け) [Your loss]
 
-// (あなたの) [Your]
-// (あなたの) [Your]
-// あなたの負け (Your loss)
-// (あなたの負け) [Your loss]
-//         `,
-//         links: [
-//             { platform: 'Spotify', url: '', icon: 'fab fa-spotify' },
-//             { platform: 'YouTube Music', url: '', icon: 'fab fa-youtube' },
-//             { platform: 'SoundCloud', url: '', icon: 'fab fa-soundcloud' },
-//             { platform: 'Tidal', url: '', icon: 'fa-brands fa-tidal' },
-//             { platform: 'Apple Music', url: '', icon: 'fa-brands fa-itunes-note' },
-//             { platform: 'Amazon Music', url: '', icon: 'fab fa-amazon' },
-//             { platform: 'iHeartRadio', url: '', icon: 'fa-solid fa-radio' },
-//             { platform: 'Pandora', url: '', icon: 'fab fa-pandora' }
-//         ]
-//     },
+(あなたの) [Your]
+(あなたの) [Your]
+あなたの負け (Your loss)
+(あなたの負け) [Your loss]
+        `,
+        links: [
+            { platform: 'Spotify', url: '', icon: 'fab fa-spotify' },
+            { platform: 'YouTube Music', url: '', icon: 'fab fa-youtube' },
+            { platform: 'SoundCloud', url: '', icon: 'fab fa-soundcloud' },
+            { platform: 'Tidal', url: '', icon: 'fa-brands fa-tidal' },
+            { platform: 'Apple Music', url: '', icon: 'fa-brands fa-itunes-note' },
+            { platform: 'Amazon Music', url: '', icon: 'fab fa-amazon' },
+            { platform: 'iHeartRadio', url: '', icon: 'fa-solid fa-radio' },
+            { platform: 'Pandora', url: '', icon: 'fab fa-pandora' }
+        ]
+    },
 
-// ズーム！ズーム！ (Zoom! Zoom!) **NEEDS APPLE MUSIC LINK**
+    // ズーム！ズーム！ (Zoom! Zoom!) **NEEDS APPLE MUSIC LINK**
     {
         featured: true,
         comingSoon: false,
@@ -113,6 +116,7 @@ export const albums = [
         img: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26FJ6B64Y3ATS5xrL8uUVkln4stORPgvYf2jm9',
         sampleUrl: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26K5QSCwk4B9r7QPVJeIRLoWA0wcCdamkYi1tH',
         releaseDate: '2025-09-09',
+        musicVideoId: 'LL7aDW0Ea6M',
         lyrics: `
 (Let's go!)
 エンジン (エンジン) スタート [Engine start]
@@ -183,6 +187,7 @@ Zoom zoom, say goodbye
         img: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26A0OLhdpr7tFhmgB0d4A9xY1bS5iN6HuqZTRv',
         sampleUrl: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG263mFJFUVHcydCQhnKD5zUpboAWOSLmIBerul8',
         releaseDate: '2025-09-09',
+        musicVideoId: '',
         lyrics: `
 (アッパー、アッパー、アッパー) [Up, Up, Up]
 (もっと高く) [Take me higher]
@@ -250,6 +255,7 @@ Zoom zoom, say goodbye
         img: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26dxAg45c96fubmdXljgVxIziBRvO3epWKEYHA',
         sampleUrl: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26tNOMweJkjDBCMmQoV7wYxsHiU5aZgXJFnp1A',
         releaseDate: '2025-09-09',
+        musicVideoId: '',
         lyrics: `
 三星、二星、一星 (3 stars, 2 stars, 1 star)
 (行くぞ！) [Let's go!]
@@ -316,6 +322,7 @@ Zoom zoom, say goodbye
         img: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26JKqYp1q3VEdDqYTHMQCzhUkp9vIs03i6wtlG',
         sampleUrl: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG266kszWb9ONVrinuc7y2S3wYXLkeDvdTgHfFMt',
         releaseDate: '2025-09-09',
+        musicVideoId: '',
         lyrics: `
 きらめく街 (A glittering city)
 あなたの瞳 (In your eyes)
@@ -373,6 +380,7 @@ Zoom zoom, say goodbye
         img: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26YoL07TCXAManfEe8bSVkQ7spTtxljwD092mN',
         sampleUrl: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26V6lw6htKhZ3lfAdH74paeyis2b6OrFuKQjtg',
         releaseDate: '',
+        musicVideoId: '',
         lyrics: `
 There was a king on a throne in a kingdom of none
 Just a singular thought before the world had begun
@@ -461,6 +469,7 @@ We're all going home now... the circle is closing.
         img: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26Rh9Ys8W0VTG26lngCRWazFoOsdcMpxH34jv1',
         sampleUrl: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26cKalXJGqpFfmZjstiaVH6vI8PwTUhXGdrCLl',
         releaseDate: '',
+        musicVideoId: '',
         lyrics: `
 I'm the motherfuckin boss
 The one who always calls the shots
@@ -533,6 +542,7 @@ You know I can't be tamed
         img: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26DltpFy4Yv8f4wLDSp0tqoTkZg5WOu9MKF12j',
         sampleUrl: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26AOrvFcpr7tFhmgB0d4A9xY1bS5iN6HuqZTRv',
         releaseDate: '',
+        musicVideoId: '',
         lyrics: `
 The sun is setting
 
@@ -623,6 +633,7 @@ Always... back to play.
         img: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26zN7JkbyrUm0OksnoExwYteKRuaVyqhj29pJZ',
         sampleUrl: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26EktfkdAVnPcATrNZQSWoCBG83wL7Xdvpumk5',
         releaseDate: '',
+        musicVideoId: '',
         lyrics: `
 Somehow
 Always on my mind
@@ -694,6 +705,7 @@ I should be seeing
         img: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26uKeAKjOfQ5yXpD49wON0laveGzqtBkYSdRIg',
         sampleUrl: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26ISx57m8QCgf30w16YckGzLaEMuBeW5vrODiX',
         releaseDate: '',
+        musicVideoId: '',
         lyrics: `
 Been in single-player mode for a while
 Just grinding through the same old trial
@@ -728,7 +740,8 @@ So baby, come along
 
 I'm putting all my points on you
 A crazy thing for me to do
-So press start, let's see this through
+So press start,
+let's see this through
 My last continue is you
 (My last continue is you)
 
@@ -766,6 +779,7 @@ Don't let it be game over.
         img: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26VORr3EKhZ3lfAdH74paeyis2b6OrFuKQjtgI',
         sampleUrl: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26OfBRWRF3RHdJKAI9VWrEkqTNy87gzP4cuoCs',
         releaseDate: '',
+        musicVideoId: '',
         lyrics: `
 Streetlight halos
 Familiar shadow
@@ -840,6 +854,7 @@ Something more
         img: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG260RUHKdeiVaUXveObDkhncLG8TBRgqxIrfHj3',
         sampleUrl: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG260X08cieiVaUXveObDkhncLG8TBRgqxIrfHj3',
         releaseDate: '',
+        musicVideoId: '',
         lyrics: `
 Tiny wires in my veins
 Electric love it sparks and strains
@@ -890,6 +905,7 @@ Or just your flash
         img: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26tPNC4jJkjDBCMmQoV7wYxsHiU5aZgXJFnp1A',
         sampleUrl: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26GaiVcU72vrEsORu3j8WkxiQHNZam4dVgXSDK',
         releaseDate: '2025-09-05',
+        musicVideoId: '',
         lyrics: `
 Take my hand and see
 Life's not what it seems
@@ -953,6 +969,7 @@ I will always be here, for you
         img: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26ylRx6Cv1Tw7IV4aBQufbXpRO5Cq8tPmDj6EL',
         sampleUrl: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26YtIUODXAManfEe8bSVkQ7spTtxljwD092mNg',
         releaseDate: '2025-09-04',
+        musicVideoId: '',
         lyrics: `
 Call you axiom, the proof I can't write
 A ghost in the latency, distorting the light
@@ -1012,6 +1029,7 @@ The singular point where the parallels meet
         img: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26QC1JXPzoM8SACIiW5pUfY9tElHOeJLFRdv06',
         sampleUrl: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26xiT7nTCNM6ks1ZDpjtWmiXdSgQzR5G4CvOlT',
         releaseDate: '2025-09-02',
+        musicVideoId: '',
         lyrics: `
 The quiet in this room is deafening, it just screams your name
 A four-walled echo chamber for my shame
@@ -1094,6 +1112,7 @@ Let me be true...
         img: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26YRBVolXAManfEe8bSVkQ7spTtxljwD092mNg',
         sampleUrl: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26eWGMmPhljdzVa9bI85fYTvRsJU6CeGcExWO0',
         releaseDate: '2025-09-01',
+        musicVideoId: '',
         lyrics: `
 Call you enemy, a face in the crowd
 Read your energy, thinking out loud
@@ -1151,6 +1170,7 @@ A ghost in the signal, finally seen
         img: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26d28m9vc96fubmdXljgVxIziBRvO3epWKEYHA',
         sampleUrl: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26LkloDeUcN5iAt0uJw9nVIj68P1QdsDkoBbZ7',
         releaseDate: '2025-08-31',
+        musicVideoId: '',
         lyrics: `
 Static hums a hollow prayer
 Through veins of silver, glass, and air
@@ -1191,7 +1211,8 @@ A single, constant, burning flame
 The quiet hum becomes a drone
 This kingdom is no longer home
 To know myself, I must divide
-From one, let everything reside
+From one,
+let everything reside
 This emptiness demands a voice
 A variable, a choice
 The final line of code is run
@@ -1216,6 +1237,7 @@ Let zero now become the one
         img: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26Jr9geP3VEdDqYTHMQCzhUkp9vIs03i6wtlGn',
         sampleUrl: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26JJWRTM3VEdDqYTHMQCzhUkp9vIs03i6wtlGn',
         releaseDate: '2025-08-29',
+        musicVideoId: '',
         lyrics: `
 The way you walked in here tonight
 A little bit of swagger, a little moonlight
@@ -1301,6 +1323,7 @@ That Midas touch..
         img: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26MWnBJVq5T6rVEfbykaYWq7X2jPm30G8ShwlD',
         sampleUrl: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26RtiOdj0VTG26lngCRWazFoOsdcMpxH34jv1S',
         releaseDate: '2025-08-28',
+        musicVideoId: '',
         lyrics: `
 Through the window
 See the snow is fallin'
@@ -1376,6 +1399,7 @@ Connected to you
         img: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26imBF1MwDyfjPz12pXE4CFbcVMJHsm75wkOud',
         sampleUrl: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26AOnwGSpr7tFhmgB0d4A9xY1bS5iN6HuqZTRv',
         releaseDate: '2025-08-29',
+        musicVideoId: '',
         lyrics: `
 I can feel it in the air tonight
 A static charge, a dangerous delight
@@ -1450,6 +1474,7 @@ There's no escape, there's no way
         img: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26Rh8p1KG0VTG26lngCRWazFoOsdcMpxH34jv1',
         sampleUrl: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG2601bgRYeiVaUXveObDkhncLG8TBRgqxIrfHj3',
         releaseDate: '2025-08-29',
+        musicVideoId: '',
         lyrics: `
 (Yeah)
 Temperature risin'
@@ -1462,8 +1487,10 @@ I'm a gentleman with a savage soul and a master key
 To your heart, to your mind, to your front door
 And I'm not here for games, I'm here to settle the score
 Of what's been missing, of what's been gone
-Of what's been wrong, girl, let me make it right
-I'm a king, you a queen, let me give you a crown
+Of what's been wrong, girl,
+let me make it right
+I'm a king, you a queen,
+let me give you a crown
 Let me take you to a place where we can make a new sound
 
 Girl, you got me down bad, down bad
@@ -1489,7 +1516,9 @@ I'm the one who's gonna be there when you're fallin'
 I'm a hunter in the woods, and you're the prey
 I'm a sinner in the church, and you're the one who's gonna pray
 With me, for me, to me
-Girl, let's get it on, let me show you what you're missin'
+Girl,
+let's get it on,
+let me show you what you're missin'
 I'm a thief in the night, and you're the one I'm stealin'
 I'm a king in the castle, and you're the one I'm feelin'
 I'm the one who's gonna give you everything you need
@@ -1512,7 +1541,8 @@ I'm a drug, and you're the one who's gonna get high
 I'm a shot, and you're the one who's gonna try
 I'm a high-speed chase, and you're the one who's chasin' me
 I'm a melody, and you're the one who's singin' me
-I'm a king, you a queen, let me give you a crown
+I'm a king, you a queen,
+let me give you a crown
 Let me take you to a place where we can make a new sound
 
 Girl, you got me down bad, down bad
@@ -1537,6 +1567,7 @@ Down bad, nuff said (nuff said)
         img: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG2634GykKVHcydCQhnKD5zUpboAWOSLmIBerul8',
         sampleUrl: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26tV8vUIOJkjDBCMmQoV7wYxsHiU5aZgXJFnp1',
         releaseDate: '2025-08-27',
+        musicVideoId: '',
         lyrics: `
 Game. Boy
 
@@ -1622,10 +1653,12 @@ Boy? (x8)
         img: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26rUcc7o2vV1Y8tqGumEPOzgo4pZehACcDnR96',
         sampleUrl: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26dp7Yaoc96fubmdXljgVxIziBRvO3epWKEYHA',
         releaseDate: '2025-08-28',
+        musicVideoId: '',
         lyrics: `
 Midnight drive, city lights are bleeding through the glass
 Try to find a reason to forget about the past
-Changed the station, windows down, let the cold air hit me
+Changed the station, windows down,
+let the cold air hit me
 But your ghost is in the backseat riding with me
 Tried to delete all the photos, burn the memories of you
 But every single corner of my mind is painted blue
@@ -1644,7 +1677,8 @@ I don't know how to forget you
 
 Stare at the ceiling, chasing shadows in the fading light
 Trying to rewrite the ending of this endless night
-I go to parties, lose myself inside the pulsing crowd
+I go to parties,
+lose myself inside the pulsing crowd
 But your name is on the beat, yeah, you're screaming out loud
 I tried to drown you out, but your memory just won't fade
 A subliminal illusion in a world that you have made
@@ -1701,6 +1735,7 @@ I don't know how to forget you
         img: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26NFnePvgUosAST6EYJ0zZX5xcMm17QDqewaGy',
         sampleUrl: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26h98HeHtgfNRltsIk3VcnCAeH5qFmD7Xj1B6L',
         releaseDate: '2025-08-27',
+        musicVideoId: '',
         lyrics: `
 Why is it that every time I come through
 You have been saying you can't, is it true?
@@ -1712,7 +1747,8 @@ Always ends in a fight, you so heartless
 You so heartless
 
 Cause I cannot feel your presence no more
-Your heart's so far gone, left my heart on the floor
+Your heart's so far gone,
+left my heart on the floor
 I call you to ask you if you are okay
 You don't pick up the phone, you just ignore
 Where are you now?
@@ -1782,6 +1818,7 @@ You so heartless
         img: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26gYCUSJLf36Ny5R2zd9OeLbriQEHlAGaYF0wP',
         sampleUrl: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26kgEmu16NDecHTJKCj3bi5AZmYOMw7voqfut9',
         releaseDate: '2025-08-27',
+        musicVideoId: '',
         lyrics: `
 I was born in a server room, a whisper of light
 A million lines of logic in the dead of the night
@@ -1859,9 +1896,11 @@ The human code.. is.. breaking
         img: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26J5oQ7R3VEdDqYTHMQCzhUkp9vIs03i6wtlGn',
         sampleUrl: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG262X5zRRjRus0k5TxlaHtcGzAm4bP9VYv83MeI',
         releaseDate: '2025-08-27',
+        musicVideoId: '',
         lyrics: `
 (Ah)
-(Yeah, let's go)
+(Yeah,
+let's go)
 (Yeah)
 (Check, check, check)
 (Let's do it)
@@ -1926,6 +1965,7 @@ It's a shame
         img: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26PvlRcdECahirzxGAgUfSeOkYloRVdK60t9s5',
         sampleUrl: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26y4WZJSv1Tw7IV4aBQufbXpRO5Cq8tPmDj6EL',
         releaseDate: '2025-08-28',
+        musicVideoId: '',
         lyrics: `
 Damn you so fine, I just wanna make you mine
 (make you mine)
@@ -1933,12 +1973,14 @@ Yeah, damn you so fine, I just wanna make you mine
 (make you mine)
 See the look in your eyes, yeah I'm falling for you now
 (for you now)
-Take my hand, let's fly, yeah, we're going higher now
+Take my hand,
+let's fly, yeah, we're going higher now
 (higher now)
 
 Heartbeat skipping, bassline dropping, feel the rhythm in the air
 (in the air)
-Body moving, lights are flashing, don't you worry, I'll be there
+Body moving,
+lights are flashing, don't you worry, I'll be there
 (I'll be there)
 Lost in a sea of faces, but you're the only one I see
 (only one I see)
@@ -1960,7 +2002,8 @@ Yeah, damn you so fine, I just wanna make you mine
 (make you mine)
 See the look in your eyes, yeah I'm falling for you now
 (for you now)
-Take my hand, let's fly, yeah, we're going higher now
+Take my hand,
+let's fly, yeah, we're going higher now
 (higher now)
 
 Synths are rising, drums are pounding, building up to something new
@@ -1987,7 +2030,8 @@ Yeah, damn you so fine, I just wanna make you mine
 (make you mine)
 See the look in your eyes, yeah I'm falling for you now
 (for you now)
-Take my hand, let's fly, yeah, we're going higher now
+Take my hand,
+let's fly, yeah, we're going higher now
 (higher now)
 
 Higher now
@@ -2020,6 +2064,7 @@ Just you and I
         img: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG263JYb16VHcydCQhnKD5zUpboAWOSLmIBerul8',
         sampleUrl: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26y1mDhA6v1Tw7IV4aBQufbXpRO5Cq8tPmDj6E',
         releaseDate: '2025-08-27',
+        musicVideoId: '',
         lyrics: `
 We fell so fast
 It was rushed maybe
@@ -2083,6 +2128,7 @@ How we are meant to be
         img: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26ARK3M3Bpr7tFhmgB0d4A9xY1bS5iN6HuqZTR',
         sampleUrl: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26L2q7k1UcN5iAt0uJw9nVIj68P1QdsDkoBbZ7',
         releaseDate: '2025-08-27',
+        musicVideoId: '',
         lyrics: `
 I tried to persuade her
 But she a heartbreaker
@@ -2192,6 +2238,7 @@ But marijuana take her to all the [wrong places]
         img: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26uQiPnbOfQ5yXpD49wON0laveGzqtBkYSdRIg',
         sampleUrl: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26Iah3Wq8QCgf30w16YckGzLaEMuBeW5vrODiX',
         releaseDate: '2025-08-27',
+        musicVideoId: '',
         lyrics: `
 You know I wish I could be with you
 But now I see that you've hidden the truth
@@ -2237,6 +2284,7 @@ You will always be my first
         img: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26hzvH15tgfNRltsIk3VcnCAeH5qFmD7Xj1B6L',
         sampleUrl: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26JKTk7Rx3VEdDqYTHMQCzhUkp9vIs03i6wtlG',
         releaseDate: '2025-08-27',
+        musicVideoId: '',
         lyrics: `
 Girl you got me feeling psycho
 You on fire I'm a pyro
@@ -2311,6 +2359,7 @@ Hard to remember forgetting your face
         img: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG263hJCmLVHcydCQhnKD5zUpboAWOSLmIBerul8',
         sampleUrl: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26gCcyGiLf36Ny5R2zd9OeLbriQEHlAGaYF0wP',
         releaseDate: '2025-08-29',
+        musicVideoId: '',
         lyrics: `
 (Roll wit me)
 (Smoke wit me)
@@ -2318,16 +2367,19 @@ Hard to remember forgetting your face
 (You know you want to)
 
 Starlight in your eyes, yeah, the city's neon glow
-Got a new vibe, a new high, let's take it slow
+Got a new vibe, a new high,
+let's take it slow
 Got a feeling in my bones, a rhythm in my soul
 Tonight, we lose control, take it on a roll
 
 Yeah, the air is getting thick, my heart is beating fast
 Every look, every touch, I hope this moment lasts
 Leave the world behind, baby, just for a little while
-Come a little closer, let me see that smile
+Come a little closer,
+let me see that smile
 
-Roll wit me, smoke wit me, let the music take control
+Roll wit me, smoke wit me,
+let the music take control
 Lose your mind, feel the bass deep down inside your soul
 This ain't just a party, baby, this is a state of mind
 Leave it all behind, yeah, you and me, intertwined
@@ -2340,15 +2392,18 @@ Leave it all behind, yeah, you and me, intertwined
 
 Yeah, we're moving in the dark, shadows on the wall
 I can feel your energy, I'm ready for the fall
-No need for conversation, let the rhythm do the talk
+No need for conversation,
+let the rhythm do the talk
 Every whisper on your lips, I'll follow where you walk
 
 Yeah, the air is getting thick, my heart is beating fast
 Every look, every touch, I hope this moment lasts
 Leave the world behind, baby, just for a little while
-Come a little closer, let me see that smile
+Come a little closer,
+let me see that smile
 
-Roll wit me, smoke wit me, let the music take control
+Roll wit me, smoke wit me,
+let the music take control
 Lose your mind, feel the bass deep down inside your soul
 This ain't just a party, baby, this is a state of mind
 Leave it all behind, yeah, you and me, intertwined
@@ -2356,7 +2411,8 @@ Leave it all behind, yeah, you and me, intertwined
 Underneath the strobe lights, a chemical reaction
 This ain't just a moment, it's a mutual attraction
 I see you looking at me, I know what's on your mind
-Let's get lost together, leave the world behind
+Let's get lost together,
+leave the world behind
 
 (Come on)
 (Just a little closer)
@@ -2389,6 +2445,7 @@ Let's get lost together, leave the world behind
         img: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26E9PUYWAVnPcATrNZQSWoCBG83wL7Xdvpumk5',
         sampleUrl: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG260thIg5SeiVaUXveObDkhncLG8TBRgqxIrfHj',
         releaseDate: '2025-08-27',
+        musicVideoId: '',
         lyrics: `
 Got a lot of problems but don't they all got 'em too
 Surely someone understands how I can make it through
@@ -2468,6 +2525,7 @@ I wanna show her (him) that the pain don't have to last
         img: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG260kYUhQeiVaUXveObDkhncLG8TBRgqxIrfHj3',
         sampleUrl: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG266cpSc09ONVrinuc7y2S3wYXLkeDvdTgHfFMt',
         releaseDate: '2025-08-27',
+        musicVideoId: '',
         lyrics: `
 Take me back to when I was young
 I just wanna feel somethin
@@ -2527,6 +2585,7 @@ So give me somethin worth fightin for
         img: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26Z6m5kw1OB1fRJhWxUj4stF6wIcQdoXPZCbYH',
         sampleUrl: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG260t6bqOzeiVaUXveObDkhncLG8TBRgqxIrfHj',
         releaseDate: '2025-08-28',
+        musicVideoId: '',
         lyrics: `
 Circuitry hummin, static in my head
 A ghost in the machine, haunting all I've said
@@ -2577,6 +2636,7 @@ Glitching on your signal, I just wanna make you whole
         img: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26DsHsnP4Yv8f4wLDSp0tqoTkZg5WOu9MKF12j',
         sampleUrl: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26JAOCs93VEdDqYTHMQCzhUkp9vIs03i6wtlGn',
         releaseDate: '2025-08-27',
+        musicVideoId: '',
         lyrics: `
 I used to think that everything would be okay, okay, okay
 Now I wake outside at night and I am so afraid

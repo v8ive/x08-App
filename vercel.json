@@ -3,6 +3,14 @@
     {
       "source": "/song/:slug",
       "destination": "/api/song/:slug"
+    },
+    {
+      "source": "/discography",
+      "destination": "/api/discography"
+    },
+    {
+      "source": "/videos",
+      "destination": "/api/videos"
     }
   ]
 }

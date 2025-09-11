@@ -66,35 +66,43 @@
 
     <header class="header">
         <div class="logo-container">
-            <svg class="artist-logo" viewBox="0 0 200 50" xmlns="http://www.w3.org/2000/svg" role="img"
-                aria-label="x08 Logo">
-                <defs>
-                    <linearGradient id="logo-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                        <stop offset="0%" style="stop-color:var(--logo-gradient-start)" />
-                        <stop offset="100%" style="stop-color:var(--logo-gradient-end)" />
-                    </linearGradient>
-                    <filter id="displacement-filter">
-                        <feTurbulence type="fractalNoise" baseFrequency="0.02 0.2" numOctaves="1" result="turbulence" />
-                        <feDisplacementMap in="SourceGraphic" in2="turbulence" scale="3" xChannelSelector="R"
-                            yChannelSelector="G" />
-                    </filter>
-                </defs>
+            <a href="/" aria-label="Home">
+                <svg class="artist-logo" viewBox="0 0 200 50" xmlns="http://www.w3.org/2000/svg" role="img"
+                    aria-label="x08 Logo">
+                    <defs>
+                        <linearGradient id="logo-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" style="stop-color:var(--logo-gradient-start)" />
+                            <stop offset="100%" style="stop-color:var(--logo-gradient-end)" />
+                        </linearGradient>
+                        <filter id="displacement-filter">
+                            <feTurbulence type="fractalNoise" baseFrequency="0.02 0.2" numOctaves="1" result="turbulence" />
+                            <feDisplacementMap in="SourceGraphic" in2="turbulence" scale="3" xChannelSelector="R"
+                                yChannelSelector="G" />
+                        </filter>
+                    </defs>
 
-                <g class="logo-base">
-                    <text id="logo-text" x="10" y="40" font-family="'Roboto Mono', monospace" font-size="46"
-                        font-weight="700" fill="url(#logo-gradient)">x08</text>
-                </g>
+                    <g class="logo-base">
+                        <text id="logo-text" x="10" y="40" font-family="'Roboto Mono', monospace" font-size="46"
+                            font-weight="700" fill="url(#logo-gradient)">x08</text>
+                    </g>
 
-                <g class="glitch-layers">
-                    <use href="#logo-text" class="glitch-layer-1" fill="var(--secondary-color)" />
-                    <use href="#logo-text" class="glitch-layer-2" fill="var(--tertiary-color)" />
-                    <use href="#logo-text" class="glitch-layer-3" fill="url(#logo-gradient)"
-                        filter="url(#displacement-filter)" />
-                </g>
-            </svg>
+                    <g class="glitch-layers">
+                        <use href="#logo-text" class="glitch-layer-1" fill="var(--secondary-color)" />
+                        <use href="#logo-text" class="glitch-layer-2" fill="var(--tertiary-color)" />
+                        <use href="#logo-text" class="glitch-layer-3" fill="url(#logo-gradient)"
+                            filter="url(#displacement-filter)" />
+                    </g>
+                </svg>
+            </a>
         </div>
-        <nav class="social-links">
-            <button class="social-links-more-btn"><i class="fas fa-chevron-right"></i></button>
+        <nav class="main-nav">
+            <a href="#video-gallery-section" class="nav-link"><i class="fas fa-video"></i><span>Videos</span></a>
+            <a href="#discography-section" class="nav-link"><i class="fas fa-compact-disc"></i><span>Music</span></a>
+            <div class="socials-toggle-container">
+                <button class="socials-toggle-btn" aria-label="Toggle Social Links" aria-expanded="false">
+                    <i class="fas fa-plus"></i>
+                </button>
+            </div>
         </nav>
         <div class="header-controls">
             <button class="share-button"><i class="fas fa-share-alt"></i></button>
@@ -109,6 +117,10 @@
             </div>
         </div>
     </header>
+
+    <div class="socials-dropdown-container" id="socials-dropdown">
+        </div>
+
 
     <main class="main-content">
         <section class="content-section" id="latest-release-section">
@@ -132,19 +144,39 @@
             <h2 class="section-title">Upcoming</h2>
             <div class="upcoming-releases-container" id="upcoming-releases"></div>
         </section>
-
-        <section class="content-section">
-            <div class="discography-header">
-                <h2 class="section-title">Discography</h2>
+        
+        <section class="content-section" id="video-gallery-section">
+            <div class="section-header">
+                <h2 class="section-title">Videos <span id="video-count" class="item-count"></span></h2>
                 <div class="search-container">
-                    <input type="text" id="search-bar" placeholder="Search for a song...">
+                    <input type="text" id="video-search-bar" class="search-bar" placeholder="Search videos...">
+                    <i class="fas fa-search search-icon"></i>
+                </div>
+            </div>
+             <div class="video-gallery-container" id="video-gallery"></div>
+             <div class="view-all-container" id="video-view-all-container"></div>
+        </section>
+
+        <section class="content-section" id="discography-section">
+            <div class="section-header">
+                <h2 class="section-title">Discography <span id="discography-count" class="item-count"></span></h2>
+                <div class="search-container">
+                    <input type="text" id="search-bar" class="search-bar" placeholder="Search songs...">
                     <i class="fas fa-search search-icon"></i>
                 </div>
             </div>
             <div class="album-list" id="album-list"></div>
+            <div class="view-all-container" id="discography-view-all-container"></div>
         </section>
     </main>
     <div id="song-page" class="song-page"></div>
+
+    <div id="video-theater" class="video-theater-overlay">
+        <div class="video-player-container">
+            <div id="youtube-player"></div>
+        </div>
+        <button id="video-close-btn" class="video-close-btn">×</button>
+    </div>
 
     <div class="global-player" id="global-player">
         <div class="player-content">

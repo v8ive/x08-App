@@ -40,6 +40,9 @@ function initializeApp() {
     const latestReleaseContainer = document.getElementById('latest-release');
     const songPage = document.getElementById('song-page');
     const searchBar = document.getElementById('search-bar');
+    const videoSearchBar = document.getElementById('video-search-bar');
+    const discographyCount = document.getElementById('discography-count');
+    const videoCount = document.getElementById('video-count');
 
     const linksModal = document.getElementById('links-modal');
     const socialModal = document.getElementById('social-modal');
@@ -47,7 +50,8 @@ function initializeApp() {
     const modalTitle = document.getElementById('modal-title');
     const modalLinksContainer = document.getElementById('modal-links');
     const socialModalLinksContainer = socialModal.querySelector('.modal-links');
-    const headerSocialLinksContainer = document.querySelector('.header .social-links');
+    const socialsToggleBtn = document.querySelector('.socials-toggle-btn');
+    const socialsDropdown = document.getElementById('socials-dropdown');
     const modalCloseBtns = document.querySelectorAll('.modal-close-btn');
     const themeToggle = document.getElementById('theme-toggle-checkbox');
     const body = document.body;
@@ -89,6 +93,12 @@ function initializeApp() {
     let audioContext, analyser, sourceNode, dataArray, bufferLength;
     let faviconAnimationActive = false;
 
+    // --- New Feature: Video Gallery ---
+    const videoGalleryContainer = document.getElementById('video-gallery');
+    const videoTheater = document.getElementById('video-theater');
+    const videoCloseBtn = document.getElementById('video-close-btn');
+    let ytPlayer;
+
     const playIcon = '<i class="fas fa-play play-pause-icon"></i>';
     const pauseIcon = '<i class="fas fa-pause play-pause-icon"></i>';
     const nowPlayingIndicator = `
@@ -103,6 +113,8 @@ function initializeApp() {
         image: 'https://x08.app/icons/x08_x_512.png',
         type: 'website'
     };
+    
+    const ITEM_LIMIT = 8;
 
     // Theme toggle functionality
     const savedTheme = localStorage.getItem('theme') || 'dark';
@@ -117,50 +129,53 @@ function initializeApp() {
         updateThemeColor(newTheme);
     });
 
-    const createSocialLinkElement = (url, iconClass, text) => {
+    const createSocialLinkElement = (url, iconClass, text, platformClass, isDropdown = false) => {
         const linkElement = document.createElement('a');
         linkElement.href = url;
         linkElement.target = '_blank';
-        linkElement.classList.add('social-link');
+        linkElement.classList.add('social-link', platformClass);
+        linkElement.ariaLabel = text;
 
         const icon = document.createElement('i');
         icon.className = iconClass + ' social-icon';
-
         linkElement.appendChild(icon);
-        linkElement.appendChild(document.createTextNode(` ${text}`));
+
+        if (isDropdown) {
+            const nameSpan = document.createElement('span');
+            nameSpan.className = 'platform-name';
+            nameSpan.textContent = text;
+            linkElement.appendChild(nameSpan);
+        } else {
+             linkElement.appendChild(document.createTextNode(` ${text}`));
+        }
+       
         return linkElement;
     };
 
-    const populateHeaderSocialLinks = () => {
-        const moreBtn = headerSocialLinksContainer.querySelector('.social-links-more-btn');
-        headerSocialLinksContainer.innerHTML = '';
-        headerSocialLinksContainer.appendChild(moreBtn);
-
+    const populateHeaderSocials = () => {
+        socialsDropdown.innerHTML = '';
         const platforms = {
-            'Spotify': { url: social_links.spotify, icon: 'fab fa-spotify' },
-            'SoundCloud': { url: social_links.soundcloud, icon: 'fab fa-soundcloud' },
-            'YouTube Music': { url: social_links.youtube, icon: 'fab fa-youtube' },
-            'Apple Music': { url: social_links.apple, icon: 'fa-brands fa-itunes-note' },
-            'Tidal': { url: social_links.tidal, icon: 'fa-brands fa-tidal' },
-            'Amazon Music': { url: social_links.amazon, icon: 'fab fa-amazon' },
-            'iHeartRadio': { url: social_links.iheart, icon: 'fa-solid fa-radio' },
-            'Pandora': { url: social_links.pandora, icon: 'fab fa-pandora' }
+            'Spotify': { url: social_links.spotify, icon: 'fab fa-spotify', class: 'spotify' },
+            'SoundCloud': { url: social_links.soundcloud, icon: 'fab fa-soundcloud', class: 'soundcloud' },
+            'YouTube': { url: social_links.youtube, icon: 'fab fa-youtube', class: 'youtube' },
+            'Apple Music': { url: social_links.apple, icon: 'fa-brands fa-itunes-note', class: 'apple' },
+            'Tidal': { url: social_links.tidal, icon: 'fa-brands fa-tidal', class: 'tidal' },
+            'Amazon Music': { url: social_links.amazon, icon: 'fab fa-amazon', class: 'iheart' },
+            'iHeartRadio': { url: social_links.iheart, icon: 'fa-solid fa-radio', class: 'iheart' },
+            'Pandora': { url: social_links.pandora, icon: 'fab fa-pandora', class: 'pandora' }
         };
 
-        let count = 0;
         for (const [platform, data] of Object.entries(platforms)) {
             if (data.url) {
-                const linkElement = createSocialLinkElement(data.url, data.icon, platform);
-                if (count >= 4) {
-                    linkElement.classList.add('social-link-hidden');
-                }
-                headerSocialLinksContainer.insertBefore(linkElement, moreBtn);
-                count++;
+                const linkElement = createSocialLinkElement(data.url, data.icon, platform, data.class, true);
+                socialsDropdown.appendChild(linkElement);
             }
         }
-        
-        moreBtn.addEventListener('click', () => {
-            headerSocialLinksContainer.classList.toggle('expanded');
+
+        socialsToggleBtn.addEventListener('click', () => {
+            socialsToggleBtn.classList.toggle('active');
+            socialsDropdown.classList.toggle('active');
+            socialsToggleBtn.setAttribute('aria-expanded', socialsDropdown.classList.contains('active'));
         });
     };
     
@@ -203,15 +218,16 @@ function initializeApp() {
         }
     };
     
-    const renderAlbums = (filteredAlbums) => {
+    const renderAlbums = (filteredAlbums, isFullPage = false) => {
         albumList.innerHTML = '';
-        const albumsToRender = filteredAlbums || albums;
+        const allAlbums = filteredAlbums || albums.filter(album => !album.comingSoon);
+        discographyCount.textContent = `(${allAlbums.length})`;
+
+        const sortedAlbums = allAlbums.sort((a, b) => new Date(b.releaseDate) - new Date(a.releaseDate));
         
-        const sortedAlbums = albumsToRender
-            .filter(album => !album.comingSoon)
-            .sort((a, b) => new Date(b.releaseDate) - new Date(a.releaseDate));
+        const albumsToRender = isFullPage ? sortedAlbums : sortedAlbums.slice(0, ITEM_LIMIT);
         
-        sortedAlbums.forEach((album, index) => {
+        albumsToRender.forEach((album, index) => {
             const originalIndex = albums.indexOf(album);
             const albumItem = document.createElement('div');
             albumItem.classList.add('album-item', 'reveal-on-scroll');
@@ -234,6 +250,24 @@ function initializeApp() {
             `;
             albumList.appendChild(albumItem);
         });
+        
+        const viewAllContainer = document.getElementById('discography-view-all-container');
+        viewAllContainer.innerHTML = '';
+        if (sortedAlbums.length > ITEM_LIMIT && !isFullPage) {
+            const remaining = sortedAlbums.length - ITEM_LIMIT;
+            const viewAllBtn = document.createElement('a');
+            viewAllBtn.href = '/discography';
+            viewAllBtn.className = 'view-all-btn';
+            viewAllBtn.innerHTML = `<span>View All (${remaining} more) <i class="fas fa-arrow-right arrow-icon"></i></span>`;
+            viewAllBtn.addEventListener('click', (e) => {
+                e.preventDefault();
+                const searchTerm = searchBar.value;
+                const url = searchTerm ? `/discography?search=${encodeURIComponent(searchTerm)}` : '/discography';
+                history.pushState({ page: 'discography', search: searchTerm }, '', url);
+                handleRouting();
+            });
+            viewAllContainer.appendChild(viewAllBtn);
+        }
     };
 
     const renderFeaturedSongs = () => {
@@ -477,6 +511,104 @@ function initializeApp() {
         }
     };
 
+    const renderVideoGallery = (filteredVideos, isFullPage = false) => {
+        const videoSection = document.getElementById('video-gallery-section');
+        videoGalleryContainer.innerHTML = '';
+        const allVideos = filteredVideos || albums.filter(song => song.musicVideoId);
+        videoCount.textContent = `(${allVideos.length})`;
+
+        if (allVideos.length === 0) {
+            videoSection.style.display = 'none';
+            return;
+        }
+        videoSection.style.display = 'block';
+        
+        const videosToRender = isFullPage ? allVideos : allVideos.slice(0, ITEM_LIMIT);
+
+        videosToRender.forEach((video, index) => {
+            const videoItem = document.createElement('div');
+            videoItem.className = 'video-item reveal-on-scroll';
+            videoItem.dataset.videoId = video.musicVideoId;
+            videoItem.style.setProperty('--stagger-index', index);
+            videoItem.innerHTML = `
+                <img src="https://i3.ytimg.com/vi/${video.musicVideoId}/maxresdefault.jpg" alt="${video.title} video thumbnail" class="video-thumbnail">
+                <div class="play-icon-overlay"><i class="fas fa-play"></i></div>
+                <div class="video-info">
+                    <h3 class="video-title">${video.title}</h3>
+                </div>
+            `;
+            videoGalleryContainer.appendChild(videoItem);
+        });
+        
+        const viewAllContainer = document.getElementById('video-view-all-container');
+        viewAllContainer.innerHTML = '';
+        if (allVideos.length > ITEM_LIMIT && !isFullPage) {
+            const remaining = allVideos.length - ITEM_LIMIT;
+            const viewAllBtn = document.createElement('a');
+            viewAllBtn.href = '/videos';
+            viewAllBtn.className = 'view-all-btn';
+            viewAllBtn.innerHTML = `<span>View All (${remaining} more) <i class="fas fa-arrow-right arrow-icon"></i></span>`;
+            viewAllBtn.addEventListener('click', (e) => {
+                e.preventDefault();
+                const searchTerm = videoSearchBar.value;
+                const url = searchTerm ? `/videos?search=${encodeURIComponent(searchTerm)}` : '/videos';
+                history.pushState({ page: 'videos', search: searchTerm }, '', url);
+                handleRouting();
+            });
+            viewAllContainer.appendChild(viewAllBtn);
+        }
+    };
+
+    const setupVideoPlayer = () => {
+        const tag = document.createElement('script');
+        tag.src = "https://www.youtube.com/iframe_api";
+        const firstScriptTag = document.getElementsByTagName('script')[0];
+        firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+        window.onYouTubeIframeAPIReady = () => {
+            ytPlayer = new YT.Player('youtube-player', {
+                height: '100%',
+                width: '100%',
+                playerVars: {
+                    'playsinline': 1,
+                    'autoplay': 1,
+                    'controls': 1,
+                    'rel': 0,
+                    'modestbranding': 1
+                }
+            });
+        };
+
+        videoGalleryContainer.addEventListener('click', e => {
+            const videoItem = e.target.closest('.video-item');
+            if (videoItem) {
+                const videoId = videoItem.dataset.videoId;
+                if (isPlaying) {
+                    audioPlayer.pause();
+                }
+                videoTheater.classList.add('active');
+                if (ytPlayer && ytPlayer.loadVideoById) {
+                    ytPlayer.loadVideoById(videoId);
+                }
+            }
+        });
+
+        const closeVideo = () => {
+            videoTheater.classList.remove('active');
+            if (ytPlayer && ytPlayer.stopVideo) {
+                ytPlayer.stopVideo();
+            }
+        };
+
+        videoCloseBtn.addEventListener('click', closeVideo);
+        videoTheater.addEventListener('click', e => {
+            if (e.target === videoTheater) {
+                closeVideo();
+            }
+        });
+    };
+
+
     const updatePlayingUI = () => {
         const allSongElements = document.querySelectorAll('[data-index]');
         
@@ -692,53 +824,41 @@ function initializeApp() {
     upcomingReleasesContainer.addEventListener('click', handleAlbumControlsClick);
     latestReleaseContainer.addEventListener('click', handleAlbumControlsClick);
     
-    searchBar.addEventListener('input', (e) => {
+    const handleSearch = (e, type) => {
         const searchTerm = e.target.value.toLowerCase();
-        const filteredAlbums = albums.filter(album => album.title.toLowerCase().includes(searchTerm));
-        renderAlbums(filteredAlbums);
-        setupScrollAnimations(); // Re-apply animations to new elements
-    });
-
-    const updateMetaTags = (song) => {
-        if (!song) return;
-
-        const title = `${song.title} | x08`;
-        const description = song.comingSoon 
-            ? `Listen to "${song.title}" by x08. Releasing soon.`
-            : `Listen to "${song.title}" by x08. Released on ${formatRelativeDate(song.releaseDate, true)}.`;
-        const url = `${siteDefaults.url}song/${encodeURIComponent(song.title.toLowerCase().replace(/\s+/g, '-'))}`;
-        const image = song.img;
-
-        document.title = title;
-        document.querySelector('meta[name="description"]').setAttribute('content', description);
         
-        document.querySelector('meta[property="og:title"]').setAttribute('content', title);
-        document.querySelector('meta[property="og:description"]').setAttribute('content', description);
-        document.querySelector('meta[property="og:url"]').setAttribute('content', url);
-        document.querySelector('meta[property="og:image"]').setAttribute('content', image);
-        document.querySelector('meta[property="og:type"]').setAttribute('content', 'music.song');
-
-        document.querySelector('meta[property="twitter:title"]').setAttribute('content', title);
-        document.querySelector('meta[property="twitter:description"]').setAttribute('content', description);
-        document.querySelector('meta[property="twitter:url"]').setAttribute('content', url);
-        document.querySelector('meta[property="twitter:image"]').setAttribute('content', image);
+        if (type === 'discography') {
+            const filtered = albums.filter(a => !a.comingSoon && a.title.toLowerCase().includes(searchTerm));
+            renderAlbums(filtered, window.location.pathname.startsWith('/discography'));
+        } else if (type === 'videos') {
+            const filtered = albums.filter(a => a.musicVideoId && a.title.toLowerCase().includes(searchTerm));
+            renderVideoGallery(filtered, window.location.pathname.startsWith('/videos'));
+        }
+        
+        setupScrollAnimations();
     };
 
-    const resetMetaTags = () => {
-        document.title = siteDefaults.title;
-        document.querySelector('meta[name="description"]').setAttribute('content', siteDefaults.description);
-        
-        document.querySelector('meta[property="og:title"]').setAttribute('content', siteDefaults.title);
-        document.querySelector('meta[property="og:description"]').setAttribute('content', siteDefaults.description);
-        document.querySelector('meta[property="og:url"]').setAttribute('content', siteDefaults.url);
-        document.querySelector('meta[property="og:image"]').setAttribute('content', siteDefaults.image);
-        document.querySelector('meta[property="og:type"]').setAttribute('content', siteDefaults.type);
+    searchBar.addEventListener('input', (e) => handleSearch(e, 'discography'));
+    videoSearchBar.addEventListener('input', (e) => handleSearch(e, 'videos'));
 
-        document.querySelector('meta[property="twitter:title"]').setAttribute('content', siteDefaults.title);
-        document.querySelector('meta[property="twitter:description"]').setAttribute('content', siteDefaults.description);
-        document.querySelector('meta[property="twitter:url"]').setAttribute('content', siteDefaults.url);
-        document.querySelector('meta[property="twitter:image"]').setAttribute('content', siteDefaults.image);
+
+    const updateMetaTags = (data) => {
+        document.title = data.title;
+        document.querySelector('meta[name="description"]').setAttribute('content', data.description);
+        
+        document.querySelector('meta[property="og:title"]').setAttribute('content', data.title);
+        document.querySelector('meta[property="og:description"]').setAttribute('content', data.description);
+        document.querySelector('meta[property="og:url"]').setAttribute('content', data.url);
+        document.querySelector('meta[property="og:image"]').setAttribute('content', data.image);
+        document.querySelector('meta[property="og:type"]').setAttribute('content', data.type);
+
+        document.querySelector('meta[property="twitter:title"]').setAttribute('content', data.title);
+        document.querySelector('meta[property="twitter:description"]').setAttribute('content', data.description);
+        document.querySelector('meta[property="twitter:url"]').setAttribute('content', data.url);
+        document.querySelector('meta[property="twitter:image"]').setAttribute('content', data.image);
     };
+
+    const resetMetaTags = () => updateMetaTags(siteDefaults);
 
     const renderSongPage = (index) => {
         const song = albums[index];
@@ -749,7 +869,16 @@ function initializeApp() {
             return;
         }
 
-        updateMetaTags(song);
+        const songMeta = {
+            title: `${song.title} | x08`,
+            description: song.comingSoon 
+                ? `Listen to "${song.title}" by x08. Releasing soon.`
+                : `Listen to "${song.title}" by x08. Released on ${formatRelativeDate(song.releaseDate, true)}.`,
+            url: `${siteDefaults.url}song/${encodeURIComponent(song.title.toLowerCase().replace(/\s+/g, '-'))}`,
+            image: song.img,
+            type: 'music.song'
+        };
+        updateMetaTags(songMeta);
 
         const isComingSoon = song.comingSoon;
         
@@ -780,6 +909,21 @@ function initializeApp() {
                 </a>
             `).join('');
         
+        const videoSectionHtml = song.musicVideoId ? `
+            <div class="song-page-video-section reveal-on-scroll">
+                <h3>Official Video</h3>
+                <div class="song-page-video-wrapper">
+                    <iframe 
+                        src="https://www.youtube.com/embed/${song.musicVideoId}?rel=0" 
+                        title="YouTube video player" 
+                        frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                        allowfullscreen>
+                    </iframe>
+                </div>
+            </div>
+        ` : '';
+
         songPage.style.setProperty('--song-bg-image', `url(${song.img})`);
 
         songPage.innerHTML = `
@@ -813,14 +957,19 @@ function initializeApp() {
                     </div>
                 </div>
                 <div class="song-page-content">
-                    <div class="song-page-lyrics">
-                        <h3>Lyrics</h3>
-                        <pre>${song.lyrics || 'Lyrics not available yet.'}</pre>
-                    </div>
-                    <div class="song-page-links">
-                        <h3>${isComingSoon ? 'Available Soon On' : 'Listen On'}</h3>
-                        <div class="modal-links">
-                            ${linksHtml}
+                    ${videoSectionHtml}
+                    <div class="song-page-details reveal-on-scroll">
+                        <div class="tab-nav">
+                            <button class="tab-btn active" data-tab="links">${isComingSoon ? 'Available Soon On' : 'Listen On'}</button>
+                            <button class="tab-btn" data-tab="lyrics">Lyrics</button>
+                        </div>
+                        <div class="tab-content">
+                            <div class="tab-pane active" id="tab-links">
+                                <div class="modal-links">${linksHtml}</div>
+                            </div>
+                            <div class="tab-pane" id="tab-lyrics">
+                                <pre>${song.lyrics || 'Lyrics not available yet.'}</pre>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -830,6 +979,24 @@ function initializeApp() {
         mainContent.style.display = 'none';
         songPage.classList.add('active');
         songPage.scrollTop = 0;
+        
+        // Add event listeners for the new tabs
+        const tabNav = songPage.querySelector('.tab-nav');
+        tabNav.addEventListener('click', e => {
+            if (e.target.classList.contains('tab-btn')) {
+                const targetTab = e.target.dataset.tab;
+
+                tabNav.querySelector('.active').classList.remove('active');
+                e.target.classList.add('active');
+
+                const content = songPage.querySelector('.tab-content');
+                content.querySelector('.active').classList.remove('active');
+                content.querySelector(`#tab-${targetTab}`).classList.add('active');
+            }
+        });
+
+        // Re-run scroll animations for new content
+        setupScrollAnimations();
 
         const songPageImg = songPage.querySelector('.song-page-img');
         const applyGlow = () => {
@@ -1107,18 +1274,18 @@ function initializeApp() {
     const openSocialModal = () => {
         socialModalLinksContainer.innerHTML = '';
         const allPlatforms = {
-            'Spotify': { url: social_links.spotify, icon: 'fab fa-spotify' },
-            'YouTube Music': { url: social_links.youtube, icon: 'fab fa-youtube' },
-            'SoundCloud': { url: social_links.soundcloud, icon: 'fab fa-soundcloud' },
-            'Tidal': { url: social_links.tidal, icon: 'fa-brands fa-tidal' },
-            'Apple Music': { url: social_links.apple, icon: 'fa-brands fa-itunes-note' },
-            'Amazon Music': { url: social_links.amazon, icon: 'fab fa-amazon' },
-            'iHeartRadio': { url: social_links.iheart, icon: 'fa-solid fa-radio' },
-            'Pandora': { url: social_links.pandora, icon: 'fab fa-pandora' }
+            'Spotify': { url: social_links.spotify, icon: 'fab fa-spotify', class: 'spotify' },
+            'YouTube': { url: social_links.youtube, icon: 'fab fa-youtube', class: 'youtube' },
+            'SoundCloud': { url: social_links.soundcloud, icon: 'fab fa-soundcloud', class: 'soundcloud' },
+            'Tidal': { url: social_links.tidal, icon: 'fa-brands fa-tidal', class: 'tidal' },
+            'Apple Music': { url: social_links.apple, icon: 'fa-brands fa-itunes-note', class: 'apple' },
+            'Amazon Music': { url: social_links.amazon, icon: 'fab fa-amazon', class: 'amazon' },
+            'iHeartRadio': { url: social_links.iheart, icon: 'fa-solid fa-radio', class: 'iheart' },
+            'Pandora': { url: social_links.pandora, icon: 'fab fa-pandora', class: 'pandora' }
         };
         for (const [platform, data] of Object.entries(allPlatforms)) {
              if (data.url) {
-                const linkElement = createSocialLinkElement(data.url, data.icon, platform);
+                const linkElement = createSocialLinkElement(data.url, data.icon, platform, data.class, false);
                 socialModalLinksContainer.appendChild(linkElement);
              }
         }
@@ -1135,11 +1302,29 @@ function initializeApp() {
     document.addEventListener('click', (e) => {
         if (e.target === linksModal) closeModal(linksModal);
         if (e.target === socialModal) closeModal(socialModal);
+        
+        // Close dropdown if clicking outside
+        const isSocialsToggle = e.target.closest('.socials-toggle-btn');
+        const isDropdown = e.target.closest('.socials-dropdown-container');
+        if (!isSocialsToggle && !isDropdown && socialsDropdown.classList.contains('active')) {
+            socialsToggleBtn.classList.remove('active');
+            socialsDropdown.classList.remove('active');
+            socialsToggleBtn.setAttribute('aria-expanded', 'false');
+        }
     });
 
     shareButton.addEventListener('click', openSocialModal);
+    
     const handleRouting = () => {
         const path = window.location.pathname;
+        const params = new URLSearchParams(window.location.search);
+        const searchTerm = params.get('search') || '';
+
+        // Hide all sections by default, show based on route
+        document.querySelectorAll('.content-section').forEach(s => s.style.display = 'none');
+        songPage.classList.remove('active');
+        mainContent.style.display = 'flex';
+        
         if (path.startsWith('/song/')) {
             const songTitleSlug = decodeURIComponent(path.split('/song/')[1]);
             const songIndex = albums.findIndex(album => album.title.toLowerCase().replace(/\s+/g, '-') === songTitleSlug);
@@ -1147,14 +1332,46 @@ function initializeApp() {
                 renderSongPage(songIndex);
             } else {
                 history.replaceState(null, '', '/');
-                mainContent.style.display = 'flex';
-                songPage.classList.remove('active');
-                resetMetaTags();
+                handleRouting(); 
             }
+        } else if (path.startsWith('/discography')) {
+            const discographySection = document.getElementById('discography-section');
+            discographySection.style.display = 'block';
+            searchBar.value = searchTerm;
+            const filtered = albums.filter(a => !a.comingSoon && a.title.toLowerCase().includes(searchTerm));
+            renderAlbums(filtered, true);
+            updateMetaTags({
+                title: `Discography | x08`,
+                description: `Browse all ${albums.length} releases from x08.`,
+                url: `${siteDefaults.url}discography`,
+                image: siteDefaults.image,
+                type: 'website'
+            });
+            setupScrollAnimations();
+        } else if (path.startsWith('/videos')) {
+            const videoSection = document.getElementById('video-gallery-section');
+            videoSection.style.display = 'block';
+            videoSearchBar.value = searchTerm;
+            const filtered = albums.filter(a => a.musicVideoId && a.title.toLowerCase().includes(searchTerm));
+            renderVideoGallery(filtered, true);
+            updateMetaTags({
+                title: `Videos | x08`,
+                description: `Watch all official music videos from x08.`,
+                url: `${siteDefaults.url}videos`,
+                image: siteDefaults.image,
+                type: 'website'
+            });
+            setupScrollAnimations();
         } else {
-            mainContent.style.display = 'flex';
-            songPage.classList.remove('active');
+            // Homepage
+            document.querySelectorAll('.content-section').forEach(s => s.style.display = 'block');
+            renderLatestRelease();
+            renderFeaturedSongs();
+            renderUpcomingReleases();
+            renderVideoGallery();
+            renderAlbums();
             resetMetaTags();
+            setupScrollAnimations();
         }
     };
 
@@ -1186,7 +1403,7 @@ function initializeApp() {
             }, { duration: animationDuration, fill: "forwards" });
         });
 
-        const interactiveElements = document.querySelectorAll('a, button, .album-item, .toggle-label, .slider-btn, .pagination-dot, .progress-bar-bg');
+        const interactiveElements = document.querySelectorAll('a, button, .album-item, .toggle-label, .slider-btn, .pagination-dot, .progress-bar-bg, .video-item');
         interactiveElements.forEach(el => {
             el.addEventListener('mouseenter', () => {
                 cursorDot.classList.add('hovered');
@@ -1227,18 +1444,15 @@ function initializeApp() {
         });
     };
 
-    populateHeaderSocialLinks();
-    renderLatestRelease();
-    renderFeaturedSongs();
-    renderUpcomingReleases();
-    renderAlbums();
-    handleRouting();
+    populateHeaderSocials();
+    handleRouting(); // Initial routing call
     playerInfoBtn.disabled = true;
     
     // Initialize new features
     setupCursorFollower();
+    setupVideoPlayer();
     
     // Add reveal-on-scroll to static elements before observing
-    document.querySelectorAll('.section-title, .latest-release-container, .featured-songs-slider, #upcoming-releases-section > .section-title, .discography-header').forEach(el => el.classList.add('reveal-on-scroll'));
+    document.querySelectorAll('.section-header, .latest-release-container, .featured-songs-slider, #upcoming-releases-section > .section-title, .discography-header, #video-gallery-section > .section-title').forEach(el => el.classList.add('reveal-on-scroll'));
     setupScrollAnimations();
 }
