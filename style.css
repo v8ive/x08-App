@@ -55,6 +55,118 @@
     --logo-gradient-end: var(--tertiary-color);
 }
 
+/* --- Preloader Styles --- */
+#preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--bg-dark);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10000;
+    opacity: 1;
+    transition: opacity 0.5s 0.5s ease-in-out, visibility 0.5s 0.5s ease-in-out; /* Added delay */
+    visibility: visible;
+}
+
+.preloader-logo-container {
+    position: relative;
+    width: 300px; /* Base size */
+    max-width: 90vw; /* Ensure it fits on small screens */
+    height: auto;
+}
+
+#preloader .artist-logo {
+    width: 100%;
+    height: 100%;
+    filter: drop-shadow(0 0 10px var(--primary-color));
+}
+
+#preloader .logo-outline {
+    fill: none;
+    stroke: rgba(var(--primary-color-rgb), 0.4);
+    stroke-width: 1px;
+    opacity: 0.5;
+    animation: preloader-flicker 2.5s infinite steps(1, end);
+}
+
+#preloader .clip-rect {
+    transform-origin: left center;
+    transform: scaleX(0);
+    animation: preloader-fill 2.5s 0.2s ease-out forwards; /* Delay to sync with scanline */
+}
+
+#preloader .glitch-layers {
+    mix-blend-mode: screen;
+    opacity: 0;
+    animation: preloader-glitch-fade-in 1s 0.5s forwards;
+}
+
+#preloader .glitch-layer-1 { 
+    animation: preloader-glitch-1 2s infinite linear alternate;
+}
+
+#preloader .glitch-layer-2 { 
+    animation: preloader-glitch-2 1.5s infinite linear alternate;
+}
+
+.scanline {
+    position: absolute;
+    top: -10%; /* Start slightly above */
+    left: -5%; /* Start slightly left */
+    width: 3px;
+    height: 120%; /* Extend below */
+    background: var(--tertiary-color);
+    box-shadow: 0 0 15px var(--tertiary-color);
+    transform: translateX(0) skewX(-10deg); /* Initial position */
+    animation: scanline-anim 2.5s ease-out forwards;
+}
+
+
+@keyframes preloader-fill {
+    to { transform: scaleX(1); }
+}
+
+@keyframes scanline-anim {
+    0% { transform: translateX(0) skewX(-10deg); }
+    100% { transform: translateX(320px) skewX(-10deg); } /* Move across the container */
+}
+
+@keyframes preloader-glitch-fade-in {
+    to { opacity: 1; }
+}
+
+@keyframes preloader-flicker {
+    0%, 100% { opacity: 0.5; }
+    50.0% { opacity: 0.3; }
+    50.5% { opacity: 0.6; }
+    51.0% { opacity: 0.4; }
+    51.5% { opacity: 0.7; }
+}
+
+@keyframes preloader-glitch-1 {
+    0%, 100% { transform: translate(0, 0); }
+    25% { transform: translate(1px, -1px); }
+    50% { transform: translate(-1px, 1px); }
+    75% { transform: translate(1px, 1px); }
+}
+
+@keyframes preloader-glitch-2 {
+    0%, 100% { transform: translate(0, 0); }
+    25% { transform: translate(-2px, 2px); }
+    50% { transform: translate(2px, -2px); }
+    75% { transform: translate(-2px, -2px); }
+}
+
+#preloader.preloader-hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+
+
 ::-webkit-scrollbar {
     width: 8px;
     height: 8px;
@@ -754,7 +866,7 @@ body::before {
 
 [data-theme="light"] .modal-links .social-link {
     background-color: rgba(var(--card-light-rgb), 0.7);
-    border-color: rgba(var(--text-light), 0.1);
+    border-color: rgba(0,0,0,0.1);
 }
 
 .modal-links .social-link:hover {
@@ -816,10 +928,29 @@ body::before {
 .player-info {
     flex-grow: 1;
     max-width: 400px;
+    display: flex;
+    flex-direction: column;
+}
+
+.player-title-visualizer {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    min-height: 24px;
 }
 
 #player-song-title {
     font-weight: 700;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    flex-shrink: 1;
+}
+
+#audio-visualizer {
+    width: 100px;
+    height: 24px;
+    flex-shrink: 0;
 }
 
 .progress-container {
@@ -1805,6 +1936,13 @@ body.cursor-visible .cursor-outline {
     }
     .player-info {
         max-width: none;
+        width: 100%;
+    }
+    .player-title-visualizer {
+       justify-content: space-between;
+    }
+    #player-song-title {
+        max-width: calc(100% - 110px);
     }
     .player-controls {
         margin-left: 0;

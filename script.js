@@ -5,6 +5,15 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 function initializeApp() {
+    // --- New Feature: Preloader ---
+    const preloader = document.getElementById('preloader');
+    window.addEventListener('load', () => {
+        preloader.classList.add('preloader-hidden');
+        preloader.addEventListener('transitionend', () => {
+            preloader.remove();
+        }, { once: true });
+    });
+
     const updateThemeColor = (theme) => {
         const themeColor = theme === 'light' ? '#F0F0F0' : '#000000';
         const metaThemeColor = document.querySelector('meta[name="theme-color"]');
@@ -64,6 +73,20 @@ function initializeApp() {
     let isPlaying = false;
     let isSeeking = false;
     const colorThief = new ColorThief();
+
+    // --- New Feature: Audio Visualizer & Dynamic Favicon Variables ---
+    const visualizerCanvas = document.getElementById('audio-visualizer');
+    const visualizerCtx = visualizerCanvas.getContext('2d');
+    const faviconLink = document.getElementById('favicon');
+    const originalFavicon = faviconLink.href;
+    const faviconCanvas = document.createElement('canvas');
+    faviconCanvas.width = 64;
+    faviconCanvas.height = 64;
+    const faviconCtx = faviconCanvas.getContext('2d');
+    const baseFaviconImg = new Image();
+    baseFaviconImg.src = '/icons/x08_x_64.png';
+    let audioContext, analyser, sourceNode, dataArray, bufferLength;
+    let faviconAnimationActive = false;
 
     const playIcon = '<i class="fas fa-play play-pause-icon"></i>';
     const pauseIcon = '<i class="fas fa-pause play-pause-icon"></i>';
@@ -546,9 +569,28 @@ function initializeApp() {
         return topColors;
     };
 
+    // --- New Feature: Initialize Web Audio API for Visualizer ---
+    const setupAudioContext = () => {
+        if (audioContext) return;
+        audioContext = new (window.AudioContext || window.webkitAudioContext)();
+        analyser = audioContext.createAnalyser();
+        analyser.fftSize = 128; // Number of samples for FFT
+        sourceNode = audioContext.createMediaElementSource(audioPlayer);
+        
+        sourceNode.connect(analyser);
+        analyser.connect(audioContext.destination);
+
+        bufferLength = analyser.frequencyBinCount;
+        dataArray = new Uint8Array(bufferLength);
+    };
 
     const playSong = (index) => {
         if (index < 0 || index >= albums.length) return;
+        
+        // --- Initialize AudioContext on user interaction ---
+        if (!audioContext) {
+            setupAudioContext();
+        }
         
         const song = albums[index];
         if (song.sampleUrl) {
@@ -597,6 +639,7 @@ function initializeApp() {
             if (isPlaying) {
                 audioPlayer.pause();
             } else {
+                if (!audioContext) setupAudioContext(); // Ensure context is ready
                 audioPlayer.play();
             }
         } else if (albums.length > 0) {
@@ -913,15 +956,19 @@ function initializeApp() {
 
     audioPlayer.addEventListener('play', () => {
         isPlaying = true;
+        faviconAnimationActive = true;
         playerPlayPauseBtn.innerHTML = pauseIcon;
         updatePlayingUI();
-        requestAnimationFrame(updateProgress);
+        requestAnimationFrame(animationLoop);
     });
 
     audioPlayer.addEventListener('pause', () => {
         isPlaying = false;
+        faviconAnimationActive = false;
+        faviconLink.href = originalFavicon;
         playerPlayPauseBtn.innerHTML = playIcon;
         updatePlayingUI();
+        visualizerCtx.clearRect(0, 0, visualizerCanvas.width, visualizerCanvas.height); // Clear visualizer
     });
     
     audioPlayer.addEventListener('ended', () => {
@@ -941,10 +988,65 @@ function initializeApp() {
             playerProgressBar.style.width = `${progress}%`;
             playerCurrentTimeEl.textContent = formatTime(audioPlayer.currentTime);
         }
-    
-        if (isPlaying) {
-            requestAnimationFrame(updateProgress);
+    };
+
+    // --- New Feature: Main Animation Loop ---
+    const animationLoop = () => {
+        if (!isPlaying && !faviconAnimationActive) return;
+        
+        updateProgress();
+        
+        if (audioContext && isPlaying) {
+            analyser.getByteFrequencyData(dataArray);
+            drawVisualizer();
+            if (faviconAnimationActive) {
+                drawFavicon();
+            }
         }
+        
+        requestAnimationFrame(animationLoop);
+    };
+
+    // --- New Feature: Draw Player Visualizer ---
+    const drawVisualizer = () => {
+        visualizerCtx.clearRect(0, 0, visualizerCanvas.width, visualizerCanvas.height);
+
+        const barWidth = (visualizerCanvas.width / bufferLength) * 1.5;
+        let x = 0;
+        const primaryColor = getComputedStyle(document.documentElement).getPropertyValue('--primary-color');
+
+        for (let i = 0; i < bufferLength; i++) {
+            const barHeight = (dataArray[i] / 255) * visualizerCanvas.height;
+            visualizerCtx.fillStyle = primaryColor;
+            visualizerCtx.fillRect(x, visualizerCanvas.height - barHeight, barWidth, barHeight);
+            x += barWidth + 1; // Add 1 for spacing
+        }
+    };
+
+    // --- New Feature: Draw Animated Favicon ---
+    const drawFavicon = () => {
+        faviconCtx.clearRect(0, 0, 64, 64);
+        
+        if (baseFaviconImg.complete) {
+             faviconCtx.drawImage(baseFaviconImg, 0, 0, 64, 64);
+        }
+
+        const primaryColor = getComputedStyle(document.documentElement).getPropertyValue('--primary-color');
+        faviconCtx.fillStyle = primaryColor;
+        
+        // Draw 3 simple bars in the bottom-right corner
+        const barWidth = 8;
+        const spacing = 4;
+        const totalBarsWidth = (3 * barWidth) + (2 * spacing);
+        let x = 64 - totalBarsWidth - 4;
+
+        for (let i = 0; i < 3; i++) {
+            const barHeight = (dataArray[i * 4] / 255) * 24 + 4; // Scale and offset
+            faviconCtx.fillRect(x, 64 - barHeight - 4, barWidth, barHeight);
+            x += barWidth + spacing;
+        }
+
+        faviconLink.href = faviconCanvas.toDataURL('image/png');
     };
 
     audioPlayer.addEventListener('loadedmetadata', () => {
