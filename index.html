@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+
     <title>x08 | Official Site</title>
     <meta name="description" content="The official website and music portfolio for the artist x08.">
-    <meta name="theme-color" content="#000000"/>
+    <meta name="theme-color" content="#000000" />
 
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://x08.app/">
@@ -30,9 +31,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
-
-    <script src="/_vercel/insights/script.js" defer></script>
 </head>
+
 <body data-theme="dark">
 
     <div id="preloader">
@@ -44,12 +44,14 @@
                         <stop offset="100%" style="stop-color:var(--logo-gradient-end)" />
                     </linearGradient>
                     <clipPath id="loader-clip">
-                        <rect x="0" y="0" width="200" height="50" class="clip-rect"/>
+                        <rect x="0" y="0" width="200" height="50" class="clip-rect" />
                     </clipPath>
                 </defs>
-                <text id="loader-text-base" class="logo-outline" x="10" y="40" font-family="'Roboto Mono', monospace" font-size="46" font-weight="700">x08</text>
+                <text id="loader-text-base" class="logo-outline" x="10" y="40" font-family="'Roboto Mono', monospace"
+                    font-size="46" font-weight="700">x08</text>
                 <g clip-path="url(#loader-clip)">
-                    <text id="loader-text-fill" x="10" y="40" font-family="'Roboto Mono', monospace" font-size="46" font-weight="700" fill="url(#logo-gradient-loader)">x08</text>
+                    <text id="loader-text-fill" x="10" y="40" font-family="'Roboto Mono', monospace" font-size="46"
+                        font-weight="700" fill="url(#logo-gradient-loader)">x08</text>
                     <g class="glitch-layers">
                         <use href="#loader-text-fill" class="glitch-layer-1" fill="var(--secondary-color)" />
                         <use href="#loader-text-fill" class="glitch-layer-2" fill="var(--tertiary-color)" />
@@ -64,7 +66,8 @@
 
     <header class="header">
         <div class="logo-container">
-            <svg class="artist-logo" viewBox="0 0 200 50" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="x08 Logo">
+            <svg class="artist-logo" viewBox="0 0 200 50" xmlns="http://www.w3.org/2000/svg" role="img"
+                aria-label="x08 Logo">
                 <defs>
                     <linearGradient id="logo-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
                         <stop offset="0%" style="stop-color:var(--logo-gradient-start)" />
@@ -72,23 +75,26 @@
                     </linearGradient>
                     <filter id="displacement-filter">
                         <feTurbulence type="fractalNoise" baseFrequency="0.02 0.2" numOctaves="1" result="turbulence" />
-                        <feDisplacementMap in="SourceGraphic" in2="turbulence" scale="3" xChannelSelector="R" yChannelSelector="G" />
+                        <feDisplacementMap in="SourceGraphic" in2="turbulence" scale="3" xChannelSelector="R"
+                            yChannelSelector="G" />
                     </filter>
                 </defs>
 
                 <g class="logo-base">
-                    <text id="logo-text" x="10" y="40" font-family="'Roboto Mono', monospace" font-size="46" font-weight="700" fill="url(#logo-gradient)">x08</text>
+                    <text id="logo-text" x="10" y="40" font-family="'Roboto Mono', monospace" font-size="46"
+                        font-weight="700" fill="url(#logo-gradient)">x08</text>
                 </g>
-                
+
                 <g class="glitch-layers">
                     <use href="#logo-text" class="glitch-layer-1" fill="var(--secondary-color)" />
                     <use href="#logo-text" class="glitch-layer-2" fill="var(--tertiary-color)" />
-                    <use href="#logo-text" class="glitch-layer-3" fill="url(#logo-gradient)" filter="url(#displacement-filter)" />
+                    <use href="#logo-text" class="glitch-layer-3" fill="url(#logo-gradient)"
+                        filter="url(#displacement-filter)" />
                 </g>
             </svg>
         </div>
         <nav class="social-links">
-             <button class="social-links-more-btn"><i class="fas fa-chevron-right"></i></button>
+            <button class="social-links-more-btn"><i class="fas fa-chevron-right"></i></button>
         </nav>
         <div class="header-controls">
             <button class="share-button"><i class="fas fa-share-alt"></i></button>
@@ -114,12 +120,14 @@
             <h2 class="section-title">Featured</h2>
             <div class="featured-songs-slider">
                 <div class="featured-songs-container" id="featured-songs"></div>
-                <button class="slider-btn prev-btn" aria-label="Previous featured song"><i class="fas fa-chevron-left"></i></button>
-                <button class="slider-btn next-btn" aria-label="Next featured song"><i class="fas fa-chevron-right"></i></button>
+                <button class="slider-btn prev-btn" aria-label="Previous featured song"><i
+                        class="fas fa-chevron-left"></i></button>
+                <button class="slider-btn next-btn" aria-label="Next featured song"><i
+                        class="fas fa-chevron-right"></i></button>
                 <div class="slider-pagination"></div>
             </div>
         </section>
-        
+
         <section class="content-section" id="upcoming-releases-section">
             <h2 class="section-title">Upcoming</h2>
             <div class="upcoming-releases-container" id="upcoming-releases"></div>
@@ -142,7 +150,7 @@
         <div class="player-content">
             <img id="player-album-art" src="" alt="Album Art" class="player-album-art" crossorigin="anonymous">
             <div class="player-info">
-                 <div class="player-title-visualizer">
+                <div class="player-title-visualizer">
                     <span id="player-song-title">No song selected</span>
                     <canvas id="audio-visualizer"></canvas>
                 </div>
@@ -166,7 +174,7 @@
         </div>
         <button id="player-close-btn" class="player-close-btn"><i class="fas fa-times"></i></button>
     </div>
-    
+
     <div id="links-modal" class="modal-overlay">
         <div class="modal-content">
             <button class="modal-close-btn">×</button>
@@ -184,11 +192,21 @@
             </div>
         </div>
     </div>
-    
+
     <div class="cursor-dot"></div>
     <div class="cursor-outline"></div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/color-thief/2.3.0/color-thief.umd.js"></script>
     <script type="module" src="/script.js"></script>
+
+    <script>
+        window.si = window.si || function () { (window.siq = window.siq || []).push(arguments); };
+    </script>
+    <script defer src="/_vercel/speed-insights/script.js"></script>
+    <script>
+        window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+    </script>
+    <script defer src="/_vercel/insights/script.js"></script>
 </body>
+
 </html>
