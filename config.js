@@ -2585,7 +2585,7 @@ So give me somethin worth fightin for
         img: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26Z6m5kw1OB1fRJhWxUj4stF6wIcQdoXPZCbYH',
         sampleUrl: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG260t6bqOzeiVaUXveObDkhncLG8TBRgqxIrfHj',
         releaseDate: '2025-08-28',
-        musicVideoId: '',
+        musicVideoId: 'GIgLTLrvGA0',
         lyrics: `
 Circuitry hummin, static in my head
 A ghost in the machine, haunting all I've said
