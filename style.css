@@ -314,7 +314,7 @@ body::before {
     border: none;
     color: var(--text-color);
     font-size: 1.2rem;
-    cursor: pointer;
+    cursor: none;
     transition: transform 0.3s ease, color 0.3s ease;
     padding: 5px;
 }
@@ -355,7 +355,7 @@ body::before {
     border: none;
     color: var(--text-color);
     font-size: 1.5rem;
-    cursor: pointer;
+    cursor: none;
     transition: color 0.3s ease, transform 0.3s ease;
     display: none;
 }
@@ -380,7 +380,7 @@ body::before {
     height: 32px;
     border-radius: 16px;
     background-color: #2c2c54;
-    cursor: pointer;
+    cursor: none;
     transition: background-color 0.5s ease;
     display: flex;
     align-items: center;
@@ -584,7 +584,7 @@ body::before {
     border: none;
     color: var(--text-color);
     font-size: 1.2rem;
-    cursor: pointer;
+    cursor: none;
     transition: color 0.3s ease, transform 0.3s ease;
     width: 24px;
     height: 24px;
@@ -636,7 +636,7 @@ body::before {
     border: none;
     color: var(--text-color);
     font-size: 1.2rem;
-    cursor: pointer;
+    cursor: none;
     transition: color 0.3s ease, transform 0.3s ease;
 }
 
@@ -720,7 +720,7 @@ body::before {
     border: none;
     color: var(--text-color);
     font-size: 1.5rem;
-    cursor: pointer;
+    cursor: none;
     transition: color 0.3s ease, transform 0.3s ease;
 }
 
@@ -832,7 +832,7 @@ body::before {
     height: 5px;
     background-color: rgba(var(--text-dark), 0.2);
     border-radius: 5px;
-    cursor: pointer;
+    cursor: none;
     position: relative;
 }
 
@@ -889,7 +889,7 @@ body::before {
     border: none;
     color: var(--text-color);
     font-size: 1.5rem;
-    cursor: pointer;
+    cursor: none;
     transition: color 0.3s ease, transform 0.3s ease, text-shadow 0.3s ease;
 }
 
@@ -920,7 +920,7 @@ body::before {
     border: none;
     color: var(--text-color);
     font-size: 1.2rem;
-    cursor: pointer;
+    cursor: none;
     transition: color 0.3s ease, transform 0.3s ease;
 }
 
@@ -997,7 +997,7 @@ body::before {
     width: 40px;
     height: 40px;
     border-radius: 50%;
-    cursor: pointer;
+    cursor: none;
     transition: all 0.3s ease;
     z-index: 5;
     display: flex;
@@ -1035,7 +1035,7 @@ body::before {
     height: 10px;
     border-radius: 50%;
     background-color: rgba(255, 255, 255, 0.3);
-    cursor: pointer;
+    cursor: none;
     transition: background-color 0.3s ease, transform 0.3s ease;
 }
 .pagination-dot.active {
@@ -1293,7 +1293,7 @@ body::before {
     width: 60px;
     height: 60px;
     border-radius: 50%;
-    cursor: pointer;
+    cursor: none;
     font-size: 1.5rem;
     transition: all 0.3s ease;
     display: inline-flex;
@@ -1333,7 +1333,7 @@ body::before {
     width: 50px;
     height: 50px;
     border-radius: 50%;
-    cursor: pointer;
+    cursor: none;
     font-size: 1.2rem;
     transition: all 0.3s ease;
     display: inline-flex;
@@ -1394,7 +1394,7 @@ body::before {
     border-radius: 50%;
     border: none;
     color: var(--text-color);
-    cursor: pointer;
+    cursor: none;
     transition: all 0.3s, background-color 0.5s ease, color 0.5s ease;
     display: flex;
     justify-content: center;
