@@ -1,0 +1,8 @@
+{
+  "rewrites": [
+    {
+      "source": "/song/:slug",
+      "destination": "/api/song/:slug"
+    }
+  ]
+}

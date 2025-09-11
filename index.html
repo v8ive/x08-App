@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>x08 | Official Site</title>
+    <meta name="description" content="The official website and music portfolio for the artist x08.">
+    <meta name="theme-color" content="#000000"/>
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://x08.app/">
+    <meta property="og:title" content="x08 | Official Site">
+    <meta property="og:description" content="The official website and music portfolio for the artist x08.">
+    <meta property="og:image" content="https://x08.app/icons/x08_x_512.png">
+
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://x08.app/">
+    <meta property="twitter:title" content="x08 | Official Site">
+    <meta property="twitter:description" content="The official website and music portfolio for the artist x08.">
+    <meta property="twitter:image" content="https://x08.app/icons/x08_x_512.png">
+
+    <link rel="manifest" href="/manifest.json">
+    <link rel="apple-touch-icon" href="/icons/x08_x_192.png">
+    <link rel="icon" href="/icons/x08_x_48.png" type="image/png">
+
+    <link rel="stylesheet" href="/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+</head>
+<body data-theme="dark">
+
+    <div class="background-animation"></div>
+
+    <header class="header">
+        <div class="logo-container">
+            <svg class="artist-logo" viewBox="0 0 200 50" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="x08 Logo">
+                <defs>
+                    <linearGradient id="logo-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" style="stop-color:var(--logo-gradient-start)" />
+                        <stop offset="100%" style="stop-color:var(--logo-gradient-end)" />
+                    </linearGradient>
+                    <filter id="displacement-filter">
+                        <feTurbulence type="fractalNoise" baseFrequency="0.02 0.2" numOctaves="1" result="turbulence" />
+                        <feDisplacementMap in="SourceGraphic" in2="turbulence" scale="3" xChannelSelector="R" yChannelSelector="G" />
+                    </filter>
+                </defs>
+
+                <g class="logo-base">
+                    <text id="logo-text" x="10" y="40" font-family="'Roboto Mono', monospace" font-size="46" font-weight="700" fill="url(#logo-gradient)">x08</text>
+                </g>
+                
+                <g class="glitch-layers">
+                    <use href="#logo-text" class="glitch-layer-1" fill="var(--secondary-color)" />
+                    <use href="#logo-text" class="glitch-layer-2" fill="var(--tertiary-color)" />
+                    <use href="#logo-text" class="glitch-layer-3" fill="url(#logo-gradient)" filter="url(#displacement-filter)" />
+                </g>
+            </svg>
+        </div>
+        <nav class="social-links">
+             <button class="social-links-more-btn"><i class="fas fa-chevron-right"></i></button>
+        </nav>
+        <div class="header-controls">
+            <button class="share-button"><i class="fas fa-share-alt"></i></button>
+            <div class="theme-toggle">
+                <input type="checkbox" id="theme-toggle-checkbox">
+                <label for="theme-toggle-checkbox" class="toggle-label">
+                    <span class="toggle-handle">
+                        <i class="fas fa-moon moon-icon"></i>
+                        <i class="fas fa-sun sun-icon"></i>
+                    </span>
+                </label>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <section class="content-section" id="latest-release-section">
+            <h2 class="section-title">Latest</h2>
+            <div class="latest-release-container" id="latest-release"></div>
+        </section>
+
+        <section class="content-section" id="featured-songs-section">
+            <h2 class="section-title">Featured</h2>
+            <div class="featured-songs-slider">
+                <div class="featured-songs-container" id="featured-songs"></div>
+                <button class="slider-btn prev-btn" aria-label="Previous featured song"><i class="fas fa-chevron-left"></i></button>
+                <button class="slider-btn next-btn" aria-label="Next featured song"><i class="fas fa-chevron-right"></i></button>
+                <div class="slider-pagination"></div>
+            </div>
+        </section>
+        
+        <section class="content-section" id="upcoming-releases-section">
+            <h2 class="section-title">Upcoming</h2>
+            <div class="upcoming-releases-container" id="upcoming-releases"></div>
+        </section>
+
+        <section class="content-section">
+            <div class="discography-header">
+                <h2 class="section-title">Discography</h2>
+                <div class="search-container">
+                    <input type="text" id="search-bar" placeholder="Search for a song...">
+                    <i class="fas fa-search search-icon"></i>
+                </div>
+            </div>
+            <div class="album-list" id="album-list"></div>
+        </section>
+    </main>
+    <div id="song-page" class="song-page"></div>
+
+    <div class="global-player" id="global-player">
+        <div class="player-content">
+            <img id="player-album-art" src="" alt="Album Art" class="player-album-art" crossorigin="anonymous">
+            <div class="player-info">
+                <span id="player-song-title">No song selected</span>
+                <div class="progress-container">
+                    <div class="progress-bar-bg">
+                        <div id="player-progress-bar" class="progress-bar">
+                            <div class="progress-handle"></div>
+                        </div>
+                    </div>
+                    <div class="time-display">
+                        <span id="player-current-time">0:00</span> / <span id="player-duration">0:00</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="player-controls">
+            <button id="player-prev-btn" class="control-btn"><i class="fas fa-backward-step"></i></button>
+            <button id="player-play-pause-btn" class="control-btn play-btn"><i class="fas fa-play"></i></button>
+            <button id="player-next-btn" class="control-btn"><i class="fas fa-forward-step"></i></button>
+            <button id="player-info-btn" class="control-btn"><i class="fas fa-info-circle"></i></button>
+        </div>
+        <button id="player-close-btn" class="player-close-btn"><i class="fas fa-times"></i></button>
+    </div>
+    
+    <div id="links-modal" class="modal-overlay">
+        <div class="modal-content">
+            <button class="modal-close-btn">×</button>
+            <h3 id="modal-title"></h3>
+            <div class="modal-links" id="modal-links">
+            </div>
+        </div>
+    </div>
+
+    <div id="social-modal" class="modal-overlay">
+        <div class="modal-content">
+            <button class="modal-close-btn" data-modal="social">×</button>
+            <h3>Follow x08</h3>
+            <div class="modal-links" id="social-modal-links">
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/color-thief/2.3.0/color-thief.umd.js"></script>
+    <script type="module" src="/script.js"></script>
+</body>
+</html>
