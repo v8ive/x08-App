@@ -15,7 +15,7 @@ function initializeApp() {
 
     if ('serviceWorker' in navigator) {
         window.addEventListener('load', () => {
-            navigator.serviceWorker.register('/service-worker-v2.js')
+            navigator.serviceWorker.register('/sw.js')
                 .then(registration => {
                     console.log('ServiceWorker registration successful with scope: ', registration.scope);
                 })
@@ -187,11 +187,12 @@ function initializeApp() {
             .filter(album => !album.comingSoon)
             .sort((a, b) => new Date(b.releaseDate) - new Date(a.releaseDate));
         
-        sortedAlbums.forEach((album) => {
+        sortedAlbums.forEach((album, index) => {
             const originalIndex = albums.indexOf(album);
             const albumItem = document.createElement('div');
-            albumItem.classList.add('album-item');
+            albumItem.classList.add('album-item', 'reveal-on-scroll');
             albumItem.dataset.index = originalIndex;
+            albumItem.style.setProperty('--stagger-index', index);
 
             albumItem.innerHTML = `
                 <img src="${album.img}" alt="${album.title}" class="album-item-img">
@@ -380,7 +381,7 @@ function initializeApp() {
         upcoming.forEach(song => {
             const originalIndex = albums.indexOf(song);
             const upcomingItem = document.createElement('div');
-            upcomingItem.classList.add('album-item', 'coming-soon-item');
+            upcomingItem.classList.add('album-item', 'coming-soon-item', 'reveal-on-scroll');
             upcomingItem.dataset.index = originalIndex;
 
             upcomingItem.innerHTML = `
@@ -651,6 +652,7 @@ function initializeApp() {
         const searchTerm = e.target.value.toLowerCase();
         const filteredAlbums = albums.filter(album => album.title.toLowerCase().includes(searchTerm));
         renderAlbums(filteredAlbums);
+        setupScrollAnimations(); // Re-apply animations to new elements
     });
 
     const updateMetaTags = (song) => {
@@ -1043,6 +1045,64 @@ function initializeApp() {
         handleRouting();
     });
 
+    const setupCursorFollower = () => {
+        const cursorDot = document.querySelector('.cursor-dot');
+        const cursorOutline = document.querySelector('.cursor-outline');
+
+        window.addEventListener('mousemove', e => {
+            const posX = e.clientX;
+            const posY = e.clientY;
+
+            cursorDot.style.left = `${posX}px`;
+            cursorDot.style.top = `${posY}px`;
+
+            cursorOutline.animate({
+                left: `${posX}px`,
+                top: `${posY}px`
+            }, { duration: 500, fill: "forwards" });
+        });
+
+        const interactiveElements = document.querySelectorAll('a, button, .album-item, .toggle-label, .slider-btn, .pagination-dot, .progress-bar-bg, .artist-logo');
+        interactiveElements.forEach(el => {
+            el.addEventListener('mouseenter', () => {
+                cursorDot.classList.add('hovered');
+                cursorOutline.classList.add('hovered');
+            });
+            el.addEventListener('mouseleave', () => {
+                cursorDot.classList.remove('hovered');
+                cursorOutline.classList.remove('hovered');
+            });
+        });
+        
+        document.body.addEventListener('mouseenter', () => {
+             document.body.classList.add('cursor-visible');
+        });
+        document.body.addEventListener('mouseleave', () => {
+             document.body.classList.remove('cursor-visible');
+        });
+    };
+
+    const setupScrollAnimations = () => {
+        const observer = new IntersectionObserver((entries, observerInstance) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    setTimeout(() => {
+                         entry.target.classList.add('is-visible');
+                    }, 200);
+                    observerInstance.unobserve(entry.target);
+                }
+            });
+        }, {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        });
+
+        const elementsToReveal = document.querySelectorAll('.section-title, .latest-release-container, .featured-songs-slider, .upcoming-releases-container, .discography-header, .album-item');
+        elementsToReveal.forEach(el => {
+            observer.observe(el);
+        });
+    };
+
     populateHeaderSocialLinks();
     renderLatestRelease();
     renderFeaturedSongs();
@@ -1050,4 +1110,9 @@ function initializeApp() {
     renderAlbums();
     handleRouting();
     playerInfoBtn.disabled = true;
+    
+    setupCursorFollower();
+    
+    document.querySelectorAll('.section-title, .latest-release-container, .featured-songs-slider, #upcoming-releases-section > .section-title, .discography-header').forEach(el => el.classList.add('reveal-on-scroll'));
+    setupScrollAnimations();
 }

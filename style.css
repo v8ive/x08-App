@@ -1,6 +1,7 @@
 :root {
     /* Base colors */
     --primary-color: #8A2BE2; /* BlueViolet */
+    --primary-color-rgb: 138, 43, 226; /* For RGBA usage */
     --secondary-color: #FF1493; /* DeepPink */
     --tertiary-color: #00FFFF; /* Aqua */
     --font-color-hover: #ffffff; /* New hover color */
@@ -445,16 +446,10 @@ body::before {
     width: 100%;
 }
 
-@keyframes fade-in {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
-}
-
 .content-section {
     width: 100%;
     max-width: 1200px;
     margin-bottom: 2rem;
-    animation: fade-in 1s ease-out;
 }
 
 .content-section:last-child {
@@ -1601,6 +1596,77 @@ body::before {
     gap: 1rem;
 }
 
+/* --- New Animations --- */
+.reveal-on-scroll {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275), transform 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.reveal-on-scroll.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.album-list .reveal-on-scroll.is-visible {
+    transition-delay: calc(0.05s * var(--stagger-index));
+}
+
+/* --- Custom Cursor --- */
+.cursor-dot,
+.cursor-outline {
+    pointer-events: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    border-radius: 50%;
+    opacity: 0;
+    z-index: 9999;
+    mix-blend-mode: difference;
+}
+
+.cursor-dot {
+    width: 8px;
+    height: 8px;
+    background-color: #fff;
+    transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.cursor-outline {
+    width: 40px;
+    height: 40px;
+    background-color: rgba(255,255,255,0.5);
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275),
+                width 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275),
+                height 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275),
+                background-color 0.3s ease;
+}
+
+body.cursor-visible .cursor-dot,
+body.cursor-visible .cursor-outline {
+    opacity: 1;
+}
+
+.cursor-outline.hovered {
+    width: 60px;
+    height: 60px;
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.cursor-dot.hovered {
+    transform: scale(0.5);
+}
+
+@media (pointer: fine) {
+    * {
+        cursor: none;
+    }
+}
+@media (pointer: coarse) {
+    .cursor-dot, .cursor-outline {
+        display: none;
+    }
+}
 
 @media (max-width: 1024px) {
     .logo-container {
