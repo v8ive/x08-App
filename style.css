@@ -173,7 +173,7 @@ body::before {
 .artist-logo {
     width: 150px;
     height: auto;
-    cursor: pointer;
+    cursor: none;
     overflow: visible;
 }
 
