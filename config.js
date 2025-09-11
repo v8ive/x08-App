@@ -969,7 +969,7 @@ I will always be here, for you
         img: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26ylRx6Cv1Tw7IV4aBQufbXpRO5Cq8tPmDj6EL',
         sampleUrl: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26YtIUODXAManfEe8bSVkQ7spTtxljwD092mNg',
         releaseDate: '2025-09-04',
-        musicVideoId: '',
+        musicVideoId: 'bbuOHPY8TsY',
         lyrics: `
 Call you axiom, the proof I can't write
 A ghost in the latency, distorting the light
@@ -1029,7 +1029,7 @@ The singular point where the parallels meet
         img: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26QC1JXPzoM8SACIiW5pUfY9tElHOeJLFRdv06',
         sampleUrl: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26xiT7nTCNM6ks1ZDpjtWmiXdSgQzR5G4CvOlT',
         releaseDate: '2025-09-02',
-        musicVideoId: '',
+        musicVideoId: 'SWPd-2600kM',
         lyrics: `
 The quiet in this room is deafening, it just screams your name
 A four-walled echo chamber for my shame
@@ -1112,7 +1112,7 @@ Let me be true...
         img: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26YRBVolXAManfEe8bSVkQ7spTtxljwD092mNg',
         sampleUrl: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26eWGMmPhljdzVa9bI85fYTvRsJU6CeGcExWO0',
         releaseDate: '2025-09-01',
-        musicVideoId: '',
+        musicVideoId: 'dEY_XqyDle8',
         lyrics: `
 Call you enemy, a face in the crowd
 Read your energy, thinking out loud
@@ -1237,7 +1237,7 @@ Let zero now become the one
         img: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26Jr9geP3VEdDqYTHMQCzhUkp9vIs03i6wtlGn',
         sampleUrl: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26JJWRTM3VEdDqYTHMQCzhUkp9vIs03i6wtlGn',
         releaseDate: '2025-08-29',
-        musicVideoId: '',
+        musicVideoId: 's86Alp3xzco',
         lyrics: `
 The way you walked in here tonight
 A little bit of swagger, a little moonlight
@@ -1323,7 +1323,7 @@ That Midas touch..
         img: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26MWnBJVq5T6rVEfbykaYWq7X2jPm30G8ShwlD',
         sampleUrl: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26RtiOdj0VTG26lngCRWazFoOsdcMpxH34jv1S',
         releaseDate: '2025-08-28',
-        musicVideoId: '',
+        musicVideoId: 'xIXA-EDw3_g',
         lyrics: `
 Through the window
 See the snow is fallin'
@@ -1399,7 +1399,7 @@ Connected to you
         img: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26imBF1MwDyfjPz12pXE4CFbcVMJHsm75wkOud',
         sampleUrl: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26AOnwGSpr7tFhmgB0d4A9xY1bS5iN6HuqZTRv',
         releaseDate: '2025-08-29',
-        musicVideoId: '',
+        musicVideoId: 'YctI4CNwCYw',
         lyrics: `
 I can feel it in the air tonight
 A static charge, a dangerous delight
@@ -1474,7 +1474,7 @@ There's no escape, there's no way
         img: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26Rh8p1KG0VTG26lngCRWazFoOsdcMpxH34jv1',
         sampleUrl: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG2601bgRYeiVaUXveObDkhncLG8TBRgqxIrfHj3',
         releaseDate: '2025-08-29',
-        musicVideoId: '',
+        musicVideoId: 'H8J_aC4EC-c',
         lyrics: `
 (Yeah)
 Temperature risin'
