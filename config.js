@@ -187,7 +187,7 @@ Zoom zoom, say goodbye
         img: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26A0OLhdpr7tFhmgB0d4A9xY1bS5iN6HuqZTRv',
         sampleUrl: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG263mFJFUVHcydCQhnKD5zUpboAWOSLmIBerul8',
         releaseDate: '2025-09-09',
-        musicVideoId: '8IFO_VeJKWk',
+        musicVideoId: 'dPOvIJN96tY',
         lyrics: `
 (アッパー、アッパー、アッパー) [Up, Up, Up]
 (もっと高く) [Take me higher]
