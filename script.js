@@ -1,12 +1,7 @@
+import { social_links, albums } from '/config.js';
+
 document.addEventListener('DOMContentLoaded', () => {
-    const configScript = document.createElement('script');
-    configScript.src = `/config.js?v=${new Date().getTime()}`;
-    
-    configScript.onload = () => {
-        initializeApp();
-    };
-    
-    document.head.appendChild(configScript);
+    initializeApp();
 });
 
 function initializeApp() {
@@ -20,7 +15,7 @@ function initializeApp() {
 
     if ('serviceWorker' in navigator) {
         window.addEventListener('load', () => {
-            navigator.serviceWorker.register('/sw.js')
+            navigator.serviceWorker.register('/service-worker-v2.js')
                 .then(registration => {
                     console.log('ServiceWorker registration successful with scope: ', registration.scope);
                 })
