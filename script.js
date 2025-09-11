@@ -84,6 +84,7 @@ function initializeApp() {
     let isSeeking = false;
     const colorThief = new ColorThief();
     let currentPalette = [];
+    let featuredSliderAutoplayInterval;
 
     // --- New Feature: Audio Visualizer & Dynamic Favicon Variables ---
     const visualizerCanvas = document.getElementById('audio-visualizer');
@@ -143,6 +144,16 @@ function initializeApp() {
             timeout = setTimeout(() => func.apply(context, args), delay);
         };
     };
+    
+    const updateURL = (type, searchTerm) => {
+        const currentPath = window.location.pathname;
+        let newUrl = currentPath;
+        if (searchTerm) {
+            newUrl += `?search=${encodeURIComponent(searchTerm)}`;
+        }
+        history.pushState({ page: type, search: searchTerm }, '', newUrl);
+    };
+    const debouncedUpdateURL = debounce(updateURL, 300);
 
     const createSocialLinkElement = (url, iconClass, text, platformClass) => {
         const linkElement = document.createElement('a');
@@ -175,7 +186,7 @@ function initializeApp() {
             'iHeartRadio': { url: social_links.iheart, icon: 'fa-solid fa-radio', class: 'iheart' },
             'Pandora': { url: social_links.pandora, icon: 'fab fa-pandora', class: 'pandora' }
         };
-
+    
         let delay = 0;
         for (const [platform, data] of Object.entries(platforms)) {
             if (data.url) {
@@ -185,13 +196,13 @@ function initializeApp() {
                 delay += 0.05;
             }
         }
-
+    
         socialsToggleBtn.addEventListener('click', () => {
             const isActive = socialsDropdown.classList.contains('active');
             socialsToggleBtn.classList.toggle('active', !isActive);
             socialsDropdown.classList.toggle('active', !isActive);
             socialsToggleBtn.setAttribute('aria-expanded', !isActive);
-    
+        
             if (window.innerWidth <= 768) {
                 document.body.style.overflow = !isActive ? 'hidden' : '';
             }
@@ -338,9 +349,13 @@ function initializeApp() {
 
     const setupFeaturedSlider = () => {
         const slider = document.querySelector('.featured-songs-slider');
+        if (!slider) return;
+
+        clearInterval(featuredSliderAutoplayInterval);
+
         const container = slider.querySelector('.featured-songs-container');
-        const prevBtn = slider.querySelector('.prev-btn');
-        const nextBtn = slider.querySelector('.next-btn');
+        let prevBtn = slider.querySelector('.prev-btn');
+        let nextBtn = slider.querySelector('.next-btn');
         const paginationContainer = slider.querySelector('.slider-pagination');
         
         let songs = Array.from(container.children);
@@ -349,9 +364,13 @@ function initializeApp() {
         if (songCount <= 1) {
             prevBtn.classList.add('hidden');
             nextBtn.classList.add('hidden');
-            songs[0]?.classList.add('active');
+            if (songs[0]) songs[0].classList.add('active');
             container.style.justifyContent = 'center';
             return;
+        } else {
+            prevBtn.classList.remove('hidden');
+            nextBtn.classList.remove('hidden');
+            container.style.justifyContent = '';
         }
 
         const cloneFirst = songs[0].cloneNode(true);
@@ -362,9 +381,9 @@ function initializeApp() {
         songs = Array.from(container.children);
         let currentIndex = 1;
         let isTransitioning = false;
-        let autoplayInterval;
     
         const updateSliderPosition = (instant = false) => {
+            if (!songs[0]) return;
             const itemWidth = songs[0].offsetWidth;
             const offset = (slider.clientWidth / 2) - (itemWidth / 2) - (currentIndex * itemWidth);
             
@@ -421,15 +440,24 @@ function initializeApp() {
             resetAutoplay();
         };
     
+        const stopAutoplay = () => clearInterval(featuredSliderAutoplayInterval);
         const startAutoplay = () => {
             stopAutoplay();
-            autoplayInterval = setInterval(() => moveTo(1), 5000);
+            featuredSliderAutoplayInterval = setInterval(() => moveTo(1), 5000);
         };
-        const stopAutoplay = () => clearInterval(autoplayInterval);
         const resetAutoplay = () => {
             stopAutoplay();
             startAutoplay();
         };
+        
+        // Clone and replace buttons to remove old event listeners
+        const newPrevBtn = prevBtn.cloneNode(true);
+        prevBtn.parentNode.replaceChild(newPrevBtn, prevBtn);
+        prevBtn = newPrevBtn;
+
+        const newNextBtn = nextBtn.cloneNode(true);
+        nextBtn.parentNode.replaceChild(newNextBtn, nextBtn);
+        nextBtn = newNextBtn;
         
         prevBtn.addEventListener('click', () => moveTo(-1));
         nextBtn.addEventListener('click', () => moveTo(1));
@@ -536,7 +564,7 @@ function initializeApp() {
         const allVideos = filteredVideos || albums.filter(song => song.musicVideoId);
         videoCount.textContent = `(${allVideos.length})`;
 
-        if (allVideos.length === 0) {
+        if (allVideos.length === 0 && !isFullPage) {
             videoSection.style.display = 'none';
             return;
         }
@@ -1314,9 +1342,9 @@ function initializeApp() {
     });
     
     const handleRouting = (isPushState = false) => {
-        if (isPushState) {
+        setTimeout(() => {
             window.scrollTo(0, 0);
-        }
+        }, 0);
 
         const path = window.location.pathname;
         const params = new URLSearchParams(window.location.search);
