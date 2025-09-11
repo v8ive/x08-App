@@ -73,6 +73,7 @@ function initializeApp() {
     let isPlaying = false;
     let isSeeking = false;
     const colorThief = new ColorThief();
+    let currentPalette = [];
 
     // --- New Feature: Audio Visualizer & Dynamic Favicon Variables ---
     const visualizerCanvas = document.getElementById('audio-visualizer');
@@ -569,12 +570,11 @@ function initializeApp() {
         return topColors;
     };
 
-    // --- New Feature: Initialize Web Audio API for Visualizer ---
     const setupAudioContext = () => {
         if (audioContext) return;
         audioContext = new (window.AudioContext || window.webkitAudioContext)();
         analyser = audioContext.createAnalyser();
-        analyser.fftSize = 128; // Number of samples for FFT
+        analyser.fftSize = 256;
         sourceNode = audioContext.createMediaElementSource(audioPlayer);
         
         sourceNode.connect(analyser);
@@ -587,7 +587,6 @@ function initializeApp() {
     const playSong = (index) => {
         if (index < 0 || index >= albums.length) return;
         
-        // --- Initialize AudioContext on user interaction ---
         if (!audioContext) {
             setupAudioContext();
         }
@@ -610,13 +609,13 @@ function initializeApp() {
             tempImg.onload = () => {
                 try {
                     const palette = colorThief.getPalette(tempImg, 8);
-                    const vibrantPalette = getVibrantPalette(palette);
+                    currentPalette = getVibrantPalette(palette);
 
-                    if (vibrantPalette && vibrantPalette.length >= 3) {
-                        document.body.style.setProperty('--aurora-color-1', `rgb(${vibrantPalette[0].join(',')})`);
-                        document.body.style.setProperty('--aurora-color-2', `rgb(${vibrantPalette[1].join(',')})`);
-                        document.body.style.setProperty('--aurora-color-3', `rgb(${vibrantPalette[2].join(',')})`);
-                        document.body.style.setProperty('--primary-color', rgbToHex(vibrantPalette[0][0], vibrantPalette[0][1], vibrantPalette[0][2]));
+                    if (currentPalette && currentPalette.length >= 3) {
+                        document.body.style.setProperty('--aurora-color-1', `rgb(${currentPalette[0].join(',')})`);
+                        document.body.style.setProperty('--aurora-color-2', `rgb(${currentPalette[1].join(',')})`);
+                        document.body.style.setProperty('--aurora-color-3', `rgb(${currentPalette[2].join(',')})`);
+                        document.body.style.setProperty('--primary-color', rgbToHex(currentPalette[0][0], currentPalette[0][1], currentPalette[0][2]));
                     }
 
                 } catch (e) {
@@ -625,6 +624,7 @@ function initializeApp() {
                     document.body.style.removeProperty('--aurora-color-2');
                     document.body.style.removeProperty('--aurora-color-3');
                     document.body.style.removeProperty('--primary-color');
+                    currentPalette = [];
                 }
             };
             updateAlbumArtGlow();
@@ -990,7 +990,6 @@ function initializeApp() {
         }
     };
 
-    // --- New Feature: Main Animation Loop ---
     const animationLoop = () => {
         if (!isPlaying && !faviconAnimationActive) return;
         
@@ -1007,45 +1006,60 @@ function initializeApp() {
         requestAnimationFrame(animationLoop);
     };
 
-    // --- New Feature: Draw Player Visualizer ---
     const drawVisualizer = () => {
         visualizerCtx.clearRect(0, 0, visualizerCanvas.width, visualizerCanvas.height);
-
-        const barWidth = (visualizerCanvas.width / bufferLength) * 1.5;
+    
+        const barWidth = 3;
+        const gap = 2;
+        const numBars = Math.floor(visualizerCanvas.width / (barWidth + gap));
         let x = 0;
-        const primaryColor = getComputedStyle(document.documentElement).getPropertyValue('--primary-color');
-
-        for (let i = 0; i < bufferLength; i++) {
-            const barHeight = (dataArray[i] / 255) * visualizerCanvas.height;
-            visualizerCtx.fillStyle = primaryColor;
+    
+        const gradient = visualizerCtx.createLinearGradient(0, 0, 0, visualizerCanvas.height);
+        if (currentPalette && currentPalette.length >= 2) {
+            gradient.addColorStop(0, `rgb(${currentPalette[0].join(',')})`);
+            gradient.addColorStop(1, `rgb(${currentPalette[1].join(',')})`);
+        } else {
+            const primaryColor = getComputedStyle(document.documentElement).getPropertyValue('--primary-color');
+            const secondaryColor = getComputedStyle(document.documentElement).getPropertyValue('--secondary-color');
+            gradient.addColorStop(0, primaryColor);
+            gradient.addColorStop(1, secondaryColor);
+        }
+        visualizerCtx.fillStyle = gradient;
+    
+        for (let i = 0; i < numBars; i++) {
+            const dataIndex = Math.floor(i * (bufferLength / numBars));
+            const barHeight = (dataArray[dataIndex] / 255) * visualizerCanvas.height;
+    
             visualizerCtx.fillRect(x, visualizerCanvas.height - barHeight, barWidth, barHeight);
-            x += barWidth + 1; // Add 1 for spacing
+            x += barWidth + gap;
         }
     };
 
-    // --- New Feature: Draw Animated Favicon ---
     const drawFavicon = () => {
         faviconCtx.clearRect(0, 0, 64, 64);
         
         if (baseFaviconImg.complete) {
              faviconCtx.drawImage(baseFaviconImg, 0, 0, 64, 64);
         }
-
-        const primaryColor = getComputedStyle(document.documentElement).getPropertyValue('--primary-color');
+    
+        const primaryColor = (currentPalette && currentPalette.length > 0) 
+            ? `rgb(${currentPalette[0].join(',')})` 
+            : getComputedStyle(document.documentElement).getPropertyValue('--primary-color');
+        
         faviconCtx.fillStyle = primaryColor;
         
-        // Draw 3 simple bars in the bottom-right corner
         const barWidth = 8;
         const spacing = 4;
         const totalBarsWidth = (3 * barWidth) + (2 * spacing);
         let x = 64 - totalBarsWidth - 4;
-
+    
         for (let i = 0; i < 3; i++) {
-            const barHeight = (dataArray[i * 4] / 255) * 24 + 4; // Scale and offset
+            const dataIndex = Math.floor(i * (bufferLength / 4));
+            const barHeight = (dataArray[dataIndex] / 255) * 24 + 4;
             faviconCtx.fillRect(x, 64 - barHeight - 4, barWidth, barHeight);
             x += barWidth + spacing;
         }
-
+    
         faviconLink.href = faviconCanvas.toDataURL('image/png');
     };
 
@@ -1156,13 +1170,20 @@ function initializeApp() {
             const posX = e.clientX;
             const posY = e.clientY;
 
+            // The dot always follows the cursor instantly.
             cursorDot.style.left = `${posX}px`;
             cursorDot.style.top = `${posY}px`;
+
+            const isHovered = cursorOutline.classList.contains('hovered');
+            
+            // When hovered over an interactive element, the animation duration is 0 for an instant "snap" effect, providing direct feedback.
+            // Otherwise, it's 500ms for a smooth, trailing animation.
+            const animationDuration = isHovered ? 0 : 500;
 
             cursorOutline.animate({
                 left: `${posX}px`,
                 top: `${posY}px`
-            }, { duration: 500, fill: "forwards" });
+            }, { duration: animationDuration, fill: "forwards" });
         });
 
         const interactiveElements = document.querySelectorAll('a, button, .album-item, .toggle-label, .slider-btn, .pagination-dot, .progress-bar-bg');

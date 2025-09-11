@@ -22,37 +22,58 @@ export default async function handler(request, response) {
         const siteDefaults = {
             title: 'x08 | Official Site',
             description: 'The official website and music portfolio for the artist x08.',
-            url: 'https://x08.app', // Your actual domain
+            url: 'https://x08.app',
             image: 'https://x08.app/icons/x08_x_512.png',
         };
 
-        let title, description, url, image;
-
         if (song) {
-            title = `${song.title} | x08`;
-            description = song.comingSoon 
-                ? `Listen to "${song.title}" by x08. Releasing soon.`
-                : `Listen to "${song.title}" by x08.`;
-            url = `${siteDefaults.url}/song/${slug}`;
-            image = song.img;
-        } else {
-            ({ title, description, url, image } = siteDefaults);
-            url = siteDefaults.url;
+            const songTitle = song.title;
+            const description = song.comingSoon 
+                ? `Check out the upcoming release "${songTitle}" by x08.`
+                : `Listen to "${songTitle}" by x08. Released on ${new Date(song.releaseDate).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}.`;
+            const url = `${siteDefaults.url}/song/${slug}`;
+            const image = song.img;
+            const themeColor = '#8A2BE2'; // Brand color for embeds
+
+            const metaValues = {
+                'title': `${songTitle} | x08`,
+                'description': description,
+                'theme-color': themeColor,
+                'og:title': songTitle,
+                'og:description': description,
+                'og:url': url,
+                'og:image': image,
+                'og:type': 'music.song',
+                'og:site_name': 'x08',
+                'twitter:title': songTitle,
+                'twitter:description': description,
+                'twitter:url': url,
+                'twitter:image': image,
+            };
+
+            // Replace existing tags with dynamic content
+            for (const property in metaValues) {
+                const content = metaValues[property];
+                if (property === 'title') {
+                    html = html.replace(/<title>.*?<\/title>/, `<title>${content}</title>`);
+                } else {
+                    const propRegex = new RegExp(`(<meta (?:property|name)="${property}" content=").*?(")`);
+                    html = html.replace(propRegex, `$1${content}$2`);
+                }
+            }
+
+            // Inject new tags for rich music embeds
+            let newTags = '';
+            if (song.sampleUrl) {
+                newTags += `\n    <meta property="og:audio" content="${song.sampleUrl}">\n    <meta property="og:audio:type" content="audio/mpeg">`;
+            }
+            newTags += `\n    <meta property="music:musician" content="${siteDefaults.url}">`;
+            
+            if (newTags) {
+                html = html.replace('</head>', `${newTags}\n</head>`);
+            }
         }
-
-        // Use regex to replace the content of the meta tags
-        html = html.replace(/<title>.*?<\/title>/, `<title>${title}</title>`);
-        html = html.replace(/(<meta name="description" content=").*?(")/, `$1${description}$2`);
-        html = html.replace(/(<meta property="og:title" content=").*?(")/, `$1${title}$2`);
-        html = html.replace(/(<meta property="og:description" content=").*?(")/, `$1${description}$2`);
-        html = html.replace(/(<meta property="og:url" content=").*?(")/, `$1${url}$2`);
-        html = html.replace(/(<meta property="og:image" content=").*?(")/, `$1${image}$2`);
-        html = html.replace(/(<meta property="twitter:title" content=").*?(")/, `$1${title}$2`);
-        html = html.replace(/(<meta property="twitter:description" content=").*?(")/, `$1${description}$2`);
-        html = html.replace(/(<meta property="twitter:url" content=").*?(")/, `$1${url}$2`);
-        html = html.replace(/(<meta property="twitter:image" content=").*?(")/, `$1${image}$2`);
         
-
         response.setHeader('Content-Type', 'text/html');
         return response.status(200).send(html);
 
