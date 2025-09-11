@@ -187,7 +187,7 @@ Zoom zoom, say goodbye
         img: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26A0OLhdpr7tFhmgB0d4A9xY1bS5iN6HuqZTRv',
         sampleUrl: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG263mFJFUVHcydCQhnKD5zUpboAWOSLmIBerul8',
         releaseDate: '2025-09-09',
-        musicVideoId: '',
+        musicVideoId: '8IFO_VeJKWk',
         lyrics: `
 (アッパー、アッパー、アッパー) [Up, Up, Up]
 (もっと高く) [Take me higher]
@@ -255,7 +255,7 @@ Zoom zoom, say goodbye
         img: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26dxAg45c96fubmdXljgVxIziBRvO3epWKEYHA',
         sampleUrl: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26tNOMweJkjDBCMmQoV7wYxsHiU5aZgXJFnp1A',
         releaseDate: '2025-09-09',
-        musicVideoId: '',
+        musicVideoId: 'NiLloTibaXM',
         lyrics: `
 三星、二星、一星 (3 stars, 2 stars, 1 star)
 (行くぞ！) [Let's go!]
@@ -322,7 +322,7 @@ Zoom zoom, say goodbye
         img: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26JKqYp1q3VEdDqYTHMQCzhUkp9vIs03i6wtlG',
         sampleUrl: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG266kszWb9ONVrinuc7y2S3wYXLkeDvdTgHfFMt',
         releaseDate: '2025-09-09',
-        musicVideoId: '',
+        musicVideoId: 'lwcP_YLkj-0',
         lyrics: `
 きらめく街 (A glittering city)
 あなたの瞳 (In your eyes)
