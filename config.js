@@ -776,7 +776,7 @@ Don't let it be game over.
         featured: true,
         comingSoon: true,
         title: 'Something More',
-        img: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26VORr3EKhZ3lfAdH74paeyis2b6OrFuKQjtgI',
+        img: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26pmo7GynRBwFTAs2kpzjJdaNlu6P75f3qicGS',
         sampleUrl: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26OfBRWRF3RHdJKAI9VWrEkqTNy87gzP4cuoCs',
         releaseDate: '',
         musicVideoId: '',
