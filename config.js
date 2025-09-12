@@ -379,8 +379,8 @@ Zoom zoom, say goodbye
         title: 'Omnia Ab Uno',
         img: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26YoL07TCXAManfEe8bSVkQ7spTtxljwD092mN',
         sampleUrl: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26V6lw6htKhZ3lfAdH74paeyis2b6OrFuKQjtg',
-        releaseDate: '',
-        musicVideoId: '',
+        releaseDate: '2025-09-11',
+        musicVideoId: 'xXwmzg4S4VM',
         lyrics: `
 There was a king on a throne in a kingdom of none
 Just a singular thought before the world had begun
@@ -450,9 +450,9 @@ Returning and knowing
 We're all going home now... the circle is closing.
         `,
         links: [
-            { platform: 'Spotify', url: '', icon: 'fab fa-spotify' },
-            { platform: 'YouTube Music', url: '', icon: 'fab fa-youtube' },
-            { platform: 'SoundCloud', url: '', icon: 'fab fa-soundcloud' },
+            { platform: 'Spotify', url: 'https://open.spotify.com/track/6TtLltJOWd4d7boFZkENDK', icon: 'fab fa-spotify' },
+            { platform: 'YouTube Music', url: 'https://music.youtube.com/watch?v=1qTmoNcUywM', icon: 'fab fa-youtube' },
+            { platform: 'SoundCloud', url: 'https://soundcloud.com/x0zero8eight/omnia-ab-uno', icon: 'fab fa-soundcloud' },
             { platform: 'Tidal', url: '', icon: 'fa-brands fa-tidal' },
             { platform: 'Apple Music', url: '', icon: 'fa-brands fa-itunes-note' },
             { platform: 'Amazon Music', url: '', icon: 'fab fa-amazon' },
