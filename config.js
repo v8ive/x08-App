@@ -33,6 +33,65 @@ export const albums = [
     //     ]
     // },
 
+    // Рваный (Torn)
+    {
+        featured: true,
+        comingSoon: true,
+        title: 'Рваный',
+        img: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG260tq9JIfeiVaUXveObDkhncLG8TBRgqxIrfHj',
+        sampleUrl: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26pfXcaBnRBwFTAs2kpzjJdaNlu6P75f3qicGS',
+        releaseDate: '',
+        musicVideoId: '',
+        lyrics: `
+Серый город, в горле ком (Gray city, lump in throat)
+На губах застыла соль (Salt frozen on lips)
+Под ногами битый хром (Broken chrome underfoot)
+И в груди тупая боль (Dull pain in chest)
+
+Душа на части, всё к чертям (Soul in pieces, all to hell)
+Я рваный, сука, пополам (I'm torn, bitch, in half)
+Твои слова — дешёвый яд (Your words are cheap poison)
+И нет дороги, блядь, назад (And there's no fucking way back)
+
+Помню запах. Дым и лёд (I remember the smell. Smoke and ice)
+Кто из нас кому-то врёт? (Who of us is lying to whom?)
+Пальцы вмёрзли в телефон (Fingers frozen into the phone)
+Пустота со всех сторон (Emptiness on all sides)
+
+Душа на части, всё к чертям (Soul in pieces, all to hell)
+Я рваный, сука, пополам (I'm torn, bitch, in half)
+Твои слова — дешёвый яд (Your words are cheap poison)
+И нет дороги, блядь, назад (And there's no fucking way back)
+
+Собрать осколки нету сил (I don't have the strength to collect the pieces)
+Я сам себя похоронил (I buried myself)
+В этом холоде пустом (In this empty cold)
+Наш финал — пустой перрон (Our finale is an empty platform)
+
+Душа на части, всё к чертям (Soul in pieces, all to hell)
+(Всё к чертям) (Everything to hell)
+Я рваный, сука, пополам (I'm torn, bitch, in half)
+(Пополам) (In half)
+Твои слова — дешёвый яд (Your words are cheap poison)
+И нет дороги, блядь, назад (And there's no fucking way back)
+
+Рваный... просто рваный... (Torn... just torn...)
+Пополам... (In half...)
+(К чертям) (To hell)
+Нахуй всё. (Fuck everything.)
+        `,
+        links: [
+            { platform: 'Spotify', url: '', icon: 'fab fa-spotify' },
+            { platform: 'YouTube Music', url: '', icon: 'fab fa-youtube' },
+            { platform: 'SoundCloud', url: '', icon: 'fab fa-soundcloud' },
+            { platform: 'Tidal', url: '', icon: 'fa-brands fa-tidal' },
+            { platform: 'Apple Music', url: '', icon: 'fa-brands fa-itunes-note' },
+            { platform: 'Amazon Music', url: '', icon: 'fab fa-amazon' },
+            { platform: 'iHeartRadio', url: '', icon: 'fa-solid fa-radio' },
+            { platform: 'Pandora', url: '', icon: 'fab fa-pandora' }
+        ]
+    },
+
     // あなたの負け (Your Loss)
     {
         featured: true,
