@@ -108,7 +108,7 @@ export const albums = [
         ]
     },
 
-    // ズーム！ズーム！ (Zoom! Zoom!) **NEEDS APPLE MUSIC LINK**
+    // ズーム！ズーム！ (Zoom! Zoom!)
     {
         featured: true,
         comingSoon: false,
@@ -172,14 +172,14 @@ Zoom zoom, say goodbye
             { platform: 'YouTube Music', url: 'https://music.youtube.com/watch?v=kxwYHYRHjYc&list=OLAK5uy_ntJCsHAxq0WdTJQnBZIgn_a_k7XrGIpeA', icon: 'fab fa-youtube' },
             { platform: 'SoundCloud', url: 'https://soundcloud.com/x0zero8eight/zoom-zoom', icon: 'fab fa-soundcloud' },
             { platform: 'Tidal', url: 'https://tidal.com/browse/track/459624487/u', icon: 'fa-brands fa-tidal' },
-            { platform: 'Apple Music', url: 'https://music.apple.com/us/artist/x08/1835855543', icon: 'fa-brands fa-itunes-note' },
+            { platform: 'Apple Music', url: 'https://music.apple.com/us/song/%E3%82%BA%E3%83%BC%E3%83%A0-%E3%82%BA%E3%83%BC%E3%83%A0/1839168225', icon: 'fa-brands fa-itunes-note' },
             { platform: 'Amazon Music', url: 'https://music.amazon.com/tracks/B0FQHQLP2B?marketplaceId=ATVPDKIKX0DER&musicTerritory=US&ref=dm_sh_p5YCv4XQ4esJL9L2UXitTYmtB', icon: 'fab fa-amazon' },
             { platform: 'iHeartRadio', url: 'https://www.iheart.com/artist/x08-47869013/songs/-349415946/', icon: 'fa-solid fa-radio' },
             { platform: 'Pandora', url: 'https://www.pandora.com/artist/x08/zu-mu-zu-mu/zu-mu-zu-mu/TR2Knt7vZtxd6dg', icon: 'fab fa-pandora' }
         ]
     },
 
-    // もっと高くへ連れてって (Take Me Higher) **NEEDS APPLE MUSIC LINK**
+    // もっと高くへ連れてって (Take Me Higher)
     {
         featured: true,
         comingSoon: false,
@@ -240,14 +240,14 @@ Zoom zoom, say goodbye
             { platform: 'YouTube Music', url: 'https://music.youtube.com/watch?v=r8uzOyRxHsw', icon: 'fab fa-youtube' },
             { platform: 'SoundCloud', url: 'https://soundcloud.com/x0zero8eight/take-me-higher', icon: 'fab fa-soundcloud' },
             { platform: 'Tidal', url: 'https://tidal.com/browse/track/459634296/u', icon: 'fa-brands fa-tidal' },
-            { platform: 'Apple Music', url: 'https://music.apple.com/us/artist/x08/1835855543', icon: 'fa-brands fa-itunes-note' },
+            { platform: 'Apple Music', url: 'https://music.apple.com/us/song/%E3%82%82%E3%81%A3%E3%81%A8%E9%AB%98%E3%81%8F%E9%80%A3%E3%82%8C%E3%81%A6%E8%A1%8C%E3%81%A3%E3%81%A6/1839158301', icon: 'fa-brands fa-itunes-note' },
             { platform: 'Amazon Music', url: 'https://music.amazon.com/tracks/B0FQJ7RYXT?marketplaceId=ATVPDKIKX0DER&musicTerritory=US&ref=dm_sh_pV4h1zifZSdIEiZf45cTAsXWr', icon: 'fab fa-amazon' },
             { platform: 'iHeartRadio', url: 'https://www.iheart.com/artist/x08-47869013/songs/-349424117/', icon: 'fa-solid fa-radio' },
             { platform: 'Pandora', url: 'https://www.pandora.com/artist/x08/motsutogao-kulian-retexing-tsute/motsutogao-kulian-retexing-tsute/TRmgpPd3zpctw7c', icon: 'fab fa-pandora' }
         ]
     },
 
-    // プレイ！プレイ！プレイ！ (Play! Play! Play!) **NEEDS APPLE MUSIC LINK**
+    // プレイ！プレイ！プレイ！ (Play! Play! Play!)
     {
         featured: true,
         comingSoon: false,
@@ -307,14 +307,14 @@ Zoom zoom, say goodbye
             { platform: 'YouTube Music', url: 'https://music.youtube.com/watch?v=dXca5ZfSrYE', icon: 'fab fa-youtube' },
             { platform: 'SoundCloud', url: 'https://soundcloud.com/x0zero8eight/play-play-play', icon: 'fab fa-soundcloud' },
             { platform: 'Tidal', url: 'https://tidal.com/browse/track/459634586/u', icon: 'fa-brands fa-tidal' },
-            { platform: 'Apple Music', url: 'https://music.apple.com/us/artist/x08/1835855543', icon: 'fa-brands fa-itunes-note' },
+            { platform: 'Apple Music', url: 'https://music.apple.com/us/song/%E3%83%97%E3%83%AC%E3%82%A4-%E3%83%97%E3%83%AC%E3%82%A4-%E3%83%97%E3%83%AC%E3%82%A4/1839320998', icon: 'fa-brands fa-itunes-note' },
             { platform: 'Amazon Music', url: 'https://music.amazon.com/tracks/B0FQHGLXTF?marketplaceId=ATVPDKIKX0DER&musicTerritory=US&ref=dm_sh_K9PuMX6rPDaPvVht1o6Qi89hX', icon: 'fab fa-amazon' },
             { platform: 'iHeartRadio', url: 'https://www.iheart.com/artist/x08-47869013/songs/-349424082/', icon: 'fa-solid fa-radio' },
             { platform: 'Pandora', url: 'https://www.pandora.com/artist/x08/purei-purei-purei/purei-purei-purei/TRJmlKj5Vr9g376', icon: 'fab fa-pandora' }
         ]
     },
 
-    // 甘いメロディ (A Sweet Melody) **NEEDS APPLE MUSIC LINK**
+    // 甘いメロディ (A Sweet Melody)
     {
         featured: true,
         comingSoon: false,
@@ -365,7 +365,7 @@ Zoom zoom, say goodbye
             { platform: 'YouTube Music', url: 'https://music.youtube.com/watch?v=VCHgmz_rMK4', icon: 'fab fa-youtube' },
             { platform: 'SoundCloud', url: 'https://soundcloud.com/x0zero8eight/a-sweet-melody', icon: 'fab fa-soundcloud' },
             { platform: 'Tidal', url: 'https://tidal.com/browse/track/459634301/u', icon: 'fa-brands fa-tidal' },
-            { platform: 'Apple Music', url: 'https://music.apple.com/us/artist/x08/1835855543', icon: 'fa-brands fa-itunes-note' },
+            { platform: 'Apple Music', url: 'https://music.apple.com/us/song/%E7%94%98%E3%81%84%E3%83%A1%E3%83%AD%E3%83%87%E3%82%A3/1839158293', icon: 'fa-brands fa-itunes-note' },
             { platform: 'Amazon Music', url: 'https://music.amazon.com/tracks/B0FQHZJ8H3?marketplaceId=ATVPDKIKX0DER&musicTerritory=US&ref=dm_sh_gp8jMTLuC1v0etNGQsqfZZdcD', icon: 'fab fa-amazon' },
             { platform: 'iHeartRadio', url: 'https://www.iheart.com/artist/x08-47869013/songs/-349424109/', icon: 'fa-solid fa-radio' },
             { platform: 'Pandora', url: 'https://www.pandora.com/artist/x08/gan-imerodei/gan-imerodei/TR73cV4mXxlxkb2', icon: 'fab fa-pandora' }
@@ -374,8 +374,8 @@ Zoom zoom, say goodbye
 
     // Omnia Ab Uno
     {
-        featured: true,
-        comingSoon: true,
+        featured: false,
+        comingSoon: false,
         title: 'Omnia Ab Uno',
         img: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26YoL07TCXAManfEe8bSVkQ7spTtxljwD092mN',
         sampleUrl: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26V6lw6htKhZ3lfAdH74paeyis2b6OrFuKQjtg',
@@ -453,15 +453,15 @@ We're all going home now... the circle is closing.
             { platform: 'Spotify', url: 'https://open.spotify.com/track/6TtLltJOWd4d7boFZkENDK', icon: 'fab fa-spotify' },
             { platform: 'YouTube Music', url: 'https://music.youtube.com/watch?v=1qTmoNcUywM', icon: 'fab fa-youtube' },
             { platform: 'SoundCloud', url: 'https://soundcloud.com/x0zero8eight/omnia-ab-uno', icon: 'fab fa-soundcloud' },
-            { platform: 'Tidal', url: '', icon: 'fa-brands fa-tidal' },
-            { platform: 'Apple Music', url: '', icon: 'fa-brands fa-itunes-note' },
-            { platform: 'Amazon Music', url: '', icon: 'fab fa-amazon' },
-            { platform: 'iHeartRadio', url: '', icon: 'fa-solid fa-radio' },
-            { platform: 'Pandora', url: '', icon: 'fab fa-pandora' }
+            { platform: 'Tidal', url: 'https://tidal.com/browse/track/460174016/u', icon: 'fa-brands fa-tidal' },
+            { platform: 'Apple Music', url: 'https://music.apple.com/us/song/omnia-ab-uno/1839656484', icon: 'fa-brands fa-itunes-note' },
+            { platform: 'Amazon Music', url: 'https://music.amazon.com/tracks/B0FQWRYPV9?marketplaceId=ATVPDKIKX0DER&musicTerritory=US&ref=dm_sh_QY5qO7HbaneXwGDckM0JOKSoN', icon: 'fab fa-amazon' },
+            { platform: 'iHeartRadio', url: 'https://www.iheart.com/artist/x08-47869013/songs/omnia-ab-uno-349865619/', icon: 'fa-solid fa-radio' },
+            { platform: 'Pandora', url: 'https://www.pandora.com/artist/x08/omnia-ab-uno/omnia-ab-uno/TRzJj77KJjcl5b2', icon: 'fab fa-pandora' }
         ]
     },
 
-    // HGFS
+    // HGFS [Coming Soon]
     {
         featured: true,
         comingSoon: true,
@@ -534,7 +534,7 @@ You know I can't be tamed
         ]
     },
 
-    // Nocturnal
+    // Nocturnal [Coming Soon]
     {
         featured: true,
         comingSoon: true,
@@ -625,7 +625,7 @@ Always... back to play.
         ]
     },
 
-    // Blind
+    // Blind [Coming Soon]
     {
         featured: true,
         comingSoon: true,
@@ -697,7 +697,7 @@ I should be seeing
         ]
     },
 
-    // One Life
+    // One Life [Coming Soon]
     {
         featured: true,
         comingSoon: true,
@@ -774,12 +774,12 @@ Don't let it be game over.
     // Something More
     {
         featured: true,
-        comingSoon: true,
+        comingSoon: false,
         title: 'Something More',
         img: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26pmo7GynRBwFTAs2kpzjJdaNlu6P75f3qicGS',
         sampleUrl: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26OfBRWRF3RHdJKAI9VWrEkqTNy87gzP4cuoCs',
-        releaseDate: '',
-        musicVideoId: '',
+        releaseDate: '2025-09-11',
+        musicVideoId: 'OLC7RTLxOLQ',
         lyrics: `
 Streetlight halos
 Familiar shadow
@@ -835,18 +835,18 @@ Something more
 Something more
         `,
         links: [
-            { platform: 'Spotify', url: '', icon: 'fab fa-spotify' },
-            { platform: 'YouTube Music', url: '', icon: 'fab fa-youtube' },
-            { platform: 'SoundCloud', url: '', icon: 'fab fa-soundcloud' },
-            { platform: 'Tidal', url: '', icon: 'fa-brands fa-tidal' },
+            { platform: 'Spotify', url: 'https://open.spotify.com/track/0P2tTG0fYKPwsHPBa1SqPw', icon: 'fab fa-spotify' },
+            { platform: 'YouTube Music', url: 'https://music.youtube.com/watch?v=1wDUbBbM6lM', icon: 'fab fa-youtube' },
+            { platform: 'SoundCloud', url: 'https://soundcloud.com/x0zero8eight/something-more', icon: 'fab fa-soundcloud' },
+            { platform: 'Tidal', url: 'https://tidal.com/browse/track/460381230/u', icon: 'fa-brands fa-tidal' },
             { platform: 'Apple Music', url: '', icon: 'fa-brands fa-itunes-note' },
             { platform: 'Amazon Music', url: '', icon: 'fab fa-amazon' },
-            { platform: 'iHeartRadio', url: '', icon: 'fa-solid fa-radio' },
-            { platform: 'Pandora', url: '', icon: 'fab fa-pandora' }
+            { platform: 'iHeartRadio', url: 'https://www.iheart.com/artist/x08-47869013/songs/something-more-350001446/', icon: 'fa-solid fa-radio' },
+            { platform: 'Pandora', url: 'https://www.pandora.com/artist/x08/something-more/something-more/TRhJfgbpjbtZxgP?part=ug-desktop&corr=200697158100332643', icon: 'fab fa-pandora' }
         ]
     },
 
-    // Pixel Heartbeat
+    // Pixel Heartbeat [Coming Soon]
     {
         featured: true,
         comingSoon: true,
