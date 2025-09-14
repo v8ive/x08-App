@@ -33,6 +33,60 @@ export const albums = [
     //     ]
     // },
 
+    // Ночь в огне (Night on Fire)
+    {
+        featured: true,
+        comingSoon: true,
+        title: 'Ночь в огне',
+        img: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26t9G9EnJkjDBCMmQoV7wYxsHiU5aZgXJFnp1A',
+        sampleUrl: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26Mfp0Vjq5T6rVEfbykaYWq7X2jPm30G8ShwlD',
+        releaseDate: '',
+        musicVideoId: '',
+        lyrics: `
+На коже – иней слов. (Frost of words on the skin)
+Впиваюсь в твой излом, (I bite into your fracture)
+Дышу у самых основ. (Breathe at the very foundations)
+(Я больше не готов) (I'm not ready anymore)
+
+Ночь в огне, ты моя сука, (Night on fire, you're my bitch)
+Каждый стон – блядская наука. (Every moan is fucking science.)
+Губы жгут, твоя рука (Lips burn, your hand)
+Давит так, что дрожат бока. (Presses so hard that my sides tremble.)
+
+По спине – холодный ток, (A cold current runs down my back,)
+С губ срывается комок (A lump of)
+Жарких, блядских, диких слов. (Hot, fucking, wild words comes out of my lips.)
+Ты мой плен, моя любовь. (You are my captivity, my love.)
+
+Ночь в огне, ты моя сука, (Night on fire, you're my bitch)
+Каждый стон – блядская наука. (Every moan is fucking science.)
+Губы жгут, твоя рука (Lips burn, your hand)
+Давит так, что дрожат бока. (Presses so hard that my sides tremble.)
+
+Утро режет по глазам, (Morning cuts my eyes,)
+Я тебя им не отдам. (I won't give you to them.)
+(Никому) (To no one)
+Мир снаружи – просто хлам, (The world outside is just trash,)
+Я сломаю пополам. (I'll break it in half.)
+
+Ночь в огне, ты моя сука, (Night on fire, you're my bitch)
+(Моя сука) (My bitch)
+Каждый стон – блядская наука. (Every moan is fucking science.)
+Губы жгут, твоя рука (Lips burn, your hand)
+Давит так, что дрожат бока. (Presses so hard that my sides tremble.)
+        `,
+        links: [
+            { platform: 'Spotify', url: '', icon: 'fab fa-spotify' },
+            { platform: 'YouTube Music', url: '', icon: 'fab fa-youtube' },
+            { platform: 'SoundCloud', url: '', icon: 'fab fa-soundcloud' },
+            { platform: 'Tidal', url: '', icon: 'fa-brands fa-tidal' },
+            { platform: 'Apple Music', url: '', icon: 'fa-brands fa-itunes-note' },
+            { platform: 'Amazon Music', url: '', icon: 'fab fa-amazon' },
+            { platform: 'iHeartRadio', url: '', icon: 'fa-solid fa-radio' },
+            { platform: 'Pandora', url: '', icon: 'fab fa-pandora' }
+        ]
+    },
+
     // Рваный (Torn)
     {
         featured: true,
