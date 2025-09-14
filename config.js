@@ -33,6 +33,95 @@ export const albums = [
     //     ]
     // },
 
+    // всё забрать назад (Take it all back)
+    {
+        featured: true,
+        comingSoon: true,
+        title: 'всё забрать назад',
+        img: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26dDCiMrc96fubmdXljgVxIziBRvO3epWKEYHA',
+        sampleUrl: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG262z5SkOajRus0k5TxlaHtcGzAm4bP9VYv83Me',
+        releaseDate: '',
+        musicVideoId: '',
+        lyrics: `
+Тишина. (Silence.)
+В лёгких осел серый шлам. (A grey sludge has settled in the lungs.)
+Мы молчим по углам. (We are silent in the corners.)
+(По своим углам). (In our corners).
+
+Бронзовый всадник на площади спит, (The bronze horseman sleeps in the square,)
+Его пьедестал мхом гранитным покрыт. (His pedestal is covered with granite moss.)
+Под нами гудит вековой механизм, (Under us, the age-old mechanism hums,)
+Перемалывая жизни в скупой афоризм. (Grinding lives into a stingy aphorism.)
+Мы – поле седое, где вызрел бурьян, (We are a grey field where the weeds have ripened,)
+Каждый сам по себе, каждый в собственный пьян (Each on his own, each drunk in his own)
+Туман. Иконы роняют смолу. (Fog. Icons drop resin.)
+Мы ползём по стеклу. (We crawl on glass.)
+
+Но под кожей земли назревает разлом, (But under the skin of the earth, a rift is brewing,)
+Молодая кровь бьётся об этот заслон. (Young blood is beating against this barrier.)
+Слышишь гул? (Это не в проводах). (Do you hear the hum? (It's not in the wires).)
+Это ярость в зрачках. (This is the rage in the pupils.)
+
+Мы – новый прибой, разъедающий мол, (We are the new surf, corroding the pier,)
+Мы – соль этой почвы, мы – голый глагол. (We are the salt of this soil, we are the naked verb.)
+Смотрите, как ваши дворцы из песка (Watch as your palaces of sand)
+Смывает голодная наша тоска. (Wash away our hungry longing.)
+Нам не нужен ваш трон, ваш просроченный яд, (We don't need your throne, your expired poison,)
+Мы просто пришли забрать всё назад. (We just came to take it all back.)
+(Назад, назад, всё забрать назад). (Back, back, take it all back).
+
+Ваши флаги истлели, ваш гимн – это хрип, (Your flags have rotted, your anthem is a wheeze,)
+Вы – папка «входящие», полная рип. (You are an inbox full of rip.)
+Вы чертите схемы на мёртвой воде, (You draw diagrams on dead water,)
+Но компас сломался, мы знаем где. (But the compass is broken, we know where.)
+Мы выросли в трещинах ваших дорог, (We grew up in the cracks of your roads,)
+Наш смех – это ваш несработавший бог. (Our laughter is your failed god.)
+Смола на иконах сменилась на гной. (Resin on the icons has changed to pus.)
+Идём за тобой. (We are following you.)
+
+Мы – новый прибой, разъедающий мол, (We are the new surf, corroding the pier,)
+Мы – соль этой почвы, мы – голый глагол. (We are the salt of this soil, we are the naked verb.)
+Смотрите, как ваши дворцы из песка (Watch as your palaces of sand)
+Смывает голодная наша тоска. (Wash away our hungry longing.)
+Нам не нужен ваш трон, ваш просроченный яд, (We don't need your throne, your expired poison,)
+Мы просто пришли забрать всё назад. (We just came to take it all back.)
+(Назад, назад, всё забрать назад). (Back, back, take it all back).
+
+Хватит спать, города. (Stop sleeping, cities.)
+Сбросьте пепел с ресниц. (Throw the ashes from your eyelashes.)
+Эта муть, эта ржа – (This turbidity, this rust -)
+Лишь преграда границ. (Just a barrier of borders.)
+Кровь стучит в проводах, (Blood knocks in the wires,)
+Созывая своих. (Calling their own.)
+Ваш панический страх – (Your panic fear -)
+Наш единственный стих. (Our only verse.)
+
+Мы – новый прибой, разъедающий мол, (We are the new surf, corroding the pier,)
+Мы – соль этой почвы, мы – голый глагол. (We are the salt of this soil, we are the naked verb.)
+Смотрите, как ваши дворцы из песка (Watch as your palaces of sand)
+Смывает голодная наша тоска. (Wash away our hungry longing.)
+Нам не нужен ваш трон, ваш просроченный яд, (We don't need your throne, your expired poison,)
+Мы просто пришли забрать всё назад. (We just came to take it all back.)
+(Назад, назад, всё забрать назад). (Back, back, take it all back).
+
+Забрать всё назад. (Take it all back.)
+(Слышишь?) (Do you hear?)
+Мы пришли. (We have come.)
+(Ты слышишь?) (Do you hear?)
+Забрать. (Take it.)
+        `,
+        links: [
+            { platform: 'Spotify', url: '', icon: 'fab fa-spotify' },
+            { platform: 'YouTube Music', url: '', icon: 'fab fa-youtube' },
+            { platform: 'SoundCloud', url: '', icon: 'fab fa-soundcloud' },
+            { platform: 'Tidal', url: '', icon: 'fa-brands fa-tidal' },
+            { platform: 'Apple Music', url: '', icon: 'fa-brands fa-itunes-note' },
+            { platform: 'Amazon Music', url: '', icon: 'fab fa-amazon' },
+            { platform: 'iHeartRadio', url: '', icon: 'fa-solid fa-radio' },
+            { platform: 'Pandora', url: '', icon: 'fab fa-pandora' }
+        ]
+    },
+
     // Ночь в огне (Night on Fire)
     {
         featured: true,
