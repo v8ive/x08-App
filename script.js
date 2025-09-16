@@ -44,6 +44,9 @@ function initializeApp() {
     const videoSearchBar = document.getElementById('video-search-bar');
     const discographyCount = document.getElementById('discography-count');
     const videoCount = document.getElementById('video-count');
+    const musicFiltersContainer = document.getElementById('music-active-filters');
+    const videoFiltersContainer = document.getElementById('video-active-filters');
+
 
     const linksModal = document.getElementById('links-modal');
     const socialModal = document.getElementById('social-modal');
@@ -110,6 +113,9 @@ function initializeApp() {
         image: 'https://x08.app/icons/x08_x_512.png',
         type: 'website'
     };
+    
+    let activeMusicFilters = [];
+    let activeVideoFilters = [];
 
     const ITEM_LIMIT = 8;
     const savedTheme = localStorage.getItem('theme') || 'dark';
@@ -133,14 +139,19 @@ function initializeApp() {
         };
     };
 
-    const updateURL = (type, searchTerm) => {
+    const updateURL = (type, searchTerm, filters) => {
         const currentPath = window.location.pathname;
-        let newUrl = currentPath;
+        const params = new URLSearchParams();
         if (searchTerm) {
-            newUrl += `?search=${encodeURIComponent(searchTerm)}`;
+            params.set('search', searchTerm);
         }
-        history.pushState({ page: type, search: searchTerm }, '', newUrl);
+        if (filters && filters.length > 0) {
+            params.set('filter', filters.join(','));
+        }
+        const newUrl = `${currentPath}${params.toString() ? `?${params.toString()}` : ''}`;
+        history.pushState({ page: type, search: searchTerm, filter: filters }, '', newUrl);
     };
+
     const debouncedUpdateURL = debounce(updateURL, 300);
 
     const createSocialLinkElement = (url, iconClass, text, platformClass) => {
@@ -235,38 +246,52 @@ function initializeApp() {
             return `Released ${yearsAgo} year${yearsAgo > 1 ? 's' : ''} ago`;
         }
     };
-
+    
     const createTagElement = (tagText, type, delay) => {
         const tagEl = document.createElement('div');
         tagEl.className = `song-tag ${type}-tag`;
         tagEl.textContent = tagText;
+        tagEl.dataset.tag = tagText.toLowerCase();
+        tagEl.dataset.type = type;
         tagEl.style.setProperty('--tag-delay', `${delay}s`);
         return tagEl;
     };
-
-    const renderAlbums = (filteredAlbums, isFullPage = false) => {
+    
+    const renderAlbums = (isFullPage = false) => {
+        const searchTerm = searchBar.value.toLowerCase();
+        let filteredAlbums = albums.filter(album => !album.comingSoon);
+    
+        if (searchTerm) {
+            filteredAlbums = filteredAlbums.filter(album => album.title.toLowerCase().includes(searchTerm));
+        }
+    
+        if (activeMusicFilters.length > 0) {
+            filteredAlbums = filteredAlbums.filter(album => {
+                const albumTags = [...(album.tags || []), ...(album.languages || [])].map(t => t.toLowerCase());
+                return activeMusicFilters.every(filter => albumTags.includes(filter));
+            });
+        }
+        
         albumList.innerHTML = '';
-        const allAlbums = filteredAlbums || albums.filter(album => !album.comingSoon);
-        discographyCount.textContent = `(${allAlbums.length})`;
-
-        const sortedAlbums = allAlbums.sort((a, b) => new Date(b.releaseDate) - new Date(a.releaseDate));
-
+        discographyCount.textContent = `(${filteredAlbums.length})`;
+    
+        const sortedAlbums = filteredAlbums.sort((a, b) => new Date(b.releaseDate) - new Date(a.releaseDate));
         const albumsToRender = isFullPage ? sortedAlbums : sortedAlbums.slice(0, ITEM_LIMIT);
-
+    
         albumsToRender.forEach((album, index) => {
             const originalIndex = albums.indexOf(album);
             const albumItem = document.createElement('div');
             albumItem.classList.add('album-item', 'reveal-on-scroll');
             albumItem.dataset.index = originalIndex;
             albumItem.style.setProperty('--stagger-index', index);
-
+    
             const tagsHtml = `
                 <div class="song-tags-container">
-                    ${(album.languages || []).map((lang, i) => `<div class="song-tag language-tag" style="--tag-delay: ${i * 0.1}s">${lang}</div>`).join('')}
-                    ${(album.tags || []).slice(0, 3).map((tag, i) => `<div class="song-tag genre-tag" style="--tag-delay: ${(i + (album.languages || []).length) * 0.1}s">${tag}</div>`).join('')}
+                    ${(album.languages || []).map((lang, i) => `<div class="song-tag language-tag" data-tag="${lang.toLowerCase()}" data-type="language" style="--tag-delay: ${i * 0.1}s">${lang}</div>`).join('')}
+                    ${(album.tags || []).slice(0, 3).map((tag, i) => `<div class="song-tag genre-tag" data-tag="${tag.toLowerCase()}" data-type="genre" style="--tag-delay: ${(i + (album.languages || []).length) * 0.1}s">${tag}</div>`).join('')}
                 </div>
             `;
-
+    
             albumItem.innerHTML = `
                 <img src="${album.img}" alt="${album.title}" class="album-item-img">
                 <div class="album-info">
@@ -284,7 +309,7 @@ function initializeApp() {
             `;
             albumList.appendChild(albumItem);
         });
-
+    
         const viewAllContainer = document.getElementById('discography-view-all-container');
         viewAllContainer.innerHTML = '';
         if (sortedAlbums.length > ITEM_LIMIT && !isFullPage) {
@@ -295,13 +320,12 @@ function initializeApp() {
             viewAllBtn.innerHTML = `<span>View All (${remaining} more) <i class="fas fa-arrow-right arrow-icon"></i></span>`;
             viewAllBtn.addEventListener('click', (e) => {
                 e.preventDefault();
-                const searchTerm = searchBar.value;
-                const url = searchTerm ? `/discography?search=${encodeURIComponent(searchTerm)}` : '/discography';
-                history.pushState({ page: 'discography', search: searchTerm }, '', url);
+                history.pushState({ page: 'discography', search: searchTerm, filter: activeMusicFilters }, '', '/discography');
                 handleRouting(true);
             });
             viewAllContainer.appendChild(viewAllBtn);
         }
+        setupScrollAnimations();
     };
     
     const renderArtistPicks = () => {
@@ -325,8 +349,8 @@ function initializeApp() {
 
             const tagsHtml = `
                 <div class="song-tags-container">
-                    ${(song.languages || []).map((lang, i) => `<div class="song-tag language-tag" style="--tag-delay: ${i * 0.1}s">${lang}</div>`).join('')}
-                    ${(song.tags || []).slice(0, 3).map((tag, i) => `<div class="song-tag genre-tag" style="--tag-delay: ${(i + (song.languages || []).length) * 0.1}s">${tag}</div>`).join('')}
+                    ${(song.languages || []).map((lang, i) => `<div class="song-tag language-tag" data-tag="${lang.toLowerCase()}" data-type="language" style="--tag-delay: ${i * 0.1}s">${lang}</div>`).join('')}
+                    ${(song.tags || []).slice(0, 3).map((tag, i) => `<div class="song-tag genre-tag" data-tag="${tag.toLowerCase()}" data-type="genre" style="--tag-delay: ${(i + (song.languages || []).length) * 0.1}s">${tag}</div>`).join('')}
                 </div>
             `;
 
@@ -373,22 +397,38 @@ function initializeApp() {
                 pickImg.addEventListener('load', setAnimationColor, { once: true });
             }
         });
+        
+        // After rendering, trigger scroll animations for elements that might already be in view
+        setupScrollAnimations();
     };
 
-    const renderVideoGallery = (filteredVideos, isFullPage = false) => {
+    const renderVideoGallery = (isFullPage = false) => {
+        const searchTerm = videoSearchBar.value.toLowerCase();
         const videoSection = document.getElementById('video-gallery-section');
+        let filteredVideos = albums.filter(song => song.musicVideoId);
+    
+        if (searchTerm) {
+            filteredVideos = filteredVideos.filter(video => video.title.toLowerCase().includes(searchTerm));
+        }
+    
+        if (activeVideoFilters.length > 0) {
+            filteredVideos = filteredVideos.filter(video => {
+                const videoTags = [...(video.tags || []), ...(video.languages || [])].map(t => t.toLowerCase());
+                return activeVideoFilters.every(filter => videoTags.includes(filter));
+            });
+        }
+    
         videoGalleryContainer.innerHTML = '';
-        const allVideos = filteredVideos || albums.filter(song => song.musicVideoId);
-        videoCount.textContent = `(${allVideos.length})`;
-
-        if (allVideos.length === 0 && !isFullPage) {
+        videoCount.textContent = `(${filteredVideos.length})`;
+    
+        if (filteredVideos.length === 0 && !isFullPage) {
             videoSection.style.display = 'none';
             return;
         }
         videoSection.style.display = 'block';
-
-        const videosToRender = isFullPage ? allVideos : allVideos.slice(0, ITEM_LIMIT);
-
+    
+        const videosToRender = isFullPage ? filteredVideos : filteredVideos.slice(0, ITEM_LIMIT);
+    
         videosToRender.forEach((video, index) => {
             const videoItem = document.createElement('div');
             videoItem.className = 'video-item reveal-on-scroll';
@@ -403,24 +443,23 @@ function initializeApp() {
             `;
             videoGalleryContainer.appendChild(videoItem);
         });
-
+    
         const viewAllContainer = document.getElementById('video-view-all-container');
         viewAllContainer.innerHTML = '';
-        if (allVideos.length > ITEM_LIMIT && !isFullPage) {
-            const remaining = allVideos.length - ITEM_LIMIT;
+        if (filteredVideos.length > ITEM_LIMIT && !isFullPage) {
+            const remaining = filteredVideos.length - ITEM_LIMIT;
             const viewAllBtn = document.createElement('a');
             viewAllBtn.href = '/videos';
             viewAllBtn.className = 'view-all-btn';
             viewAllBtn.innerHTML = `<span>View All (${remaining} more) <i class="fas fa-arrow-right arrow-icon"></i></span>`;
             viewAllBtn.addEventListener('click', (e) => {
                 e.preventDefault();
-                const searchTerm = videoSearchBar.value;
-                const url = searchTerm ? `/videos?search=${encodeURIComponent(searchTerm)}` : '/videos';
-                history.pushState({ page: 'videos', search: searchTerm }, '', url);
+                history.pushState({ page: 'videos', search: searchTerm, filter: activeVideoFilters }, '', '/videos');
                 handleRouting(true);
             });
             viewAllContainer.appendChild(viewAllBtn);
         }
+        setupScrollAnimations();
     };
 
     const setupVideoPlayer = () => {
@@ -687,21 +726,14 @@ function initializeApp() {
     artistPickContainer.addEventListener('click', handleAlbumControlsClick);
 
     const handleSearch = (e, type) => {
-        const searchTerm = e.target.value.toLowerCase();
-
+        const isFullPage = window.location.pathname.startsWith(`/${type}`);
         if (type === 'discography') {
-            const isFullPage = window.location.pathname.startsWith('/discography');
-            const filtered = albums.filter(a => !a.comingSoon && a.title.toLowerCase().includes(searchTerm));
-            renderAlbums(filtered, isFullPage);
-            if (isFullPage) debouncedUpdateURL(type, searchTerm);
+            renderAlbums(isFullPage);
+            debouncedUpdateURL(type, e.target.value, activeMusicFilters);
         } else if (type === 'videos') {
-            const isFullPage = window.location.pathname.startsWith('/videos');
-            const filtered = albums.filter(a => a.musicVideoId && a.title.toLowerCase().includes(searchTerm));
-            renderVideoGallery(filtered, isFullPage);
-            if (isFullPage) debouncedUpdateURL(type, searchTerm);
+            renderVideoGallery(isFullPage);
+            debouncedUpdateURL(type, e.target.value, activeVideoFilters);
         }
-
-        setupScrollAnimations();
     };
 
     searchBar.addEventListener('input', (e) => handleSearch(e, 'discography'));
@@ -1152,20 +1184,21 @@ function initializeApp() {
             }
         }
     });
-
+    
     const handleRouting = (isPushState = false) => {
         setTimeout(() => {
             window.scrollTo(0, 0);
         }, 0);
-
+    
         const path = window.location.pathname;
         const params = new URLSearchParams(window.location.search);
         const searchTerm = params.get('search') || '';
-
+        const filterTerm = params.get('filter') || '';
+    
         document.querySelectorAll('.content-section').forEach(s => s.style.display = 'none');
         songPage.classList.remove('active');
         mainContent.style.display = 'flex';
-
+    
         if (path.startsWith('/song/')) {
             const songTitleSlug = decodeURIComponent(path.split('/song/')[1]);
             const songIndex = albums.findIndex(album => album.title.toLowerCase().replace(/\s+/g, '-') === songTitleSlug);
@@ -1179,22 +1212,23 @@ function initializeApp() {
             const discographySection = document.getElementById('discography-section');
             discographySection.style.display = 'block';
             searchBar.value = searchTerm;
-            const filtered = albums.filter(a => !a.comingSoon && a.title.toLowerCase().includes(searchTerm));
-            renderAlbums(filtered, true);
+            activeMusicFilters = filterTerm ? filterTerm.split(',') : [];
+            renderActiveFilters('music');
+            renderAlbums(true);
             updateMetaTags({
                 title: `Discography | x08`,
-                description: `Browse all ${albums.length} releases from x08.`,
+                description: `Browse all ${albums.filter(a => !a.comingSoon).length} releases from x08.`,
                 url: `${siteDefaults.url}discography`,
                 image: siteDefaults.image,
                 type: 'website'
             });
-            setupScrollAnimations();
         } else if (path.startsWith('/videos')) {
             const videoSection = document.getElementById('video-gallery-section');
             videoSection.style.display = 'block';
             videoSearchBar.value = searchTerm;
-            const filtered = albums.filter(a => a.musicVideoId && a.title.toLowerCase().includes(searchTerm));
-            renderVideoGallery(filtered, true);
+            activeVideoFilters = filterTerm ? filterTerm.split(',') : [];
+            renderActiveFilters('video');
+            renderVideoGallery(true);
             updateMetaTags({
                 title: `Videos | x08`,
                 description: `Watch all official music videos from x08.`,
@@ -1202,16 +1236,87 @@ function initializeApp() {
                 image: siteDefaults.image,
                 type: 'website'
             });
-            setupScrollAnimations();
         } else {
             document.querySelectorAll('.content-section').forEach(s => s.style.display = 'block');
+            searchBar.value = '';
+            videoSearchBar.value = '';
+            activeMusicFilters = [];
+            activeVideoFilters = [];
+            renderActiveFilters('music');
+            renderActiveFilters('video');
             renderArtistPicks();
             renderVideoGallery();
             renderAlbums();
             resetMetaTags();
-            setupScrollAnimations();
         }
     };
+    
+    const renderActiveFilters = (type) => {
+        const container = type === 'music' ? musicFiltersContainer : videoFiltersContainer;
+        const filters = type === 'music' ? activeMusicFilters : activeVideoFilters;
+        container.innerHTML = '';
+        filters.forEach(filter => {
+            const tagEl = document.createElement('div');
+            const originalTag = albums.flatMap(a => [...(a.tags || []), ...(a.languages || [])]).find(t => t.toLowerCase() === filter);
+            const tagType = albums.some(a => (a.languages || []).map(l=>l.toLowerCase()).includes(filter)) ? 'language' : 'genre';
+            tagEl.className = `filter-tag ${tagType}-tag`;
+            tagEl.innerHTML = `
+                <span>${originalTag}</span>
+                <button class="remove-filter-btn" data-tag="${filter}">×</button>
+            `;
+            container.appendChild(tagEl);
+        });
+    }
+
+    const handleTagClick = (e) => {
+        const tagEl = e.target.closest('.song-tag');
+        if (tagEl) {
+            e.preventDefault();
+            const tag = tagEl.dataset.tag;
+            const type = e.target.closest('#video-gallery-section') ? 'video' : 'music';
+            let activeFilters = type === 'music' ? activeMusicFilters : activeVideoFilters;
+    
+            if (!activeFilters.includes(tag)) {
+                activeFilters.push(tag);
+            }
+    
+            const page = type === 'music' ? 'discography' : 'videos';
+            const search = type === 'music' ? searchBar.value : videoSearchBar.value;
+            
+            // Build the URL with filters
+            const params = new URLSearchParams();
+            if (search) params.set('search', search);
+            if (activeFilters.length > 0) params.set('filter', activeFilters.join(','));
+            
+            const url = `/${page}${params.toString() ? `?${params.toString()}` : ''}`;
+    
+            history.pushState({ page, search, filter: activeFilters }, '', url);
+            handleRouting(true);
+        }
+    };
+    
+    const handleFilterRemove = (e) => {
+        const removeBtn = e.target.closest('.remove-filter-btn');
+        if (removeBtn) {
+            const tag = removeBtn.dataset.tag;
+            const type = e.target.closest('#video-gallery-section') ? 'video' : 'music';
+            if (type === 'music') {
+                activeMusicFilters = activeMusicFilters.filter(f => f !== tag);
+                renderAlbums(window.location.pathname.startsWith('/discography'));
+                renderActiveFilters('music');
+                 debouncedUpdateURL('discography', searchBar.value, activeMusicFilters);
+            } else {
+                activeVideoFilters = activeVideoFilters.filter(f => f !== tag);
+                renderVideoGallery(window.location.pathname.startsWith('/videos'));
+                renderActiveFilters('video');
+                debouncedUpdateURL('videos', videoSearchBar.value, activeVideoFilters);
+            }
+        }
+    };
+    
+    document.body.addEventListener('click', handleTagClick);
+    musicFiltersContainer.addEventListener('click', handleFilterRemove);
+    videoFiltersContainer.addEventListener('click', handleFilterRemove);
 
     logoLink.addEventListener('click', (e) => {
         e.preventDefault();
@@ -1259,7 +1364,7 @@ function initializeApp() {
             cursorDot.style.top = `${posY}px`;
 
             const isHovered = cursorOutline.classList.contains('hovered');
-            const animationDuration = isHovered ? 0 : 500;
+            const animationDuration = isHovered ? 200 : 500;
 
             cursorOutline.animate({
                 left: `${posX}px`,
@@ -1267,7 +1372,7 @@ function initializeApp() {
             }, { duration: animationDuration, fill: "forwards" });
         });
 
-        const interactiveElements = document.querySelectorAll('a, button, .album-item, .toggle-label, .slider-btn, .pagination-dot, .progress-bar-bg, .video-item, .artist-pick-item');
+        const interactiveElements = document.querySelectorAll('a, button, .album-item, .toggle-label, .slider-btn, .pagination-dot, .progress-bar-bg, .video-item, .artist-pick-item, .song-tag');
         interactiveElements.forEach(el => {
             el.addEventListener('mouseenter', () => {
                 cursorDot.classList.add('hovered');
@@ -1304,7 +1409,15 @@ function initializeApp() {
 
         const elementsToReveal = document.querySelectorAll('.reveal-on-scroll');
         elementsToReveal.forEach(el => {
-            observer.observe(el);
+            // If the element is already in view, make it visible immediately.
+            if (el.getBoundingClientRect().top < window.innerHeight) {
+                 setTimeout(() => {
+                        el.classList.add('is-visible');
+                    }, 200 * (parseInt(el.style.getPropertyValue('--stagger-index')) || 0));
+                observer.unobserve(el);
+            } else {
+                observer.observe(el);
+            }
         });
     };
 

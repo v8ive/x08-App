@@ -5,6 +5,8 @@
     --secondary-color: #FF1493; /* DeepPink */
     --tertiary-color: #00FFFF; /* Aqua */
     --font-color-hover: #ffffff; /* New hover color */
+    --tag-hover-bg-color: #9932CC; /* DarkOrchid - A more subtle purple */
+
 
     /* Social Brand Colors */
     --spotify-color: #1DB954;
@@ -39,6 +41,10 @@
     --shadow-light: rgba(138, 43, 226, 0.1);
     --scrollbar-track-light: #e0e0e0;
     --scrollbar-thumb-light: #cccccc;
+    --language-tag-bg-light: rgba(0, 123, 255, 0.15);
+    --language-tag-border-light: rgba(0, 123, 255, 0.6);
+    --language-tag-text-light: #0056b3;
+
 
     /* Current theme variables */
     --bg-color: var(--bg-dark);
@@ -64,6 +70,18 @@
     --logo-gradient-start: var(--primary-color);
     --logo-gradient-end: var(--tertiary-color);
 }
+
+[data-theme="light"] .language-tag {
+    background-color: var(--language-tag-bg-light);
+    border-color: var(--language-tag-border-light);
+    color: var(--language-tag-text-light);
+}
+
+[data-theme="light"] .song-tag:hover {
+    background-color: var(--primary-color);
+    color: #fff;
+}
+
 
 /* --- Preloader Styles --- */
 #preloader {
@@ -677,10 +695,16 @@ body::before {
     background-color: rgba(var(--card-dark-rgb), 0.2);
     border-radius: 8px;
     border: 1px solid transparent;
-    transition: background-color 0.4s ease, border-color 0.4s ease, transform 0.3s ease;
+    transition: background-color 0.4s ease, border-color 0.4s ease, transform 0.3s ease, opacity 0.4s ease;
     position: relative;
     overflow: hidden;
     backdrop-filter: blur(5px);
+}
+
+.album-item.filtered-out {
+    transform: scale(0.9);
+    opacity: 0;
+    pointer-events: none;
 }
 
 .album-item:hover {
@@ -1335,7 +1359,19 @@ body::before {
     transform: translateY(10px);
     animation: tag-fade-in 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
     animation-delay: var(--tag-delay, 0s);
+    cursor: none;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.3s ease, color 0.3s ease;
+    border: 1px solid transparent;
 }
+
+.song-tag:hover {
+    transform: translateY(-2px) scale(1.05);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    background-color: var(--tag-hover-bg-color);
+    color: #fff;
+    border-color: var(--tag-hover-bg-color);
+}
+
 
 @keyframes tag-fade-in {
     to {
@@ -1753,7 +1789,7 @@ body::before {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
     flex-wrap: wrap;
     gap: 1rem;
 }
@@ -1768,6 +1804,12 @@ body::before {
     font-weight: 400;
     color: var(--primary-color);
     opacity: 0.8;
+}
+
+.search-and-filter-container {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
 }
 
 .search-container {
@@ -1803,6 +1845,70 @@ body::before {
     transform: translateY(-50%);
     color: var(--primary-color);
     pointer-events: none;
+}
+
+.active-filters-container {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+    min-height: 30px;
+    align-items: center;
+}
+
+.filter-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.25rem 0.75rem;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    opacity: 0;
+    transform: scale(0.8);
+    animation: filter-tag-in 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+}
+
+@keyframes filter-tag-in {
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.filter-tag.language-tag {
+    background-color: rgba(var(--tertiary-color-rgb, 0, 255, 255), 0.2);
+    border: 1px solid rgba(var(--tertiary-color-rgb, 0, 255, 255), 0.5);
+    color: var(--tertiary-color);
+}
+
+.filter-tag.genre-tag {
+    background-color: rgba(var(--secondary-color-rgb, 255, 20, 147), 0.2);
+    border: 1px solid rgba(var(--secondary-color-rgb, 255, 20, 147), 0.5);
+    color: var(--secondary-color);
+}
+
+[data-theme="light"] .filter-tag.language-tag {
+    background-color: var(--language-tag-bg-light);
+    border-color: var(--language-tag-border-light);
+    color: var(--language-tag-text-light);
+}
+
+.remove-filter-btn {
+    background: none;
+    border: none;
+    color: inherit;
+    font-size: 0.9rem;
+    cursor: none;
+    padding: 0;
+    margin-left: 0.25rem;
+    opacity: 0.7;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.remove-filter-btn:hover {
+    opacity: 1;
+    transform: rotate(90deg) scale(1.1);
 }
 
 .view-all-container {
@@ -1896,9 +2002,16 @@ body::before {
     border-radius: 8px;
     overflow: hidden;
     background-color: #0a0a0a;
-    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.4s ease;
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.4s ease, opacity 0.4s ease;
     cursor: none;
 }
+
+.video-item.filtered-out {
+    transform: scale(0.9);
+    opacity: 0;
+    pointer-events: none;
+}
+
 
 .video-item:hover {
     transform: translateY(-10px) scale(1.03);
@@ -2074,12 +2187,14 @@ body.cursor-visible .cursor-outline {
 }
 
 .cursor-outline.hovered {
-    transform: translate(-50%, -50%) scale(1.3);
-    background-color: rgba(var(--primary-color-rgb), 0.1);
+    width: 20px;
+    height: 20px;
+    background-color: rgba(var(--primary-color-rgb), 0.2);
+    border-width: 1px;
 }
 
 .cursor-dot.hovered {
-    transform: translate(-50%, -50%) scale(0);
+    transform: translate(-50%, -50%) scale(0.5);
 }
 
 @media (pointer: fine) {
@@ -2371,6 +2486,11 @@ body.cursor-visible .cursor-outline {
     }
     .search-bar:focus {
         width: 100%;
+    }
+
+    .search-and-filter-container {
+        flex-direction: column;
+        align-items: stretch;
     }
 
 
