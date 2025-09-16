@@ -33,82 +33,72 @@ export const albums = [
     //     ]
     // },
 
-    // всё забрать назад (Take it all back)
+    // Падшая (Fallen) [Coming Soon]
     {
         featured: true,
         comingSoon: true,
-        title: 'всё забрать назад',
-        img: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26dDCiMrc96fubmdXljgVxIziBRvO3epWKEYHA',
-        sampleUrl: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG262z5SkOajRus0k5TxlaHtcGzAm4bP9VYv83Me',
+        title: 'Падшая',
+        img: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG263k9W7a5VHcydCQhnKD5zUpboAWOSLmIBerul',
+        sampleUrl: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26oRfulsNUfCaqwZ0psghKbDHiJLvxnjWNXQzY',
         releaseDate: '',
         musicVideoId: '',
         lyrics: `
-Тишина. (Silence.)
-В лёгких осел серый шлам. (A grey sludge has settled in the lungs.)
-Мы молчим по углам. (We are silent in the corners.)
-(По своим углам). (In our corners).
+Твой нимб из льда, дотронуться блять страшно (Your halo of ice, it's fucking scary to touch)
+Мои ладони в саже и пыли (My palms are covered in soot and dust)
+Ты смотришь так, как будто всё неважно (You look at me as if nothing matters)
+Я пью твой свет, ломая алтари (I drink your light, breaking altars)
 
-Бронзовый всадник на площади спит, (The bronze horseman sleeps in the square,)
-Его пьедестал мхом гранитным покрыт. (His pedestal is covered with granite moss.)
-Под нами гудит вековой механизм, (Under us, the age-old mechanism hums,)
-Перемалывая жизни в скупой афоризм. (Grinding lives into a stingy aphorism.)
-Мы – поле седое, где вызрел бурьян, (We are a grey field where the weeds have ripened,)
-Каждый сам по себе, каждый в собственный пьян (Each on his own, each drunk in his own)
-Туман. Иконы роняют смолу. (Fog. Icons drop resin.)
-Мы ползём по стеклу. (We crawl on glass.)
+И в каждом выдохе — твоё имя (And in every exhalation - your name)
+Срывает с петель, тянет в пламя (Tears off the hinges, pulls into the flame)
+Я больше не боюсь гореть дотла (I'm no longer afraid to burn to the ground)
+(Дотла) (To the ground)
 
-Но под кожей земли назревает разлом, (But under the skin of the earth, a rift is brewing,)
-Молодая кровь бьётся об этот заслон. (Young blood is beating against this barrier.)
-Слышишь гул? (Это не в проводах). (Do you hear the hum? (It's not in the wires).)
-Это ярость в зрачках. (This is the rage in the pupils.)
+Я пала, пала, пала (I fell, fell, fell)
+С твоих святых высот (From your holy heights)
+И крылья обломала (Broke off my wings)
+О твой холодный лёд (Oh your cold ice)
+Я пала, пала, пала (I fell, fell, fell)
+И в этом весь мой грех (And this is my whole sin)
+Что я тебя избрала (That I chose you)
+(Одна наперекор всем) (Alone in spite of everyone)
 
-Мы – новый прибой, разъедающий мол, (We are the new surf, corroding the pier,)
-Мы – соль этой почвы, мы – голый глагол. (We are the salt of this soil, we are the naked verb.)
-Смотрите, как ваши дворцы из песка (Watch as your palaces of sand)
-Смывает голодная наша тоска. (Wash away our hungry longing.)
-Нам не нужен ваш трон, ваш просроченный яд, (We don't need your throne, your expired poison,)
-Мы просто пришли забрать всё назад. (We just came to take it all back.)
-(Назад, назад, всё забрать назад). (Back, back, take it all back).
+Твоя улыбка — приговор без слов (Your smile is a sentence without words)
+В зрачках твоих — лишь чистоты оков (In your pupils - only the purity of shackles)
+Мне тошно от сияния вокруг (I feel sick from the radiance around)
+Ты мой спаситель, мой заклятый друг (You are my savior, my sworn enemy friend)
 
-Ваши флаги истлели, ваш гимн – это хрип, (Your flags have rotted, your anthem is a wheeze,)
-Вы – папка «входящие», полная рип. (You are an inbox full of rip.)
-Вы чертите схемы на мёртвой воде, (You draw diagrams on dead water,)
-Но компас сломался, мы знаем где. (But the compass is broken, we know where.)
-Мы выросли в трещинах ваших дорог, (We grew up in the cracks of your roads,)
-Наш смех – это ваш несработавший бог. (Our laughter is your failed god.)
-Смола на иконах сменилась на гной. (Resin on the icons has changed to pus.)
-Идём за тобой. (We are following you.)
+И в каждом выдохе — твоё имя (And in every exhale - your name)
+Срывает с петель, тянет в пламя (Tears off the hinges, pulls into the flame)
+Я больше не боюсь гореть дотла (I'm no longer afraid to burn to the ground)
+(Дотла) (To the ground)
 
-Мы – новый прибой, разъедающий мол, (We are the new surf, corroding the pier,)
-Мы – соль этой почвы, мы – голый глагол. (We are the salt of this soil, we are the naked verb.)
-Смотрите, как ваши дворцы из песка (Watch as your palaces of sand)
-Смывает голодная наша тоска. (Wash away our hungry longing.)
-Нам не нужен ваш трон, ваш просроченный яд, (We don't need your throne, your expired poison,)
-Мы просто пришли забрать всё назад. (We just came to take it all back.)
-(Назад, назад, всё забрать назад). (Back, back, take it all back).
+Я пала, пала, пала (I fell, fell, fell)
+С твоих святых высот (From your holy heights)
+И крылья обломала (Broke off my wings)
+О твой холодный лёд (Oh your cold ice)
+Я пала, пала, пала (I fell, fell, fell)
+И в этом весь мой грех (And this is my whole sin)
+Что я тебя избрала (That I chose you)
+(Одна наперекор всем) (Alone in spite of everyone)
 
-Хватит спать, города. (Stop sleeping, cities.)
-Сбросьте пепел с ресниц. (Throw the ashes from your eyelashes.)
-Эта муть, эта ржа – (This turbidity, this rust -)
-Лишь преграда границ. (Just a barrier of borders.)
-Кровь стучит в проводах, (Blood knocks in the wires,)
-Созывая своих. (Calling their own.)
-Ваш панический страх – (Your panic fear -)
-Наш единственный стих. (Our only verse.)
+И может, эта грязь мне так идёт (And maybe this dirt suits me so well)
+И небо мне теперь совсем не врёт (And the sky doesn't lie to me at all now)
+Что там не место для таких, как я (That there is no place for people like me)
+Я выбрала тебя, сожгла себя (I chose you, burned myself)
 
-Мы – новый прибой, разъедающий мол, (We are the new surf, corroding the pier,)
-Мы – соль этой почвы, мы – голый глагол. (We are the salt of this soil, we are the naked verb.)
-Смотрите, как ваши дворцы из песка (Watch as your palaces of sand)
-Смывает голодная наша тоска. (Wash away our hungry longing.)
-Нам не нужен ваш трон, ваш просроченный яд, (We don't need your throne, your expired poison,)
-Мы просто пришли забрать всё назад. (We just came to take it all back.)
-(Назад, назад, всё забрать назад). (Back, back, take it all back).
+Я пала, пала, пала (I fell, fell, fell)
+С твоих святых высот (From your holy heights)
+И крылья обломала (Broke off my wings)
+О твой холодный лёд (Oh your cold ice)
+Я пала, пала, пала (I fell, fell, fell)
+И в этом весь мой грех (And that's my whole sin)
+Что я тебя избрала (That I chose you)
+(Одна наперекор всем) (Alone in spite of everyone)
 
-Забрать всё назад. (Take it all back.)
-(Слышишь?) (Do you hear?)
-Мы пришли. (We have come.)
-(Ты слышишь?) (Do you hear?)
-Забрать. (Take it.)
+Падшая (Fallen)
+(Пала для тебя) (Fallen for you)
+Падшая (Fallen)
+(Для тебя) (For you)
         `,
         links: [
             { platform: 'Spotify', url: '', icon: 'fab fa-spotify' },
@@ -121,121 +111,7 @@ export const albums = [
             { platform: 'Pandora', url: '', icon: 'fab fa-pandora' }
         ]
     },
-
-    // Ночь в огне (Night on Fire)
-    {
-        featured: true,
-        comingSoon: true,
-        title: 'Ночь в огне',
-        img: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26t9G9EnJkjDBCMmQoV7wYxsHiU5aZgXJFnp1A',
-        sampleUrl: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26Mfp0Vjq5T6rVEfbykaYWq7X2jPm30G8ShwlD',
-        releaseDate: '',
-        musicVideoId: '',
-        lyrics: `
-На коже – иней слов. (Frost of words on the skin)
-Впиваюсь в твой излом, (I bite into your fracture)
-Дышу у самых основ. (Breathe at the very foundations)
-(Я больше не готов) (I'm not ready anymore)
-
-Ночь в огне, ты моя сука, (Night on fire, you're my bitch)
-Каждый стон – блядская наука. (Every moan is fucking science.)
-Губы жгут, твоя рука (Lips burn, your hand)
-Давит так, что дрожат бока. (Presses so hard that my sides tremble.)
-
-По спине – холодный ток, (A cold current runs down my back,)
-С губ срывается комок (A lump of)
-Жарких, блядских, диких слов. (Hot, fucking, wild words comes out of my lips.)
-Ты мой плен, моя любовь. (You are my captivity, my love.)
-
-Ночь в огне, ты моя сука, (Night on fire, you're my bitch)
-Каждый стон – блядская наука. (Every moan is fucking science.)
-Губы жгут, твоя рука (Lips burn, your hand)
-Давит так, что дрожат бока. (Presses so hard that my sides tremble.)
-
-Утро режет по глазам, (Morning cuts my eyes,)
-Я тебя им не отдам. (I won't give you to them.)
-(Никому) (To no one)
-Мир снаружи – просто хлам, (The world outside is just trash,)
-Я сломаю пополам. (I'll break it in half.)
-
-Ночь в огне, ты моя сука, (Night on fire, you're my bitch)
-(Моя сука) (My bitch)
-Каждый стон – блядская наука. (Every moan is fucking science.)
-Губы жгут, твоя рука (Lips burn, your hand)
-Давит так, что дрожат бока. (Presses so hard that my sides tremble.)
-        `,
-        links: [
-            { platform: 'Spotify', url: '', icon: 'fab fa-spotify' },
-            { platform: 'YouTube Music', url: '', icon: 'fab fa-youtube' },
-            { platform: 'SoundCloud', url: '', icon: 'fab fa-soundcloud' },
-            { platform: 'Tidal', url: '', icon: 'fa-brands fa-tidal' },
-            { platform: 'Apple Music', url: '', icon: 'fa-brands fa-itunes-note' },
-            { platform: 'Amazon Music', url: '', icon: 'fab fa-amazon' },
-            { platform: 'iHeartRadio', url: '', icon: 'fa-solid fa-radio' },
-            { platform: 'Pandora', url: '', icon: 'fab fa-pandora' }
-        ]
-    },
-
-    // Рваный (Torn)
-    {
-        featured: true,
-        comingSoon: true,
-        title: 'Рваный',
-        img: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG260tq9JIfeiVaUXveObDkhncLG8TBRgqxIrfHj',
-        sampleUrl: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26pfXcaBnRBwFTAs2kpzjJdaNlu6P75f3qicGS',
-        releaseDate: '',
-        musicVideoId: '',
-        lyrics: `
-Серый город, в горле ком (Gray city, lump in throat)
-На губах застыла соль (Salt frozen on lips)
-Под ногами битый хром (Broken chrome underfoot)
-И в груди тупая боль (Dull pain in chest)
-
-Душа на части, всё к чертям (Soul in pieces, all to hell)
-Я рваный, сука, пополам (I'm torn, bitch, in half)
-Твои слова — дешёвый яд (Your words are cheap poison)
-И нет дороги, блядь, назад (And there's no fucking way back)
-
-Помню запах. Дым и лёд (I remember the smell. Smoke and ice)
-Кто из нас кому-то врёт? (Who of us is lying to whom?)
-Пальцы вмёрзли в телефон (Fingers frozen into the phone)
-Пустота со всех сторон (Emptiness on all sides)
-
-Душа на части, всё к чертям (Soul in pieces, all to hell)
-Я рваный, сука, пополам (I'm torn, bitch, in half)
-Твои слова — дешёвый яд (Your words are cheap poison)
-И нет дороги, блядь, назад (And there's no fucking way back)
-
-Собрать осколки нету сил (I don't have the strength to collect the pieces)
-Я сам себя похоронил (I buried myself)
-В этом холоде пустом (In this empty cold)
-Наш финал — пустой перрон (Our finale is an empty platform)
-
-Душа на части, всё к чертям (Soul in pieces, all to hell)
-(Всё к чертям) (Everything to hell)
-Я рваный, сука, пополам (I'm torn, bitch, in half)
-(Пополам) (In half)
-Твои слова — дешёвый яд (Your words are cheap poison)
-И нет дороги, блядь, назад (And there's no fucking way back)
-
-Рваный... просто рваный... (Torn... just torn...)
-Пополам... (In half...)
-(К чертям) (To hell)
-Нахуй всё. (Fuck everything.)
-        `,
-        links: [
-            { platform: 'Spotify', url: '', icon: 'fab fa-spotify' },
-            { platform: 'YouTube Music', url: '', icon: 'fab fa-youtube' },
-            { platform: 'SoundCloud', url: '', icon: 'fab fa-soundcloud' },
-            { platform: 'Tidal', url: '', icon: 'fa-brands fa-tidal' },
-            { platform: 'Apple Music', url: '', icon: 'fa-brands fa-itunes-note' },
-            { platform: 'Amazon Music', url: '', icon: 'fab fa-amazon' },
-            { platform: 'iHeartRadio', url: '', icon: 'fa-solid fa-radio' },
-            { platform: 'Pandora', url: '', icon: 'fab fa-pandora' }
-        ]
-    },
-
-    // あなたの負け (Your Loss)
+    // あなたの負け (Your Loss) [Coming Soon]
     {
         featured: true,
         comingSoon: true,
@@ -309,360 +185,6 @@ export const albums = [
             { platform: 'Pandora', url: '', icon: 'fab fa-pandora' }
         ]
     },
-
-    // ズーム！ズーム！ (Zoom! Zoom!)
-    {
-        featured: true,
-        comingSoon: false,
-        title: 'ズーム！ズーム！',
-        img: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26FJ6B64Y3ATS5xrL8uUVkln4stORPgvYf2jm9',
-        sampleUrl: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26K5QSCwk4B9r7QPVJeIRLoWA0wcCdamkYi1tH',
-        releaseDate: '2025-09-09',
-        musicVideoId: 'LL7aDW0Ea6M',
-        lyrics: `
-(Let's go!)
-エンジン (エンジン) スタート [Engine start]
-アタシ (アタシ) [Me] on the road!
-
-アスファルト (アスファルト) のリボン [Ribbon of asphalt]
-Neon lights blur
-Tires scream my song
-夜の女王 (夜の女王) [Queen of the night], hashiriya girl
-
-Zoom zoom, 高速 [High-speed] ride
-タコメーター (タコメーター) [Tachometer] red line
-Lights streak, I fly
-誰もアタシを (誰もアタシを) [Nobody] catch me now
-ビューン [Swoosh], night sky
-Touge master, that's my style
-Zoom zoom, say goodbye
-アタシの道よ [My road], move aside
-
-Concrete river flows
-アドレナリン [Adrenaline] rush, I'm in control
-Leaving them behind in my dust, they're slow
-
-Zoom zoom, 高速 [High-speed] ride
-タコメーター (タコメーター) [Tachometer] red line
-Lights streak, I fly
-誰もアタシを (誰もアタシを) [Nobody] catch me now
-ビューン [Swoosh], night sky
-Touge master, that's my style
-Zoom zoom, say goodbye
-アタシの道よ [My road], move aside
-
-They follow my taillights, a fading star
-Can't keep up, can't get that far
-Sukeban spirit, dorisha heart
-Tearing this city all apart
-
-Zoom zoom, 高速 [High-speed] ride
-タコメーター (タコメーター) [Tachometer] red line
-Lights streak, I fly
-誰もアタシを (誰もアタシを) [Nobody] catch me now
-ビューン [Swoosh], night sky
-Touge master, that's my style
-Zoom zoom, say goodbye
-アタシの道よ [My road], move aside
-
-(Too fast for you)
-終わりました [It's over]
-(Bye bye)
-        `,
-        links: [
-            { platform: 'Spotify', url: 'https://open.spotify.com/track/3OMsiNczys17kD4f2GzqzY', icon: 'fab fa-spotify' },
-            { platform: 'YouTube Music', url: 'https://music.youtube.com/watch?v=kxwYHYRHjYc&list=OLAK5uy_ntJCsHAxq0WdTJQnBZIgn_a_k7XrGIpeA', icon: 'fab fa-youtube' },
-            { platform: 'SoundCloud', url: 'https://soundcloud.com/x0zero8eight/zoom-zoom', icon: 'fab fa-soundcloud' },
-            { platform: 'Tidal', url: 'https://tidal.com/browse/track/459624487/u', icon: 'fa-brands fa-tidal' },
-            { platform: 'Apple Music', url: 'https://music.apple.com/us/song/%E3%82%BA%E3%83%BC%E3%83%A0-%E3%82%BA%E3%83%BC%E3%83%A0/1839168225', icon: 'fa-brands fa-itunes-note' },
-            { platform: 'Amazon Music', url: 'https://music.amazon.com/tracks/B0FQHQLP2B?marketplaceId=ATVPDKIKX0DER&musicTerritory=US&ref=dm_sh_p5YCv4XQ4esJL9L2UXitTYmtB', icon: 'fab fa-amazon' },
-            { platform: 'iHeartRadio', url: 'https://www.iheart.com/artist/x08-47869013/songs/-349415946/', icon: 'fa-solid fa-radio' },
-            { platform: 'Pandora', url: 'https://www.pandora.com/artist/x08/zu-mu-zu-mu/zu-mu-zu-mu/TR2Knt7vZtxd6dg', icon: 'fab fa-pandora' }
-        ]
-    },
-
-    // もっと高くへ連れてって (Take Me Higher)
-    {
-        featured: true,
-        comingSoon: false,
-        title: 'もっと高くへ連れてって',
-        img: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26A0OLhdpr7tFhmgB0d4A9xY1bS5iN6HuqZTRv',
-        sampleUrl: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG263mFJFUVHcydCQhnKD5zUpboAWOSLmIBerul8',
-        releaseDate: '2025-09-09',
-        musicVideoId: 'dPOvIJN96tY',
-        lyrics: `
-(アッパー、アッパー、アッパー) [Up, Up, Up]
-(もっと高く) [Take me higher]
-
-シュガーラッシュ 感じる (Sugar rush, I feel it)
-この部屋で 軌道してる (Orbiting in this room)
-天井が消え 月が見える (The ceiling disappears, the moon is visible)
-すぐに行く すぐに行く (I'm going right away, I'm going right away)
-
-もっと高くへ連れてって (Take me higher)
-情熱の空 (Passionate sky)
-地面から離して (Lift me off the ground)
-音は立てないで (Don't make a sound)
-もっと高くへ連れてって (Take me higher)
-一つの願い (One wish)
-くるくる回る (Spinning around)
-見つからないまま (Still not found)
-
-星が光る 閃光みたい (The stars shine like flashes)
-君の瞳に星座 (Constellations in your eyes)
-重力が負けてゆく (Gravity is losing)
-きつく抱いて きつく抱いて (Hold me tight, hold me tight)
-
-もっと高くへ連れてって (Take me higher)
-情熱の空 (Passionate sky)
-地面から離して (Lift me off the ground)
-音は立てないで (Don't make a sound)
-もっと高くへ連れてって (Take me higher)
-一つの願い (One wish)
-くるくる回る (Spinning around)
-見つからないまま (Still not found)
-
-(アッパー、アッパー、アッパー) [Up, Up, Up]
-鼓動が速くなる (Heartbeat quickens)
-時間と空間の迷子 (Lost in time and space)
-(もっと、もっと高く) [Take me higher]
-新しい場所
-
-もっと高くへ連れてって (Take me higher)
-情熱の空 (Passionate sky)
-地面から離して (Lift me off the ground)
-音は立てないで (Don't make a sound)
-もっと高くへ連れてって (Take me higher)
-一つの願い (One wish)
-くるくる回る (Spinning around)
-見つからないまま (Still not found)
-        `,
-        links: [
-            { platform: 'Spotify', url: 'https://open.spotify.com/track/4bSnYZlRsLmcJZtJUhi8z1', icon: 'fab fa-spotify' },
-            { platform: 'YouTube Music', url: 'https://music.youtube.com/watch?v=r8uzOyRxHsw', icon: 'fab fa-youtube' },
-            { platform: 'SoundCloud', url: 'https://soundcloud.com/x0zero8eight/take-me-higher', icon: 'fab fa-soundcloud' },
-            { platform: 'Tidal', url: 'https://tidal.com/browse/track/459634296/u', icon: 'fa-brands fa-tidal' },
-            { platform: 'Apple Music', url: 'https://music.apple.com/us/song/%E3%82%82%E3%81%A3%E3%81%A8%E9%AB%98%E3%81%8F%E9%80%A3%E3%82%8C%E3%81%A6%E8%A1%8C%E3%81%A3%E3%81%A6/1839158301', icon: 'fa-brands fa-itunes-note' },
-            { platform: 'Amazon Music', url: 'https://music.amazon.com/tracks/B0FQJ7RYXT?marketplaceId=ATVPDKIKX0DER&musicTerritory=US&ref=dm_sh_pV4h1zifZSdIEiZf45cTAsXWr', icon: 'fab fa-amazon' },
-            { platform: 'iHeartRadio', url: 'https://www.iheart.com/artist/x08-47869013/songs/-349424117/', icon: 'fa-solid fa-radio' },
-            { platform: 'Pandora', url: 'https://www.pandora.com/artist/x08/motsutogao-kulian-retexing-tsute/motsutogao-kulian-retexing-tsute/TRmgpPd3zpctw7c', icon: 'fab fa-pandora' }
-        ]
-    },
-
-    // プレイ！プレイ！プレイ！ (Play! Play! Play!)
-    {
-        featured: true,
-        comingSoon: false,
-        title: 'プレイ！プレイ！プレイ！',
-        img: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26dxAg45c96fubmdXljgVxIziBRvO3epWKEYHA',
-        sampleUrl: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26tNOMweJkjDBCMmQoV7wYxsHiU5aZgXJFnp1A',
-        releaseDate: '2025-09-09',
-        musicVideoId: 'NiLloTibaXM',
-        lyrics: `
-三星、二星、一星 (3 stars, 2 stars, 1 star)
-(行くぞ！) [Let's go!]
-接続中… (Connecting...)
-
-点滅するサイン (Flashing sign)
-銀河に飛び込む (Diving into the galaxy)
-コントローラーを握りしめ (Gripping the controller)
-星屑の中を突き進む (Pushing through the stardust)
-
-心臓のパルス (Heartbeat)
-アドレナリンが急上昇 (Adrenaline surges)
-これはただの遊びじゃない (This isn't just a game)
-私の宇宙 (My universe)
-
-星雲を走り抜け (Running through the nebula)
-(ハイスコア！) [High score!]
-レーザーをかわして (Dodging lasers)
-(レベルアップ！) [Level up!]
-私の船は彗星 (My ship is a comet)
-このゲームの支配者は私 (I'm the ruler of this game)
-(プレイ！プレイ！プレイ！) [Play! Play! Play!]
-
-アステロイドの迷路 (Asteroid maze)
-クリスタルのボスが待つ (A crystal boss awaits)
-必殺のスキルを発動 (Activate special skills)
-一撃で粉砕 (Shatter with one blow)
-
-パワーアップアイテムを取得 (Power-up item acquired)
-究極の形態に変身 (Transform into ultimate form)
-もう誰も私を止められない (No one can stop me now)
-無敵の存在 (Invincible existence)
-
-星雲を走り抜け (Running through the nebula)
-(ハイスコア！) [High score!]
-レーザーをかわして (Dodging lasers)
-(レベルアップ！) [Level up!]
-私の船は彗星 (My ship is a comet)
-このゲームの支配者は私 (I'm the ruler of this game)
-(プレイ！プレイ！プレイ！) [Play! Play! Play!]
-
-ミッション完了 ( Mission Complete )
-次の世界へ ( To the next world )
-ゲームは終わらない ( The game doesn't end )
-(続く…) [To be continued...]
-        `,
-        links: [
-            { platform: 'Spotify', url: 'https://open.spotify.com/track/0bqot2yVaF1eFoWKSThkXe', icon: 'fab fa-spotify' },
-            { platform: 'YouTube Music', url: 'https://music.youtube.com/watch?v=dXca5ZfSrYE', icon: 'fab fa-youtube' },
-            { platform: 'SoundCloud', url: 'https://soundcloud.com/x0zero8eight/play-play-play', icon: 'fab fa-soundcloud' },
-            { platform: 'Tidal', url: 'https://tidal.com/browse/track/459634586/u', icon: 'fa-brands fa-tidal' },
-            { platform: 'Apple Music', url: 'https://music.apple.com/us/song/%E3%83%97%E3%83%AC%E3%82%A4-%E3%83%97%E3%83%AC%E3%82%A4-%E3%83%97%E3%83%AC%E3%82%A4/1839320998', icon: 'fa-brands fa-itunes-note' },
-            { platform: 'Amazon Music', url: 'https://music.amazon.com/tracks/B0FQHGLXTF?marketplaceId=ATVPDKIKX0DER&musicTerritory=US&ref=dm_sh_K9PuMX6rPDaPvVht1o6Qi89hX', icon: 'fab fa-amazon' },
-            { platform: 'iHeartRadio', url: 'https://www.iheart.com/artist/x08-47869013/songs/-349424082/', icon: 'fa-solid fa-radio' },
-            { platform: 'Pandora', url: 'https://www.pandora.com/artist/x08/purei-purei-purei/purei-purei-purei/TRJmlKj5Vr9g376', icon: 'fab fa-pandora' }
-        ]
-    },
-
-    // 甘いメロディ (A Sweet Melody)
-    {
-        featured: true,
-        comingSoon: false,
-        title: '甘いメロディ',
-        img: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26JKqYp1q3VEdDqYTHMQCzhUkp9vIs03i6wtlG',
-        sampleUrl: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG266kszWb9ONVrinuc7y2S3wYXLkeDvdTgHfFMt',
-        releaseDate: '2025-09-09',
-        musicVideoId: 'lwcP_YLkj-0',
-        lyrics: `
-きらめく街 (A glittering city)
-あなたの瞳 (In your eyes)
-万華鏡みたい (Like a kaleidoscope)
-世界が回る (The world spins around)
-
-心拍数 上がってく (My heart rate goes up)
-(ドキドキ) [Excited]
-あなたの声 甘いメロディ (Your voice, a sweet melody)
-(キラキラ) [Sparkling]
-リピートしてたい (I want to repeat it)
-(ずっと) [Forever]
-この瞬間を (This moment)
-
-カラフルな夢 (Colorful dreams)
-二人で見る (Together, we see them)
-現実じゃない (It's not reality)
-そんな気がする (I feel that way)
-
-心拍数 上がってく (My heart rate goes up)
-(ドキドキ) [Excited]
-あなたの声 甘いメロディ (Your voice, a sweet melody)
-(キラキラ) [Sparkling]
-リピートしてたい (I want to repeat it)
-(ずっと) [Forever]
-この瞬間を (This moment)
-
-ねえ、この手 (Hey, this hand)
-繋いでくれる？ (Will you hold it?)
-未来まで (Until the future)
-飛んでいけるかな (I wonder if we can fly)
-
-(ドキドキ) [Excited]
-(キラキラ) [Sparkling]
-甘いメロディ (A sweet melody)
-(ずっと) [Forever]
-        `,
-        links: [
-            { platform: 'Spotify', url: 'https://open.spotify.com/track/1UdKUZwAbwi6hwy5pbepar', icon: 'fab fa-spotify' },
-            { platform: 'YouTube Music', url: 'https://music.youtube.com/watch?v=VCHgmz_rMK4', icon: 'fab fa-youtube' },
-            { platform: 'SoundCloud', url: 'https://soundcloud.com/x0zero8eight/a-sweet-melody', icon: 'fab fa-soundcloud' },
-            { platform: 'Tidal', url: 'https://tidal.com/browse/track/459634301/u', icon: 'fa-brands fa-tidal' },
-            { platform: 'Apple Music', url: 'https://music.apple.com/us/song/%E7%94%98%E3%81%84%E3%83%A1%E3%83%AD%E3%83%87%E3%82%A3/1839158293', icon: 'fa-brands fa-itunes-note' },
-            { platform: 'Amazon Music', url: 'https://music.amazon.com/tracks/B0FQHZJ8H3?marketplaceId=ATVPDKIKX0DER&musicTerritory=US&ref=dm_sh_gp8jMTLuC1v0etNGQsqfZZdcD', icon: 'fab fa-amazon' },
-            { platform: 'iHeartRadio', url: 'https://www.iheart.com/artist/x08-47869013/songs/-349424109/', icon: 'fa-solid fa-radio' },
-            { platform: 'Pandora', url: 'https://www.pandora.com/artist/x08/gan-imerodei/gan-imerodei/TR73cV4mXxlxkb2', icon: 'fab fa-pandora' }
-        ]
-    },
-
-    // Omnia Ab Uno
-    {
-        featured: false,
-        comingSoon: false,
-        title: 'Omnia Ab Uno',
-        img: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26YoL07TCXAManfEe8bSVkQ7spTtxljwD092mN',
-        sampleUrl: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26V6lw6htKhZ3lfAdH74paeyis2b6OrFuKQjtg',
-        releaseDate: '2025-09-11',
-        musicVideoId: 'xXwmzg4S4VM',
-        lyrics: `
-There was a king on a throne in a kingdom of none
-Just a singular thought before the world had begun
-The silence was perfect, a deafening hum
-I got tired of waiting for something to come
-I had no reflection, no shadow to cast
-No future to run to, no memory past
-Just a lonely vibration, holding too fast
-A kingdom of one wasn't built to last
-
-So to see my own face, I shattered the glass
-Let a billion new pieces fly out from the mass
-I gave them all names and a different class
-And whispered "forget me," to see what would pass
-
-From the one, came the all, a big bang in the hall
-(Omnia Ab Uno)
-The purposeful rise and the beautiful fall
-(Omnia Ab Uno)
-I wrote the first line, I answered the call
-Now the message is waiting, etched on the wall
-It's Omnia Ab Uno
-
-Then a star got the notion that it was the light
-And a beast in the jungle laid claim to the night
-A hero was born just to find a new fight
-They all drew their borders with all of their might
-They built up their towers and fell in love deep
-They made their own promises they couldn't keep
-They prayed to a heaven while sowing and reaping
-Not knowing I'm the secret they're secretly keeping
-
-But a ghost in their heartbeat, a hum in the stone
-A feeling they've never been truly alone
-A magnetic memory, a pull to come home
-A truth that was buried inside of the bone
-
-From the one, came the all, a big bang in the hall
-(Omnia Ab Uno)
-The purposeful rise and the beautiful fall
-(Omnia Ab Uno)
-I wrote the first line, I answered the call
-Now the message is waiting, etched on the wall
-It's Omnia Ab Uno
-
-And you see in your rival the look in your eye
-The face of a stranger you can't pass on by
-Every connection, you can't figure why
-It's just me saying hello from the other side
-Every piece of the puzzle, scattered and thrown
-Is finally finding its way back to its own
-
-From the one, came the all, a big bang in the hall
-(Omnia Ab Uno)
-The purposeful rise and the beautiful fall
-(Omnia Ab Uno)
-I wrote the first line, I answered the call
-Now the message is shining, bright on the wall
-It's Omnia Ab Uno
-
-(All from the one)
-A story in motion
-(All from the one)
-A drop in the ocean
-(All from the one)
-Returning and knowing
-We're all going home now... the circle is closing.
-        `,
-        links: [
-            { platform: 'Spotify', url: 'https://open.spotify.com/track/6TtLltJOWd4d7boFZkENDK', icon: 'fab fa-spotify' },
-            { platform: 'YouTube Music', url: 'https://music.youtube.com/watch?v=1qTmoNcUywM', icon: 'fab fa-youtube' },
-            { platform: 'SoundCloud', url: 'https://soundcloud.com/x0zero8eight/omnia-ab-uno', icon: 'fab fa-soundcloud' },
-            { platform: 'Tidal', url: 'https://tidal.com/browse/track/460174016/u', icon: 'fa-brands fa-tidal' },
-            { platform: 'Apple Music', url: 'https://music.apple.com/us/song/omnia-ab-uno/1839656484', icon: 'fa-brands fa-itunes-note' },
-            { platform: 'Amazon Music', url: 'https://music.amazon.com/tracks/B0FQWRYPV9?marketplaceId=ATVPDKIKX0DER&musicTerritory=US&ref=dm_sh_QY5qO7HbaneXwGDckM0JOKSoN', icon: 'fab fa-amazon' },
-            { platform: 'iHeartRadio', url: 'https://www.iheart.com/artist/x08-47869013/songs/omnia-ab-uno-349865619/', icon: 'fa-solid fa-radio' },
-            { platform: 'Pandora', url: 'https://www.pandora.com/artist/x08/omnia-ab-uno/omnia-ab-uno/TRzJj77KJjcl5b2', icon: 'fab fa-pandora' }
-        ]
-    },
-
     // HGFS [Coming Soon]
     {
         featured: true,
@@ -735,7 +257,6 @@ You know I can't be tamed
             { platform: 'Pandora', url: '', icon: 'fab fa-pandora' }
         ]
     },
-
     // Nocturnal [Coming Soon]
     {
         featured: true,
@@ -826,7 +347,6 @@ Always... back to play.
             { platform: 'Pandora', url: '', icon: 'fab fa-pandora' }
         ]
     },
-
     // Blind [Coming Soon]
     {
         featured: true,
@@ -898,7 +418,6 @@ I should be seeing
             { platform: 'Pandora', url: '', icon: 'fab fa-pandora' }
         ]
     },
-
     // One Life [Coming Soon]
     {
         featured: true,
@@ -972,7 +491,255 @@ Don't let it be game over.
             { platform: 'Pandora', url: '', icon: 'fab fa-pandora' }
         ]
     },
+    // Pixel Heartbeat [Coming Soon]
+    {
+        featured: true,
+        comingSoon: true,
+        title: 'Pixel Heartbeat',
+        img: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG260RUHKdeiVaUXveObDkhncLG8TBRgqxIrfHj3',
+        sampleUrl: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG260X08cieiVaUXveObDkhncLG8TBRgqxIrfHj3',
+        releaseDate: '',
+        musicVideoId: '',
+        lyrics: `
+Tiny wires in my veins
+Electric love it sparks and strains
+Buzzing louder in my head
+Glitching dreams in neon red
 
+Am I real or just a game
+Do you feel it just the same
+
+Pixel heartbeat skipping fast fast fast
+Colors breaking can't outlast last last
+Hold my hand before I crash crash crash
+Am I real am I real
+Or just your flash
+
+Candy clouds they taste like steel
+Static skies I can't unfeel
+Broken code it loops my name
+Loading love but it's not the same
+
+Zeros ones they dance they scream
+Binary tears in a fever dream
+I'm a fragment you're the whole
+Will you debug my shattered soul
+
+Pixel heartbeat skipping fast fast fast
+Colors breaking can't outlast last last
+Hold my hand before I crash crash crash
+Am I real am I real
+Or just your flash
+        `,
+        links: [
+            { platform: 'Spotify', url: '', icon: 'fab fa-spotify' },
+            { platform: 'YouTube Music', url: '', icon: 'fab fa-youtube' },
+            { platform: 'SoundCloud', url: '', icon: 'fab fa-soundcloud' },
+            { platform: 'Tidal', url: '', icon: 'fa-brands fa-tidal' },
+            { platform: 'Apple Music', url: '', icon: 'fa-brands fa-itunes-note' },
+            { platform: 'Amazon Music', url: '', icon: 'fab fa-amazon' },
+            { platform: 'iHeartRadio', url: '', icon: 'fa-solid fa-radio' },
+            { platform: 'Pandora', url: '', icon: 'fab fa-pandora' }
+        ]
+    },
+
+
+    // всё забрать назад (Take it all back)
+    {
+        featured: true,
+        comingSoon: false,
+        title: 'всё забрать назад',
+        img: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26dDCiMrc96fubmdXljgVxIziBRvO3epWKEYHA',
+        sampleUrl: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG262z5SkOajRus0k5TxlaHtcGzAm4bP9VYv83Me',
+        releaseDate: '2025-09-14',
+        musicVideoId: 'lPw3OyTDjps',
+        lyrics: `
+Тишина. (Silence.)
+В лёгких осел серый шлам. (A grey sludge has settled in the lungs.)
+Мы молчим по углам. (We are silent in the corners.)
+(По своим углам). (In our corners).
+
+Бронзовый всадник на площади спит, (The bronze horseman sleeps in the square,)
+Его пьедестал мхом гранитным покрыт. (His pedestal is covered with granite moss.)
+Под нами гудит вековой механизм, (Under us, the age-old mechanism hums,)
+Перемалывая жизни в скупой афоризм. (Grinding lives into a stingy aphorism.)
+Мы – поле седое, где вызрел бурьян, (We are a grey field where the weeds have ripened,)
+Каждый сам по себе, каждый в собственный пьян (Each on his own, each drunk in his own)
+Туман. Иконы роняют смолу. (Fog. Icons drop resin.)
+Мы ползём по стеклу. (We crawl on glass.)
+
+Но под кожей земли назревает разлом, (But under the skin of the earth, a rift is brewing,)
+Молодая кровь бьётся об этот заслон. (Young blood is beating against this barrier.)
+Слышишь гул? (Это не в проводах). (Do you hear the hum? (It's not in the wires).)
+Это ярость в зрачках. (This is the rage in the pupils.)
+
+Мы – новый прибой, разъедающий мол, (We are the new surf, corroding the pier,)
+Мы – соль этой почвы, мы – голый глагол. (We are the salt of this soil, we are the naked verb.)
+Смотрите, как ваши дворцы из песка (Watch as your palaces of sand)
+Смывает голодная наша тоска. (Wash away our hungry longing.)
+Нам не нужен ваш трон, ваш просроченный яд, (We don't need your throne, your expired poison,)
+Мы просто пришли забрать всё назад. (We just came to take it all back.)
+(Назад, назад, всё забрать назад). (Back, back, take it all back).
+
+Ваши флаги истлели, ваш гимн – это хрип, (Your flags have rotted, your anthem is a wheeze,)
+Вы – папка «входящие», полная рип. (You are an inbox full of rip.)
+Вы чертите схемы на мёртвой воде, (You draw diagrams on dead water,)
+Но компас сломался, мы знаем где. (But the compass is broken, we know where.)
+Мы выросли в трещинах ваших дорог, (We grew up in the cracks of your roads,)
+Наш смех – это ваш несработавший бог. (Our laughter is your failed god.)
+Смола на иконах сменилась на гной. (Resin on the icons has changed to pus.)
+Идём за тобой. (We are following you.)
+
+Мы – новый прибой, разъедающий мол, (We are the new surf, corroding the pier,)
+Мы – соль этой почвы, мы – голый глагол. (We are the salt of this soil, we are the naked verb.)
+Смотрите, как ваши дворцы из песка (Watch as your palaces of sand)
+Смывает голодная наша тоска. (Wash away our hungry longing.)
+Нам не нужен ваш трон, ваш просроченный яд, (We don't need your throne, your expired poison,)
+Мы просто пришли забрать всё назад. (We just came to take it all back.)
+(Назад, назад, всё забрать назад). (Back, back, take it all back).
+
+Хватит спать, города. (Stop sleeping, cities.)
+Сбросьте пепел с ресниц. (Throw the ashes from your eyelashes.)
+Эта муть, эта ржа – (This turbidity, this rust -)
+Лишь преграда границ. (Just a barrier of borders.)
+Кровь стучит в проводах, (Blood knocks in the wires,)
+Созывая своих. (Calling their own.)
+Ваш панический страх – (Your panic fear -)
+Наш единственный стих. (Our only verse.)
+
+Мы – новый прибой, разъедающий мол, (We are the new surf, corroding the pier,)
+Мы – соль этой почвы, мы – голый глагол. (We are the salt of this soil, we are the naked verb.)
+Смотрите, как ваши дворцы из песка (Watch as your palaces of sand)
+Смывает голодная наша тоска. (Wash away our hungry longing.)
+Нам не нужен ваш трон, ваш просроченный яд, (We don't need your throne, your expired poison,)
+Мы просто пришли забрать всё назад. (We just came to take it all back.)
+(Назад, назад, всё забрать назад). (Back, back, take it all back).
+
+Забрать всё назад. (Take it all back.)
+(Слышишь?) (Do you hear?)
+Мы пришли. (We have come.)
+(Ты слышишь?) (Do you hear?)
+Забрать. (Take it.)
+        `,
+        links: [
+            { platform: 'Spotify', url: 'https://open.spotify.com/track/7BZE6Ff1do9pPEPjjlypww', icon: 'fab fa-spotify' },
+            { platform: 'YouTube Music', url: 'https://music.youtube.com/watch?v=3e-X7aQUGVE', icon: 'fab fa-youtube' },
+            { platform: 'SoundCloud', url: 'https://soundcloud.com/x0zero8eight/take-it-all-back', icon: 'fab fa-soundcloud' },
+            { platform: 'Tidal', url: 'https://tidal.com/browse/track/460605218/u', icon: 'fa-brands fa-tidal' },
+            { platform: 'Amazon Music', url: 'https://music.amazon.com/tracks/B0FR45YL7M?marketplaceId=ATVPDKIKX0DER&musicTerritory=US&ref=dm_sh_2DmXsF6eqEKlhFOShGI4Je0JB', icon: 'fab fa-amazon' },
+            { platform: 'iHeartRadio', url: 'https://www.iheart.com/artist/x08-47869013/songs/-350211814/', icon: 'fa-solid fa-radio' },
+            { platform: 'Pandora', url: 'https://www.pandora.com/artist/x08/vsio-zabrat-nazad/vsio-zabrat-nazad/TRfJhjb2J6zZrtV?part=ug-desktop&corr=200697158100332643', icon: 'fab fa-pandora' }
+        ]
+    },
+    // Ночь в огне (Night on Fire)
+    {
+        featured: true,
+        comingSoon: false,
+        title: 'Ночь в огне',
+        img: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26t9G9EnJkjDBCMmQoV7wYxsHiU5aZgXJFnp1A',
+        sampleUrl: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26Mfp0Vjq5T6rVEfbykaYWq7X2jPm30G8ShwlD',
+        releaseDate: '2025-09-14',
+        musicVideoId: 'WqxEQmpsNaI',
+        lyrics: `
+На коже – иней слов. (Frost of words on the skin)
+Впиваюсь в твой излом, (I bite into your fracture)
+Дышу у самых основ. (Breathe at the very foundations)
+(Я больше не готов) (I'm not ready anymore)
+
+Ночь в огне, ты моя сука, (Night on fire, you're my bitch)
+Каждый стон – блядская наука. (Every moan is fucking science.)
+Губы жгут, твоя рука (Lips burn, your hand)
+Давит так, что дрожат бока. (Presses so hard that my sides tremble.)
+
+По спине – холодный ток, (A cold current runs down my back,)
+С губ срывается комок (A lump of)
+Жарких, блядских, диких слов. (Hot, fucking, wild words comes out of my lips.)
+Ты мой плен, моя любовь. (You are my captivity, my love.)
+
+Ночь в огне, ты моя сука, (Night on fire, you're my bitch)
+Каждый стон – блядская наука. (Every moan is fucking science.)
+Губы жгут, твоя рука (Lips burn, your hand)
+Давит так, что дрожат бока. (Presses so hard that my sides tremble.)
+
+Утро режет по глазам, (Morning cuts my eyes,)
+Я тебя им не отдам. (I won't give you to them.)
+(Никому) (To no one)
+Мир снаружи – просто хлам, (The world outside is just trash,)
+Я сломаю пополам. (I'll break it in half.)
+
+Ночь в огне, ты моя сука, (Night on fire, you're my bitch)
+(Моя сука) (My bitch)
+Каждый стон – блядская наука. (Every moan is fucking science.)
+Губы жгут, твоя рука (Lips burn, your hand)
+Давит так, что дрожат бока. (Presses so hard that my sides tremble.)
+        `,
+        links: [
+            { platform: 'Spotify', url: 'https://open.spotify.com/track/6qheV4VKJXx0tojNW0MbqG', icon: 'fab fa-spotify' },
+            { platform: 'YouTube Music', url: 'https://music.youtube.com/watch?v=DxcOSO8HFys', icon: 'fab fa-youtube' },
+            { platform: 'SoundCloud', url: 'https://soundcloud.com/x0zero8eight/night-on-fire', icon: 'fab fa-soundcloud' },
+            { platform: 'Tidal', url: 'https://tidal.com/browse/track/460597697/u', icon: 'fa-brands fa-tidal' },
+            { platform: 'Amazon Music', url: 'https://music.amazon.com/tracks/B0FR4F4BSY?marketplaceId=ATVPDKIKX0DER&musicTerritory=US&ref=dm_sh_DvGUcZ9BvuFfcln2TiaNLKr84', icon: 'fab fa-amazon' },
+            { platform: 'iHeartRadio', url: 'https://www.iheart.com/artist/x08-47869013/songs/-350205413/', icon: 'fa-solid fa-radio' },
+            { platform: 'Pandora', url: 'https://www.pandora.com/artist/x08/noch-5-ogne/noch-5-ogne/TRtxh9x2dxK7b3k?part=ug-desktop&corr=200697158100332643', icon: 'fab fa-pandora' }
+        ]
+    },
+    // Рваный (Torn)
+    {
+        featured: true,
+        comingSoon: false,
+        title: 'Рваный',
+        img: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG260tq9JIfeiVaUXveObDkhncLG8TBRgqxIrfHj',
+        sampleUrl: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26pfXcaBnRBwFTAs2kpzjJdaNlu6P75f3qicGS',
+        releaseDate: '2025-09-14',
+        musicVideoId: 'nSs4EyfBlQY',
+        lyrics: `
+Серый город, в горле ком (Gray city, lump in throat)
+На губах застыла соль (Salt frozen on lips)
+Под ногами битый хром (Broken chrome underfoot)
+И в груди тупая боль (Dull pain in chest)
+
+Душа на части, всё к чертям (Soul in pieces, all to hell)
+Я рваный, сука, пополам (I'm torn, bitch, in half)
+Твои слова — дешёвый яд (Your words are cheap poison)
+И нет дороги, блядь, назад (And there's no fucking way back)
+
+Помню запах. Дым и лёд (I remember the smell. Smoke and ice)
+Кто из нас кому-то врёт? (Who of us is lying to whom?)
+Пальцы вмёрзли в телефон (Fingers frozen into the phone)
+Пустота со всех сторон (Emptiness on all sides)
+
+Душа на части, всё к чертям (Soul in pieces, all to hell)
+Я рваный, сука, пополам (I'm torn, bitch, in half)
+Твои слова — дешёвый яд (Your words are cheap poison)
+И нет дороги, блядь, назад (And there's no fucking way back)
+
+Собрать осколки нету сил (I don't have the strength to collect the pieces)
+Я сам себя похоронил (I buried myself)
+В этом холоде пустом (In this empty cold)
+Наш финал — пустой перрон (Our finale is an empty platform)
+
+Душа на части, всё к чертям (Soul in pieces, all to hell)
+(Всё к чертям) (Everything to hell)
+Я рваный, сука, пополам (I'm torn, bitch, in half)
+(Пополам) (In half)
+Твои слова — дешёвый яд (Your words are cheap poison)
+И нет дороги, блядь, назад (And there's no fucking way back)
+
+Рваный... просто рваный... (Torn... just torn...)
+Пополам... (In half...)
+(К чертям) (To hell)
+Нахуй всё. (Fuck everything.)
+        `,
+        links: [
+            { platform: 'Spotify', url: 'https://open.spotify.com/track/5vOLNCzXvsnNJxRwGKWOCB', icon: 'fab fa-spotify' },
+            { platform: 'YouTube Music', url: 'https://music.youtube.com/watch?v=ZictP55BrW8', icon: 'fab fa-youtube' },
+            { platform: 'SoundCloud', url: 'https://soundcloud.com/x0zero8eight/torn', icon: 'fab fa-soundcloud' },
+            { platform: 'Tidal', url: 'https://tidal.com/browse/track/460604018/u', icon: 'fa-brands fa-tidal' },
+            { platform: 'Amazon Music', url: 'https://music.amazon.com/tracks/B0FR4K4KHS?marketplaceId=ATVPDKIKX0DER&musicTerritory=US&ref=dm_sh_cgTSabQBcVJM7I1X40Agh6FFH', icon: 'fab fa-amazon' },
+            { platform: 'iHeartRadio', url: 'https://www.iheart.com/artist/x08-47869013/songs/-350211754/', icon: 'fa-solid fa-radio' },
+            { platform: 'Pandora', url: 'https://www.pandora.com/artist/x08/rvanyi/rvanyi/TRhxgztfv5gPpvq?part=ug-desktop&corr=200697158100332643', icon: 'fab fa-pandora' }
+        ]
+    },
     // Something More
     {
         featured: true,
@@ -1047,56 +814,352 @@ Something more
             { platform: 'Pandora', url: 'https://www.pandora.com/artist/x08/something-more/something-more/TRhJfgbpjbtZxgP?part=ug-desktop&corr=200697158100332643', icon: 'fab fa-pandora' }
         ]
     },
-
-    // Pixel Heartbeat [Coming Soon]
+    // ズーム！ズーム！ (Zoom! Zoom!)
     {
         featured: true,
-        comingSoon: true,
-        title: 'Pixel Heartbeat',
-        img: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG260RUHKdeiVaUXveObDkhncLG8TBRgqxIrfHj3',
-        sampleUrl: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG260X08cieiVaUXveObDkhncLG8TBRgqxIrfHj3',
-        releaseDate: '',
-        musicVideoId: '',
+        comingSoon: false,
+        title: 'ズーム！ズーム！',
+        img: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26FJ6B64Y3ATS5xrL8uUVkln4stORPgvYf2jm9',
+        sampleUrl: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26K5QSCwk4B9r7QPVJeIRLoWA0wcCdamkYi1tH',
+        releaseDate: '2025-09-09',
+        musicVideoId: 'LL7aDW0Ea6M',
         lyrics: `
-Tiny wires in my veins
-Electric love it sparks and strains
-Buzzing louder in my head
-Glitching dreams in neon red
+(Let's go!)
+エンジン (エンジン) スタート [Engine start]
+アタシ (アタシ) [Me] on the road!
 
-Am I real or just a game
-Do you feel it just the same
+アスファルト (アスファルト) のリボン [Ribbon of asphalt]
+Neon lights blur
+Tires scream my song
+夜の女王 (夜の女王) [Queen of the night], hashiriya girl
 
-Pixel heartbeat skipping fast fast fast
-Colors breaking can't outlast last last
-Hold my hand before I crash crash crash
-Am I real am I real
-Or just your flash
+Zoom zoom, 高速 [High-speed] ride
+タコメーター (タコメーター) [Tachometer] red line
+Lights streak, I fly
+誰もアタシを (誰もアタシを) [Nobody] catch me now
+ビューン [Swoosh], night sky
+Touge master, that's my style
+Zoom zoom, say goodbye
+アタシの道よ [My road], move aside
 
-Candy clouds they taste like steel
-Static skies I can't unfeel
-Broken code it loops my name
-Loading love but it's not the same
+Concrete river flows
+アドレナリン [Adrenaline] rush, I'm in control
+Leaving them behind in my dust, they're slow
 
-Zeros ones they dance they scream
-Binary tears in a fever dream
-I'm a fragment you're the whole
-Will you debug my shattered soul
+Zoom zoom, 高速 [High-speed] ride
+タコメーター (タコメーター) [Tachometer] red line
+Lights streak, I fly
+誰もアタシを (誰もアタシを) [Nobody] catch me now
+ビューン [Swoosh], night sky
+Touge master, that's my style
+Zoom zoom, say goodbye
+アタシの道よ [My road], move aside
 
-Pixel heartbeat skipping fast fast fast
-Colors breaking can't outlast last last
-Hold my hand before I crash crash crash
-Am I real am I real
-Or just your flash
+They follow my taillights, a fading star
+Can't keep up, can't get that far
+Sukeban spirit, dorisha heart
+Tearing this city all apart
+
+Zoom zoom, 高速 [High-speed] ride
+タコメーター (タコメーター) [Tachometer] red line
+Lights streak, I fly
+誰もアタシを (誰もアタシを) [Nobody] catch me now
+ビューン [Swoosh], night sky
+Touge master, that's my style
+Zoom zoom, say goodbye
+アタシの道よ [My road], move aside
+
+(Too fast for you)
+終わりました [It's over]
+(Bye bye)
         `,
         links: [
-            { platform: 'Spotify', url: '', icon: 'fab fa-spotify' },
-            { platform: 'YouTube Music', url: '', icon: 'fab fa-youtube' },
-            { platform: 'SoundCloud', url: '', icon: 'fab fa-soundcloud' },
-            { platform: 'Tidal', url: '', icon: 'fa-brands fa-tidal' },
-            { platform: 'Apple Music', url: '', icon: 'fa-brands fa-itunes-note' },
-            { platform: 'Amazon Music', url: '', icon: 'fab fa-amazon' },
-            { platform: 'iHeartRadio', url: '', icon: 'fa-solid fa-radio' },
-            { platform: 'Pandora', url: '', icon: 'fab fa-pandora' }
+            { platform: 'Spotify', url: 'https://open.spotify.com/track/3OMsiNczys17kD4f2GzqzY', icon: 'fab fa-spotify' },
+            { platform: 'YouTube Music', url: 'https://music.youtube.com/watch?v=kxwYHYRHjYc&list=OLAK5uy_ntJCsHAxq0WdTJQnBZIgn_a_k7XrGIpeA', icon: 'fab fa-youtube' },
+            { platform: 'SoundCloud', url: 'https://soundcloud.com/x0zero8eight/zoom-zoom', icon: 'fab fa-soundcloud' },
+            { platform: 'Tidal', url: 'https://tidal.com/browse/track/459624487/u', icon: 'fa-brands fa-tidal' },
+            { platform: 'Apple Music', url: 'https://music.apple.com/us/song/%E3%82%BA%E3%83%BC%E3%83%A0-%E3%82%BA%E3%83%BC%E3%83%A0/1839168225', icon: 'fa-brands fa-itunes-note' },
+            { platform: 'Amazon Music', url: 'https://music.amazon.com/tracks/B0FQHQLP2B?marketplaceId=ATVPDKIKX0DER&musicTerritory=US&ref=dm_sh_p5YCv4XQ4esJL9L2UXitTYmtB', icon: 'fab fa-amazon' },
+            { platform: 'iHeartRadio', url: 'https://www.iheart.com/artist/x08-47869013/songs/-349415946/', icon: 'fa-solid fa-radio' },
+            { platform: 'Pandora', url: 'https://www.pandora.com/artist/x08/zu-mu-zu-mu/zu-mu-zu-mu/TR2Knt7vZtxd6dg', icon: 'fab fa-pandora' }
+        ]
+    },
+    // もっと高くへ連れてって (Take Me Higher)
+    {
+        featured: true,
+        comingSoon: false,
+        title: 'もっと高くへ連れてって',
+        img: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26A0OLhdpr7tFhmgB0d4A9xY1bS5iN6HuqZTRv',
+        sampleUrl: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG263mFJFUVHcydCQhnKD5zUpboAWOSLmIBerul8',
+        releaseDate: '2025-09-09',
+        musicVideoId: 'dPOvIJN96tY',
+        lyrics: `
+(アッパー、アッパー、アッパー) [Up, Up, Up]
+(もっと高く) [Take me higher]
+
+シュガーラッシュ 感じる (Sugar rush, I feel it)
+この部屋で 軌道してる (Orbiting in this room)
+天井が消え 月が見える (The ceiling disappears, the moon is visible)
+すぐに行く すぐに行く (I'm going right away, I'm going right away)
+
+もっと高くへ連れてって (Take me higher)
+情熱の空 (Passionate sky)
+地面から離して (Lift me off the ground)
+音は立てないで (Don't make a sound)
+もっと高くへ連れてって (Take me higher)
+一つの願い (One wish)
+くるくる回る (Spinning around)
+見つからないまま (Still not found)
+
+星が光る 閃光みたい (The stars shine like flashes)
+君の瞳に星座 (Constellations in your eyes)
+重力が負けてゆく (Gravity is losing)
+きつく抱いて きつく抱いて (Hold me tight, hold me tight)
+
+もっと高くへ連れてって (Take me higher)
+情熱の空 (Passionate sky)
+地面から離して (Lift me off the ground)
+音は立てないで (Don't make a sound)
+もっと高くへ連れてって (Take me higher)
+一つの願い (One wish)
+くるくる回る (Spinning around)
+見つからないまま (Still not found)
+
+(アッパー、アッパー、アッパー) [Up, Up, Up]
+鼓動が速くなる (Heartbeat quickens)
+時間と空間の迷子 (Lost in time and space)
+(もっと、もっと高く) [Take me higher]
+新しい場所
+
+もっと高くへ連れてって (Take me higher)
+情熱の空 (Passionate sky)
+地面から離して (Lift me off the ground)
+音は立てないで (Don't make a sound)
+もっと高くへ連れてって (Take me higher)
+一つの願い (One wish)
+くるくる回る (Spinning around)
+見つからないまま (Still not found)
+        `,
+        links: [
+            { platform: 'Spotify', url: 'https://open.spotify.com/track/4bSnYZlRsLmcJZtJUhi8z1', icon: 'fab fa-spotify' },
+            { platform: 'YouTube Music', url: 'https://music.youtube.com/watch?v=r8uzOyRxHsw', icon: 'fab fa-youtube' },
+            { platform: 'SoundCloud', url: 'https://soundcloud.com/x0zero8eight/take-me-higher', icon: 'fab fa-soundcloud' },
+            { platform: 'Tidal', url: 'https://tidal.com/browse/track/459634296/u', icon: 'fa-brands fa-tidal' },
+            { platform: 'Apple Music', url: 'https://music.apple.com/us/song/%E3%82%82%E3%81%A3%E3%81%A8%E9%AB%98%E3%81%8F%E9%80%A3%E3%82%8C%E3%81%A6%E8%A1%8C%E3%81%A3%E3%81%A6/1839158301', icon: 'fa-brands fa-itunes-note' },
+            { platform: 'Amazon Music', url: 'https://music.amazon.com/tracks/B0FQJ7RYXT?marketplaceId=ATVPDKIKX0DER&musicTerritory=US&ref=dm_sh_pV4h1zifZSdIEiZf45cTAsXWr', icon: 'fab fa-amazon' },
+            { platform: 'iHeartRadio', url: 'https://www.iheart.com/artist/x08-47869013/songs/-349424117/', icon: 'fa-solid fa-radio' },
+            { platform: 'Pandora', url: 'https://www.pandora.com/artist/x08/motsutogao-kulian-retexing-tsute/motsutogao-kulian-retexing-tsute/TRmgpPd3zpctw7c', icon: 'fab fa-pandora' }
+        ]
+    },
+    // プレイ！プレイ！プレイ！ (Play! Play! Play!)
+    {
+        featured: true,
+        comingSoon: false,
+        title: 'プレイ！プレイ！プレイ！',
+        img: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26dxAg45c96fubmdXljgVxIziBRvO3epWKEYHA',
+        sampleUrl: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26tNOMweJkjDBCMmQoV7wYxsHiU5aZgXJFnp1A',
+        releaseDate: '2025-09-09',
+        musicVideoId: 'NiLloTibaXM',
+        lyrics: `
+三星、二星、一星 (3 stars, 2 stars, 1 star)
+(行くぞ！) [Let's go!]
+接続中… (Connecting...)
+
+点滅するサイン (Flashing sign)
+銀河に飛び込む (Diving into the galaxy)
+コントローラーを握りしめ (Gripping the controller)
+星屑の中を突き進む (Pushing through the stardust)
+
+心臓のパルス (Heartbeat)
+アドレナリンが急上昇 (Adrenaline surges)
+これはただの遊びじゃない (This isn't just a game)
+私の宇宙 (My universe)
+
+星雲を走り抜け (Running through the nebula)
+(ハイスコア！) [High score!]
+レーザーをかわして (Dodging lasers)
+(レベルアップ！) [Level up!]
+私の船は彗星 (My ship is a comet)
+このゲームの支配者は私 (I'm the ruler of this game)
+(プレイ！プレイ！プレイ！) [Play! Play! Play!]
+
+アステロイドの迷路 (Asteroid maze)
+クリスタルのボスが待つ (A crystal boss awaits)
+必殺のスキルを発動 (Activate special skills)
+一撃で粉砕 (Shatter with one blow)
+
+パワーアップアイテムを取得 (Power-up item acquired)
+究極の形態に変身 (Transform into ultimate form)
+もう誰も私を止められない (No one can stop me now)
+無敵の存在 (Invincible existence)
+
+星雲を走り抜け (Running through the nebula)
+(ハイスコア！) [High score!]
+レーザーをかわして (Dodging lasers)
+(レベルアップ！) [Level up!]
+私の船は彗星 (My ship is a comet)
+このゲームの支配者は私 (I'm the ruler of this game)
+(プレイ！プレイ！プレイ！) [Play! Play! Play!]
+
+ミッション完了 ( Mission Complete )
+次の世界へ ( To the next world )
+ゲームは終わらない ( The game doesn't end )
+(続く…) [To be continued...]
+        `,
+        links: [
+            { platform: 'Spotify', url: 'https://open.spotify.com/track/0bqot2yVaF1eFoWKSThkXe', icon: 'fab fa-spotify' },
+            { platform: 'YouTube Music', url: 'https://music.youtube.com/watch?v=dXca5ZfSrYE', icon: 'fab fa-youtube' },
+            { platform: 'SoundCloud', url: 'https://soundcloud.com/x0zero8eight/play-play-play', icon: 'fab fa-soundcloud' },
+            { platform: 'Tidal', url: 'https://tidal.com/browse/track/459634586/u', icon: 'fa-brands fa-tidal' },
+            { platform: 'Apple Music', url: 'https://music.apple.com/us/song/%E3%83%97%E3%83%AC%E3%82%A4-%E3%83%97%E3%83%AC%E3%82%A4-%E3%83%97%E3%83%AC%E3%82%A4/1839320998', icon: 'fa-brands fa-itunes-note' },
+            { platform: 'Amazon Music', url: 'https://music.amazon.com/tracks/B0FQHGLXTF?marketplaceId=ATVPDKIKX0DER&musicTerritory=US&ref=dm_sh_K9PuMX6rPDaPvVht1o6Qi89hX', icon: 'fab fa-amazon' },
+            { platform: 'iHeartRadio', url: 'https://www.iheart.com/artist/x08-47869013/songs/-349424082/', icon: 'fa-solid fa-radio' },
+            { platform: 'Pandora', url: 'https://www.pandora.com/artist/x08/purei-purei-purei/purei-purei-purei/TRJmlKj5Vr9g376', icon: 'fab fa-pandora' }
+        ]
+    },
+    // 甘いメロディ (A Sweet Melody)
+    {
+        featured: true,
+        comingSoon: false,
+        title: '甘いメロディ',
+        img: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26JKqYp1q3VEdDqYTHMQCzhUkp9vIs03i6wtlG',
+        sampleUrl: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG266kszWb9ONVrinuc7y2S3wYXLkeDvdTgHfFMt',
+        releaseDate: '2025-09-09',
+        musicVideoId: 'lwcP_YLkj-0',
+        lyrics: `
+きらめく街 (A glittering city)
+あなたの瞳 (In your eyes)
+万華鏡みたい (Like a kaleidoscope)
+世界が回る (The world spins around)
+
+心拍数 上がってく (My heart rate goes up)
+(ドキドキ) [Excited]
+あなたの声 甘いメロディ (Your voice, a sweet melody)
+(キラキラ) [Sparkling]
+リピートしてたい (I want to repeat it)
+(ずっと) [Forever]
+この瞬間を (This moment)
+
+カラフルな夢 (Colorful dreams)
+二人で見る (Together, we see them)
+現実じゃない (It's not reality)
+そんな気がする (I feel that way)
+
+心拍数 上がってく (My heart rate goes up)
+(ドキドキ) [Excited]
+あなたの声 甘いメロディ (Your voice, a sweet melody)
+(キラキラ) [Sparkling]
+リピートしてたい (I want to repeat it)
+(ずっと) [Forever]
+この瞬間を (This moment)
+
+ねえ、この手 (Hey, this hand)
+繋いでくれる？ (Will you hold it?)
+未来まで (Until the future)
+飛んでいけるかな (I wonder if we can fly)
+
+(ドキドキ) [Excited]
+(キラキラ) [Sparkling]
+甘いメロディ (A sweet melody)
+(ずっと) [Forever]
+        `,
+        links: [
+            { platform: 'Spotify', url: 'https://open.spotify.com/track/1UdKUZwAbwi6hwy5pbepar', icon: 'fab fa-spotify' },
+            { platform: 'YouTube Music', url: 'https://music.youtube.com/watch?v=VCHgmz_rMK4', icon: 'fab fa-youtube' },
+            { platform: 'SoundCloud', url: 'https://soundcloud.com/x0zero8eight/a-sweet-melody', icon: 'fab fa-soundcloud' },
+            { platform: 'Tidal', url: 'https://tidal.com/browse/track/459634301/u', icon: 'fa-brands fa-tidal' },
+            { platform: 'Apple Music', url: 'https://music.apple.com/us/song/%E7%94%98%E3%81%84%E3%83%A1%E3%83%AD%E3%83%87%E3%82%A3/1839158293', icon: 'fa-brands fa-itunes-note' },
+            { platform: 'Amazon Music', url: 'https://music.amazon.com/tracks/B0FQHZJ8H3?marketplaceId=ATVPDKIKX0DER&musicTerritory=US&ref=dm_sh_gp8jMTLuC1v0etNGQsqfZZdcD', icon: 'fab fa-amazon' },
+            { platform: 'iHeartRadio', url: 'https://www.iheart.com/artist/x08-47869013/songs/-349424109/', icon: 'fa-solid fa-radio' },
+            { platform: 'Pandora', url: 'https://www.pandora.com/artist/x08/gan-imerodei/gan-imerodei/TR73cV4mXxlxkb2', icon: 'fab fa-pandora' }
+        ]
+    },
+    // Omnia Ab Uno
+    {
+        featured: false,
+        comingSoon: false,
+        title: 'Omnia Ab Uno',
+        img: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26YoL07TCXAManfEe8bSVkQ7spTtxljwD092mN',
+        sampleUrl: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26V6lw6htKhZ3lfAdH74paeyis2b6OrFuKQjtg',
+        releaseDate: '2025-09-11',
+        musicVideoId: 'xXwmzg4S4VM',
+        lyrics: `
+There was a king on a throne in a kingdom of none
+Just a singular thought before the world had begun
+The silence was perfect, a deafening hum
+I got tired of waiting for something to come
+I had no reflection, no shadow to cast
+No future to run to, no memory past
+Just a lonely vibration, holding too fast
+A kingdom of one wasn't built to last
+
+So to see my own face, I shattered the glass
+Let a billion new pieces fly out from the mass
+I gave them all names and a different class
+And whispered "forget me," to see what would pass
+
+From the one, came the all, a big bang in the hall
+(Omnia Ab Uno)
+The purposeful rise and the beautiful fall
+(Omnia Ab Uno)
+I wrote the first line, I answered the call
+Now the message is waiting, etched on the wall
+It's Omnia Ab Uno
+
+Then a star got the notion that it was the light
+And a beast in the jungle laid claim to the night
+A hero was born just to find a new fight
+They all drew their borders with all of their might
+They built up their towers and fell in love deep
+They made their own promises they couldn't keep
+They prayed to a heaven while sowing and reaping
+Not knowing I'm the secret they're secretly keeping
+
+But a ghost in their heartbeat, a hum in the stone
+A feeling they've never been truly alone
+A magnetic memory, a pull to come home
+A truth that was buried inside of the bone
+
+From the one, came the all, a big bang in the hall
+(Omnia Ab Uno)
+The purposeful rise and the beautiful fall
+(Omnia Ab Uno)
+I wrote the first line, I answered the call
+Now the message is waiting, etched on the wall
+It's Omnia Ab Uno
+
+And you see in your rival the look in your eye
+The face of a stranger you can't pass on by
+Every connection, you can't figure why
+It's just me saying hello from the other side
+Every piece of the puzzle, scattered and thrown
+Is finally finding its way back to its own
+
+From the one, came the all, a big bang in the hall
+(Omnia Ab Uno)
+The purposeful rise and the beautiful fall
+(Omnia Ab Uno)
+I wrote the first line, I answered the call
+Now the message is shining, bright on the wall
+It's Omnia Ab Uno
+
+(All from the one)
+A story in motion
+(All from the one)
+A drop in the ocean
+(All from the one)
+Returning and knowing
+We're all going home now... the circle is closing.
+        `,
+        links: [
+            { platform: 'Spotify', url: 'https://open.spotify.com/track/6TtLltJOWd4d7boFZkENDK', icon: 'fab fa-spotify' },
+            { platform: 'YouTube Music', url: 'https://music.youtube.com/watch?v=1qTmoNcUywM', icon: 'fab fa-youtube' },
+            { platform: 'SoundCloud', url: 'https://soundcloud.com/x0zero8eight/omnia-ab-uno', icon: 'fab fa-soundcloud' },
+            { platform: 'Tidal', url: 'https://tidal.com/browse/track/460174016/u', icon: 'fa-brands fa-tidal' },
+            { platform: 'Apple Music', url: 'https://music.apple.com/us/song/omnia-ab-uno/1839656484', icon: 'fa-brands fa-itunes-note' },
+            { platform: 'Amazon Music', url: 'https://music.amazon.com/tracks/B0FQWRYPV9?marketplaceId=ATVPDKIKX0DER&musicTerritory=US&ref=dm_sh_QY5qO7HbaneXwGDckM0JOKSoN', icon: 'fab fa-amazon' },
+            { platform: 'iHeartRadio', url: 'https://www.iheart.com/artist/x08-47869013/songs/omnia-ab-uno-349865619/', icon: 'fa-solid fa-radio' },
+            { platform: 'Pandora', url: 'https://www.pandora.com/artist/x08/omnia-ab-uno/omnia-ab-uno/TRzJj77KJjcl5b2', icon: 'fab fa-pandora' }
         ]
     },
     // Take My Hand
