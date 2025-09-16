@@ -9,7 +9,6 @@ function initializeApp() {
         history.scrollRestoration = 'manual';
     }
 
-    // --- New Feature: Preloader ---
     const preloader = document.getElementById('preloader');
     window.addEventListener('load', () => {
         preloader.classList.add('preloader-hidden');
@@ -39,9 +38,7 @@ function initializeApp() {
     }
 
     const albumList = document.getElementById('album-list');
-    const featuredSongsContainer = document.getElementById('featured-songs');
-    const upcomingReleasesContainer = document.getElementById('upcoming-releases');
-    const latestReleaseContainer = document.getElementById('latest-release');
+    const artistPickContainer = document.getElementById('artist-pick');
     const songPage = document.getElementById('song-page');
     const searchBar = document.getElementById('search-bar');
     const videoSearchBar = document.getElementById('video-search-bar');
@@ -50,9 +47,6 @@ function initializeApp() {
 
     const linksModal = document.getElementById('links-modal');
     const socialModal = document.getElementById('social-modal');
-    const modalTitle = document.getElementById('modal-title');
-    const modalLinksContainer = document.getElementById('modal-links');
-    const socialModalLinksContainer = socialModal.querySelector('.modal-links');
     const socialsToggleBtn = document.querySelector('.socials-toggle-btn');
     const socialsDropdown = document.getElementById('socials-dropdown');
     const modalCloseBtns = document.querySelectorAll('.modal-close-btn');
@@ -63,7 +57,6 @@ function initializeApp() {
     const logoLink = document.querySelector('.logo-container a');
 
 
-    // Global Player Elements
     const globalPlayer = document.getElementById('global-player');
     const playerAlbumArt = document.getElementById('player-album-art');
     const playerSongTitle = document.getElementById('player-song-title');
@@ -84,9 +77,7 @@ function initializeApp() {
     let isSeeking = false;
     const colorThief = new ColorThief();
     let currentPalette = [];
-    let featuredSliderAutoplayInterval;
 
-    // --- New Feature: Audio Visualizer & Dynamic Favicon Variables ---
     const visualizerCanvas = document.getElementById('audio-visualizer');
     const visualizerCtx = visualizerCanvas.getContext('2d');
     const faviconLink = document.getElementById('favicon');
@@ -100,7 +91,6 @@ function initializeApp() {
     let audioContext, analyser, sourceNode, dataArray, bufferLength;
     let faviconAnimationActive = false;
 
-    // --- New Feature: Video Gallery ---
     const videoGalleryContainer = document.getElementById('video-gallery');
     const videoTheater = document.getElementById('video-theater');
     const videoCloseBtn = document.getElementById('video-close-btn');
@@ -112,7 +102,7 @@ function initializeApp() {
         <div class="now-playing-indicator">
             <span></span><span></span><span></span>
         </div>`;
-    
+
     const siteDefaults = {
         title: 'x08 | Official Site',
         description: 'The official website and music portfolio for the artist x08.',
@@ -120,10 +110,8 @@ function initializeApp() {
         image: 'https://x08.app/icons/x08_x_512.png',
         type: 'website'
     };
-    
-    const ITEM_LIMIT = 8;
 
-    // Theme toggle functionality
+    const ITEM_LIMIT = 8;
     const savedTheme = localStorage.getItem('theme') || 'dark';
     body.setAttribute('data-theme', savedTheme);
     themeToggle.checked = savedTheme === 'light';
@@ -138,13 +126,13 @@ function initializeApp() {
 
     const debounce = (func, delay) => {
         let timeout;
-        return function(...args) {
+        return function (...args) {
             const context = this;
             clearTimeout(timeout);
             timeout = setTimeout(() => func.apply(context, args), delay);
         };
     };
-    
+
     const updateURL = (type, searchTerm) => {
         const currentPath = window.location.pathname;
         let newUrl = currentPath;
@@ -170,7 +158,7 @@ function initializeApp() {
         nameSpan.className = 'platform-name';
         nameSpan.textContent = text;
         linkElement.appendChild(nameSpan);
-       
+
         return linkElement;
     };
 
@@ -186,7 +174,7 @@ function initializeApp() {
             'iHeartRadio': { url: social_links.iheart, icon: 'fa-solid fa-radio', class: 'iheart' },
             'Pandora': { url: social_links.pandora, icon: 'fab fa-pandora', class: 'pandora' }
         };
-    
+
         let delay = 0;
         for (const [platform, data] of Object.entries(platforms)) {
             if (data.url) {
@@ -196,19 +184,19 @@ function initializeApp() {
                 delay += 0.05;
             }
         }
-    
+
         socialsToggleBtn.addEventListener('click', () => {
             const isActive = socialsDropdown.classList.contains('active');
             socialsToggleBtn.classList.toggle('active', !isActive);
             socialsDropdown.classList.toggle('active', !isActive);
             socialsToggleBtn.setAttribute('aria-expanded', !isActive);
-        
+
             if (window.innerWidth <= 768) {
                 document.body.style.overflow = !isActive ? 'hidden' : '';
             }
         });
     };
-    
+
     const formatRelativeDate = (dateString, isSongPage = false) => {
         if (!dateString) {
             return "Releasing Soon";
@@ -224,7 +212,7 @@ function initializeApp() {
         const now = new Date();
         releaseDate.setHours(0, 0, 0, 0);
         now.setHours(0, 0, 0, 0);
-        
+
         const diffTime = releaseDate - now;
         const diffDays = Math.round(diffTime / (1000 * 60 * 60 * 24));
 
@@ -232,7 +220,7 @@ function initializeApp() {
             const rtf = new Intl.RelativeTimeFormat('en', { numeric: 'auto' });
             if (diffDays <= 7) return `Releases ${rtf.format(diffDays, 'day')}`;
             const weeks = Math.round(diffDays / 7);
-             return `Releases in ${weeks} week${weeks > 1 ? 's' : ''}`;
+            return `Releases in ${weeks} week${weeks > 1 ? 's' : ''}`;
         } else if (diffDays === 0) {
             return "Releases today";
         } else {
@@ -247,16 +235,24 @@ function initializeApp() {
             return `Released ${yearsAgo} year${yearsAgo > 1 ? 's' : ''} ago`;
         }
     };
-    
+
+    const createTagElement = (tagText, type, delay) => {
+        const tagEl = document.createElement('div');
+        tagEl.className = `song-tag ${type}-tag`;
+        tagEl.textContent = tagText;
+        tagEl.style.setProperty('--tag-delay', `${delay}s`);
+        return tagEl;
+    };
+
     const renderAlbums = (filteredAlbums, isFullPage = false) => {
         albumList.innerHTML = '';
         const allAlbums = filteredAlbums || albums.filter(album => !album.comingSoon);
         discographyCount.textContent = `(${allAlbums.length})`;
 
         const sortedAlbums = allAlbums.sort((a, b) => new Date(b.releaseDate) - new Date(a.releaseDate));
-        
+
         const albumsToRender = isFullPage ? sortedAlbums : sortedAlbums.slice(0, ITEM_LIMIT);
-        
+
         albumsToRender.forEach((album, index) => {
             const originalIndex = albums.indexOf(album);
             const albumItem = document.createElement('div');
@@ -264,11 +260,19 @@ function initializeApp() {
             albumItem.dataset.index = originalIndex;
             albumItem.style.setProperty('--stagger-index', index);
 
+            const tagsHtml = `
+                <div class="song-tags-container">
+                    ${(album.languages || []).map((lang, i) => `<div class="song-tag language-tag" style="--tag-delay: ${i * 0.1}s">${lang}</div>`).join('')}
+                    ${(album.tags || []).slice(0, 3).map((tag, i) => `<div class="song-tag genre-tag" style="--tag-delay: ${(i + (album.languages || []).length) * 0.1}s">${tag}</div>`).join('')}
+                </div>
+            `;
+
             albumItem.innerHTML = `
                 <img src="${album.img}" alt="${album.title}" class="album-item-img">
                 <div class="album-info">
                     <div class="album-title">${album.title}</div>
                     <div class="album-status">${formatRelativeDate(album.releaseDate)}</div>
+                    ${tagsHtml}
                 </div>
                 <div class="album-controls">
                     <button class="album-play-btn" data-index="${originalIndex}" ${!album.sampleUrl ? 'disabled' : ''}>
@@ -280,7 +284,7 @@ function initializeApp() {
             `;
             albumList.appendChild(albumItem);
         });
-        
+
         const viewAllContainer = document.getElementById('discography-view-all-container');
         viewAllContainer.innerHTML = '';
         if (sortedAlbums.length > ITEM_LIMIT && !isFullPage) {
@@ -299,40 +303,48 @@ function initializeApp() {
             viewAllContainer.appendChild(viewAllBtn);
         }
     };
+    
+    const renderArtistPicks = () => {
+        const artistPickSection = document.getElementById('artist-pick-section');
+        artistPickContainer.innerHTML = '';
+        const picks = albums.filter(song => song.artistPick);
 
-    const renderFeaturedSongs = () => {
-        const featuredSongsSection = document.getElementById('featured-songs-section');
-        const container = document.getElementById('featured-songs');
-        container.innerHTML = '';
-        const featuredSongs = albums.filter(song => song.featured);
-
-        if (featuredSongs.length === 0) {
-            featuredSongsSection.style.display = 'none';
+        if (picks.length === 0) {
+            artistPickSection.style.display = 'none';
             return;
         }
-        
-        featuredSongsSection.style.display = 'block';
 
-        featuredSongs.forEach(song => {
+        artistPickSection.style.display = 'block';
+
+        picks.forEach((song, index) => {
             const originalIndex = albums.indexOf(song);
-            const featuredItem = document.createElement('div');
-            featuredItem.classList.add('featured-song');
-            featuredItem.dataset.index = originalIndex;
-            
-            const tagIcon = song.comingSoon ? 'fa-clock' : 'fa-star';
-            const tagTitle = song.comingSoon ? 'Coming Soon' : 'Featured Release';
+            const pickItem = document.createElement('div');
+            pickItem.className = 'artist-pick-item reveal-on-scroll';
+            pickItem.dataset.index = originalIndex;
+            pickItem.style.setProperty('--stagger-index', index);
 
-            featuredItem.innerHTML = `
-                <div class="featured-song-art">
-                    <img src="${song.img}" alt="${song.title}" class="featured-song-img">
-                    <div class="featured-tag" title="${tagTitle}">
+            const tagsHtml = `
+                <div class="song-tags-container">
+                    ${(song.languages || []).map((lang, i) => `<div class="song-tag language-tag" style="--tag-delay: ${i * 0.1}s">${lang}</div>`).join('')}
+                    ${(song.tags || []).slice(0, 3).map((tag, i) => `<div class="song-tag genre-tag" style="--tag-delay: ${(i + (song.languages || []).length) * 0.1}s">${tag}</div>`).join('')}
+                </div>
+            `;
+
+            const tagIcon = song.comingSoon ? 'fa-clock' : 'fa-star';
+            const tagTitle = song.comingSoon ? 'Coming Soon' : 'Artist Pick';
+
+            pickItem.innerHTML = `
+                <div class="artist-pick-art">
+                    <img src="${song.img}" alt="${song.title}" class="artist-pick-img" crossorigin="anonymous">
+                    <div class="artist-pick-tag" title="${tagTitle}">
                         <i class="fas ${tagIcon}"></i>
                     </div>
                 </div>
-                <div class="featured-song-info">
+                <div class="artist-pick-info">
                     <h2>${song.title}</h2>
                     <p class="release-date">${formatRelativeDate(song.releaseDate)}</p>
-                    <div class="featured-song-controls">
+                    ${tagsHtml}
+                    <div class="artist-pick-controls">
                         <button class="album-play-btn control-btn" data-index="${originalIndex}" ${!song.sampleUrl ? 'disabled' : ''}>
                             ${playIcon}
                             ${nowPlayingIndicator}
@@ -341,221 +353,26 @@ function initializeApp() {
                     </div>
                 </div>
             `;
-            container.appendChild(featuredItem);
-        });
-        
-        setupFeaturedSlider();
-    };
+            artistPickContainer.appendChild(pickItem);
 
-    const setupFeaturedSlider = () => {
-        const slider = document.querySelector('.featured-songs-slider');
-        if (!slider) return;
-
-        clearInterval(featuredSliderAutoplayInterval);
-
-        const container = slider.querySelector('.featured-songs-container');
-        let prevBtn = slider.querySelector('.prev-btn');
-        let nextBtn = slider.querySelector('.next-btn');
-        const paginationContainer = slider.querySelector('.slider-pagination');
-        
-        let songs = Array.from(container.children);
-        const songCount = songs.length;
-        
-        if (songCount <= 1) {
-            prevBtn.classList.add('hidden');
-            nextBtn.classList.add('hidden');
-            if (songs[0]) songs[0].classList.add('active');
-            container.style.justifyContent = 'center';
-            return;
-        } else {
-            prevBtn.classList.remove('hidden');
-            nextBtn.classList.remove('hidden');
-            container.style.justifyContent = '';
-        }
-
-        const cloneFirst = songs[0].cloneNode(true);
-        const cloneLast = songs[songCount - 1].cloneNode(true);
-        container.appendChild(cloneFirst);
-        container.insertBefore(cloneLast, songs[0]);
-    
-        songs = Array.from(container.children);
-        let currentIndex = 1;
-        let isTransitioning = false;
-    
-        const updateSliderPosition = (instant = false) => {
-            if (!songs[0]) return;
-            const itemWidth = songs[0].offsetWidth;
-            const offset = (slider.clientWidth / 2) - (itemWidth / 2) - (currentIndex * itemWidth);
-            
-            container.style.transition = instant ? 'none' : 'transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94)';
-            container.style.transform = `translateX(${offset}px)`;
-            
-            updateActiveStates();
-        };
-    
-        const updateActiveStates = () => {
-            const activeIndex = (currentIndex - 1 + songCount) % songCount;
-            songs.forEach((song, index) => {
-                let originalIndex = (index - 1 + songCount) % songCount;
-                if (index === 0) originalIndex = songCount - 1;
-                if (index === songs.length - 1) originalIndex = 0;
-    
-                song.classList.toggle('active', originalIndex === activeIndex);
-            });
-            updatePagination(activeIndex);
-        };
-        
-        const updatePagination = (activeIndex) => {
-            paginationContainer.innerHTML = '';
-            for (let i = 0; i < songCount; i++) {
-                const dot = document.createElement('div');
-                dot.classList.add('pagination-dot');
-                dot.classList.toggle('active', i === activeIndex);
-                dot.addEventListener('click', () => {
-                    if (isTransitioning) return;
-                    currentIndex = i + 1;
-                    updateSliderPosition();
-                    resetAutoplay();
-                });
-                paginationContainer.appendChild(dot);
-            }
-        };
-    
-        const handleTransitionEnd = () => {
-            isTransitioning = false;
-            if (currentIndex === 0) {
-                currentIndex = songCount;
-                updateSliderPosition(true);
-            } else if (currentIndex === songs.length - 1) {
-                currentIndex = 1;
-                updateSliderPosition(true);
-            }
-        };
-    
-        const moveTo = (direction) => {
-            if (isTransitioning) return;
-            isTransitioning = true;
-            currentIndex += direction;
-            updateSliderPosition();
-            resetAutoplay();
-        };
-    
-        const stopAutoplay = () => clearInterval(featuredSliderAutoplayInterval);
-        const startAutoplay = () => {
-            stopAutoplay();
-            featuredSliderAutoplayInterval = setInterval(() => moveTo(1), 5000);
-        };
-        const resetAutoplay = () => {
-            stopAutoplay();
-            startAutoplay();
-        };
-        
-        // Clone and replace buttons to remove old event listeners
-        const newPrevBtn = prevBtn.cloneNode(true);
-        prevBtn.parentNode.replaceChild(newPrevBtn, prevBtn);
-        prevBtn = newPrevBtn;
-
-        const newNextBtn = nextBtn.cloneNode(true);
-        nextBtn.parentNode.replaceChild(newNextBtn, nextBtn);
-        nextBtn = newNextBtn;
-        
-        prevBtn.addEventListener('click', () => moveTo(-1));
-        nextBtn.addEventListener('click', () => moveTo(1));
-        container.addEventListener('transitionend', handleTransitionEnd);
-        slider.addEventListener('mouseenter', stopAutoplay);
-        slider.addEventListener('mouseleave', startAutoplay);
-        window.addEventListener('resize', () => updateSliderPosition(true));
-    
-        updateSliderPosition(true);
-        startAutoplay();
-    };
-
-    const renderUpcomingReleases = () => {
-        const upcomingReleasesSection = document.getElementById('upcoming-releases-section');
-        upcomingReleasesContainer.innerHTML = '';
-        const upcoming = albums.filter(song => song.comingSoon);
-
-        if (upcoming.length === 0) {
-            upcomingReleasesSection.style.display = 'none';
-            return;
-        }
-        
-        upcomingReleasesSection.style.display = 'block';
-        upcoming.sort((a,b) => new Date(a.releaseDate) - new Date(b.releaseDate));
-
-        upcoming.forEach((song, index) => {
-            const originalIndex = albums.indexOf(song);
-            const upcomingItem = document.createElement('div');
-            upcomingItem.classList.add('album-item', 'coming-soon-item', 'reveal-on-scroll');
-            upcomingItem.dataset.index = originalIndex;
-            upcomingItem.style.setProperty('--stagger-index', index);
-
-            upcomingItem.innerHTML = `
-                <img src="${song.img}" alt="${song.title}" class="album-item-img">
-                <div class="album-info">
-                    <div class="album-title">${song.title}</div>
-                    <div class="album-status">${formatRelativeDate(song.releaseDate)}</div>
-                </div>
-                <div class="album-controls">
-                    <button class="album-play-btn" data-index="${originalIndex}" ${!song.sampleUrl ? 'disabled' : ''}>
-                        ${playIcon}
-                        ${nowPlayingIndicator}
-                    </button>
-                    <button class="album-info-btn" data-index="${originalIndex}"><i class="fas fa-info-circle"></i></button>
-                </div>
-            `;
-             upcomingReleasesContainer.appendChild(upcomingItem);
-        });
-    };
-
-    const renderLatestRelease = () => {
-        latestReleaseContainer.innerHTML = '';
-        const latestRelease = albums
-            .filter(album => !album.comingSoon && album.releaseDate)
-            .sort((a, b) => new Date(b.releaseDate) - new Date(a.releaseDate))[0];
-
-        if (!latestRelease) {
-            document.getElementById('latest-release-section').style.display = 'none';
-            return;
-        }
-
-        const originalIndex = albums.indexOf(latestRelease);
-        latestReleaseContainer.dataset.index = originalIndex;
-
-        latestReleaseContainer.innerHTML = `
-            <div class="latest-release-art">
-                <img src="${latestRelease.img}" alt="${latestRelease.title}" class="latest-release-img" crossorigin="anonymous">
-            </div>
-            <div class="latest-release-info">
-                <h2>${latestRelease.title}</h2>
-                <p class="release-date">${formatRelativeDate(latestRelease.releaseDate)}</p>
-                <div class="latest-release-controls">
-                    <button class="album-play-btn control-btn" data-index="${originalIndex}" ${!latestRelease.sampleUrl ? 'disabled' : ''}>
-                        ${playIcon}
-                        ${nowPlayingIndicator}
-                    </button>
-                    <button class="album-info-btn control-btn" data-index="${originalIndex}"><i class="fas fa-info-circle"></i></button>
-                </div>
-            </div>
-        `;
-        
-        const latestImg = latestReleaseContainer.querySelector('.latest-release-img');
-        const setAnimationColor = () => {
-            try {
-                const dominantColor = colorThief.getColor(latestImg);
-                if (dominantColor) {
-                    latestReleaseContainer.style.setProperty('--animation-color', `rgba(${dominantColor.join(',')}, 0.7)`);
+            const pickImg = pickItem.querySelector('.artist-pick-img');
+            const setAnimationColor = () => {
+                try {
+                    const dominantColor = colorThief.getColor(pickImg);
+                    if (dominantColor) {
+                        pickItem.style.setProperty('--animation-color', `rgba(${dominantColor.join(',')}, 0.7)`);
+                    }
+                } catch(e) {
+                    console.error("Could not get color from image.", e);
                 }
-            } catch(e) {
-                console.error("Could not get color from image.", e);
+            };
+    
+            if (pickImg.complete) {
+                setAnimationColor();
+            } else {
+                pickImg.addEventListener('load', setAnimationColor, { once: true });
             }
-        };
-
-        if (latestImg.complete) {
-            setAnimationColor();
-        } else {
-            latestImg.addEventListener('load', setAnimationColor, { once: true });
-        }
+        });
     };
 
     const renderVideoGallery = (filteredVideos, isFullPage = false) => {
@@ -569,7 +386,7 @@ function initializeApp() {
             return;
         }
         videoSection.style.display = 'block';
-        
+
         const videosToRender = isFullPage ? allVideos : allVideos.slice(0, ITEM_LIMIT);
 
         videosToRender.forEach((video, index) => {
@@ -586,7 +403,7 @@ function initializeApp() {
             `;
             videoGalleryContainer.appendChild(videoItem);
         });
-        
+
         const viewAllContainer = document.getElementById('video-view-all-container');
         viewAllContainer.innerHTML = '';
         if (allVideos.length > ITEM_LIMIT && !isFullPage) {
@@ -658,20 +475,20 @@ function initializeApp() {
 
     const updatePlayingUI = () => {
         const allSongElements = document.querySelectorAll('[data-index]');
-        
+
         allSongElements.forEach(el => {
             const elIndex = parseInt(el.dataset.index, 10);
             const playBtn = el.querySelector('.album-play-btn');
 
             if (elIndex === currentSongIndex && isPlaying) {
                 el.classList.add('playing');
-                if(playBtn) {
+                if (playBtn) {
                     playBtn.classList.add('playing');
                     playBtn.innerHTML = `${pauseIcon}${nowPlayingIndicator}`;
                 }
             } else {
                 el.classList.remove('playing');
-                if(playBtn) {
+                if (playBtn) {
                     playBtn.classList.remove('playing');
                     playBtn.innerHTML = `${playIcon}${nowPlayingIndicator}`;
                 }
@@ -703,7 +520,7 @@ function initializeApp() {
             }
         } else {
             playerAlbumArt.addEventListener('load', () => {
-                 try {
+                try {
                     const dominantColor = colorThief.getColor(playerAlbumArt);
                     if (dominantColor) {
                         playerAlbumArt.style.boxShadow = `0 0 15px rgba(${dominantColor.join(',')}, 0.7)`;
@@ -715,7 +532,7 @@ function initializeApp() {
             }, { once: true });
         }
     };
-    
+
     const componentToHex = (c) => {
         const hex = c.toString(16);
         return hex.length == 1 ? "0" + hex : hex;
@@ -724,7 +541,7 @@ function initializeApp() {
     const rgbToHex = (r, g, b) => {
         return "#" + componentToHex(r) + componentToHex(g) + componentToHex(b);
     }
-    
+
     const getVibrantPalette = (palette) => {
         if (!palette || palette.length === 0) return null;
 
@@ -741,11 +558,11 @@ function initializeApp() {
         scoredPalette.sort((a, b) => b.score - a.score);
 
         const topColors = scoredPalette.slice(0, 3).map(item => item.color);
-        
+
         while (topColors.length < 3) {
             topColors.push(topColors[0] || [138, 43, 226]);
         }
-        
+
         return topColors;
     };
 
@@ -755,7 +572,7 @@ function initializeApp() {
         analyser = audioContext.createAnalyser();
         analyser.fftSize = 256;
         sourceNode = audioContext.createMediaElementSource(audioPlayer);
-        
+
         sourceNode.connect(analyser);
         analyser.connect(audioContext.destination);
 
@@ -765,11 +582,11 @@ function initializeApp() {
 
     const playSong = (index) => {
         if (index < 0 || index >= albums.length) return;
-        
+
         if (!audioContext) {
             setupAudioContext();
         }
-        
+
         const song = albums[index];
         if (song.sampleUrl) {
             currentSongIndex = index;
@@ -818,12 +635,12 @@ function initializeApp() {
             if (isPlaying) {
                 audioPlayer.pause();
             } else {
-                if (!audioContext) setupAudioContext(); // Ensure context is ready
+                if (!audioContext) setupAudioContext();
                 audioPlayer.play();
             }
         } else if (albums.length > 0) {
             const firstPlayable = albums.findIndex(song => song.sampleUrl);
-            if(firstPlayable > -1) playSong(firstPlayable);
+            if (firstPlayable > -1) playSong(firstPlayable);
         }
     };
 
@@ -835,7 +652,7 @@ function initializeApp() {
         globalPlayer.classList.remove('active');
         playerInfoBtn.disabled = true;
         updatePlayingUI();
-        
+
         document.body.style.removeProperty('--primary-color');
         document.body.style.removeProperty('--aurora-color-1');
         document.body.style.removeProperty('--aurora-color-2');
@@ -848,8 +665,8 @@ function initializeApp() {
         const infoBtn = e.target.closest('.album-info-btn');
         const container = e.target.closest('[data-index]');
 
-        if(playBtn) {
-             const index = parseInt(container.dataset.index, 10);
+        if (playBtn) {
+            const index = parseInt(container.dataset.index, 10);
             if (!albums[index].sampleUrl) return;
             if (index === currentSongIndex) {
                 togglePlayPause();
@@ -867,13 +684,11 @@ function initializeApp() {
 
 
     albumList.addEventListener('click', handleAlbumControlsClick);
-    featuredSongsContainer.addEventListener('click', handleAlbumControlsClick);
-    upcomingReleasesContainer.addEventListener('click', handleAlbumControlsClick);
-    latestReleaseContainer.addEventListener('click', handleAlbumControlsClick);
-    
+    artistPickContainer.addEventListener('click', handleAlbumControlsClick);
+
     const handleSearch = (e, type) => {
         const searchTerm = e.target.value.toLowerCase();
-        
+
         if (type === 'discography') {
             const isFullPage = window.location.pathname.startsWith('/discography');
             const filtered = albums.filter(a => !a.comingSoon && a.title.toLowerCase().includes(searchTerm));
@@ -885,7 +700,7 @@ function initializeApp() {
             renderVideoGallery(filtered, isFullPage);
             if (isFullPage) debouncedUpdateURL(type, searchTerm);
         }
-        
+
         setupScrollAnimations();
     };
 
@@ -896,7 +711,7 @@ function initializeApp() {
     const updateMetaTags = (data) => {
         document.title = data.title;
         document.querySelector('meta[name="description"]').setAttribute('content', data.description);
-        
+
         document.querySelector('meta[property="og:title"]').setAttribute('content', data.title);
         document.querySelector('meta[property="og:description"]').setAttribute('content', data.description);
         document.querySelector('meta[property="og:url"]').setAttribute('content', data.url);
@@ -922,7 +737,7 @@ function initializeApp() {
 
         const songMeta = {
             title: `${song.title} | x08`,
-            description: song.comingSoon 
+            description: song.comingSoon
                 ? `Listen to "${song.title}" by x08. Releasing soon.`
                 : `Listen to "${song.title}" by x08. Released on ${formatRelativeDate(song.releaseDate, true)}.`,
             url: `${siteDefaults.url}song/${encodeURIComponent(song.title.toLowerCase().replace(/\s+/g, '-'))}`,
@@ -932,12 +747,12 @@ function initializeApp() {
         updateMetaTags(songMeta);
 
         const isComingSoon = song.comingSoon;
-        
+
         const linksHtml = isComingSoon ?
             Object.entries(social_links).map(([platform, url]) => {
-                if(!url) return '';
+                if (!url) return '';
                 const platformName = platform.charAt(0).toUpperCase() + platform.slice(1);
-                 const iconMap = {
+                const iconMap = {
                     'spotify': 'fab fa-spotify',
                     'youtube': 'fab fa-youtube',
                     'soundcloud': 'fab fa-soundcloud',
@@ -959,7 +774,7 @@ function initializeApp() {
                     <i class="${link.icon} social-icon"></i> ${link.platform}
                 </a>
             `).join('');
-        
+
         const videoSectionHtml = song.musicVideoId ? `
             <div class="song-page-video-section reveal-on-scroll">
                 <h3>Official Video</h3>
@@ -1029,8 +844,7 @@ function initializeApp() {
 
         mainContent.style.display = 'none';
         songPage.classList.add('active');
-        
-        // Add event listeners for the new tabs
+
         const tabNav = songPage.querySelector('.tab-nav');
         tabNav.addEventListener('click', e => {
             if (e.target.classList.contains('tab-btn')) {
@@ -1045,7 +859,6 @@ function initializeApp() {
             }
         });
 
-        // Re-run scroll animations for new content
         setupScrollAnimations();
 
         const songPageImg = songPage.querySelector('.song-page-img');
@@ -1066,7 +879,7 @@ function initializeApp() {
         } else {
             songPageImg.addEventListener('load', applyGlow, { once: true });
         }
-        
+
         if (songPage.observer) {
             songPage.observer.disconnect();
         }
@@ -1111,7 +924,7 @@ function initializeApp() {
                     text: `Check out "${songTitle}" by x08!`,
                     url: url,
                 };
-        
+
                 if (navigator.share) {
                     try {
                         await navigator.share(shareData);
@@ -1133,11 +946,11 @@ function initializeApp() {
             });
         });
     };
-    
+
     const closeModal = (modal) => {
         modal.classList.remove('active');
     };
-    
+
     const getNextPlayableSong = (startIndex, direction) => {
         let nextIndex = (startIndex + direction + albums.length) % albums.length;
         let checked = 0;
@@ -1151,11 +964,11 @@ function initializeApp() {
     playerPlayPauseBtn.addEventListener('click', togglePlayPause);
     playerNextBtn.addEventListener('click', () => {
         const nextIndex = getNextPlayableSong(currentSongIndex, 1);
-        if(nextIndex > -1) playSong(nextIndex);
+        if (nextIndex > -1) playSong(nextIndex);
     });
     playerPrevBtn.addEventListener('click', () => {
         const prevIndex = getNextPlayableSong(currentSongIndex, -1);
-        if(prevIndex > -1) playSong(prevIndex);
+        if (prevIndex > -1) playSong(prevIndex);
     });
     playerInfoBtn.addEventListener('click', () => {
         if (currentSongIndex !== -1) {
@@ -1182,12 +995,12 @@ function initializeApp() {
         faviconLink.href = originalFavicon;
         playerPlayPauseBtn.innerHTML = playIcon;
         updatePlayingUI();
-        visualizerCtx.clearRect(0, 0, visualizerCanvas.width, visualizerCanvas.height); // Clear visualizer
+        visualizerCtx.clearRect(0, 0, visualizerCanvas.width, visualizerCanvas.height);
     });
-    
+
     audioPlayer.addEventListener('ended', () => {
         const nextIndex = getNextPlayableSong(currentSongIndex, 1);
-        if(nextIndex > -1) playSong(nextIndex);
+        if (nextIndex > -1) playSong(nextIndex);
     });
 
     const formatTime = (seconds) => {
@@ -1206,9 +1019,9 @@ function initializeApp() {
 
     const animationLoop = () => {
         if (!isPlaying && !faviconAnimationActive) return;
-        
+
         updateProgress();
-        
+
         if (audioContext && isPlaying) {
             analyser.getByteFrequencyData(dataArray);
             drawVisualizer();
@@ -1216,18 +1029,18 @@ function initializeApp() {
                 drawFavicon();
             }
         }
-        
+
         requestAnimationFrame(animationLoop);
     };
 
     const drawVisualizer = () => {
         visualizerCtx.clearRect(0, 0, visualizerCanvas.width, visualizerCanvas.height);
-    
+
         const barWidth = 3;
         const gap = 2;
         const numBars = Math.floor(visualizerCanvas.width / (barWidth + gap));
         let x = 0;
-    
+
         const gradient = visualizerCtx.createLinearGradient(0, 0, 0, visualizerCanvas.height);
         if (currentPalette && currentPalette.length >= 2) {
             gradient.addColorStop(0, `rgb(${currentPalette[0].join(',')})`);
@@ -1239,11 +1052,11 @@ function initializeApp() {
             gradient.addColorStop(1, secondaryColor);
         }
         visualizerCtx.fillStyle = gradient;
-    
+
         for (let i = 0; i < numBars; i++) {
             const dataIndex = Math.floor(i * (bufferLength / numBars));
             const barHeight = (dataArray[dataIndex] / 255) * visualizerCanvas.height;
-    
+
             visualizerCtx.fillRect(x, visualizerCanvas.height - barHeight, barWidth, barHeight);
             x += barWidth + gap;
         }
@@ -1251,47 +1064,47 @@ function initializeApp() {
 
     const drawFavicon = () => {
         faviconCtx.clearRect(0, 0, 64, 64);
-        
+
         if (baseFaviconImg.complete) {
-             faviconCtx.drawImage(baseFaviconImg, 0, 0, 64, 64);
+            faviconCtx.drawImage(baseFaviconImg, 0, 0, 64, 64);
         }
-    
-        const primaryColor = (currentPalette && currentPalette.length > 0) 
-            ? `rgb(${currentPalette[0].join(',')})` 
+
+        const primaryColor = (currentPalette && currentPalette.length > 0)
+            ? `rgb(${currentPalette[0].join(',')})`
             : getComputedStyle(document.documentElement).getPropertyValue('--primary-color');
-        
+
         faviconCtx.fillStyle = primaryColor;
-        
+
         const barWidth = 8;
         const spacing = 4;
         const totalBarsWidth = (3 * barWidth) + (2 * spacing);
         let x = 64 - totalBarsWidth - 4;
-    
+
         for (let i = 0; i < 3; i++) {
             const dataIndex = Math.floor(i * (bufferLength / 4));
             const barHeight = (dataArray[dataIndex] / 255) * 24 + 4;
             faviconCtx.fillRect(x, 64 - barHeight - 4, barWidth, barHeight);
             x += barWidth + spacing;
         }
-    
+
         faviconLink.href = faviconCanvas.toDataURL('image/png');
     };
 
     audioPlayer.addEventListener('loadedmetadata', () => {
         playerDurationEl.textContent = formatTime(audioPlayer.duration);
     });
-    
+
     const setSongPosition = (e) => {
         if (!isNaN(audioPlayer.duration)) {
             const rect = progressBarBg.getBoundingClientRect();
             const clientX = e.type.startsWith('touch') ? e.touches[0].clientX : e.clientX;
             let newPosition = (clientX - rect.left) / rect.width;
-            
+
             newPosition = Math.max(0, Math.min(1, newPosition));
 
             const newTime = newPosition * audioPlayer.duration;
             audioPlayer.currentTime = newTime;
-            
+
             playerProgressBar.style.width = `${newPosition * 100}%`;
             playerCurrentTimeEl.textContent = formatTime(newTime);
         }
@@ -1328,8 +1141,7 @@ function initializeApp() {
     document.addEventListener('click', (e) => {
         if (e.target === linksModal) closeModal(linksModal);
         if (e.target === socialModal) closeModal(socialModal);
-        
-        // Close dropdown if clicking outside (desktop only)
+
         if (window.innerWidth > 768) {
             const isSocialsToggle = e.target.closest('.socials-toggle-btn');
             const isDropdown = e.target.closest('.socials-dropdown-container');
@@ -1340,7 +1152,7 @@ function initializeApp() {
             }
         }
     });
-    
+
     const handleRouting = (isPushState = false) => {
         setTimeout(() => {
             window.scrollTo(0, 0);
@@ -1350,11 +1162,10 @@ function initializeApp() {
         const params = new URLSearchParams(window.location.search);
         const searchTerm = params.get('search') || '';
 
-        // Hide all sections by default, show based on route
         document.querySelectorAll('.content-section').forEach(s => s.style.display = 'none');
         songPage.classList.remove('active');
         mainContent.style.display = 'flex';
-        
+
         if (path.startsWith('/song/')) {
             const songTitleSlug = decodeURIComponent(path.split('/song/')[1]);
             const songIndex = albums.findIndex(album => album.title.toLowerCase().replace(/\s+/g, '-') === songTitleSlug);
@@ -1362,7 +1173,7 @@ function initializeApp() {
                 renderSongPage(songIndex);
             } else {
                 history.replaceState(null, '', '/');
-                handleRouting(); 
+                handleRouting();
             }
         } else if (path.startsWith('/discography')) {
             const discographySection = document.getElementById('discography-section');
@@ -1393,11 +1204,8 @@ function initializeApp() {
             });
             setupScrollAnimations();
         } else {
-            // Homepage
             document.querySelectorAll('.content-section').forEach(s => s.style.display = 'block');
-            renderLatestRelease();
-            renderFeaturedSongs();
-            renderUpcomingReleases();
+            renderArtistPicks();
             renderVideoGallery();
             renderAlbums();
             resetMetaTags();
@@ -1423,7 +1231,6 @@ function initializeApp() {
 
             if (window.location.pathname === href) return;
 
-            // Close mobile socials dropdown if it's open
             if (window.innerWidth <= 768 && socialsDropdown.classList.contains('active')) {
                 socialsToggleBtn.classList.remove('active');
                 socialsDropdown.classList.remove('active');
@@ -1448,14 +1255,10 @@ function initializeApp() {
             const posX = e.clientX;
             const posY = e.clientY;
 
-            // The dot always follows the cursor instantly.
             cursorDot.style.left = `${posX}px`;
             cursorDot.style.top = `${posY}px`;
 
             const isHovered = cursorOutline.classList.contains('hovered');
-            
-            // When hovered over an interactive element, the animation duration is 0 for an instant "snap" effect, providing direct feedback.
-            // Otherwise, it's 500ms for a smooth, trailing animation.
             const animationDuration = isHovered ? 0 : 500;
 
             cursorOutline.animate({
@@ -1464,7 +1267,7 @@ function initializeApp() {
             }, { duration: animationDuration, fill: "forwards" });
         });
 
-        const interactiveElements = document.querySelectorAll('a, button, .album-item, .toggle-label, .slider-btn, .pagination-dot, .progress-bar-bg, .video-item');
+        const interactiveElements = document.querySelectorAll('a, button, .album-item, .toggle-label, .slider-btn, .pagination-dot, .progress-bar-bg, .video-item, .artist-pick-item');
         interactiveElements.forEach(el => {
             el.addEventListener('mouseenter', () => {
                 cursorDot.classList.add('hovered');
@@ -1475,12 +1278,12 @@ function initializeApp() {
                 cursorOutline.classList.remove('hovered');
             });
         });
-        
+
         document.body.addEventListener('mouseenter', () => {
-             document.body.classList.add('cursor-visible');
+            document.body.classList.add('cursor-visible');
         });
         document.body.addEventListener('mouseleave', () => {
-             document.body.classList.remove('cursor-visible');
+            document.body.classList.remove('cursor-visible');
         });
     };
 
@@ -1489,7 +1292,7 @@ function initializeApp() {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     setTimeout(() => {
-                         entry.target.classList.add('is-visible');
+                        entry.target.classList.add('is-visible');
                     }, 200);
                     observerInstance.unobserve(entry.target);
                 }
@@ -1506,14 +1309,12 @@ function initializeApp() {
     };
 
     populateHeaderSocials();
-    handleRouting(); // Initial routing call
+    handleRouting();
     playerInfoBtn.disabled = true;
-    
-    // Initialize new features
+
     setupCursorFollower();
     setupVideoPlayer();
-    
-    // Add reveal-on-scroll to static elements before observing
-    document.querySelectorAll('.section-header, .latest-release-container, .featured-songs-slider, #upcoming-releases-section > .section-title, .discography-header, #video-gallery-section > .section-title').forEach(el => el.classList.add('reveal-on-scroll'));
+
+    document.querySelectorAll('.section-header, .artist-pick-container').forEach(el => el.classList.add('reveal-on-scroll'));
     setupScrollAnimations();
 }

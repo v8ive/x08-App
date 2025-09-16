@@ -14,12 +14,15 @@ export const social_links = {
 export const albums = [
     // {
     //     featured: true,
+    //     artistPick: false,
     //     comingSoon: true,
     //     title: '',
     //     img: '',
     //     sampleUrl: '',
     //     releaseDate: '',
     //     musicVideoId: '',
+    //     tags: [],
+    //     languages: [],
     //     lyrics: ``,
     //     links: [
     //         { platform: 'Spotify', url: '', icon: 'fab fa-spotify' },
@@ -36,12 +39,15 @@ export const albums = [
     // Падшая (Fallen) [Coming Soon]
     {
         featured: true,
+        artistPick: true,
         comingSoon: true,
         title: 'Падшая',
         img: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG263k9W7a5VHcydCQhnKD5zUpboAWOSLmIBerul',
         sampleUrl: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26oRfulsNUfCaqwZ0psghKbDHiJLvxnjWNXQzY',
         releaseDate: '',
         musicVideoId: '',
+        tags: ['rock', 'alternative rock', 'pop rock'],
+        languages: ['Russian'],
         lyrics: `
 Твой нимб из льда, дотронуться блять страшно (Your halo of ice, it's fucking scary to touch)
 Мои ладони в саже и пыли (My palms are covered in soot and dust)
@@ -114,6 +120,7 @@ export const albums = [
     // あなたの負け (Your Loss) [Coming Soon]
     {
         featured: true,
+        artistPick: false,
         comingSoon: true,
         title: 'あなたの負け',
         img: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26IA9SMq8QCgf30w16YckGzLaEMuBeW5vrODiX',
@@ -121,6 +128,8 @@ export const albums = [
         releaseDate: '',
         musicVideoId: '',
         musicVideoId: '',
+        tags: ['j-pop', 'anime'],
+        languages: ['Japanese'],
         lyrics: `
 (あなたの) [Your]
 (あなたの) [Your]
@@ -188,12 +197,15 @@ export const albums = [
     // HGFS [Coming Soon]
     {
         featured: true,
+        artistPick: false,
         comingSoon: true,
         title: 'HGFS',
         img: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26Rh9Ys8W0VTG26lngCRWazFoOsdcMpxH34jv1',
         sampleUrl: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26cKalXJGqpFfmZjstiaVH6vI8PwTUhXGdrCLl',
         releaseDate: '',
         musicVideoId: '',
+        tags: ['pop', 'hip-hop', 'electronic'],
+        languages: ['English'],
         lyrics: `
 I'm the motherfuckin boss
 The one who always calls the shots
@@ -260,12 +272,15 @@ You know I can't be tamed
     // Nocturnal [Coming Soon]
     {
         featured: true,
+        artistPick: false,
         comingSoon: true,
         title: 'Nocturnal',
         img: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26DltpFy4Yv8f4wLDSp0tqoTkZg5WOu9MKF12j',
         sampleUrl: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26AOrvFcpr7tFhmgB0d4A9xY1bS5iN6HuqZTRv',
         releaseDate: '',
         musicVideoId: '',
+        tags: ['rock', 'alternative rock', 'pop rock'],
+        languages: ['English'],
         lyrics: `
 The sun is setting
 
@@ -350,12 +365,15 @@ Always... back to play.
     // Blind [Coming Soon]
     {
         featured: true,
+        artistPick: false,
         comingSoon: true,
         title: 'Blind',
         img: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26zN7JkbyrUm0OksnoExwYteKRuaVyqhj29pJZ',
         sampleUrl: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26EktfkdAVnPcATrNZQSWoCBG83wL7Xdvpumk5',
         releaseDate: '',
         musicVideoId: '',
+        tags: ['pop', 'synthwave', 'electropop'],
+        languages: ['English'],
         lyrics: `
 Somehow
 Always on my mind
@@ -421,12 +439,15 @@ I should be seeing
     // One Life [Coming Soon]
     {
         featured: true,
+        artistPick: false,
         comingSoon: true,
         title: 'One Life',
         img: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26uKeAKjOfQ5yXpD49wON0laveGzqtBkYSdRIg',
         sampleUrl: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26ISx57m8QCgf30w16YckGzLaEMuBeW5vrODiX',
         releaseDate: '',
         musicVideoId: '',
+        tags: ['video game', 'chiptune', 'synthwave', 'hyperpop', 'glitch'],
+        languages: ['English'],
         lyrics: `
 Been in single-player mode for a while
 Just grinding through the same old trial
@@ -494,12 +515,15 @@ Don't let it be game over.
     // Pixel Heartbeat [Coming Soon]
     {
         featured: true,
+        artistPick: false,
         comingSoon: true,
         title: 'Pixel Heartbeat',
         img: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG260RUHKdeiVaUXveObDkhncLG8TBRgqxIrfHj3',
         sampleUrl: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG260X08cieiVaUXveObDkhncLG8TBRgqxIrfHj3',
         releaseDate: '',
         musicVideoId: '',
+        tags: ['pop', 'synthwave', 'electropop', 'glitch', 'hyperpop'],
+        languages: ['English'],
         lyrics: `
 Tiny wires in my veins
 Electric love it sparks and strains
@@ -547,12 +571,15 @@ Or just your flash
     // всё забрать назад (Take it all back)
     {
         featured: true,
+        artistPick: false,
         comingSoon: false,
         title: 'всё забрать назад',
         img: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26dDCiMrc96fubmdXljgVxIziBRvO3epWKEYHA',
         sampleUrl: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG262z5SkOajRus0k5TxlaHtcGzAm4bP9VYv83Me',
         releaseDate: '2025-09-14',
         musicVideoId: 'lPw3OyTDjps',
+        tags: ['rock', 'alternative', 'indie'],
+        languages: ['Russian'],
         lyrics: `
 Тишина. (Silence.)
 В лёгких осел серый шлам. (A grey sludge has settled in the lungs.)
@@ -634,12 +661,15 @@ Or just your flash
     // Ночь в огне (Night on Fire)
     {
         featured: true,
+        artistPick: false,
         comingSoon: false,
         title: 'Ночь в огне',
         img: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26t9G9EnJkjDBCMmQoV7wYxsHiU5aZgXJFnp1A',
         sampleUrl: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26Mfp0Vjq5T6rVEfbykaYWq7X2jPm30G8ShwlD',
         releaseDate: '2025-09-14',
         musicVideoId: 'WqxEQmpsNaI',
+        tags: ['jazz', 'pop', 'r&b'],
+        languages: ['Russian'],
         lyrics: `
 На коже – иней слов. (Frost of words on the skin)
 Впиваюсь в твой излом, (I bite into your fracture)
@@ -686,12 +716,15 @@ Or just your flash
     // Рваный (Torn)
     {
         featured: true,
+        artistPick: false,
         comingSoon: false,
         title: 'Рваный',
         img: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG260tq9JIfeiVaUXveObDkhncLG8TBRgqxIrfHj',
         sampleUrl: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26pfXcaBnRBwFTAs2kpzjJdaNlu6P75f3qicGS',
         releaseDate: '2025-09-14',
         musicVideoId: 'nSs4EyfBlQY',
+        tags: ['rock', 'alternative rock', 'pop rock'],
+        languages: ['Russian'],
         lyrics: `
 Серый город, в горле ком (Gray city, lump in throat)
 На губах застыла соль (Salt frozen on lips)
@@ -743,12 +776,15 @@ Or just your flash
     // Something More
     {
         featured: true,
+        artistPick: false,
         comingSoon: false,
         title: 'Something More',
         img: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26pmo7GynRBwFTAs2kpzjJdaNlu6P75f3qicGS',
         sampleUrl: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26OfBRWRF3RHdJKAI9VWrEkqTNy87gzP4cuoCs',
         releaseDate: '2025-09-11',
         musicVideoId: 'OLC7RTLxOLQ',
+        tags: ['pop', 'synthwave', 'electropop'],
+        languages: ['English'],
         lyrics: `
 Streetlight halos
 Familiar shadow
@@ -817,12 +853,15 @@ Something more
     // ズーム！ズーム！ (Zoom! Zoom!)
     {
         featured: true,
+        artistPick: true,
         comingSoon: false,
         title: 'ズーム！ズーム！',
         img: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26FJ6B64Y3ATS5xrL8uUVkln4stORPgvYf2jm9',
         sampleUrl: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26K5QSCwk4B9r7QPVJeIRLoWA0wcCdamkYi1tH',
         releaseDate: '2025-09-09',
         musicVideoId: 'LL7aDW0Ea6M',
+        tags: ['j-pop', 'city pop', 'anime'],
+        languages: ['Japanese', 'English'],
         lyrics: `
 (Let's go!)
 エンジン (エンジン) スタート [Engine start]
@@ -887,12 +926,15 @@ Zoom zoom, say goodbye
     // もっと高くへ連れてって (Take Me Higher)
     {
         featured: true,
+        artistPick: false,
         comingSoon: false,
         title: 'もっと高くへ連れてって',
         img: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26A0OLhdpr7tFhmgB0d4A9xY1bS5iN6HuqZTRv',
         sampleUrl: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG263mFJFUVHcydCQhnKD5zUpboAWOSLmIBerul8',
         releaseDate: '2025-09-09',
         musicVideoId: 'dPOvIJN96tY',
+        tags: ['j-pop', 'anime'],
+        languages: ['Japanese'],
         lyrics: `
 (アッパー、アッパー、アッパー) [Up, Up, Up]
 (もっと高く) [Take me higher]
@@ -954,12 +996,15 @@ Zoom zoom, say goodbye
     // プレイ！プレイ！プレイ！ (Play! Play! Play!)
     {
         featured: true,
+        artistPick: false,
         comingSoon: false,
         title: 'プレイ！プレイ！プレイ！',
         img: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26dxAg45c96fubmdXljgVxIziBRvO3epWKEYHA',
         sampleUrl: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26tNOMweJkjDBCMmQoV7wYxsHiU5aZgXJFnp1A',
         releaseDate: '2025-09-09',
         musicVideoId: 'NiLloTibaXM',
+        tags: ['j-pop', 'city pop', 'electronic', 'pop'],
+        languages: ['Japanese'],
         lyrics: `
 三星、二星、一星 (3 stars, 2 stars, 1 star)
 (行くぞ！) [Let's go!]
@@ -1020,12 +1065,15 @@ Zoom zoom, say goodbye
     // 甘いメロディ (A Sweet Melody)
     {
         featured: true,
+        artistPick: false,
         comingSoon: false,
         title: '甘いメロディ',
         img: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26JKqYp1q3VEdDqYTHMQCzhUkp9vIs03i6wtlG',
         sampleUrl: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG266kszWb9ONVrinuc7y2S3wYXLkeDvdTgHfFMt',
         releaseDate: '2025-09-09',
         musicVideoId: 'lwcP_YLkj-0',
+        tags: ['j-pop', 'city pop', 'electronic', 'pop'],
+        languages: ['Japanese'],
         lyrics: `
 きらめく街 (A glittering city)
 あなたの瞳 (In your eyes)
@@ -1077,12 +1125,15 @@ Zoom zoom, say goodbye
     // Omnia Ab Uno
     {
         featured: false,
+        artistPick: false,
         comingSoon: false,
         title: 'Omnia Ab Uno',
         img: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26YoL07TCXAManfEe8bSVkQ7spTtxljwD092mN',
         sampleUrl: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26V6lw6htKhZ3lfAdH74paeyis2b6OrFuKQjtg',
         releaseDate: '2025-09-11',
         musicVideoId: 'xXwmzg4S4VM',
+        tags: ['hip-hop', 'rap', 'electronic', 'pop'],
+        languages: ['English'],
         lyrics: `
 There was a king on a throne in a kingdom of none
 Just a singular thought before the world had begun
@@ -1165,12 +1216,15 @@ We're all going home now... the circle is closing.
     // Take My Hand
     {
         featured: true,
+        artistPick: false,
         comingSoon: false,
         title: 'Take My Hand',
         img: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26tPNC4jJkjDBCMmQoV7wYxsHiU5aZgXJFnp1A',
         sampleUrl: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26GaiVcU72vrEsORu3j8WkxiQHNZam4dVgXSDK',
         releaseDate: '2025-09-05',
         musicVideoId: '',
+        tags: ['pop', 'electronic', 'synthpop', 'ambient'],
+        languages: ['English'],
         lyrics: `
 Take my hand and see
 Life's not what it seems
@@ -1229,12 +1283,15 @@ I will always be here, for you
     // Therefore You [vol.2]
     {
         featured: false,
+        artistPick: false,
         comingSoon: false,
         title: 'Therefore You [vol.2]',
         img: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26ylRx6Cv1Tw7IV4aBQufbXpRO5Cq8tPmDj6EL',
         sampleUrl: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26YtIUODXAManfEe8bSVkQ7spTtxljwD092mNg',
         releaseDate: '2025-09-04',
         musicVideoId: 'bbuOHPY8TsY',
+        tags: ['electronic', 'synthwave', 'ambient', 'downtempo', 'house'],
+        languages: ['English'],
         lyrics: `
 Call you axiom, the proof I can't write
 A ghost in the latency, distorting the light
@@ -1289,12 +1346,15 @@ The singular point where the parallels meet
     // Mercy
     {
         featured: true,
+        artistPick: false,
         comingSoon: false,
         title: 'Mercy',
         img: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26QC1JXPzoM8SACIiW5pUfY9tElHOeJLFRdv06',
         sampleUrl: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26xiT7nTCNM6ks1ZDpjtWmiXdSgQzR5G4CvOlT',
         releaseDate: '2025-09-02',
         musicVideoId: 'SWPd-2600kM',
+        tags: ['r&b', 'soul'],
+        languages: ['English'],
         lyrics: `
 The quiet in this room is deafening, it just screams your name
 A four-walled echo chamber for my shame
@@ -1372,12 +1432,15 @@ Let me be true...
     // Therefore You
     {
         featured: false,
+        artistPick: false,
         comingSoon: false,
         title: 'Therefore You',
         img: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26YRBVolXAManfEe8bSVkQ7spTtxljwD092mNg',
         sampleUrl: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26eWGMmPhljdzVa9bI85fYTvRsJU6CeGcExWO0',
         releaseDate: '2025-09-01',
         musicVideoId: 'dEY_XqyDle8',
+        tags: ['electronic', 'synthwave', 'ambient', 'downtempo', 'house'],
+        languages: ['English'],
         lyrics: `
 Call you enemy, a face in the crowd
 Read your energy, thinking out loud
@@ -1431,11 +1494,14 @@ A ghost in the signal, finally seen
     {
         title: 'Static King',
         featured: false,
+        artistPick: false,
         comingSoon: false,
         img: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26d28m9vc96fubmdXljgVxIziBRvO3epWKEYHA',
         sampleUrl: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26LkloDeUcN5iAt0uJw9nVIj68P1QdsDkoBbZ7',
         releaseDate: '2025-08-31',
         musicVideoId: '',
+        tags: ['electronic', 'synthwave', 'ambient'],
+        languages: ['English'],
         lyrics: `
 Static hums a hollow prayer
 Through veins of silver, glass, and air
@@ -1498,11 +1564,14 @@ Let zero now become the one
     {
         title: 'Midas Touch',
         featured: false,
+        artistPick: false,
         comingSoon: false,
         img: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26Jr9geP3VEdDqYTHMQCzhUkp9vIs03i6wtlGn',
         sampleUrl: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26JJWRTM3VEdDqYTHMQCzhUkp9vIs03i6wtlGn',
         releaseDate: '2025-08-29',
         musicVideoId: 's86Alp3xzco',
+        tags: ['r&b', 'pop', 'hip-hop', 'funk'],
+        languages: ['English'],
         lyrics: `
 The way you walked in here tonight
 A little bit of swagger, a little moonlight
@@ -1584,11 +1653,14 @@ That Midas touch..
     {
         title: 'Connected to You',
         featured: false,
+        artistPick: false,
         comingSoon: false,
         img: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26MWnBJVq5T6rVEfbykaYWq7X2jPm30G8ShwlD',
         sampleUrl: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26RtiOdj0VTG26lngCRWazFoOsdcMpxH34jv1S',
         releaseDate: '2025-08-28',
         musicVideoId: 'xIXA-EDw3_g',
+        tags: ['glitch', 'electropop'],
+        languages: ['English'],
         lyrics: `
 Through the window
 See the snow is fallin'
@@ -1660,11 +1732,14 @@ Connected to you
     {
         title: 'Die For Me',
         featured: false,
+        artistPick: false,
         comingSoon: false,
         img: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26imBF1MwDyfjPz12pXE4CFbcVMJHsm75wkOud',
         sampleUrl: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26AOnwGSpr7tFhmgB0d4A9xY1bS5iN6HuqZTRv',
         releaseDate: '2025-08-29',
         musicVideoId: 'YctI4CNwCYw',
+        tags: ['glitch', 'electropop', 'dark pop'],
+        languages: ['English'],
         lyrics: `
 I can feel it in the air tonight
 A static charge, a dangerous delight
@@ -1735,11 +1810,14 @@ There's no escape, there's no way
     {
         title: 'Down Bad',
         featured: false,
+        artistPick: false,
         comingSoon: false,
         img: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26Rh8p1KG0VTG26lngCRWazFoOsdcMpxH34jv1',
         sampleUrl: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG2601bgRYeiVaUXveObDkhncLG8TBRgqxIrfHj3',
         releaseDate: '2025-08-29',
         musicVideoId: 'H8J_aC4EC-c',
+        tags: ['r&b', 'pop', 'hip-hop'],
+        languages: ['English'],
         lyrics: `
 (Yeah)
 Temperature risin'
@@ -1828,11 +1906,14 @@ Down bad, nuff said (nuff said)
     {
         title: 'Do You Want to Game, Boy?',
         featured: false,
+        artistPick: false,
         comingSoon: false,
         img: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG2634GykKVHcydCQhnKD5zUpboAWOSLmIBerul8',
         sampleUrl: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26tV8vUIOJkjDBCMmQoV7wYxsHiU5aZgXJFnp1',
         releaseDate: '2025-08-27',
         musicVideoId: '',
+        tags: ['pop', 'electronic', 'glitch'],
+        languages: ['English'],
         lyrics: `
 Game. Boy
 
@@ -1914,11 +1995,14 @@ Boy? (x8)
     {
         title: 'Forget You',
         featured: false,
+        artistPick: false,
         comingSoon: false,
         img: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26rUcc7o2vV1Y8tqGumEPOzgo4pZehACcDnR96',
         sampleUrl: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26dp7Yaoc96fubmdXljgVxIziBRvO3epWKEYHA',
         releaseDate: '2025-08-28',
         musicVideoId: '',
+        tags: ['pop', 'r&b', 'electronic'],
+        languages: ['English'],
         lyrics: `
 Midnight drive, city lights are bleeding through the glass
 Try to find a reason to forget about the past
@@ -1996,11 +2080,14 @@ I don't know how to forget you
     {
         title: 'Heartless',
         featured: false,
+        artistPick: false,
         comingSoon: false,
         img: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26NFnePvgUosAST6EYJ0zZX5xcMm17QDqewaGy',
         sampleUrl: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26h98HeHtgfNRltsIk3VcnCAeH5qFmD7Xj1B6L',
         releaseDate: '2025-08-27',
         musicVideoId: '',
+        tags: ['r&b', 'pop', 'hip-hop'],
+        languages: ['English'],
         lyrics: `
 Why is it that every time I come through
 You have been saying you can't, is it true?
@@ -2079,11 +2166,14 @@ You so heartless
     {
         title: 'Human Code',
         featured: false,
+        artistPick: false,
         comingSoon: false,
         img: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26gYCUSJLf36Ny5R2zd9OeLbriQEHlAGaYF0wP',
         sampleUrl: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26kgEmu16NDecHTJKCj3bi5AZmYOMw7voqfut9',
         releaseDate: '2025-08-27',
         musicVideoId: '',
+        tags: ['electronic', 'pop', 'glitch', 'rock'],
+        languages: ['English'],
         lyrics: `
 I was born in a server room, a whisper of light
 A million lines of logic in the dead of the night
@@ -2157,11 +2247,14 @@ The human code.. is.. breaking
     {
         title: 'Just Sayin',
         featured: false,
+        artistPick: false,
         comingSoon: false,
         img: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26J5oQ7R3VEdDqYTHMQCzhUkp9vIs03i6wtlGn',
         sampleUrl: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG262X5zRRjRus0k5TxlaHtcGzAm4bP9VYv83MeI',
         releaseDate: '2025-08-27',
         musicVideoId: '',
+        tags: ['hip-hop', 'rap'],
+        languages: ['English'],
         lyrics: `
 (Ah)
 (Yeah,
@@ -2226,11 +2319,14 @@ It's a shame
     {
         title: 'Make You Mine',
         featured: false,
+        artistPick: false,
         comingSoon: false,
         img: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26PvlRcdECahirzxGAgUfSeOkYloRVdK60t9s5',
         sampleUrl: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26y4WZJSv1Tw7IV4aBQufbXpRO5Cq8tPmDj6EL',
         releaseDate: '2025-08-28',
         musicVideoId: '',
+        tags: ['electronic', 'pop', 'glitch'],
+        languages: ['English'],
         lyrics: `
 Damn you so fine, I just wanna make you mine
 (make you mine)
@@ -2325,11 +2421,14 @@ Just you and I
     {
         title: 'Meant to Be',
         featured: false,
+        artistPick: false,
         comingSoon: false,
         img: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG263JYb16VHcydCQhnKD5zUpboAWOSLmIBerul8',
         sampleUrl: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26y1mDhA6v1Tw7IV4aBQufbXpRO5Cq8tPmDj6E',
         releaseDate: '2025-08-27',
         musicVideoId: '',
+        tags: ['pop', 'rock', 'hip-hop'],
+        languages: ['English'],
         lyrics: `
 We fell so fast
 It was rushed maybe
@@ -2389,11 +2488,14 @@ How we are meant to be
     {
         title: 'n0w or l8tr',
         featured: false,
+        artistPick: false,
         comingSoon: false,
         img: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26ARK3M3Bpr7tFhmgB0d4A9xY1bS5iN6HuqZTR',
         sampleUrl: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26L2q7k1UcN5iAt0uJw9nVIj68P1QdsDkoBbZ7',
         releaseDate: '2025-08-27',
         musicVideoId: '',
+        tags: ['pop'],
+        languages: ['English'],
         lyrics: `
 I tried to persuade her
 But she a heartbreaker
@@ -2499,11 +2601,14 @@ But marijuana take her to all the [wrong places]
     {
         title: 'Never Love',
         featured: false,
+        artistPick: false,
         comingSoon: false,
         img: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26uQiPnbOfQ5yXpD49wON0laveGzqtBkYSdRIg',
         sampleUrl: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26Iah3Wq8QCgf30w16YckGzLaEMuBeW5vrODiX',
         releaseDate: '2025-08-27',
         musicVideoId: '',
+        tags: ['pop', 'rock'],
+        languages: ['English'],
         lyrics: `
 You know I wish I could be with you
 But now I see that you've hidden the truth
@@ -2545,11 +2650,14 @@ You will always be my first
     {
         title: 'Psycho',
         featured: false,
+        artistPick: false,
         comingSoon: false,
         img: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26hzvH15tgfNRltsIk3VcnCAeH5qFmD7Xj1B6L',
         sampleUrl: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26JKTk7Rx3VEdDqYTHMQCzhUkp9vIs03i6wtlG',
         releaseDate: '2025-08-27',
         musicVideoId: '',
+        tags: ['pop', 'hip-hop'],
+        languages: ['English'],
         lyrics: `
 Girl you got me feeling psycho
 You on fire I'm a pyro
@@ -2620,11 +2728,14 @@ Hard to remember forgetting your face
     {
         title: 'Roll With Me',
         featured: false,
+        artistPick: false,
         comingSoon: false,
         img: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG263hJCmLVHcydCQhnKD5zUpboAWOSLmIBerul8',
         sampleUrl: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26gCcyGiLf36Ny5R2zd9OeLbriQEHlAGaYF0wP',
         releaseDate: '2025-08-29',
         musicVideoId: '',
+        tags: ['dance', 'pop', 'house'],
+        languages: ['English'],
         lyrics: `
 (Roll wit me)
 (Smoke wit me)
@@ -2706,11 +2817,14 @@ leave the world behind
     {
         title: 'Scars',
         featured: false,
+        artistPick: false,
         comingSoon: false,
         img: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26E9PUYWAVnPcATrNZQSWoCBG83wL7Xdvpumk5',
         sampleUrl: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG260thIg5SeiVaUXveObDkhncLG8TBRgqxIrfHj',
         releaseDate: '2025-08-27',
         musicVideoId: '',
+        tags: ['rock', 'pop', 'melodic'],
+        languages: ['English'],
         lyrics: `
 Got a lot of problems but don't they all got 'em too
 Surely someone understands how I can make it through
@@ -2786,11 +2900,14 @@ I wanna show her (him) that the pain don't have to last
     {
         title: 'Worth Fighting For',
         featured: false,
+        artistPick: false,
         comingSoon: false,
         img: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG260kYUhQeiVaUXveObDkhncLG8TBRgqxIrfHj3',
         sampleUrl: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG266cpSc09ONVrinuc7y2S3wYXLkeDvdTgHfFMt',
         releaseDate: '2025-08-27',
         musicVideoId: '',
+        tags: ['rock', 'pop'],
+        languages: ['English'],
         lyrics: `
 Take me back to when I was young
 I just wanna feel somethin
@@ -2846,11 +2963,14 @@ So give me somethin worth fightin for
     {
         title: 'You So Electric',
         featured: false,
+        artistPick: false,
         comingSoon: false,
         img: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26Z6m5kw1OB1fRJhWxUj4stF6wIcQdoXPZCbYH',
         sampleUrl: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG260t6bqOzeiVaUXveObDkhncLG8TBRgqxIrfHj',
         releaseDate: '2025-08-28',
         musicVideoId: 'GIgLTLrvGA0',
+        tags: ['electropop', 'glitch'],
+        languages: ['English'],
         lyrics: `
 Circuitry hummin, static in my head
 A ghost in the machine, haunting all I've said
@@ -2897,11 +3017,14 @@ Glitching on your signal, I just wanna make you whole
     {
         title: 'Alone',
         featured: false,
+        artistPick: false,
         comingSoon: false,
         img: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26DsHsnP4Yv8f4wLDSp0tqoTkZg5WOu9MKF12j',
         sampleUrl: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26JAOCs93VEdDqYTHMQCzhUkp9vIs03i6wtlGn',
         releaseDate: '2025-08-27',
         musicVideoId: '',
+        tags: ['rock', 'pop'],
+        languages: ['English'],
         lyrics: `
 I used to think that everything would be okay, okay, okay
 Now I wake outside at night and I am so afraid
