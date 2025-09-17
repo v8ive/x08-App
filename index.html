@@ -122,9 +122,19 @@
     </div>
 
     <main class="main-content">
-        <section class="content-section" id="artist-pick-section">
-            <h2 class="section-title">Artist Picks</h2>
-            <div class="artist-pick-container" id="artist-pick"></div>
+        <section class="content-section" id="featured-gallery-section">
+             <div class="featured-gallery-wrapper">
+                <div class="featured-gallery-background" id="featured-gallery-background"></div>
+                <div class="featured-gallery-container" id="featured-gallery-container">
+                </div>
+                <button class="featured-nav-btn prev" id="featured-prev-btn" aria-label="Previous Feature"><i class="fas fa-chevron-left"></i></button>
+                <button class="featured-nav-btn next" id="featured-next-btn" aria-label="Next Feature"><i class="fas fa-chevron-right"></i></button>
+            </div>
+        </section>
+
+        <section class="content-section" id="upcoming-releases-section">
+            <h2 class="section-title">Coming Soon</h2>
+            <div class="upcoming-releases-container" id="upcoming-releases-container"></div>
         </section>
 
         <section class="content-section" id="discography-section">
@@ -158,7 +168,9 @@
         </section>
     </main>
 
-    <div id="song-page" class="song-page"></div>
+    <div id="song-page" class="song-page">
+        <div id="song-page-background" class="song-page-background"></div>
+    </div>
 
     <div id="video-theater" class="video-theater-overlay">
         <div class="video-player-container">

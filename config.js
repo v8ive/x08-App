@@ -19,6 +19,7 @@ export const albums = [
     //     title: '',
     //     img: '',
     //     sampleUrl: '',
+    //     canvasUrl: '',
     //     releaseDate: '',
     //     musicVideoId: '',
     //     tags: [],
@@ -36,95 +37,15 @@ export const albums = [
     //     ]
     // },
 
-    // Падшая (Fallen) [Coming Soon]
-    {
-        featured: true,
-        artistPick: true,
-        comingSoon: true,
-        title: 'Падшая',
-        img: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG263k9W7a5VHcydCQhnKD5zUpboAWOSLmIBerul',
-        sampleUrl: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26oRfulsNUfCaqwZ0psghKbDHiJLvxnjWNXQzY',
-        releaseDate: '',
-        musicVideoId: '',
-        tags: ['rock', 'alternative rock', 'pop rock'],
-        languages: ['Russian'],
-        lyrics: `
-Твой нимб из льда, дотронуться блять страшно (Your halo of ice, it's fucking scary to touch)
-Мои ладони в саже и пыли (My palms are covered in soot and dust)
-Ты смотришь так, как будто всё неважно (You look at me as if nothing matters)
-Я пью твой свет, ломая алтари (I drink your light, breaking altars)
-
-И в каждом выдохе — твоё имя (And in every exhalation - your name)
-Срывает с петель, тянет в пламя (Tears off the hinges, pulls into the flame)
-Я больше не боюсь гореть дотла (I'm no longer afraid to burn to the ground)
-(Дотла) (To the ground)
-
-Я пала, пала, пала (I fell, fell, fell)
-С твоих святых высот (From your holy heights)
-И крылья обломала (Broke off my wings)
-О твой холодный лёд (Oh your cold ice)
-Я пала, пала, пала (I fell, fell, fell)
-И в этом весь мой грех (And this is my whole sin)
-Что я тебя избрала (That I chose you)
-(Одна наперекор всем) (Alone in spite of everyone)
-
-Твоя улыбка — приговор без слов (Your smile is a sentence without words)
-В зрачках твоих — лишь чистоты оков (In your pupils - only the purity of shackles)
-Мне тошно от сияния вокруг (I feel sick from the radiance around)
-Ты мой спаситель, мой заклятый друг (You are my savior, my sworn enemy friend)
-
-И в каждом выдохе — твоё имя (And in every exhale - your name)
-Срывает с петель, тянет в пламя (Tears off the hinges, pulls into the flame)
-Я больше не боюсь гореть дотла (I'm no longer afraid to burn to the ground)
-(Дотла) (To the ground)
-
-Я пала, пала, пала (I fell, fell, fell)
-С твоих святых высот (From your holy heights)
-И крылья обломала (Broke off my wings)
-О твой холодный лёд (Oh your cold ice)
-Я пала, пала, пала (I fell, fell, fell)
-И в этом весь мой грех (And this is my whole sin)
-Что я тебя избрала (That I chose you)
-(Одна наперекор всем) (Alone in spite of everyone)
-
-И может, эта грязь мне так идёт (And maybe this dirt suits me so well)
-И небо мне теперь совсем не врёт (And the sky doesn't lie to me at all now)
-Что там не место для таких, как я (That there is no place for people like me)
-Я выбрала тебя, сожгла себя (I chose you, burned myself)
-
-Я пала, пала, пала (I fell, fell, fell)
-С твоих святых высот (From your holy heights)
-И крылья обломала (Broke off my wings)
-О твой холодный лёд (Oh your cold ice)
-Я пала, пала, пала (I fell, fell, fell)
-И в этом весь мой грех (And that's my whole sin)
-Что я тебя избрала (That I chose you)
-(Одна наперекор всем) (Alone in spite of everyone)
-
-Падшая (Fallen)
-(Пала для тебя) (Fallen for you)
-Падшая (Fallen)
-(Для тебя) (For you)
-        `,
-        links: [
-            { platform: 'Spotify', url: '', icon: 'fab fa-spotify' },
-            { platform: 'YouTube Music', url: '', icon: 'fab fa-youtube' },
-            { platform: 'SoundCloud', url: '', icon: 'fab fa-soundcloud' },
-            { platform: 'Tidal', url: '', icon: 'fa-brands fa-tidal' },
-            { platform: 'Apple Music', url: '', icon: 'fa-brands fa-itunes-note' },
-            { platform: 'Amazon Music', url: '', icon: 'fab fa-amazon' },
-            { platform: 'iHeartRadio', url: '', icon: 'fa-solid fa-radio' },
-            { platform: 'Pandora', url: '', icon: 'fab fa-pandora' }
-        ]
-    },
     // あなたの負け (Your Loss) [Coming Soon]
     {
-        featured: true,
+        featured: false,
         artistPick: false,
         comingSoon: true,
         title: 'あなたの負け',
         img: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26IA9SMq8QCgf30w16YckGzLaEMuBeW5vrODiX',
         sampleUrl: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26EntqIJCAVnPcATrNZQSWoCBG83wL7Xdvpumk',
+        canvasUrl: '',
         releaseDate: '',
         musicVideoId: '',
         musicVideoId: '',
@@ -196,12 +117,13 @@ export const albums = [
     },
     // HGFS [Coming Soon]
     {
-        featured: true,
+        featured: false,
         artistPick: false,
         comingSoon: true,
         title: 'HGFS',
         img: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26Rh9Ys8W0VTG26lngCRWazFoOsdcMpxH34jv1',
         sampleUrl: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26cKalXJGqpFfmZjstiaVH6vI8PwTUhXGdrCLl',
+        canvasUrl: '',
         releaseDate: '',
         musicVideoId: '',
         tags: ['pop', 'hip-hop', 'electronic'],
@@ -271,12 +193,13 @@ You know I can't be tamed
     },
     // Nocturnal [Coming Soon]
     {
-        featured: true,
+        featured: false,
         artistPick: false,
         comingSoon: true,
         title: 'Nocturnal',
         img: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26DltpFy4Yv8f4wLDSp0tqoTkZg5WOu9MKF12j',
         sampleUrl: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26AOrvFcpr7tFhmgB0d4A9xY1bS5iN6HuqZTRv',
+        canvasUrl: '',
         releaseDate: '',
         musicVideoId: '',
         tags: ['rock', 'alternative rock', 'pop rock'],
@@ -364,12 +287,13 @@ Always... back to play.
     },
     // Blind [Coming Soon]
     {
-        featured: true,
+        featured: false,
         artistPick: false,
         comingSoon: true,
         title: 'Blind',
         img: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26zN7JkbyrUm0OksnoExwYteKRuaVyqhj29pJZ',
         sampleUrl: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26EktfkdAVnPcATrNZQSWoCBG83wL7Xdvpumk5',
+        canvasUrl: '',
         releaseDate: '',
         musicVideoId: '',
         tags: ['pop', 'synthwave', 'electropop'],
@@ -438,12 +362,13 @@ I should be seeing
     },
     // One Life [Coming Soon]
     {
-        featured: true,
+        featured: false,
         artistPick: false,
         comingSoon: true,
         title: 'One Life',
         img: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26uKeAKjOfQ5yXpD49wON0laveGzqtBkYSdRIg',
         sampleUrl: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26ISx57m8QCgf30w16YckGzLaEMuBeW5vrODiX',
+        canvasUrl: '',
         releaseDate: '',
         musicVideoId: '',
         tags: ['video game', 'chiptune', 'synthwave', 'hyperpop', 'glitch'],
@@ -514,12 +439,13 @@ Don't let it be game over.
     },
     // Pixel Heartbeat [Coming Soon]
     {
-        featured: true,
+        featured: false,
         artistPick: false,
         comingSoon: true,
         title: 'Pixel Heartbeat',
         img: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG260RUHKdeiVaUXveObDkhncLG8TBRgqxIrfHj3',
         sampleUrl: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG260X08cieiVaUXveObDkhncLG8TBRgqxIrfHj3',
+        canvasUrl: 'https://dm7frl7jug.ufs.sh/f/CydBt8G4FyIv867O6hJ73cwApy1nkKlmPbe9CfUXi4MYROqo',
         releaseDate: '',
         musicVideoId: '',
         tags: ['pop', 'synthwave', 'electropop', 'glitch', 'hyperpop'],
@@ -568,14 +494,96 @@ Or just your flash
     },
 
 
-    // всё забрать назад (Take it all back)
+    // Падшая (Fallen)
     {
         featured: true,
+        artistPick: true,
+        comingSoon: false,
+        title: 'Падшая',
+        img: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG263k9W7a5VHcydCQhnKD5zUpboAWOSLmIBerul',
+        sampleUrl: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26oRfulsNUfCaqwZ0psghKbDHiJLvxnjWNXQzY',
+        canvasUrl: 'https://dm7frl7jug.ufs.sh/f/CydBt8G4FyIvGAZAdeBLMZreon9v1DtcEGxs6zkFXQ0YAhip',
+        releaseDate: '2025-09-16',
+        musicVideoId: '',
+        tags: ['alternative rock', 'pop', 'electronic'],
+        languages: ['Russian'],
+        lyrics: `
+Твой нимб из льда, дотронуться блять страшно (Your halo of ice, it's fucking scary to touch)
+Мои ладони в саже и пыли (My palms are covered in soot and dust)
+Ты смотришь так, как будто всё неважно (You look at me as if nothing matters)
+Я пью твой свет, ломая алтари (I drink your light, breaking altars)
+
+И в каждом выдохе — твоё имя (And in every exhalation - your name)
+Срывает с петель, тянет в пламя (Tears off the hinges, pulls into the flame)
+Я больше не боюсь гореть дотла (I'm no longer afraid to burn to the ground)
+(Дотла) (To the ground)
+
+Я пала, пала, пала (I fell, fell, fell)
+С твоих святых высот (From your holy heights)
+И крылья обломала (Broke off my wings)
+О твой холодный лёд (Oh your cold ice)
+Я пала, пала, пала (I fell, fell, fell)
+И в этом весь мой грех (And this is my whole sin)
+Что я тебя избрала (That I chose you)
+(Одна наперекор всем) (Alone in spite of everyone)
+
+Твоя улыбка — приговор без слов (Your smile is a sentence without words)
+В зрачках твоих — лишь чистоты оков (In your pupils - only the purity of shackles)
+Мне тошно от сияния вокруг (I feel sick from the radiance around)
+Ты мой спаситель, мой заклятый друг (You are my savior, my sworn enemy friend)
+
+И в каждом выдохе — твоё имя (And in every exhale - your name)
+Срывает с петель, тянет в пламя (Tears off the hinges, pulls into the flame)
+Я больше не боюсь гореть дотла (I'm no longer afraid to burn to the ground)
+(Дотла) (To the ground)
+
+Я пала, пала, пала (I fell, fell, fell)
+С твоих святых высот (From your holy heights)
+И крылья обломала (Broke off my wings)
+О твой холодный лёд (Oh your cold ice)
+Я пала, пала, пала (I fell, fell, fell)
+И в этом весь мой грех (And this is my whole sin)
+Что я тебя избрала (That I chose you)
+(Одна наперекор всем) (Alone in spite of everyone)
+
+И может, эта грязь мне так идёт (And maybe this dirt suits me so well)
+И небо мне теперь совсем не врёт (And the sky doesn't lie to me at all now)
+Что там не место для таких, как я (That there is no place for people like me)
+Я выбрала тебя, сожгла себя (I chose you, burned myself)
+
+Я пала, пала, пала (I fell, fell, fell)
+С твоих святых высот (From your holy heights)
+И крылья обломала (Broke off my wings)
+О твой холодный лёд (Oh your cold ice)
+Я пала, пала, пала (I fell, fell, fell)
+И в этом весь мой грех (And that's my whole sin)
+Что я тебя избрала (That I chose you)
+(Одна наперекор всем) (Alone in spite of everyone)
+
+Падшая (Fallen)
+(Пала для тебя) (Fallen for you)
+Падшая (Fallen)
+(Для тебя) (For you)
+        `,
+        links: [
+            { platform: 'Spotify', url: 'https://open.spotify.com/track/6Fcl38rSGUUMJY24fk7HOM', icon: 'fab fa-spotify' },
+            { platform: 'YouTube Music', url: 'https://music.youtube.com/watch?v=frtcMFFMIJM', icon: 'fab fa-youtube' },
+            { platform: 'SoundCloud', url: 'https://soundcloud.com/x0zero8eight/fallen', icon: 'fab fa-soundcloud' },
+            { platform: 'Tidal', url: 'https://tidal.com/browse/track/461143669/u', icon: 'fa-brands fa-tidal' },
+            { platform: 'Amazon Music', url: 'https://music.amazon.com/tracks/B0FRF1336D?marketplaceId=ATVPDKIKX0DER&musicTerritory=US&ref=dm_sh_iv8Un8vVsiBbtG7rZim9mTilw', icon: 'fab fa-amazon' },
+            { platform: 'iHeartRadio', url: 'https://www.iheart.com/artist/x08-47869013/songs/-350593519/', icon: 'fa-solid fa-radio' },
+            { platform: 'Pandora', url: 'https://www.pandora.com/artist/x08/padshaia/padshaia/TRJpn7fb7f22mn2?part=ug-desktop&corr=200697158100332643', icon: 'fab fa-pandora' }
+        ]
+    },
+    // всё забрать назад (Take it all back)
+    {
+        featured: false,
         artistPick: false,
         comingSoon: false,
         title: 'всё забрать назад',
         img: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26dDCiMrc96fubmdXljgVxIziBRvO3epWKEYHA',
         sampleUrl: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG262z5SkOajRus0k5TxlaHtcGzAm4bP9VYv83Me',
+        canvasUrl: '',
         releaseDate: '2025-09-14',
         musicVideoId: 'lPw3OyTDjps',
         tags: ['rock', 'alternative', 'indie'],
@@ -666,6 +674,7 @@ Or just your flash
         title: 'Ночь в огне',
         img: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26t9G9EnJkjDBCMmQoV7wYxsHiU5aZgXJFnp1A',
         sampleUrl: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26Mfp0Vjq5T6rVEfbykaYWq7X2jPm30G8ShwlD',
+        canvasUrl: 'https://dm7frl7jug.ufs.sh/f/CydBt8G4FyIvZRhNGuYIiofQx5pB4RqYN8ZhUjw7mvLDPdGg',
         releaseDate: '2025-09-14',
         musicVideoId: 'WqxEQmpsNaI',
         tags: ['jazz', 'pop', 'r&b'],
@@ -715,12 +724,13 @@ Or just your flash
     },
     // Рваный (Torn)
     {
-        featured: true,
+        featured: false,
         artistPick: false,
         comingSoon: false,
         title: 'Рваный',
         img: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG260tq9JIfeiVaUXveObDkhncLG8TBRgqxIrfHj',
         sampleUrl: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26pfXcaBnRBwFTAs2kpzjJdaNlu6P75f3qicGS',
+        canvasUrl: 'https://dm7frl7jug.ufs.sh/f/CydBt8G4FyIvTfCKuVkcAbYvNCQKOrnfs1Uok65SWjHDRwV3',
         releaseDate: '2025-09-14',
         musicVideoId: 'nSs4EyfBlQY',
         tags: ['rock', 'alternative rock', 'pop rock'],
@@ -775,12 +785,13 @@ Or just your flash
     },
     // Something More
     {
-        featured: true,
+        featured: false,
         artistPick: false,
         comingSoon: false,
         title: 'Something More',
         img: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26pmo7GynRBwFTAs2kpzjJdaNlu6P75f3qicGS',
         sampleUrl: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26OfBRWRF3RHdJKAI9VWrEkqTNy87gzP4cuoCs',
+        canvasUrl: 'https://dm7frl7jug.ufs.sh/f/CydBt8G4FyIvYA3ZluCgUIKxbkdlovmepC69zWqNwArP2gaR',
         releaseDate: '2025-09-11',
         musicVideoId: 'OLC7RTLxOLQ',
         tags: ['pop', 'synthwave', 'electropop'],
@@ -858,9 +869,10 @@ Something more
         title: 'ズーム！ズーム！',
         img: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26FJ6B64Y3ATS5xrL8uUVkln4stORPgvYf2jm9',
         sampleUrl: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26K5QSCwk4B9r7QPVJeIRLoWA0wcCdamkYi1tH',
+        canvasUrl: 'https://dm7frl7jug.ufs.sh/f/CydBt8G4FyIv1SxlTVC9GOYJFWjU4wqP3veVSol7iKs6LDg2',
         releaseDate: '2025-09-09',
         musicVideoId: 'LL7aDW0Ea6M',
-        tags: ['j-pop', 'city pop', 'anime'],
+        tags: ['j-pop', 'city', 'anime', 'city'],
         languages: ['Japanese', 'English'],
         lyrics: `
 (Let's go!)
@@ -931,6 +943,7 @@ Zoom zoom, say goodbye
         title: 'もっと高くへ連れてって',
         img: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26A0OLhdpr7tFhmgB0d4A9xY1bS5iN6HuqZTRv',
         sampleUrl: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG263mFJFUVHcydCQhnKD5zUpboAWOSLmIBerul8',
+        canvasUrl: 'https://dm7frl7jug.ufs.sh/f/CydBt8G4FyIvG85adYeBLMZreon9v1DtcEGxs6zkFXQ0YAhi',
         releaseDate: '2025-09-09',
         musicVideoId: 'dPOvIJN96tY',
         tags: ['j-pop', 'anime'],
@@ -1001,6 +1014,7 @@ Zoom zoom, say goodbye
         title: 'プレイ！プレイ！プレイ！',
         img: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26dxAg45c96fubmdXljgVxIziBRvO3epWKEYHA',
         sampleUrl: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26tNOMweJkjDBCMmQoV7wYxsHiU5aZgXJFnp1A',
+        canvasUrl: 'https://dm7frl7jug.ufs.sh/f/CydBt8G4FyIv9VloWyRvYTCI3WsF41qplNrXt0caKuHUQBJy',
         releaseDate: '2025-09-09',
         musicVideoId: 'NiLloTibaXM',
         tags: ['j-pop', 'city pop', 'electronic', 'pop'],
@@ -1070,6 +1084,7 @@ Zoom zoom, say goodbye
         title: '甘いメロディ',
         img: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26JKqYp1q3VEdDqYTHMQCzhUkp9vIs03i6wtlG',
         sampleUrl: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG266kszWb9ONVrinuc7y2S3wYXLkeDvdTgHfFMt',
+        canvasUrl: 'https://dm7frl7jug.ufs.sh/f/CydBt8G4FyIvvOi6T5ohaMOdIANLYKQet2R4qZ5iUXsp9Cfg',
         releaseDate: '2025-09-09',
         musicVideoId: 'lwcP_YLkj-0',
         tags: ['j-pop', 'city pop', 'electronic', 'pop'],
@@ -1130,6 +1145,7 @@ Zoom zoom, say goodbye
         title: 'Omnia Ab Uno',
         img: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26YoL07TCXAManfEe8bSVkQ7spTtxljwD092mN',
         sampleUrl: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26V6lw6htKhZ3lfAdH74paeyis2b6OrFuKQjtg',
+        canvasUrl: 'https://dm7frl7jug.ufs.sh/f/CydBt8G4FyIvBLQ0RzqOMz3JSfeIstKly9d4LiD6G8jx7VUX',
         releaseDate: '2025-09-11',
         musicVideoId: 'xXwmzg4S4VM',
         tags: ['hip-hop', 'rap', 'electronic', 'pop'],
@@ -1215,12 +1231,13 @@ We're all going home now... the circle is closing.
     },
     // Take My Hand
     {
-        featured: true,
+        featured: false,
         artistPick: false,
         comingSoon: false,
         title: 'Take My Hand',
         img: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26tPNC4jJkjDBCMmQoV7wYxsHiU5aZgXJFnp1A',
         sampleUrl: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26GaiVcU72vrEsORu3j8WkxiQHNZam4dVgXSDK',
+        canvasUrl: 'https://dm7frl7jug.ufs.sh/f/CydBt8G4FyIvkeJFf6ll87Hcj1humTxSveFziqJgU0QapGfL',
         releaseDate: '2025-09-05',
         musicVideoId: '',
         tags: ['pop', 'electronic', 'synthpop', 'ambient'],
@@ -1288,6 +1305,7 @@ I will always be here, for you
         title: 'Therefore You [vol.2]',
         img: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26ylRx6Cv1Tw7IV4aBQufbXpRO5Cq8tPmDj6EL',
         sampleUrl: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26YtIUODXAManfEe8bSVkQ7spTtxljwD092mNg',
+        canvasUrl: 'https://dm7frl7jug.ufs.sh/f/CydBt8G4FyIvUohp4aIJhqxi3XfwW25Ha9Sod6bOE8LksgFv',
         releaseDate: '2025-09-04',
         musicVideoId: 'bbuOHPY8TsY',
         tags: ['electronic', 'synthwave', 'ambient', 'downtempo', 'house'],
@@ -1351,6 +1369,7 @@ The singular point where the parallels meet
         title: 'Mercy',
         img: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26QC1JXPzoM8SACIiW5pUfY9tElHOeJLFRdv06',
         sampleUrl: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26xiT7nTCNM6ks1ZDpjtWmiXdSgQzR5G4CvOlT',
+        canvasUrl: 'https://dm7frl7jug.ufs.sh/f/CydBt8G4FyIvGnAGy4BLMZreon9v1DtcEGxs6zkFXQ0YAhip',
         releaseDate: '2025-09-02',
         musicVideoId: 'SWPd-2600kM',
         tags: ['r&b', 'soul'],
@@ -1437,6 +1456,7 @@ Let me be true...
         title: 'Therefore You',
         img: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26YRBVolXAManfEe8bSVkQ7spTtxljwD092mNg',
         sampleUrl: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26eWGMmPhljdzVa9bI85fYTvRsJU6CeGcExWO0',
+        canvasUrl: 'https://dm7frl7jug.ufs.sh/f/CydBt8G4FyIvY6Q6EgUIKxbkdlovmepC69zWqNwArP2gaRB1',
         releaseDate: '2025-09-01',
         musicVideoId: 'dEY_XqyDle8',
         tags: ['electronic', 'synthwave', 'ambient', 'downtempo', 'house'],
@@ -1498,6 +1518,7 @@ A ghost in the signal, finally seen
         comingSoon: false,
         img: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26d28m9vc96fubmdXljgVxIziBRvO3epWKEYHA',
         sampleUrl: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26LkloDeUcN5iAt0uJw9nVIj68P1QdsDkoBbZ7',
+        canvasUrl: '',
         releaseDate: '2025-08-31',
         musicVideoId: '',
         tags: ['electronic', 'synthwave', 'ambient'],
@@ -1563,11 +1584,12 @@ Let zero now become the one
     // Midas Touch
     {
         title: 'Midas Touch',
-        featured: false,
+        featured: true,
         artistPick: false,
         comingSoon: false,
         img: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26Jr9geP3VEdDqYTHMQCzhUkp9vIs03i6wtlGn',
         sampleUrl: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26JJWRTM3VEdDqYTHMQCzhUkp9vIs03i6wtlGn',
+        canvasUrl: 'https://dm7frl7jug.ufs.sh/f/CydBt8G4FyIvJuMNOezegbY6LFklNMofKQw4TrqX7nZ25mHR',
         releaseDate: '2025-08-29',
         musicVideoId: 's86Alp3xzco',
         tags: ['r&b', 'pop', 'hip-hop', 'funk'],
@@ -1657,6 +1679,7 @@ That Midas touch..
         comingSoon: false,
         img: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26MWnBJVq5T6rVEfbykaYWq7X2jPm30G8ShwlD',
         sampleUrl: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26RtiOdj0VTG26lngCRWazFoOsdcMpxH34jv1S',
+        canvasUrl: 'https://dm7frl7jug.ufs.sh/f/CydBt8G4FyIvU9DitNIJhqxi3XfwW25Ha9Sod6bOE8LksgFv',
         releaseDate: '2025-08-28',
         musicVideoId: 'xIXA-EDw3_g',
         tags: ['glitch', 'electropop'],
@@ -1736,9 +1759,10 @@ Connected to you
         comingSoon: false,
         img: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26imBF1MwDyfjPz12pXE4CFbcVMJHsm75wkOud',
         sampleUrl: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26AOnwGSpr7tFhmgB0d4A9xY1bS5iN6HuqZTRv',
+        canvasUrl: 'https://dm7frl7jug.ufs.sh/f/CydBt8G4FyIvcbKyevsRTO6gEt49bqSoGylB3weX2d8ZCHJn',
         releaseDate: '2025-08-29',
         musicVideoId: 'YctI4CNwCYw',
-        tags: ['glitch', 'electropop', 'dark pop'],
+        tags: ['glitch', 'electronic', 'pop'],
         languages: ['English'],
         lyrics: `
 I can feel it in the air tonight
@@ -1814,6 +1838,7 @@ There's no escape, there's no way
         comingSoon: false,
         img: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26Rh8p1KG0VTG26lngCRWazFoOsdcMpxH34jv1',
         sampleUrl: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG2601bgRYeiVaUXveObDkhncLG8TBRgqxIrfHj3',
+        canvasUrl: 'https://dm7frl7jug.ufs.sh/f/CydBt8G4FyIvG4ky7DBLMZreon9v1DtcEGxs6zkFXQ0YAhip',
         releaseDate: '2025-08-29',
         musicVideoId: 'H8J_aC4EC-c',
         tags: ['r&b', 'pop', 'hip-hop'],
@@ -1910,6 +1935,7 @@ Down bad, nuff said (nuff said)
         comingSoon: false,
         img: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG2634GykKVHcydCQhnKD5zUpboAWOSLmIBerul8',
         sampleUrl: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26tV8vUIOJkjDBCMmQoV7wYxsHiU5aZgXJFnp1',
+        canvasUrl: '',
         releaseDate: '2025-08-27',
         musicVideoId: '',
         tags: ['pop', 'electronic', 'glitch'],
@@ -1999,6 +2025,7 @@ Boy? (x8)
         comingSoon: false,
         img: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26rUcc7o2vV1Y8tqGumEPOzgo4pZehACcDnR96',
         sampleUrl: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26dp7Yaoc96fubmdXljgVxIziBRvO3epWKEYHA',
+        canvasUrl: '',
         releaseDate: '2025-08-28',
         musicVideoId: '',
         tags: ['pop', 'r&b', 'electronic'],
@@ -2084,6 +2111,7 @@ I don't know how to forget you
         comingSoon: false,
         img: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26NFnePvgUosAST6EYJ0zZX5xcMm17QDqewaGy',
         sampleUrl: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26h98HeHtgfNRltsIk3VcnCAeH5qFmD7Xj1B6L',
+        canvasUrl: '',
         releaseDate: '2025-08-27',
         musicVideoId: '',
         tags: ['r&b', 'pop', 'hip-hop'],
@@ -2170,6 +2198,7 @@ You so heartless
         comingSoon: false,
         img: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26gYCUSJLf36Ny5R2zd9OeLbriQEHlAGaYF0wP',
         sampleUrl: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26kgEmu16NDecHTJKCj3bi5AZmYOMw7voqfut9',
+        canvasUrl: '',
         releaseDate: '2025-08-27',
         musicVideoId: '',
         tags: ['electronic', 'pop', 'glitch', 'rock'],
@@ -2251,6 +2280,7 @@ The human code.. is.. breaking
         comingSoon: false,
         img: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26J5oQ7R3VEdDqYTHMQCzhUkp9vIs03i6wtlGn',
         sampleUrl: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG262X5zRRjRus0k5TxlaHtcGzAm4bP9VYv83MeI',
+        canvasUrl: '',
         releaseDate: '2025-08-27',
         musicVideoId: '',
         tags: ['hip-hop', 'rap'],
@@ -2323,6 +2353,7 @@ It's a shame
         comingSoon: false,
         img: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26PvlRcdECahirzxGAgUfSeOkYloRVdK60t9s5',
         sampleUrl: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26y4WZJSv1Tw7IV4aBQufbXpRO5Cq8tPmDj6EL',
+        canvasUrl: '',
         releaseDate: '2025-08-28',
         musicVideoId: '',
         tags: ['electronic', 'pop', 'glitch'],
@@ -2425,6 +2456,7 @@ Just you and I
         comingSoon: false,
         img: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG263JYb16VHcydCQhnKD5zUpboAWOSLmIBerul8',
         sampleUrl: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26y1mDhA6v1Tw7IV4aBQufbXpRO5Cq8tPmDj6E',
+        canvasUrl: '',
         releaseDate: '2025-08-27',
         musicVideoId: '',
         tags: ['pop', 'rock', 'hip-hop'],
@@ -2492,6 +2524,7 @@ How we are meant to be
         comingSoon: false,
         img: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26ARK3M3Bpr7tFhmgB0d4A9xY1bS5iN6HuqZTR',
         sampleUrl: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26L2q7k1UcN5iAt0uJw9nVIj68P1QdsDkoBbZ7',
+        canvasUrl: '',
         releaseDate: '2025-08-27',
         musicVideoId: '',
         tags: ['pop'],
@@ -2605,6 +2638,7 @@ But marijuana take her to all the [wrong places]
         comingSoon: false,
         img: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26uQiPnbOfQ5yXpD49wON0laveGzqtBkYSdRIg',
         sampleUrl: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26Iah3Wq8QCgf30w16YckGzLaEMuBeW5vrODiX',
+        canvasUrl: '',
         releaseDate: '2025-08-27',
         musicVideoId: '',
         tags: ['pop', 'rock'],
@@ -2654,6 +2688,7 @@ You will always be my first
         comingSoon: false,
         img: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26hzvH15tgfNRltsIk3VcnCAeH5qFmD7Xj1B6L',
         sampleUrl: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26JKTk7Rx3VEdDqYTHMQCzhUkp9vIs03i6wtlG',
+        canvasUrl: '',
         releaseDate: '2025-08-27',
         musicVideoId: '',
         tags: ['pop', 'hip-hop'],
@@ -2732,6 +2767,7 @@ Hard to remember forgetting your face
         comingSoon: false,
         img: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG263hJCmLVHcydCQhnKD5zUpboAWOSLmIBerul8',
         sampleUrl: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26gCcyGiLf36Ny5R2zd9OeLbriQEHlAGaYF0wP',
+        canvasUrl: '',
         releaseDate: '2025-08-29',
         musicVideoId: '',
         tags: ['dance', 'pop', 'house'],
@@ -2821,6 +2857,7 @@ leave the world behind
         comingSoon: false,
         img: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26E9PUYWAVnPcATrNZQSWoCBG83wL7Xdvpumk5',
         sampleUrl: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG260thIg5SeiVaUXveObDkhncLG8TBRgqxIrfHj',
+        canvasUrl: '',
         releaseDate: '2025-08-27',
         musicVideoId: '',
         tags: ['rock', 'pop', 'melodic'],
@@ -2904,6 +2941,7 @@ I wanna show her (him) that the pain don't have to last
         comingSoon: false,
         img: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG260kYUhQeiVaUXveObDkhncLG8TBRgqxIrfHj3',
         sampleUrl: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG266cpSc09ONVrinuc7y2S3wYXLkeDvdTgHfFMt',
+        canvasUrl: '',
         releaseDate: '2025-08-27',
         musicVideoId: '',
         tags: ['rock', 'pop'],
@@ -2967,6 +3005,7 @@ So give me somethin worth fightin for
         comingSoon: false,
         img: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26Z6m5kw1OB1fRJhWxUj4stF6wIcQdoXPZCbYH',
         sampleUrl: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG260t6bqOzeiVaUXveObDkhncLG8TBRgqxIrfHj',
+        canvasUrl: 'https://dm7frl7jug.ufs.sh/f/CydBt8G4FyIvLVLYkQgMv4VKhQ7Z09JSxNAtOlfTCH1siacE',
         releaseDate: '2025-08-28',
         musicVideoId: 'GIgLTLrvGA0',
         tags: ['electropop', 'glitch'],
@@ -3021,6 +3060,7 @@ Glitching on your signal, I just wanna make you whole
         comingSoon: false,
         img: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26DsHsnP4Yv8f4wLDSp0tqoTkZg5WOu9MKF12j',
         sampleUrl: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26JAOCs93VEdDqYTHMQCzhUkp9vIs03i6wtlGn',
+        canvasUrl: '',
         releaseDate: '2025-08-27',
         musicVideoId: '',
         tags: ['rock', 'pop'],

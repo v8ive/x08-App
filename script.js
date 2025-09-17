@@ -36,17 +36,23 @@ function initializeApp() {
                 });
         });
     }
+    
+    // DOM Elements
+    const featuredGalleryContainer = document.getElementById('featured-gallery-container');
+    const featuredGalleryBackground = document.getElementById('featured-gallery-background');
+    const featuredPrevBtn = document.getElementById('featured-prev-btn');
+    const featuredNextBtn = document.getElementById('featured-next-btn');
+    const upcomingReleasesContainer = document.getElementById('upcoming-releases-container');
 
     const albumList = document.getElementById('album-list');
-    const artistPickContainer = document.getElementById('artist-pick');
     const songPage = document.getElementById('song-page');
+    const songPageBackground = document.getElementById('song-page-background');
     const searchBar = document.getElementById('search-bar');
     const videoSearchBar = document.getElementById('video-search-bar');
     const discographyCount = document.getElementById('discography-count');
     const videoCount = document.getElementById('video-count');
     const musicFiltersContainer = document.getElementById('music-active-filters');
     const videoFiltersContainer = document.getElementById('video-active-filters');
-
 
     const linksModal = document.getElementById('links-modal');
     const socialModal = document.getElementById('social-modal');
@@ -58,7 +64,6 @@ function initializeApp() {
     const mainContent = document.querySelector('.main-content');
     const mainNav = document.querySelector('.main-nav');
     const logoLink = document.querySelector('.logo-container a');
-
 
     const globalPlayer = document.getElementById('global-player');
     const playerAlbumArt = document.getElementById('player-album-art');
@@ -116,6 +121,12 @@ function initializeApp() {
     
     let activeMusicFilters = [];
     let activeVideoFilters = [];
+    let featuredAlbums = [];
+    let currentFeatureIndex = 0;
+    let isTransitioning = false;
+    let galleryInterval;
+    const GALLERY_INTERVAL_TIME = 5000; // 5 seconds
+
 
     const ITEM_LIMIT = 8;
     const savedTheme = localStorage.getItem('theme') || 'dark';
@@ -256,6 +267,172 @@ function initializeApp() {
         tagEl.style.setProperty('--tag-delay', `${delay}s`);
         return tagEl;
     };
+
+    const preloadImage = (src) => new Promise((resolve, reject) => {
+        const img = new Image();
+        img.onload = resolve;
+        img.onerror = reject;
+        img.src = src;
+    });
+    
+    const updateCarouselState = (newIndex) => {
+        if (isTransitioning || newIndex === currentFeatureIndex) return;
+        isTransitioning = true;
+    
+        const slides = featuredGalleryContainer.querySelectorAll('.featured-slide');
+        const oldIndex = currentFeatureIndex;
+        currentFeatureIndex = (newIndex + featuredAlbums.length) % featuredAlbums.length;
+    
+        const currentSlide = slides[oldIndex];
+        const nextSlide = slides[currentFeatureIndex];
+        const nextAlbum = featuredAlbums[currentFeatureIndex];
+    
+        const currentBg = featuredGalleryBackground.querySelector('.active');
+    
+        let newBg;
+        if (nextAlbum.canvasUrl) {
+            newBg = document.createElement('video');
+            newBg.className = 'bg-video';
+            newBg.autoplay = true;
+            newBg.loop = true;
+            newBg.muted = true;
+            newBg.playsInline = true;
+            newBg.src = nextAlbum.canvasUrl;
+        } else {
+            newBg = document.createElement('div');
+            newBg.className = 'bg-image';
+            newBg.style.backgroundImage = `url(${nextAlbum.img})`;
+        }
+        
+        featuredGalleryBackground.appendChild(newBg);
+    
+        requestAnimationFrame(() => {
+            newBg.classList.add('active');
+            if (currentBg) {
+                currentBg.classList.remove('active');
+            }
+        });
+    
+        if (currentSlide) currentSlide.classList.add('is-leaving');
+        nextSlide.classList.remove('is-leaving');
+        nextSlide.classList.add('is-active');
+    
+        setTimeout(() => {
+            if (currentBg) {
+                currentBg.remove();
+            }
+            if (currentSlide) {
+                currentSlide.classList.remove('is-active', 'is-leaving');
+            }
+            isTransitioning = false;
+        }, 600);
+    };
+    
+    const startGalleryInterval = () => {
+        clearInterval(galleryInterval);
+        galleryInterval = setInterval(() => {
+            updateCarouselState(currentFeatureIndex + 1);
+        }, GALLERY_INTERVAL_TIME);
+    };
+
+    const resetGalleryInterval = () => {
+        clearInterval(galleryInterval);
+        startGalleryInterval();
+    };
+
+    const renderFeaturedGallery = () => {
+        featuredAlbums = albums.filter(album => album.featured);
+        featuredGalleryContainer.innerHTML = '';
+        featuredGalleryBackground.innerHTML = ''; 
+    
+        if (featuredAlbums.length === 0) {
+            document.getElementById('featured-gallery-section').style.display = 'none';
+            return;
+        }
+    
+        const firstAlbum = featuredAlbums[0];
+        let bg1;
+        if (firstAlbum.canvasUrl) {
+            bg1 = document.createElement('video');
+            bg1.className = 'bg-video active';
+            bg1.autoplay = true;
+            bg1.loop = true;
+            bg1.muted = true;
+            bg1.playsInline = true;
+            bg1.src = firstAlbum.canvasUrl;
+        } else {
+            bg1 = document.createElement('div');
+            bg1.className = 'bg-image active';
+            bg1.style.backgroundImage = `url(${firstAlbum.img})`;
+        }
+        featuredGalleryBackground.appendChild(bg1);
+    
+        featuredAlbums.forEach((album, index) => {
+            const originalIndex = albums.indexOf(album);
+            const slide = document.createElement('div');
+            slide.className = 'featured-slide';
+            if (index === 0) {
+                slide.classList.add('is-active');
+            }
+            slide.dataset.index = originalIndex;
+            slide.innerHTML = `
+                <img src="${album.img}" alt="${album.title}" class="featured-img">
+                <div class="featured-info">
+                    <div class="featured-info-text">
+                        <h3>${album.title}</h3>
+                    </div>
+                    <div class="featured-controls">
+                        <button class="album-play-btn control-btn" data-index="${originalIndex}" ${!album.sampleUrl ? 'disabled' : ''} aria-label="Play Sample">
+                            ${playIcon}${nowPlayingIndicator}
+                        </button>
+                        <button class="album-info-btn control-btn" data-index="${originalIndex}" aria-label="More Info"><i class="fas fa-info-circle"></i></button>
+                    </div>
+                </div>
+            `;
+            featuredGalleryContainer.appendChild(slide);
+        });
+    
+        startGalleryInterval();
+    };
+
+    const renderUpcomingReleases = () => {
+        const upcoming = albums.filter(album => album.comingSoon);
+        const upcomingSection = document.getElementById('upcoming-releases-section');
+        upcomingReleasesContainer.innerHTML = '';
+    
+        if (upcoming.length === 0) {
+            upcomingSection.style.display = 'none';
+            return;
+        }
+        
+        upcomingSection.style.display = 'block';
+    
+        upcoming.forEach((album, index) => {
+            const originalIndex = albums.indexOf(album);
+            const item = document.createElement('div');
+            item.className = 'upcoming-item reveal-on-scroll';
+            item.dataset.index = originalIndex;
+            item.style.setProperty('--stagger-index', index);
+            item.innerHTML = `
+                <img src="${album.img}" alt="${album.title}" class="upcoming-img">
+                <div class="upcoming-info">
+                    <div>
+                        <h3 class="upcoming-title">${album.title}</h3>
+                        <p class="upcoming-release-date">${formatRelativeDate(album.releaseDate)}</p>
+                    </div>
+                    <div class="upcoming-controls">
+                        <button class="album-play-btn control-btn" data-index="${originalIndex}" ${!album.sampleUrl ? 'disabled' : ''}>
+                            ${playIcon}${nowPlayingIndicator}
+                        </button>
+                        <button class="album-info-btn control-btn" data-index="${originalIndex}"><i class="fas fa-info-circle"></i></button>
+                    </div>
+                </div>
+            `;
+            upcomingReleasesContainer.appendChild(item);
+        });
+        setupScrollAnimations();
+    };
+
     
     const renderAlbums = (isFullPage = false) => {
         const searchTerm = searchBar.value.toLowerCase();
@@ -325,80 +502,6 @@ function initializeApp() {
             });
             viewAllContainer.appendChild(viewAllBtn);
         }
-        setupScrollAnimations();
-    };
-    
-    const renderArtistPicks = () => {
-        const artistPickSection = document.getElementById('artist-pick-section');
-        artistPickContainer.innerHTML = '';
-        const picks = albums.filter(song => song.artistPick);
-
-        if (picks.length === 0) {
-            artistPickSection.style.display = 'none';
-            return;
-        }
-
-        artistPickSection.style.display = 'block';
-
-        picks.forEach((song, index) => {
-            const originalIndex = albums.indexOf(song);
-            const pickItem = document.createElement('div');
-            pickItem.className = 'artist-pick-item reveal-on-scroll';
-            pickItem.dataset.index = originalIndex;
-            pickItem.style.setProperty('--stagger-index', index);
-
-            const tagsHtml = `
-                <div class="song-tags-container">
-                    ${(song.languages || []).map((lang, i) => `<div class="song-tag language-tag" data-tag="${lang.toLowerCase()}" data-type="language" style="--tag-delay: ${i * 0.1}s">${lang}</div>`).join('')}
-                    ${(song.tags || []).slice(0, 3).map((tag, i) => `<div class="song-tag genre-tag" data-tag="${tag.toLowerCase()}" data-type="genre" style="--tag-delay: ${(i + (song.languages || []).length) * 0.1}s">${tag}</div>`).join('')}
-                </div>
-            `;
-
-            const tagIcon = song.comingSoon ? 'fa-clock' : 'fa-star';
-            const tagTitle = song.comingSoon ? 'Coming Soon' : 'Artist Pick';
-
-            pickItem.innerHTML = `
-                <div class="artist-pick-art">
-                    <img src="${song.img}" alt="${song.title}" class="artist-pick-img" crossorigin="anonymous">
-                    <div class="artist-pick-tag" title="${tagTitle}">
-                        <i class="fas ${tagIcon}"></i>
-                    </div>
-                </div>
-                <div class="artist-pick-info">
-                    <h2>${song.title}</h2>
-                    <p class="release-date">${formatRelativeDate(song.releaseDate)}</p>
-                    ${tagsHtml}
-                    <div class="artist-pick-controls">
-                        <button class="album-play-btn control-btn" data-index="${originalIndex}" ${!song.sampleUrl ? 'disabled' : ''}>
-                            ${playIcon}
-                            ${nowPlayingIndicator}
-                        </button>
-                        <button class="album-info-btn control-btn" data-index="${originalIndex}"><i class="fas fa-info-circle"></i></button>
-                    </div>
-                </div>
-            `;
-            artistPickContainer.appendChild(pickItem);
-
-            const pickImg = pickItem.querySelector('.artist-pick-img');
-            const setAnimationColor = () => {
-                try {
-                    const dominantColor = colorThief.getColor(pickImg);
-                    if (dominantColor) {
-                        pickItem.style.setProperty('--animation-color', `rgba(${dominantColor.join(',')}, 0.7)`);
-                    }
-                } catch(e) {
-                    console.error("Could not get color from image.", e);
-                }
-            };
-    
-            if (pickImg.complete) {
-                setAnimationColor();
-            } else {
-                pickImg.addEventListener('load', setAnimationColor, { once: true });
-            }
-        });
-        
-        // After rendering, trigger scroll animations for elements that might already be in view
         setupScrollAnimations();
     };
 
@@ -704,7 +807,10 @@ function initializeApp() {
         const infoBtn = e.target.closest('.album-info-btn');
         const container = e.target.closest('[data-index]');
 
+        if (!container) return;
+
         if (playBtn) {
+            e.stopPropagation();
             const index = parseInt(container.dataset.index, 10);
             if (!albums[index].sampleUrl) return;
             if (index === currentSongIndex) {
@@ -714,6 +820,7 @@ function initializeApp() {
             }
         }
         if (infoBtn) {
+            e.stopPropagation();
             const index = parseInt(container.dataset.index, 10);
             const songTitle = albums[index].title.toLowerCase().replace(/\s+/g, '-');
             history.pushState({ songIndex: index }, '', `/song/${encodeURIComponent(songTitle)}`);
@@ -723,7 +830,8 @@ function initializeApp() {
 
 
     albumList.addEventListener('click', handleAlbumControlsClick);
-    artistPickContainer.addEventListener('click', handleAlbumControlsClick);
+    upcomingReleasesContainer.addEventListener('click', handleAlbumControlsClick);
+    featuredGalleryContainer.addEventListener('click', handleAlbumControlsClick);
 
     const handleSearch = (e, type) => {
         const isFullPage = window.location.pathname.startsWith(`/${type}`);
@@ -766,7 +874,7 @@ function initializeApp() {
             resetMetaTags();
             return;
         }
-
+    
         const songMeta = {
             title: `${song.title} | x08`,
             description: song.comingSoon
@@ -777,9 +885,9 @@ function initializeApp() {
             type: 'music.song'
         };
         updateMetaTags(songMeta);
-
+    
         const isComingSoon = song.comingSoon;
-
+    
         const linksHtml = isComingSoon ?
             Object.entries(social_links).map(([platform, url]) => {
                 if (!url) return '';
@@ -795,7 +903,7 @@ function initializeApp() {
                     'pandora': 'fab fa-pandora'
                 };
                 const icon = iconMap[platform] || 'fas fa-music';
-
+    
                 return `
                     <a href="${url}" target="_blank" class="social-link coming-soon-link">
                         <i class="${icon} social-icon"></i> ${platformName}
@@ -806,7 +914,7 @@ function initializeApp() {
                     <i class="${link.icon} social-icon"></i> ${link.platform}
                 </a>
             `).join('');
-
+    
         const videoSectionHtml = song.musicVideoId ? `
             <div class="song-page-video-section reveal-on-scroll">
                 <h3>Official Video</h3>
@@ -821,10 +929,8 @@ function initializeApp() {
                 </div>
             </div>
         ` : '';
-
-        songPage.style.setProperty('--song-bg-image', `url(${song.img})`);
-
-        songPage.innerHTML = `
+    
+        const pageContent = `
             <div class="song-page-header">
                 <div class="sticky-header-content">
                     <button class="song-page-back-btn"><i class="fas fa-arrow-left"></i></button>
@@ -873,26 +979,45 @@ function initializeApp() {
                 </div>
             </div>
         `;
+        
+        songPage.innerHTML = pageContent;
+        songPageBackground.innerHTML = ''; // Clear previous background
 
+        if (song.canvasUrl) {
+            const videoBg = document.createElement('video');
+            videoBg.className = 'bg-video';
+            videoBg.src = song.canvasUrl;
+            videoBg.autoplay = true;
+            videoBg.loop = true;
+            videoBg.muted = true;
+            videoBg.playsInline = true;
+            songPageBackground.appendChild(videoBg);
+        } else {
+            const imageBg = document.createElement('div');
+            imageBg.className = 'bg-image';
+            imageBg.style.backgroundImage = `url(${song.img})`;
+            songPageBackground.appendChild(imageBg);
+        }
+    
         mainContent.style.display = 'none';
         songPage.classList.add('active');
-
+    
         const tabNav = songPage.querySelector('.tab-nav');
         tabNav.addEventListener('click', e => {
             if (e.target.classList.contains('tab-btn')) {
                 const targetTab = e.target.dataset.tab;
-
+    
                 tabNav.querySelector('.active').classList.remove('active');
                 e.target.classList.add('active');
-
+    
                 const content = songPage.querySelector('.tab-content');
                 content.querySelector('.active').classList.remove('active');
                 content.querySelector(`#tab-${targetTab}`).classList.add('active');
             }
         });
-
+    
         setupScrollAnimations();
-
+    
         const songPageImg = songPage.querySelector('.song-page-img');
         const applyGlow = () => {
             try {
@@ -905,17 +1030,17 @@ function initializeApp() {
                 songPageImg.style.setProperty('--glow-color', 'var(--primary-color)');
             }
         };
-
+    
         if (songPageImg.complete) {
             applyGlow();
         } else {
             songPageImg.addEventListener('load', applyGlow, { once: true });
         }
-
+    
         if (songPage.observer) {
             songPage.observer.disconnect();
         }
-
+    
         const headerEl = songPage.querySelector('.song-page-header');
         const heroEl = songPage.querySelector('.song-page-hero');
         const observer = new IntersectionObserver(
@@ -926,7 +1051,7 @@ function initializeApp() {
         );
         observer.observe(heroEl);
         songPage.observer = observer;
-
+    
         songPage.querySelector('.song-page-back-btn').addEventListener('click', () => {
             if (songPage.observer) {
                 songPage.observer.disconnect();
@@ -934,7 +1059,7 @@ function initializeApp() {
             history.pushState(null, '', '/');
             handleRouting(true);
         });
-
+    
         songPage.querySelectorAll('.song-page-play-btn').forEach(btn => {
             btn.addEventListener('click', (e) => {
                 const index = parseInt(e.currentTarget.dataset.index, 10);
@@ -946,7 +1071,7 @@ function initializeApp() {
                 }
             });
         });
-
+    
         songPage.querySelectorAll('.song-page-share-btn').forEach(btn => {
             btn.addEventListener('click', async () => {
                 const songTitle = song.title;
@@ -956,7 +1081,7 @@ function initializeApp() {
                     text: `Check out "${songTitle}" by x08!`,
                     url: url,
                 };
-
+    
                 if (navigator.share) {
                     try {
                         await navigator.share(shareData);
@@ -1244,7 +1369,8 @@ function initializeApp() {
             activeVideoFilters = [];
             renderActiveFilters('music');
             renderActiveFilters('video');
-            renderArtistPicks();
+            renderFeaturedGallery();
+            renderUpcomingReleases();
             renderVideoGallery();
             renderAlbums();
             resetMetaTags();
@@ -1283,7 +1409,6 @@ function initializeApp() {
             const page = type === 'music' ? 'discography' : 'videos';
             const search = type === 'music' ? searchBar.value : videoSearchBar.value;
             
-            // Build the URL with filters
             const params = new URLSearchParams();
             if (search) params.set('search', search);
             if (activeFilters.length > 0) params.set('filter', activeFilters.join(','));
@@ -1372,7 +1497,7 @@ function initializeApp() {
             }, { duration: animationDuration, fill: "forwards" });
         });
 
-        const interactiveElements = document.querySelectorAll('a, button, .album-item, .toggle-label, .slider-btn, .pagination-dot, .progress-bar-bg, .video-item, .artist-pick-item, .song-tag');
+        const interactiveElements = document.querySelectorAll('a, button, .album-item, .toggle-label, .slider-btn, .pagination-dot, .progress-bar-bg, .video-item, .artist-pick-item, .song-tag, .featured-slide, .featured-nav-btn, .upcoming-item');
         interactiveElements.forEach(el => {
             el.addEventListener('mouseenter', () => {
                 cursorDot.classList.add('hovered');
@@ -1409,7 +1534,6 @@ function initializeApp() {
 
         const elementsToReveal = document.querySelectorAll('.reveal-on-scroll');
         elementsToReveal.forEach(el => {
-            // If the element is already in view, make it visible immediately.
             if (el.getBoundingClientRect().top < window.innerHeight) {
                  setTimeout(() => {
                         el.classList.add('is-visible');
@@ -1421,6 +1545,26 @@ function initializeApp() {
         });
     };
 
+    featuredNextBtn.addEventListener('click', () => {
+        updateCarouselState(currentFeatureIndex + 1);
+        resetGalleryInterval();
+    });
+    
+    featuredPrevBtn.addEventListener('click', () => {
+        updateCarouselState(currentFeatureIndex - 1);
+        resetGalleryInterval();
+    });
+    
+    featuredGalleryContainer.addEventListener('click', e => {
+        const slide = e.target.closest('.featured-slide');
+        if (slide && slide.classList.contains('is-active') && !e.target.closest('.control-btn')) {
+            const index = parseInt(slide.dataset.index, 10);
+            const songTitle = albums[index].title.toLowerCase().replace(/\s+/g, '-');
+            history.pushState({ songIndex: index }, '', `/song/${encodeURIComponent(songTitle)}`);
+            handleRouting(true);
+        }
+    });
+
     populateHeaderSocials();
     handleRouting();
     playerInfoBtn.disabled = true;
@@ -1428,6 +1572,6 @@ function initializeApp() {
     setupCursorFollower();
     setupVideoPlayer();
 
-    document.querySelectorAll('.section-header, .artist-pick-container').forEach(el => el.classList.add('reveal-on-scroll'));
+    document.querySelectorAll('.section-header').forEach(el => el.classList.add('reveal-on-scroll'));
     setupScrollAnimations();
 }
