@@ -125,7 +125,7 @@ function initializeApp() {
     let currentFeatureIndex = 0;
     let isTransitioning = false;
     let galleryInterval;
-    const GALLERY_INTERVAL_TIME = 5000; // 5 seconds
+    const GALLERY_INTERVAL_TIME = 7500; // 7.5 seconds
 
 
     const ITEM_LIMIT = 8;
@@ -637,7 +637,8 @@ function initializeApp() {
             }
         });
 
-        const songPagePlayBtns = songPage.querySelectorAll('.song-page-play-btn');
+        const songPageContentContainer = document.getElementById('song-page-content-container');
+        const songPagePlayBtns = songPageContentContainer.querySelectorAll('.song-page-play-btn');
         songPagePlayBtns.forEach(btn => {
             const btnIndex = parseInt(btn.dataset.index, 10);
             if (btnIndex === currentSongIndex && isPlaying) {
@@ -868,9 +869,11 @@ function initializeApp() {
 
     const renderSongPage = (index) => {
         const song = albums[index];
+        const songPageContentContainer = document.getElementById('song-page-content-container');
         if (!song) {
             mainContent.style.display = 'flex';
             songPage.classList.remove('active');
+            songPageContentContainer.innerHTML = '';
             resetMetaTags();
             return;
         }
@@ -980,7 +983,7 @@ function initializeApp() {
             </div>
         `;
         
-        songPage.innerHTML = pageContent;
+        songPageContentContainer.innerHTML = pageContent;
         songPageBackground.innerHTML = ''; // Clear previous background
 
         if (song.canvasUrl) {
@@ -992,6 +995,7 @@ function initializeApp() {
             videoBg.muted = true;
             videoBg.playsInline = true;
             songPageBackground.appendChild(videoBg);
+            videoBg.play().catch(e => console.error("Video autoplay was prevented:", e));
         } else {
             const imageBg = document.createElement('div');
             imageBg.className = 'bg-image';
@@ -1002,7 +1006,7 @@ function initializeApp() {
         mainContent.style.display = 'none';
         songPage.classList.add('active');
     
-        const tabNav = songPage.querySelector('.tab-nav');
+        const tabNav = songPageContentContainer.querySelector('.tab-nav');
         tabNav.addEventListener('click', e => {
             if (e.target.classList.contains('tab-btn')) {
                 const targetTab = e.target.dataset.tab;
@@ -1010,7 +1014,7 @@ function initializeApp() {
                 tabNav.querySelector('.active').classList.remove('active');
                 e.target.classList.add('active');
     
-                const content = songPage.querySelector('.tab-content');
+                const content = songPageContentContainer.querySelector('.tab-content');
                 content.querySelector('.active').classList.remove('active');
                 content.querySelector(`#tab-${targetTab}`).classList.add('active');
             }
@@ -1018,7 +1022,7 @@ function initializeApp() {
     
         setupScrollAnimations();
     
-        const songPageImg = songPage.querySelector('.song-page-img');
+        const songPageImg = songPageContentContainer.querySelector('.song-page-img');
         const applyGlow = () => {
             try {
                 const dominantColor = colorThief.getColor(songPageImg);
@@ -1041,8 +1045,8 @@ function initializeApp() {
             songPage.observer.disconnect();
         }
     
-        const headerEl = songPage.querySelector('.song-page-header');
-        const heroEl = songPage.querySelector('.song-page-hero');
+        const headerEl = songPageContentContainer.querySelector('.song-page-header');
+        const heroEl = songPageContentContainer.querySelector('.song-page-hero');
         const observer = new IntersectionObserver(
             ([entry]) => {
                 headerEl.classList.toggle('scrolled', !entry.isIntersecting);
@@ -1052,7 +1056,7 @@ function initializeApp() {
         observer.observe(heroEl);
         songPage.observer = observer;
     
-        songPage.querySelector('.song-page-back-btn').addEventListener('click', () => {
+        songPageContentContainer.querySelector('.song-page-back-btn').addEventListener('click', () => {
             if (songPage.observer) {
                 songPage.observer.disconnect();
             }
@@ -1060,7 +1064,7 @@ function initializeApp() {
             handleRouting(true);
         });
     
-        songPage.querySelectorAll('.song-page-play-btn').forEach(btn => {
+        songPageContentContainer.querySelectorAll('.song-page-play-btn').forEach(btn => {
             btn.addEventListener('click', (e) => {
                 const index = parseInt(e.currentTarget.dataset.index, 10);
                 if (!albums[index].sampleUrl) return;
@@ -1072,7 +1076,7 @@ function initializeApp() {
             });
         });
     
-        songPage.querySelectorAll('.song-page-share-btn').forEach(btn => {
+        songPageContentContainer.querySelectorAll('.song-page-share-btn').forEach(btn => {
             btn.addEventListener('click', async () => {
                 const songTitle = song.title;
                 const url = window.location.href;
