@@ -621,6 +621,14 @@ html, body {
     letter-spacing: 1px;
 }
 
+.album-item-img, .featured-img, .upcoming-img, .song-page-img, .sticky-img, #player-album-art {
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
 /* --- Featured Gallery Section --- */
 #featured-gallery-section {
     margin-bottom: 4rem;
@@ -645,6 +653,10 @@ html, body {
     overflow: hidden;
     mask-image: radial-gradient(circle, white 60%, transparent 85%);
     -webkit-mask-image: radial-gradient(circle, white 60%, transparent 85%);
+}
+
+.bg-video {
+    pointer-events: none;
 }
 
 .featured-gallery-background .bg-image,
