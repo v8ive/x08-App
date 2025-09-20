@@ -73,7 +73,8 @@
                             <stop offset="100%" style="stop-color:var(--logo-gradient-end)" />
                         </linearGradient>
                         <filter id="displacement-filter">
-                            <feTurbulence type="fractalNoise" baseFrequency="0.02 0.2" numOctaves="1" result="turbulence" />
+                            <feTurbulence type="fractalNoise" baseFrequency="0.02 0.2" numOctaves="1"
+                                result="turbulence" />
                             <feDisplacementMap in="SourceGraphic" in2="turbulence" scale="3" xChannelSelector="R"
                                 yChannelSelector="G" />
                         </filter>
@@ -121,12 +122,14 @@
 
     <main class="main-content">
         <section class="content-section" id="featured-gallery-section">
-             <div class="featured-gallery-wrapper">
+            <div class="featured-gallery-wrapper">
                 <div class="featured-gallery-background" id="featured-gallery-background"></div>
                 <div class="featured-gallery-container" id="featured-gallery-container">
                 </div>
-                <button class="featured-nav-btn prev" id="featured-prev-btn" aria-label="Previous Feature"><i class="fas fa-chevron-left"></i></button>
-                <button class="featured-nav-btn next" id="featured-next-btn" aria-label="Next Feature"><i class="fas fa-chevron-right"></i></button>
+                <button class="featured-nav-btn prev" id="featured-prev-btn" aria-label="Previous Feature"><i
+                        class="fas fa-chevron-left"></i></button>
+                <button class="featured-nav-btn next" id="featured-next-btn" aria-label="Next Feature"><i
+                        class="fas fa-chevron-right"></i></button>
             </div>
         </section>
 
@@ -202,6 +205,12 @@
             <button id="player-prev-btn" class="control-btn"><i class="fas fa-backward-step"></i></button>
             <button id="player-play-pause-btn" class="control-btn play-btn"><i class="fas fa-play"></i></button>
             <button id="player-next-btn" class="control-btn"><i class="fas fa-forward-step"></i></button>
+            <div class="volume-control-container">
+                <button id="volume-btn" class="control-btn"><i class="fas fa-volume-high"></i></button>
+                <div class="volume-slider-container">
+                    <input type="range" id="volume-slider" class="volume-slider" min="0" max="1" step="0.01" value="1">
+                </div>
+            </div>
             <button id="player-info-btn" class="control-btn"><i class="fas fa-info-circle"></i></button>
         </div>
         <button id="player-close-btn" class="player-close-btn"><i class="fas fa-times"></i></button>

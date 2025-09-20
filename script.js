@@ -77,8 +77,11 @@ function initializeApp() {
     const playerCurrentTimeEl = document.getElementById('player-current-time');
     const playerDurationEl = document.getElementById('player-duration');
     const progressBarBg = document.querySelector('.progress-bar-bg');
+    const volumeBtn = document.getElementById('volume-btn');
+    const volumeSlider = document.getElementById('volume-slider');
 
     const audioPlayer = new Audio();
+    audioPlayer.volume = 1;
     audioPlayer.crossOrigin = "anonymous";
     let currentSongIndex = -1;
     let isPlaying = false;
@@ -1624,4 +1627,29 @@ function initializeApp() {
 
     document.querySelectorAll('.section-header').forEach(el => el.classList.add('reveal-on-scroll'));
     setupScrollAnimations();
+
+    volumeBtn.addEventListener('click', () => {
+        if (audioPlayer.volume > 0) {
+            audioPlayer.volume = 0;
+        } else {
+            audioPlayer.volume = 1;
+        }
+    });
+
+    volumeSlider.addEventListener('input', (e) => {
+        audioPlayer.volume = e.target.value;
+    });
+
+    audioPlayer.addEventListener('volumechange', () => {
+        volumeSlider.value = audioPlayer.volume;
+        const volumeIcon = volumeBtn.querySelector('i');
+        
+        if (audioPlayer.volume > 0.5) {
+            volumeIcon.className = 'fas fa-volume-high';
+        } else if (audioPlayer.volume > 0) {
+            volumeIcon.className = 'fas fa-volume-low';
+        } else {
+            volumeIcon.className = 'fas fa-volume-xmark';
+        }
+    });
 }
