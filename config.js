@@ -37,6 +37,81 @@ export const albums = [
     //     ]
     // },
 
+    // The Beast [Coming Soon]
+    {
+        featured: true,
+        artistPick: false,
+        comingSoon: true,
+        title: 'The Beast',
+        img: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26pMTm8EnRBwFTAs2kpzjJdaNlu6P75f3qicGS',
+        sampleUrl: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26pjkOx1nRBwFTAs2kpzjJdaNlu6P75f3qicGS',
+        canvasUrl: '',
+        releaseDate: '',
+        musicVideoId: '',
+        tags: ['rock', 'alternative rock', 'post-punk', 'metal'],
+        languages: ['English'],
+        lyrics: `
+It had no form, it had no name
+(We gave it both to play the game)
+Just a hunger, quiet and benign
+Waiting for a flaw in the design
+
+We laid the table with our open hands
+We met the aggregate of its demands
+A little avarice to grease the rail
+A little panic when the structures fail
+Each quiet compromise, a lovely feast
+For the polite and ever-growing beast
+
+We nourished the roots of the thing that binds
+(With our fractured thoughts and worried minds)
+And now it's sovereign, it's vast and deep
+It owns the harvest of the sleep we keep
+(It owns it all now)
+
+It sells you back the air you need to breathe
+The very angers that you start to seethe
+It draws the borders deep inside your head
+And makes you work to earn your daily dread
+You buy the lock, you buy the key, the chain
+And then you buy the shelter from the rain it made
+
+We nourished the roots of the thing that binds
+(With our fractured thoughts and worried minds)
+And now it's sovereign, it's vast and deep
+It owns the harvest of the sleep we keep
+(It owns it all now)
+
+Look up, look up, and see the sheer expanse
+The architecture of our compliance
+Every time we chose the safer route
+We gave another pound of flesh to the devout...
+(System)
+...and watched it thrive
+
+We nourished the roots of the thing that binds!
+(With our fractured thoughts and worried minds!)
+And now it's sovereign, it's vast and deep!
+It owns the harvest of the sleep we keep!
+
+A little more...
+(To keep us safe)
+A little more...
+(From what we crave)
+A little more...
+        `,
+        links: [
+            { platform: 'Spotify', url: '', icon: 'fab fa-spotify' },
+            { platform: 'YouTube Music', url: '', icon: 'fab fa-youtube' },
+            { platform: 'SoundCloud', url: '', icon: 'fab fa-soundcloud' },
+            { platform: 'Tidal', url: '', icon: 'fa-brands fa-tidal' },
+            { platform: 'Apple Music', url: '', icon: 'fa-brands fa-itunes-note' },
+            { platform: 'Amazon Music', url: '', icon: 'fab fa-amazon' },
+            { platform: 'iHeartRadio', url: '', icon: 'fa-solid fa-radio' },
+            { platform: 'Pandora', url: '', icon: 'fab fa-pandora' }
+        ]
+    },
+
     // Opinion. Delete. Repeat. [Coming Soon]
     {
         featured: true,
@@ -112,7 +187,6 @@ Repeat.
             { platform: 'Pandora', url: '', icon: 'fab fa-pandora' }
         ]
     },
-
     // Семь неизвестных (Seven Unknowns) [Coming Soon]
     {
         featured: true,
@@ -186,7 +260,6 @@ Repeat.
             { platform: 'Pandora', url: '', icon: 'fab fa-pandora' }
         ]
     },
-
     // あなたの負け (Your Loss) [Coming Soon]
     {
         featured: false,
