@@ -998,8 +998,21 @@ function initializeApp() {
                 </div>
             </div>
         `;
+        
+        // Clear the existing content safely
+        while (songPageContentContainer.firstChild) {
+            songPageContentContainer.removeChild(songPageContentContainer.firstChild);
+        }
 
-        songPageContentContainer.innerHTML = pageContent;
+        // Create a temporary container for the new content
+        const tempContainer = document.createElement('div');
+        tempContainer.innerHTML = pageContent;
+
+        // Append the new content's children to the actual container
+        while (tempContainer.firstChild) {
+            songPageContentContainer.appendChild(tempContainer.firstChild);
+        }
+
         songPageBackground.innerHTML = ''; // Clear previous background
 
         if (song.canvasUrl) {
