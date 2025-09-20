@@ -37,6 +37,82 @@ export const albums = [
     //     ]
     // },
 
+    // Opinion. Delete. Repeat. [Coming Soon]
+    {
+        featured: true,
+        artistPick: false,
+        comingSoon: true,
+        title: 'Opinion. Delete. Repeat.',
+        img: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26ZnFYiN1OB1fRJhWxUj4stF6wIcQdoXPZCbYH',
+        sampleUrl: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26EDS9tNAVnPcATrNZQSWoCBG83wL7Xdvpumk5',
+        canvasUrl: '',
+        releaseDate: '',
+        musicVideoId: '',
+        tags: ['rock', 'alternative rock', 'post-punk', 'metal'],
+        languages: ['English'],
+        lyrics: `
+Scroll until your thumbs are numb
+(Tell me what you have become)
+The feed is flowing red with rage
+Another actor on a breaking stage
+
+We argue in a thousand characters or less
+Weaponize a photograph, a home address
+Every timeline is a new front line
+(A perfect product of a grand design)
+You choose a banner, pick a team to tout
+And build a fortress just to keep the others out
+
+The argument jumped off the glass
+(It's moving way, way too fast)
+Now there's a body in the street
+For an opinion and a quick delete
+(It doesn't matter now)
+
+The profile picture's all you need to see
+A two-dimensional effigy
+Dehumanize them with a downward swipe
+Another villain of a hated type
+There is no person, only points to score
+Behind a locked and barricaded door
+
+The argument jumped off the glass
+(It's moving way, way too fast)
+Now there's a body in the street
+For an opinion and a quick delete
+(It doesn't matter now)
+
+We film the fire for the world to view
+(For a million, me and you)
+Add a filter that's the perfect hue
+(Perfect hue, shiny and new)
+We cheer the fall of what we couldn't build
+Until the quiet space is finally filled
+With nothing but the roaring flame
+
+The argument jumped off the glass!
+(It's moving way, way too fast!)
+Now there's a body in the street!
+For an opinion and a quick delete!
+
+Opinion.
+(One last post)
+Delete.
+(More than most)
+Repeat.
+        `,
+        links: [
+            { platform: 'Spotify', url: '', icon: 'fab fa-spotify' },
+            { platform: 'YouTube Music', url: '', icon: 'fab fa-youtube' },
+            { platform: 'SoundCloud', url: '', icon: 'fab fa-soundcloud' },
+            { platform: 'Tidal', url: '', icon: 'fa-brands fa-tidal' },
+            { platform: 'Apple Music', url: '', icon: 'fa-brands fa-itunes-note' },
+            { platform: 'Amazon Music', url: '', icon: 'fab fa-amazon' },
+            { platform: 'iHeartRadio', url: '', icon: 'fa-solid fa-radio' },
+            { platform: 'Pandora', url: '', icon: 'fab fa-pandora' }
+        ]
+    },
+
     // Семь неизвестных (Seven Unknowns) [Coming Soon]
     {
         featured: true,
