@@ -132,57 +132,48 @@ Repeat.
 Замер момент, будто кадр в кино, (The moment froze, like a still in a movie)
 Мир за стеклом стал размытым пятном. (The world behind the glass became a blur)
 
-[Пред-припев]
 Пара фраз, заготовленных зря, (A couple of phrases, prepared in vain)
 В горле застыли, внутри всё горя. (Frozen in my throat, all burning inside)
 Лифт увёз вверх твой неясный контур, (The elevator carried your vague outline upward)
 Я проиграл этот короткий раунд. (I lost this short round)
 
-[Припев]
 И теперь в голове один и тот же бред, (And now the same delirium fills my head)
 Семь неизвестных, которых нет. (Seven unknowns that don't exist)
 Шанс был один, растворился в дыму, (There was one chance, dissolved in smoke)
 Я даже не знаю, как тебя зовут. (I don't even know your name.)
 (Не знаю, как зовут) (I don't know your name)
 
-[Куплет 2]
 Я вглядываюсь в лица встречной толпы, (I peer into the faces of the oncoming crowd)
 В них отраженья моей немоты. (They reflect my silence.)
 Каждый похожий изгиб твоих плеч — (Every similar curve of your shoulders)
 Повод опять себя мысленно сжечь. (To mentally burn myself out again.)
 
-[Пред-припев]
 Пара фраз, заготовленных зря, (A couple of phrases, prepared in vain)
 В горле застыли, внутри всё горя. (Frozen in my throat, all burning inside)
 Дверь за тобой затворилась беззвучно, (The door closed behind you soundlessly)
 Стало навязчиво, стало скучно. (It became obsessive, it became boring.)
 
-[Припев]
 И теперь в голове один и тот же бред, (And now the same nonsense is in my head)
 Семь неизвестных, которых нет. (Seven unknowns that don't exist)
 Шанс был один, растворился в дыму, (There was one chance, dissolved in smoke)
 Я даже не знаю, как тебя зовут. (I don't even know your name.)
 (Не знаю, как зовут) (I don't know your name.)
 
-[Бридж]
 Один вопрос, три секунды всего, (One question, just three seconds)
 Могли изменить вообще всё. (Could have changed everything)
 Но я — архитектор глухих тупиков, (But I am the architect of dead ends)
 Из самых простых и бессмысленных слов. (Of the simplest and most meaningless words.)
 
-[Припев]
 И теперь в голове один и тот же бред, (And now the same nonsense is in my head)
 Семь неизвестных, которых нет. (Seven unknowns that don't exist)
 Шанс был один, растворился в дыму, (There was one chance, dissolved in smoke)
 Я даже не знаю, как тебя зовут. (I don't even know your name.)
 (Я не знаю) (I don't know)
 
-[Аутро]
 Семь неизвестных... (Seven unknowns...)
 Просто семь цифр... (Just seven numbers...)
 (Где ты теперь?) (Where are you now?)
 (Просто семь цифр...) (Just seven numbers...)
-
         `,
         links: [
             { platform: 'Spotify', url: '', icon: 'fab fa-spotify' },
