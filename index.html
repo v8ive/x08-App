@@ -36,29 +36,17 @@
 <body data-theme="dark">
 
     <div id="preloader">
-        <div class="preloader-logo-container">
-            <svg class="artist-logo" viewBox="0 0 200 50" xmlns="http://www.w3.org/2000/svg">
-                <defs>
-                    <linearGradient id="logo-gradient-loader" x1="0%" y1="0%" x2="100%" y2="100%">
-                        <stop offset="0%" style="stop-color:var(--logo-gradient-start)" />
-                        <stop offset="100%" style="stop-color:var(--logo-gradient-end)" />
-                    </linearGradient>
-                    <clipPath id="loader-clip">
-                        <rect x="0" y="0" width="200" height="50" class="clip-rect" />
-                    </clipPath>
-                </defs>
-                <text id="loader-text-base" class="logo-outline" x="10" y="40" font-family="'Roboto Mono', monospace"
-                    font-size="46" font-weight="700">x08</text>
-                <g clip-path="url(#loader-clip)">
-                    <text id="loader-text-fill" x="10" y="40" font-family="'Roboto Mono', monospace" font-size="46"
-                        font-weight="700" fill="url(#logo-gradient-loader)">x08</text>
-                    <g class="glitch-layers">
-                        <use href="#loader-text-fill" class="glitch-layer-1" fill="var(--secondary-color)" />
-                        <use href="#loader-text-fill" class="glitch-layer-2" fill="var(--tertiary-color)" />
-                    </g>
-                </g>
-            </svg>
-            <div class="scanline"></div>
+        <div class="preloader-scanline-overlay"></div>
+        <div class="preloader-content-wrapper">
+            <div class="preloader-glitch-container">
+                <div class="preloader-logo-glitch" data-text="x08">x08</div>
+            </div>
+            <div class="preloader-progress-container">
+                <div class="preloader-progress-bar">
+                    <div class="preloader-progress-bar-sheen"></div>
+                </div>
+                <span id="preloader-percentage">0%</span>
+            </div>
         </div>
     </div>
 

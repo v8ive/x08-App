@@ -9,13 +9,86 @@ function initializeApp() {
         history.scrollRestoration = 'manual';
     }
 
-    const preloader = document.getElementById('preloader');
-    window.addEventListener('load', () => {
-        preloader.classList.add('preloader-hidden');
-        preloader.addEventListener('transitionend', () => {
-            preloader.remove();
-        }, { once: true });
-    });
+    const managePreloader = () => {
+        const preloader = document.getElementById('preloader');
+        const percentageEl = document.getElementById('preloader-percentage');
+        const progressBar = document.querySelector('.preloader-progress-bar');
+        if (!preloader || !percentageEl || !progressBar) return;
+    
+        const assetPromises = [];
+        document.querySelectorAll('img, video').forEach(el => {
+            const promise = new Promise((resolve) => {
+                if (el.tagName === 'IMG') {
+                    if (el.complete) {
+                        resolve();
+                    } else {
+                        el.addEventListener('load', resolve, { once: true });
+                        el.addEventListener('error', resolve, { once: true });
+                    }
+                } else if (el.tagName === 'VIDEO') {
+                     if (el.readyState >= 3) {
+                        resolve();
+                     } else {
+                        el.addEventListener('canplaythrough', resolve, { once: true });
+                        el.addEventListener('error', resolve, { once: true });
+                     }
+                }
+            });
+            assetPromises.push(promise);
+        });
+    
+        const fontPromises = [];
+        if (document.fonts) {
+            const fontChecks = [
+                '400 1em Roboto Mono',
+                '700 1em Roboto Mono',
+                '900 1em "Font Awesome 6 Free"',
+                '400 1em "Font Awesome 6 Brands"'
+            ];
+            fontChecks.forEach(font => {
+                fontPromises.push(document.fonts.load(font));
+            });
+        }
+    
+        const allPromises = [...assetPromises, ...fontPromises];
+        const totalAssetsToTrack = allPromises.length;
+        let assetsLoadedCount = 0;
+    
+        function finishLoading() {
+            if (preloader.classList.contains('preloader-hidden')) return;
+            preloader.classList.add('preloader-hidden');
+            preloader.addEventListener('transitionend', () => {
+                preloader.remove();
+            }, { once: true });
+        }
+    
+        if (totalAssetsToTrack === 0) {
+            window.addEventListener('load', finishLoading, { once: true });
+            return;
+        }
+    
+        const updateLoaderProgress = () => {
+            assetsLoadedCount++;
+            const percent = Math.min(100, Math.round((assetsLoadedCount / totalAssetsToTrack) * 100));
+            
+            if(percentageEl) percentageEl.textContent = `${percent}%`;
+            if(progressBar) progressBar.style.width = `${percent}%`;
+        };
+        
+        allPromises.forEach(p => p.then(updateLoaderProgress).catch(updateLoaderProgress));
+    
+        Promise.allSettled(allPromises).then(() => {
+             // Ensure the bar is at 100% before fading out
+            if(percentageEl) percentageEl.textContent = `100%`;
+            if(progressBar) progressBar.style.width = `100%`;
+            setTimeout(finishLoading, 500); // A short delay for the 100% to be visible
+        });
+    
+        // Fallback timeout
+        setTimeout(finishLoading, 10000);
+    };
+
+    managePreloader();
 
     const updateThemeColor = (theme) => {
         const themeColor = theme === 'light' ? '#F0F0F0' : '#000000';

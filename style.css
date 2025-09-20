@@ -91,169 +91,184 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: var(--bg-dark);
+    background-color: #000;
     display: flex;
     justify-content: center;
     align-items: center;
     z-index: 10000;
     opacity: 1;
-    transition: opacity 0.5s 0.5s ease-in-out, visibility 0.5s 0.5s ease-in-out;
-    /* Added delay */
     visibility: visible;
-}
-
-.preloader-logo-container {
-    position: relative;
-    width: 300px;
-    /* Base size */
-    max-width: 90vw;
-    /* Ensure it fits on small screens */
-    height: auto;
-}
-
-#preloader .artist-logo {
-    width: 100%;
-    height: 100%;
-    filter: drop-shadow(0 0 10px var(--primary-color));
-}
-
-#preloader .logo-outline {
-    fill: none;
-    stroke: rgba(var(--primary-color-rgb), 0.4);
-    stroke-width: 1px;
-    opacity: 0.5;
-    animation: preloader-flicker 2.5s infinite steps(1, end);
-}
-
-#preloader .clip-rect {
-    transform-origin: left center;
-    transform: scaleX(0);
-    animation: preloader-fill 2.5s 0.2s ease-out forwards;
-    /* Delay to sync with scanline */
-}
-
-#preloader .glitch-layers {
-    mix-blend-mode: screen;
-    opacity: 0;
-    animation: preloader-glitch-fade-in 1s 0.5s forwards;
-}
-
-#preloader .glitch-layer-1 {
-    animation: preloader-glitch-1 2s infinite linear alternate;
-}
-
-#preloader .glitch-layer-2 {
-    animation: preloader-glitch-2 1.5s infinite linear alternate;
-}
-
-.scanline {
-    position: absolute;
-    top: -10%;
-    /* Start slightly above */
-    left: -5%;
-    /* Start slightly left */
-    width: 3px;
-    height: 120%;
-    /* Extend below */
-    background: var(--tertiary-color);
-    box-shadow: 0 0 15px var(--tertiary-color);
-    transform: translateX(0) skewX(-10deg);
-    /* Initial position */
-    animation: scanline-anim 2.5s ease-out forwards;
-}
-
-
-@keyframes preloader-fill {
-    to {
-        transform: scaleX(1);
-    }
-}
-
-@keyframes scanline-anim {
-    0% {
-        transform: translateX(0) skewX(-10deg);
-    }
-
-    100% {
-        transform: translateX(320px) skewX(-10deg);
-    }
-
-    /* Move across the container */
-}
-
-@keyframes preloader-glitch-fade-in {
-    to {
-        opacity: 1;
-    }
-}
-
-@keyframes preloader-flicker {
-
-    0%,
-    100% {
-        opacity: 0.5;
-    }
-
-    50.0% {
-        opacity: 0.3;
-    }
-
-    50.5% {
-        opacity: 0.6;
-    }
-
-    51.0% {
-        opacity: 0.4;
-    }
-
-    51.5% {
-        opacity: 0.7;
-    }
-}
-
-@keyframes preloader-glitch-1 {
-
-    0%,
-    100% {
-        transform: translate(0, 0);
-    }
-
-    25% {
-        transform: translate(1px, -1px);
-    }
-
-    50% {
-        transform: translate(-1px, 1px);
-    }
-
-    75% {
-        transform: translate(1px, 1px);
-    }
-}
-
-@keyframes preloader-glitch-2 {
-
-    0%,
-    100% {
-        transform: translate(0, 0);
-    }
-
-    25% {
-        transform: translate(-2px, 2px);
-    }
-
-    50% {
-        transform: translate(2px, -2px);
-    }
-
-    75% {
-        transform: translate(-2px, -2px);
-    }
+    transition: opacity 0.5s ease 0.5s, visibility 0.5s ease 0.5s;
+    overflow: hidden;
 }
 
 #preloader.preloader-hidden {
     opacity: 0;
     visibility: hidden;
+    pointer-events: none;
+}
+
+.preloader-scanline-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: repeating-linear-gradient(0deg, rgba(255, 255, 255, 0.03), rgba(255, 255, 255, 0.03) 1px, transparent 1px, transparent 3px);
+    animation: crt-flicker 0.15s infinite;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.preloader-content-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2.5rem;
+    z-index: 2;
+    transform: scale(1);
+    transition: transform 0.5s ease;
+}
+
+#preloader.preloader-hidden .preloader-content-wrapper {
+    transform: scale(0.8);
+}
+
+.preloader-glitch-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80vw;
+    max-width: 450px;
+    filter: drop-shadow(0 0 20px rgba(var(--primary-color-rgb), 0.6));
+}
+
+.preloader-logo-glitch {
+    font-family: 'Roboto Mono', monospace;
+    font-weight: 700;
+    font-size: clamp(3rem, 20vw, 8rem);
+    color: var(--text-color);
+    position: relative;
+    animation: main-glitch 4s infinite linear;
+}
+
+.preloader-logo-glitch::before,
+.preloader-logo-glitch::after {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    overflow: hidden;
+}
+
+.preloader-logo-glitch::before {
+    left: 3px;
+    text-shadow: -3px 0 var(--secondary-color);
+    animation: glitch-before 4s infinite linear reverse;
+}
+
+.preloader-logo-glitch::after {
+    left: -3px;
+    text-shadow: -3px 0 var(--tertiary-color), 3px 3px var(--secondary-color);
+    animation: glitch-after 4s infinite linear reverse;
+}
+
+.preloader-progress-container {
+    width: 80vw;
+    max-width: 450px;
+    height: 1.25rem;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    position: relative;
+    background-color: rgba(var(--primary-color-rgb), 0.1);
+    overflow: hidden;
+}
+
+.preloader-progress-container::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 4px;
+    padding: 1px;
+    background: conic-gradient(from var(--gradient-angle, 0deg), var(--tertiary-color), var(--primary-color), var(--secondary-color), var(--primary-color), var(--tertiary-color));
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    animation: gradient-spin 2s linear infinite;
+}
+
+
+.preloader-progress-bar {
+    width: 0%;
+    height: 100%;
+    background: linear-gradient(90deg, var(--tertiary-color), var(--primary-color));
+    transition: width 0.2s ease-out;
+    border-radius: 2px;
+    position: relative;
+    overflow: hidden;
+}
+
+.preloader-progress-bar-sheen {
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+    animation: sheen 1.5s infinite;
+}
+
+#preloader-percentage {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    font-weight: 700;
+    font-size: 0.75rem;
+    text-shadow: 0 0 3px #000;
+}
+
+/* Preloader Animations */
+@keyframes main-glitch {
+    2%, 64% { transform: translate(2px, -2px) skew(0deg); }
+    4%, 60% { transform: translate(-2px, 2px) skew(0deg); }
+    62% { transform: translate(0, 0) skew(5deg); }
+}
+
+@keyframes glitch-before {
+    0%, 8%, 13%, 15%, 53%, 58%, 100% { clip-path: inset(50% 0 50% 0); }
+    5%, 10%, 14%, 55%, 60% { clip-path: inset(40% 0 60% 0); }
+    25% { clip-path: inset(20% 0 80% 0); }
+    40% { clip-path: inset(80% 0 10% 0); }
+    75% { clip-path: inset(10% 0 40% 0); }
+}
+
+@keyframes glitch-after {
+    0%, 8%, 13%, 15%, 53%, 58%, 100% { clip-path: inset(50% 0 50% 0); }
+    5%, 10%, 14%, 55%, 60% { clip-path: inset(60% 0 40% 0); }
+    30% { clip-path: inset(10% 0 90% 0); }
+    45% { clip-path: inset(70% 0 20% 0); }
+    80% { clip-path: inset(20% 0 50% 0); }
+}
+
+@keyframes crt-flicker {
+    0% { opacity: 1; }
+    30% { opacity: 0.9; }
+    50% { opacity: 1; }
+    80% { opacity: 0.85; }
+    100% { opacity: 1; }
+}
+
+@keyframes sheen {
+    100% {
+        left: 200%;
+    }
 }
 
 
