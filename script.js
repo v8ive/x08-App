@@ -156,13 +156,12 @@ function initializeApp() {
     const createSlug = (title) => {
         return title
             .toLowerCase()
-            .replace(/\s+/g, '-') // Replace spaces with hyphens first
-            // Use a regex with the Unicode flag 'u' to correctly handle all language characters.
-            // \p{L} matches any letter, \p{N} matches any number.
-            // We keep letters, numbers, and hyphens, and remove everything else.
-            .replace(/[^\p{L}\p{N}-]/gu, '')
-            .replace(/--+/g, '-') // Replace multiple hyphens with a single one
-            .replace(/^-+|-+$/g, ''); // Remove leading/trailing hyphens
+            .replace(/\s+/g, '-') // Replace spaces with hyphens
+            // Keep Unicode letters, numbers, hyphens, AND periods. Remove others.
+            .replace(/[^\p{L}\p{N}.-]/gu, '')
+            .replace(/--+/g, '-') // Replace multiple hyphens
+            .replace(/^-+|-+$/g, '') // Trim leading/trailing hyphens
+            .replace(/\.+$/, ''); // Trim trailing periods for safety
     };
 
     const updateURL = (type, searchTerm, filters) => {
