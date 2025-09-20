@@ -5,8 +5,29 @@ import path from 'path';
 export default async function handler(request, response) {
     const { slug } = request.query;
 
+    const createSlug = (title) => {
+        return title
+            .toLowerCase()
+            .replace(/\s+/g, '-') // Replace spaces with hyphens
+            // Keep Unicode letters, numbers, hyphens, AND periods. Remove others.
+            .replace(/[^\p{L}\p{N}.-]/gu, '')
+            .replace(/--+/g, '-') // Replace multiple hyphens
+            .replace(/^-+|-+$/g, '') // Trim leading/trailing hyphens
+            .replace(/\.+$/, ''); // Trim trailing periods for safety
+    };
+
+    const escapeHtml = (unsafe) => {
+    if (!unsafe) return "";
+    return unsafe
+         .replace(/&/g, "&amp;")
+         .replace(/</g, "&lt;")
+         .replace(/>/g, "&gt;")
+         .replace(/"/g, "&quot;")
+         .replace(/'/g, "&#039;");
+};
+
     try {
-        const song = albums.find(album => album.title.toLowerCase().replace(/\s+/g, '-') === slug);
+        const song = albums.find(album => createSlug(album.title) === slug);
 
         // Vercel compiles files into a different structure, so we need to navigate to the built file
         const indexPath = path.join(process.cwd(), '.vercel/output/static/index.html');
@@ -36,17 +57,17 @@ export default async function handler(request, response) {
             const themeColor = '#8A2BE2'; // Brand color for embeds
 
             const metaValues = {
-                'title': `${songTitle} | x08`,
-                'description': description,
+                'title': escapeHtml(`${songTitle} | x08`),
+                'description': escapeHtml(description),
                 'theme-color': themeColor,
-                'og:title': songTitle,
-                'og:description': description,
+                'og:title': escapeHtml(songTitle),
+                'og:description': escapeHtml(description),
                 'og:url': url,
                 'og:image': image,
                 'og:type': 'music.song',
                 'og:site_name': 'x08',
-                'twitter:title': songTitle,
-                'twitter:description': description,
+                'twitter:title': escapeHtml(songTitle),
+                'twitter:description': escapeHtml(description),
                 'twitter:url': url,
                 'twitter:image': image,
             };
