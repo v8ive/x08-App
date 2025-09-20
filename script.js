@@ -153,6 +153,14 @@ function initializeApp() {
         };
     };
 
+    const createSlug = (title) => {
+        return title
+            .toLowerCase()
+            .replace(/[^\w\s-]/g, '') // remove non-word chars
+            .trim()
+            .replace(/\s+/g, '-'); // replace spaces with hyphens
+    };
+
     const updateURL = (type, searchTerm, filters) => {
         const currentPath = window.location.pathname;
         const params = new URLSearchParams();
@@ -851,7 +859,7 @@ function initializeApp() {
         if (infoBtn) {
             e.stopPropagation();
             const index = parseInt(container.dataset.index, 10);
-            const songTitle = albums[index].title.toLowerCase().replace(/\s+/g, '-');
+            const songTitle = createSlug(albums[index].title);
             history.pushState({ songIndex: index }, '', `/song/${encodeURIComponent(songTitle)}`);
             handleRouting(true);
         }
@@ -1183,7 +1191,7 @@ function initializeApp() {
     playerInfoBtn.addEventListener('click', () => {
         if (currentSongIndex !== -1) {
             const song = albums[currentSongIndex];
-            const songTitle = song.title.toLowerCase().replace(/\s+/g, '-');
+            const songTitle = createSlug(song.title);
             history.pushState({ songIndex: currentSongIndex }, '', `/song/${encodeURIComponent(songTitle)}`);
             handleRouting(true);
         }
@@ -1379,7 +1387,7 @@ function initializeApp() {
 
         if (path.startsWith('/song/')) {
             const songTitleSlug = decodeURIComponent(path.split('/song/')[1]);
-            const songIndex = albums.findIndex(album => album.title.toLowerCase().replace(/\s+/g, '-') === songTitleSlug);
+            const songIndex = albums.findIndex(album => createSlug(album.title) === songTitleSlug);
             if (songIndex !== -1) {
                 renderSongPage(songIndex);
             } else {
