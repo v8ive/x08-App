@@ -413,18 +413,27 @@ function initializeApp() {
             item.className = 'upcoming-item reveal-on-scroll';
             item.dataset.index = originalIndex;
             item.style.setProperty('--stagger-index', index);
+
+            const tagsHtml = `
+                <div class="song-tags-container">
+                    ${(album.languages || []).map((lang, i) => `<div class="song-tag language-tag" data-tag="${lang.toLowerCase()}" data-type="language" style="--tag-delay: ${i * 0.1}s">${lang}</div>`).join('')}
+                    ${(album.tags || []).slice(0, 3).map((tag, i) => `<div class="song-tag genre-tag" data-tag="${tag.toLowerCase()}" data-type="genre" style="--tag-delay: ${(i + (album.languages || []).length) * 0.1}s">${tag}</div>`).join('')}
+                </div>
+            `;
+
             item.innerHTML = `
                 <img src="${album.img}" alt="${album.title}" class="upcoming-img">
                 <div class="upcoming-info">
-                    <div>
-                        <h3 class="upcoming-title">${album.title}</h3>
+                    <h3 class="upcoming-title">${album.title}</h3>
+                    <div class="upcoming-details">
                         <p class="upcoming-release-date">${formatRelativeDate(album.releaseDate)}</p>
-                    </div>
-                    <div class="upcoming-controls">
-                        <button class="album-play-btn control-btn" data-index="${originalIndex}" ${!album.sampleUrl ? 'disabled' : ''}>
-                            ${playIcon}${nowPlayingIndicator}
-                        </button>
-                        <button class="album-info-btn control-btn" data-index="${originalIndex}"><i class="fas fa-info-circle"></i></button>
+                        ${tagsHtml}
+                        <div class="upcoming-controls">
+                             <button class="album-play-btn control-btn" data-index="${originalIndex}" ${!album.sampleUrl ? 'disabled' : ''}>
+                                ${playIcon}${nowPlayingIndicator}
+                            </button>
+                            <button class="album-info-btn control-btn" data-index="${originalIndex}"><i class="fas fa-info-circle"></i></button>
+                        </div>
                     </div>
                 </div>
             `;
@@ -948,6 +957,13 @@ function initializeApp() {
                 </div>
             </div>
         ` : '';
+        
+        const tagsHtml = `
+            <div class="song-page-tags-container">
+                ${(song.languages || []).map((lang, i) => createTagElement(lang, 'language', i * 0.1).outerHTML).join('')}
+                ${(song.tags || []).map((tag, i) => createTagElement(tag, 'genre', (i + (song.languages || []).length) * 0.1).outerHTML).join('')}
+            </div>
+        `;
 
         const pageContent = `
             <div class="song-page-header">
@@ -970,6 +986,7 @@ function initializeApp() {
                     <div class="song-page-hero-info">
                         <h2 class="song-page-title">${song.title}</h2>
                         <p class="song-page-release-date">${formatRelativeDate(song.releaseDate, true)}</p>
+                        ${tagsHtml}
                         <div class="song-page-hero-controls">
                             <button class="song-page-play-btn" data-index="${index}" ${!song.sampleUrl ? 'disabled' : ''}>${(currentSongIndex === index && isPlaying) ? pauseIcon : playIcon}</button>
                             <button class="song-page-share-btn" aria-label="Share song">
