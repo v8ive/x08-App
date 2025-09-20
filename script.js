@@ -156,9 +156,13 @@ function initializeApp() {
     const createSlug = (title) => {
         return title
             .toLowerCase()
-            .replace(/[^\w\s-]/g, '') // remove non-word chars
-            .trim()
-            .replace(/\s+/g, '-'); // replace spaces with hyphens
+            .replace(/\s+/g, '-') // Replace spaces with hyphens first
+            // Use a regex with the Unicode flag 'u' to correctly handle all language characters.
+            // \p{L} matches any letter, \p{N} matches any number.
+            // We keep letters, numbers, and hyphens, and remove everything else.
+            .replace(/[^\p{L}\p{N}-]/gu, '')
+            .replace(/--+/g, '-') // Replace multiple hyphens with a single one
+            .replace(/^-+|-+$/g, ''); // Remove leading/trailing hyphens
     };
 
     const updateURL = (type, searchTerm, filters) => {
