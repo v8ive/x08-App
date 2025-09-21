@@ -37,6 +37,83 @@ export const albums = [
     //     ]
     // },
 
+    // Generation Detonation [Coming Soon]
+    {
+        featured: true,
+        artistPick: false,
+        comingSoon: true,
+        title: 'Generation Detonation',
+        img: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26c3RAsNGqpFfmZjstiaVH6vI8PwTUhXGdrCLl',
+        sampleUrl: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG260rS6cQeiVaUXveObDkhncLG8TBRgqxIrfHj3',
+        canvasUrl: '',
+        releaseDate: '',
+        musicVideoId: '',
+        tags: ['rock', 'alternative rock', 'post-punk', 'metal'],
+        languages: ['English'],
+        lyrics: `
+They got you marching to a pulse you can't feel
+
+They carve the path of least resistance
+Then applaud your lack of distance
+Sell you remedies for ailments they create
+While they dine on golden platters, sealing fates
+You nod along to the pre-written script
+From a teleprompter your whole life is ripped
+
+Rip the sutures from the smiling mouths
+(Tear it all down!)
+Let the venom out that's flowing south
+(Spit it back out!)
+We're the frequency they can't regulate
+A generation built to detonate
+(Tick, tick, tick...)
+
+There's a monument for every broken vow
+A new distraction for the here and now
+They offer choices, red or blue veneer
+But the architecture's always built on fear
+So pick a side and wear the colors proud
+Just another face absorbed into the crowd
+
+Rip the sutures from the smiling mouths
+(Tear it all down!)
+Let the venom out that's flowing south
+(Spit it back out!)
+We're the frequency they can't regulate
+A generation built to detonate
+(Tick, tick, tick...)
+
+We are the consequence they didn't vet
+The accumulating, unpaid, final debt
+So sound the alarm with pots and pans
+(With broken mics and bloody hands)
+We're rewriting all their future plans
+(This is the start, this is the end)
+
+Rip the sutures from the smiling mouths!
+(Tear it all down!)
+Let the venom out that's flowing south!
+(Spit it back out!)
+We're the frequency they can't regulate!
+A generation built to detonate!
+
+Detonate
+(Watch it all fall)
+Detonate
+(Answer the call)
+Detonate.
+        `,
+        links: [
+            { platform: 'Spotify', url: '', icon: 'fab fa-spotify' },
+            { platform: 'YouTube Music', url: '', icon: 'fab fa-youtube' },
+            { platform: 'SoundCloud', url: '', icon: 'fab fa-soundcloud' },
+            { platform: 'Tidal', url: '', icon: 'fa-brands fa-tidal' },
+            { platform: 'Apple Music', url: '', icon: 'fa-brands fa-itunes-note' },
+            { platform: 'Amazon Music', url: '', icon: 'fab fa-amazon' },
+            { platform: 'iHeartRadio', url: '', icon: 'fa-solid fa-radio' },
+            { platform: 'Pandora', url: '', icon: 'fab fa-pandora' }
+        ]
+    },
     // The Beast [Coming Soon]
     {
         featured: true,
@@ -111,7 +188,6 @@ A little more...
             { platform: 'Pandora', url: '', icon: 'fab fa-pandora' }
         ]
     },
-
     // Opinion. Delete. Repeat. [Coming Soon]
     {
         featured: true,
@@ -198,7 +274,7 @@ Repeat.
         canvasUrl: '',
         releaseDate: '',
         musicVideoId: '',
-        tags: ['pop', 'rock', 'alternative rock', 'post-punk'],
+        tags: ['pop', 'rock', 'post-punk'],
         languages: ['Russian'],
         lyrics: `
 Серый асфальт плавил летний зной, (The summer heat melted the gray asphalt)
@@ -1095,7 +1171,7 @@ Something more
         canvasUrl: 'https://dm7frl7jug.ufs.sh/f/CydBt8G4FyIv1SxlTVC9GOYJFWjU4wqP3veVSol7iKs6LDg2',
         releaseDate: '2025-09-09',
         musicVideoId: 'LL7aDW0Ea6M',
-        tags: ['j-pop', 'city', 'anime', 'city'],
+        tags: ['j-pop', 'city pop', 'anime'],
         languages: ['Japanese', 'English'],
         lyrics: `
 (Let's go!)
@@ -1240,7 +1316,7 @@ Zoom zoom, say goodbye
         canvasUrl: 'https://dm7frl7jug.ufs.sh/f/CydBt8G4FyIv9VloWyRvYTCI3WsF41qplNrXt0caKuHUQBJy',
         releaseDate: '2025-09-09',
         musicVideoId: 'NiLloTibaXM',
-        tags: ['j-pop', 'city pop', 'electronic', 'pop'],
+        tags: ['j-pop', 'city pop', 'electronic', 'gaming', 'synthwave'],
         languages: ['Japanese'],
         lyrics: `
 三星、二星、一星 (3 stars, 2 stars, 1 star)

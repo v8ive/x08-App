@@ -14,7 +14,7 @@ function initializeApp() {
         const percentageEl = document.getElementById('preloader-percentage');
         const progressBar = document.querySelector('.preloader-progress-bar');
         if (!preloader || !percentageEl || !progressBar) return;
-    
+
         const assetPromises = [];
         document.querySelectorAll('img, video').forEach(el => {
             const promise = new Promise((resolve) => {
@@ -26,17 +26,17 @@ function initializeApp() {
                         el.addEventListener('error', resolve, { once: true });
                     }
                 } else if (el.tagName === 'VIDEO') {
-                     if (el.readyState >= 3) {
+                    if (el.readyState >= 3) {
                         resolve();
-                     } else {
+                    } else {
                         el.addEventListener('canplaythrough', resolve, { once: true });
                         el.addEventListener('error', resolve, { once: true });
-                     }
+                    }
                 }
             });
             assetPromises.push(promise);
         });
-    
+
         const fontPromises = [];
         if (document.fonts) {
             const fontChecks = [
@@ -49,11 +49,11 @@ function initializeApp() {
                 fontPromises.push(document.fonts.load(font));
             });
         }
-    
+
         const allPromises = [...assetPromises, ...fontPromises];
         const totalAssetsToTrack = allPromises.length;
         let assetsLoadedCount = 0;
-    
+
         function finishLoading() {
             if (preloader.classList.contains('preloader-hidden')) return;
             preloader.classList.add('preloader-hidden');
@@ -61,29 +61,29 @@ function initializeApp() {
                 preloader.remove();
             }, { once: true });
         }
-    
+
         if (totalAssetsToTrack === 0) {
             window.addEventListener('load', finishLoading, { once: true });
             return;
         }
-    
+
         const updateLoaderProgress = () => {
             assetsLoadedCount++;
             const percent = Math.min(100, Math.round((assetsLoadedCount / totalAssetsToTrack) * 100));
-            
-            if(percentageEl) percentageEl.textContent = `${percent}%`;
-            if(progressBar) progressBar.style.width = `${percent}%`;
+
+            if (percentageEl) percentageEl.textContent = `${percent}%`;
+            if (progressBar) progressBar.style.width = `${percent}%`;
         };
-        
+
         allPromises.forEach(p => p.then(updateLoaderProgress).catch(updateLoaderProgress));
-    
+
         Promise.allSettled(allPromises).then(() => {
-             // Ensure the bar is at 100% before fading out
-            if(percentageEl) percentageEl.textContent = `100%`;
-            if(progressBar) progressBar.style.width = `100%`;
+            // Ensure the bar is at 100% before fading out
+            if (percentageEl) percentageEl.textContent = `100%`;
+            if (progressBar) progressBar.style.width = `100%`;
             setTimeout(finishLoading, 500); // A short delay for the 100% to be visible
         });
-    
+
         // Fallback timeout
         setTimeout(finishLoading, 10000);
     };
@@ -835,6 +835,47 @@ function initializeApp() {
         dataArray = new Uint8Array(bufferLength);
     };
 
+    const handleTitleScrolling = () => {
+        const titleEl = document.getElementById('player-song-title');
+        const containerEl = titleEl.parentElement;
+
+        // Stop any active animation and restore original text
+        titleEl.classList.remove('scrolling');
+        const originalText = titleEl.dataset.originalTitle || titleEl.textContent;
+        titleEl.textContent = originalText;
+
+        // Store original title if not already stored
+        if (!titleEl.dataset.originalTitle) {
+            titleEl.dataset.originalTitle = originalText;
+        }
+
+        // Use a timeout to allow the browser to render the reset state before measuring
+        setTimeout(() => {
+            // We check against the container's clientWidth, which accounts for its new padding
+            const isOverflowing = titleEl.scrollWidth > containerEl.clientWidth;
+
+            if (isOverflowing) {
+                // Create a wide separator for a clear break between repetitions
+                const separator = ' \u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0 ';
+                titleEl.textContent = originalText + separator + originalText + separator;
+
+                requestAnimationFrame(() => {
+                    const scrollWidth = titleEl.scrollWidth / 2;
+
+                    // Using 35 for a brisk pace
+                    const duration = scrollWidth / 35;
+
+                    titleEl.style.setProperty('--marquee-duration', `${duration}s`);
+                    titleEl.classList.add('scrolling');
+                });
+            } else {
+                // If it's not overflowing, clear the stored title and any animation properties
+                delete titleEl.dataset.originalTitle;
+                titleEl.style.removeProperty('--marquee-duration');
+            }
+        }, 50);
+    };
+
     const playSong = (index) => {
         if (index < 0 || index >= albums.length) return;
 
@@ -851,6 +892,8 @@ function initializeApp() {
 
             playerAlbumArt.src = song.img;
             playerSongTitle.textContent = song.title;
+            delete playerSongTitle.dataset.originalTitle;
+            handleTitleScrolling();
             globalPlayer.classList.add('active');
             playerInfoBtn.disabled = false;
 
@@ -1044,7 +1087,7 @@ function initializeApp() {
                 </div>
             </div>
         ` : '';
-        
+
         const tagsHtml = `
             <div class="song-page-tags-container">
                 ${(song.languages || []).map((lang, i) => createTagElement(lang, 'language', i * 0.1).outerHTML).join('')}
@@ -1102,7 +1145,7 @@ function initializeApp() {
                 </div>
             </div>
         `;
-        
+
         // Clear the existing content safely
         while (songPageContentContainer.firstChild) {
             songPageContentContainer.removeChild(songPageContentContainer.firstChild);
@@ -1727,7 +1770,7 @@ function initializeApp() {
     audioPlayer.addEventListener('volumechange', () => {
         volumeSlider.value = audioPlayer.volume;
         const volumeIcon = volumeBtn.querySelector('i');
-        
+
         if (audioPlayer.volume > 0.5) {
             volumeIcon.className = 'fas fa-volume-high';
         } else if (audioPlayer.volume > 0) {
@@ -1735,5 +1778,13 @@ function initializeApp() {
         } else {
             volumeIcon.className = 'fas fa-volume-xmark';
         }
+    });
+
+    let resizeTimer;
+    window.addEventListener('resize', () => {
+        clearTimeout(resizeTimer);
+        resizeTimer = setTimeout(() => {
+            handleTitleScrolling();
+        }, 250); // Debounce to avoid excessive calls
     });
 }
