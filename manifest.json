@@ -3,6 +3,7 @@
   "short_name": "x08",
   "description": "The official website and music portfolio for the artist x08.",
   "start_url": "/",
+  "scope": "/",
   "display": "standalone",
   "background_color": "#000000",
   "theme_color": "#000000",
