@@ -3,6 +3,7 @@
 export const social_links = {
     spotify: 'https://open.spotify.com/artist/416UvpKAkRWa5tnlGThHCx',
     youtube: 'https://www.youtube.com/@x08_official',
+    // youtube_music: 'https://music.youtube.com/channel/UCe6WljruDl0gcVncWtN95Nw',
     soundcloud: 'https://soundcloud.com/x0zero8eight',
     tidal: 'https://tidal.com/artist/66048961',
     apple: 'https://music.apple.com/us/artist/x08/1835855543',
@@ -37,628 +38,9 @@ export const albums = [
     //     ]
     // },
 
-    // Back Again
-    {
-        featured: true,
-        artistPick: false,
-        comingSoon: true,
-        title: 'Back Again',
-        img: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG261Vmya8ulKIhBLdfSC8NrDg6nP97eMwGWcQmT',
-        sampleUrl: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26VX1DHVKhZ3lfAdH74paeyis2b6OrFuKQjtgI',
-        canvasUrl: '',
-        releaseDate: '2025-09-28',
-        musicVideoId: '',
-        tags: ['alternative pop', 'drum & bass', 'electronic'],
-        languages: ['English'],
-        lyrics: `
-What you tryna say though
-You want me but you push me out the way though
-You say yes but you turn around and say no
-Say what you mean to say, why you gotta be so fake though
-What you tryna say though
-You want me but you push me out the way though
-You say yes but you turn around and say no
-Say what you mean to say, why you gotta be so fake though
-
-What you tryna say
-You told me walk away, so I did
-Now you tryna come my way, shit that's crazy
-Got me trippin' like I'm hazy, got me lookin' like I'm crazy
-Deal with this on the daily, yeah
-Two-faced like I'm Batman, yeah
-Two-faced like a madman, yeah
-Threw our love in the trash can
-Now you say you want me back again, yeah
-
-Say you changed, but you didn't, no
-Say it's different, but it isn't, no
-When I'm with you, feels like a prison, yeah
-But when I'm not, I start missin' ya
-This isn't love anymore
-I'm tired of these games, done playin' on the court
-I'm tired of the same, love me then get bored
-Now I see you here tryna lie to me some more, hey
-
-What you tryna say though
-You want me but you push me out the way though
-You say yes but you turn around and say no
-Say what you mean to say, why you gotta be so fake though
-What you tryna say though
-You want me but you push me out the way though
-You say yes but you turn around and say no
-Say what you mean to say, why you gotta be so fake though
-
-I don't mean to take your time, no
-I just thought that you were mine, no
-Now I see that you were lyin, no
-Too bad I got you on my mind though
-Now I can't forget ya, no
-Can't believe I let ya, no
-Inside my mind, should have seen the signs from the time that I met ya
-'Cause I've been so blinded, never even minded
-Now I'm sittin' here and I'm on the sidelines like, what do I do
-I'm in love with you, but you play me like I'm a pawn you can use
-No more, close the door, yeah
-Tryna force me to be yours, yeah
-But I can see now, you've been playin' with me now
-'Bout time you let me out, 'bout time you let me out, yeah
-
-What you tryna say though
-You want me but you push me out the way though
-You say yes but you turn around and say no
-Say what you mean to say, why you gotta be so fake though
-What you tryna say though
-You want me but you push me out the way though
-You say yes but you turn around and say no
-Say what you mean to say, why you gotta be so fake though
-
-What you tryna say though
-You want me but you push me out the way though
-You say yes but you turn around and say no
-Say what you mean to say, why you gonna be so fake though
-        `,
-        links: [
-            { platform: 'Spotify', url: '', icon: 'fab fa-spotify' },
-            { platform: 'YouTube Music', url: '', icon: 'fab fa-youtube' },
-            { platform: 'SoundCloud', url: '', icon: 'fab fa-soundcloud' },
-            { platform: 'Tidal', url: '', icon: 'fa-brands fa-tidal' },
-            { platform: 'Apple Music', url: '', icon: 'fa-brands fa-itunes-note' },
-            { platform: 'Amazon Music', url: '', icon: 'fab fa-amazon' },
-            { platform: 'iHeartRadio', url: '', icon: 'fa-solid fa-radio' },
-            { platform: 'Pandora', url: '', icon: 'fab fa-pandora' }
-        ]
-    },
-    // No Question
-    {
-        featured: true,
-        artistPick: false,
-        comingSoon: true,
-        title: 'No Question',
-        img: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26ZjzE4Y1OB1fRJhWxUj4stF6wIcQdoXPZCbYH',
-        sampleUrl: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26AyR7Ripr7tFhmgB0d4A9xY1bS5iN6HuqZTRv',
-        canvasUrl: '',
-        releaseDate: '2025-09-28',
-        musicVideoId: '',
-        tags: ['rap', 'hip-hop', 'pop', 'electronic'],
-        languages: ['English'],
-        lyrics: `
-Damn, got a body of a hottie, a mind for the profit
-They all tryna copy, you're the whole damn topic
-Your walk is a weapon, your talk is a lesson
-Whole room stops for a second, no question
-
-Came through the doorway, shook the whole foundation
-A silent defiance, a cold declaration
-They watch from the side with a strained admiration
-You crumble the calm of their whole operation
-Your silhouette carves a new constellation
-Not here for the talk, just the final creation
-A future you built with zero hesitation
-Fuck all their approval and their validation
-
-Damn, got a body of a hottie, a mind for the profit
-They all tryna copy, you're the whole damn topic
-Your walk is a weapon, your talk is a lesson
-Whole room stops for a second, no question
-(Yeah)
-
-I see how you move, it's a calculated art form
-You weather the pressure, you function in the maelstrom
-They follow the rules, you went and built the platform
-Turned every setback you had to a life charm
-Not swayed by the flex or the fake affection
-You curate your circle with ruthless selection
-A master of movement and misdirection
-Pointed dead-center to your own perfection
-
-So let's cut the bullshit for a minute, alright?
-The way you command things is a hell of a sight
-They see all the triumphs, not the fight after fight
-They see the new day but you owned the whole night
-You don't need a savior, a king, or a rider
-You are the empire and the sole provider
-
-'Cause you got a body of a hottie, a mind for the profit
-(The profit)
-They all tryna copy, you're the whole damn topic
-(The whole topic)
-Your walk is a weapon, your talk is a lesson
-(Uh-huh)
-Whole room stops for a second, no question
-
-Yeah
-No question at all
-(Whole room stops for a second)
-Damn.
-        `,
-        links: [
-            { platform: 'Spotify', url: '', icon: 'fab fa-spotify' },
-            { platform: 'YouTube Music', url: '', icon: 'fab fa-youtube' },
-            { platform: 'SoundCloud', url: '', icon: 'fab fa-soundcloud' },
-            { platform: 'Tidal', url: '', icon: 'fa-brands fa-tidal' },
-            { platform: 'Apple Music', url: '', icon: 'fa-brands fa-itunes-note' },
-            { platform: 'Amazon Music', url: '', icon: 'fab fa-amazon' },
-            { platform: 'iHeartRadio', url: '', icon: 'fa-solid fa-radio' },
-            { platform: 'Pandora', url: '', icon: 'fab fa-pandora' }
-        ]
-    },
-    // Sugar Candy Lollipop
-    {
-        featured: true,
-        artistPick: false,
-        comingSoon: true,
-        title: 'Sugar Candy Lollipop',
-        img: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26R5lDnX0VTG26lngCRWazFoOsdcMpxH34jv1S',
-        sampleUrl: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG262rsDWnjRus0k5TxlaHtcGzAm4bP9VYv83MeI',
-        canvasUrl: '',
-        releaseDate: '2025-09-28',
-        musicVideoId: '',
-        tags: ['pop', 'synthwave', 'electropop', 'glitch', 'hyperpop'],
-        languages: ['English'],
-        lyrics: `
-Morning commute's a monochrome display
-Then you appear and flip the whole array
-A filament of cherry in the grey
-I try to keep my senses all at bay
-(Just for a moment)
-I try to look the other way
-
-Oh-oh-oh, my composure starts to fray
-It's a chemical reaction, a ricochet
-There's only one conclusion I can say
-(Can say, can say!)
-
-You're my sugar candy lollipop, my sweet apple pie!
-My celestial soda, fizzing in the sky!
-A cinematic feeling that I can't deny
-Don't you ever, ever, ever say goodbye!
-
-Conversations are a blurry hum
-But your inflections are the only drum
-That gives my quiet moments curriculum
-My thoughts of you become a tidy sum
-(I'm counting them up)
-Before my reasoning goes numb
-
-Oh-oh-oh, my composure starts to fray
-It's a chemical reaction, a ricochet
-There's only one conclusion I can say
-(Can say, can say!)
-
-You're my sugar candy lollipop, my sweet apple pie!
-My celestial soda, fizzing in the sky!
-A cinematic feeling that I can't deny
-Don't you ever, ever, ever say goodbye!
-
-I drew your likeness on my textbook spine
-A tiny little emblem that is mine
-A silly, secret, convoluted sign
-That all my orbits with your own align
-(They have to align)
-
-You're my sugar candy lollipop, my sweet apple pie!
-My celestial soda, fizzing in the sky!
-A cinematic feeling that I can't deny
-Don't you ever, ever, ever say goodbye!
-
-My cosmic confection
-My only direction
-My perfect selection
-My... you.
-        `,
-        links: [
-            { platform: 'Spotify', url: '', icon: 'fab fa-spotify' },
-            { platform: 'YouTube Music', url: '', icon: 'fab fa-youtube' },
-            { platform: 'SoundCloud', url: '', icon: 'fab fa-soundcloud' },
-            { platform: 'Tidal', url: '', icon: 'fa-brands fa-tidal' },
-            { platform: 'Apple Music', url: '', icon: 'fa-brands fa-itunes-note' },
-            { platform: 'Amazon Music', url: '', icon: 'fab fa-amazon' },
-            { platform: 'iHeartRadio', url: '', icon: 'fa-solid fa-radio' },
-            { platform: 'Pandora', url: '', icon: 'fab fa-pandora' }
-        ]
-    },
-    // HGFS
-    {
-        featured: false,
-        artistPick: false,
-        comingSoon: true,
-        title: 'HGFS',
-        img: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26Rh9Ys8W0VTG26lngCRWazFoOsdcMpxH34jv1',
-        sampleUrl: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26cKalXJGqpFfmZjstiaVH6vI8PwTUhXGdrCLl',
-        canvasUrl: '',
-        releaseDate: '2025-09-28',
-        musicVideoId: '',
-        tags: ['pop', 'hip-hop', 'electronic'],
-        languages: ['English'],
-        lyrics: `
-I'm the motherfuckin boss
-The one who always calls the shots
-Now I'm showing off
-On my hot girl freak shit
-
-Got my hair and my nails done
-Lashes on
-Top down
-Lipstick
-Bubblegum
-Popped a few uppers just to make it more fun
-Now I'm on one
-We're dancing on tables
-We're naked and famous
-They all wanna know us
-You want me to show you
-Want me to come over
-Want me to come over
-Ooh
-Look at the time
-Boy
-I'm out of my mind
-Boy
-I think it's about that time
-Let's get into something
-Oh
-I just wanna go faster
-
-Oh
-I just wanna go faster
-Oh
-I just wanna go faster
-
-On my hot girl freak shit
-Yeah
-You know I can't be tamed
-On my hot girl freak shit
-
-When I come through
-It's an encore
-Wanna make me yours
-You can just have a little taste
-And when I leave
-You want more
-Wanna make me yours
-You can just have a little taste
-
-On my hot girl freak shit
-Yeah
-You know I can't be tamed
-        `,
-        links: [
-            { platform: 'Spotify', url: '', icon: 'fab fa-spotify' },
-            { platform: 'YouTube Music', url: '', icon: 'fab fa-youtube' },
-            { platform: 'SoundCloud', url: '', icon: 'fab fa-soundcloud' },
-            { platform: 'Tidal', url: '', icon: 'fa-brands fa-tidal' },
-            { platform: 'Apple Music', url: '', icon: 'fa-brands fa-itunes-note' },
-            { platform: 'Amazon Music', url: '', icon: 'fab fa-amazon' },
-            { platform: 'iHeartRadio', url: '', icon: 'fa-solid fa-radio' },
-            { platform: 'Pandora', url: '', icon: 'fab fa-pandora' }
-        ]
-    },
-    // Бездна (Abyss)
-    {
-        featured: true,
-        artistPick: false,
-        comingSoon: true,
-        title: 'Бездна',
-        img: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26U3oblwfmOpDqCJvzjN4wGxQua0iR79ghr6H5',
-        sampleUrl: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG264XZcoEan8A5vhaF0XeP2B1WliYfpkmITSgsN',
-        canvasUrl: '',
-        releaseDate: '2025-09-28',
-        musicVideoId: '',
-        tags: ['dark', 'electronic', 'pop'],
-        languages: ['Russian'],
-        lyrics: `
-(Тише... тише...) (Quiet... quiet...)
-Слышишь гул? (Do you hear the hum?)
-Это нерв натянут, как струна (It's a nerve taut as a string.)
-(Тише...) (Quiet...)
-
-Взор расфокусирован, завис (My gaze is unfocused, suspended.)
-Я свисаю в бархатный карниз (I hang from a velvet curtain rod.)
-Гравитация сменила полюса (Gravity has shifted poles.)
-Заплетает в узел голоса (Voices are tangled in knots.)
-
-Что-то тёмное из темноты (Something dark from the darkness.)
-Молча сокращает все мосты (Silently, it shortens all bridges.)
-Мой нейронный рой ему открыт (My neural swarm is open to it.)
-Словно древний, брошенный магнит (Like an ancient, abandoned magnet.)
-
-Пустота нашла во мне зрачок (Emptiness has found a pupil in me.)
-Словно ключ подогнанный в замок (Like a key fitting into a lock.)
-Мы теперь один сплошной провал (We are now one continuous void.)
-Кто кого в итоге разгадал? (Who has finally figured out who?)
-
-Циферблаты замерли в кругу (The dials are frozen in a circle)
-Я и шага сделать не могу (I can't even take a step)
-Вязкая, густая полутень (A viscous, dense penumbra)
-Начинает мой грядущий день (Begins my coming day)
-
-Что-то тёмное из темноты (Something dark from the darkness.)
-Молча сокращает все мосты (Silently, it shortens all bridges.)
-Мой нейронный рой ему открыт (My neural swarm is open to it.)
-Словно древний, брошенный магнит (Like an ancient, abandoned magnet.)
-
-Пустота нашла во мне зрачок (Emptiness has found a pupil in me.)
-Словно ключ подогнанный в замок (Like a key fitting into a lock.)
-Мы теперь один сплошной провал (We are now one continuous void.)
-Кто кого в итоге разгадал? (Who has finally figured out who?)
-
-Искажение — новый мой закон (Distortion is my new law)
-Я в него смотрюсь, как в унисон (I look into it, as if in unison)
-Два колодца смотрят вглубь себя (Two wells look into themselves)
-Бесконечно, трепетно, дробя (Endlessly, reverently, crushing)
-
-Пустота нашла во мне зрачок (Emptiness has found a pupil in me.)
-(Мой зрачок) (My pupil)
-Словно ключ подогнанный в замок (Like a key fitting into a lock.)
-(Прямо в замок) (Straight into the lock)
-Мы теперь один сплошной провал (We are now one continuous void.)
-Кто кого в итоге разгадал? (Who has finally figured out who?)
-
-(Щёлк...) (Click...)
-Заперто. (Locked.)
-Навсегда. (Forever.)
-        `,
-        links: [
-            { platform: 'Spotify', url: '', icon: 'fab fa-spotify' },
-            { platform: 'YouTube Music', url: '', icon: 'fab fa-youtube' },
-            { platform: 'SoundCloud', url: '', icon: 'fab fa-soundcloud' },
-            { platform: 'Tidal', url: '', icon: 'fa-brands fa-tidal' },
-            { platform: 'Apple Music', url: '', icon: 'fa-brands fa-itunes-note' },
-            { platform: 'Amazon Music', url: '', icon: 'fab fa-amazon' },
-            { platform: 'iHeartRadio', url: '', icon: 'fa-solid fa-radio' },
-            { platform: 'Pandora', url: '', icon: 'fab fa-pandora' }
-        ]
-    },
-
-    // Generation Detonation [Coming Soon]
-    {
-        featured: true,
-        artistPick: false,
-        comingSoon: true,
-        title: 'Generation Detonation',
-        img: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26c3RAsNGqpFfmZjstiaVH6vI8PwTUhXGdrCLl',
-        sampleUrl: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG260rS6cQeiVaUXveObDkhncLG8TBRgqxIrfHj3',
-        canvasUrl: '',
-        releaseDate: '',
-        musicVideoId: '',
-        tags: ['rock', 'alternative rock', 'post-punk', 'metal'],
-        languages: ['English'],
-        lyrics: `
-They got you marching to a pulse you can't feel
-
-They carve the path of least resistance
-Then applaud your lack of distance
-Sell you remedies for ailments they create
-While they dine on golden platters, sealing fates
-You nod along to the pre-written script
-From a teleprompter your whole life is ripped
-
-Rip the sutures from the smiling mouths
-(Tear it all down!)
-Let the venom out that's flowing south
-(Spit it back out!)
-We're the frequency they can't regulate
-A generation built to detonate
-(Tick, tick, tick...)
-
-There's a monument for every broken vow
-A new distraction for the here and now
-They offer choices, red or blue veneer
-But the architecture's always built on fear
-So pick a side and wear the colors proud
-Just another face absorbed into the crowd
-
-Rip the sutures from the smiling mouths
-(Tear it all down!)
-Let the venom out that's flowing south
-(Spit it back out!)
-We're the frequency they can't regulate
-A generation built to detonate
-(Tick, tick, tick...)
-
-We are the consequence they didn't vet
-The accumulating, unpaid, final debt
-So sound the alarm with pots and pans
-(With broken mics and bloody hands)
-We're rewriting all their future plans
-(This is the start, this is the end)
-
-Rip the sutures from the smiling mouths!
-(Tear it all down!)
-Let the venom out that's flowing south!
-(Spit it back out!)
-We're the frequency they can't regulate!
-A generation built to detonate!
-
-Detonate
-(Watch it all fall)
-Detonate
-(Answer the call)
-Detonate.
-        `,
-        links: [
-            { platform: 'Spotify', url: '', icon: 'fab fa-spotify' },
-            { platform: 'YouTube Music', url: '', icon: 'fab fa-youtube' },
-            { platform: 'SoundCloud', url: '', icon: 'fab fa-soundcloud' },
-            { platform: 'Tidal', url: '', icon: 'fa-brands fa-tidal' },
-            { platform: 'Apple Music', url: '', icon: 'fa-brands fa-itunes-note' },
-            { platform: 'Amazon Music', url: '', icon: 'fab fa-amazon' },
-            { platform: 'iHeartRadio', url: '', icon: 'fa-solid fa-radio' },
-            { platform: 'Pandora', url: '', icon: 'fab fa-pandora' }
-        ]
-    },
-    // The Beast [Coming Soon]
-    {
-        featured: true,
-        artistPick: false,
-        comingSoon: true,
-        title: 'The Beast',
-        img: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26pMTm8EnRBwFTAs2kpzjJdaNlu6P75f3qicGS',
-        sampleUrl: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26pjkOx1nRBwFTAs2kpzjJdaNlu6P75f3qicGS',
-        canvasUrl: '',
-        releaseDate: '',
-        musicVideoId: '',
-        tags: ['rock', 'alternative rock', 'post-punk', 'metal'],
-        languages: ['English'],
-        lyrics: `
-It had no form, it had no name
-(We gave it both to play the game)
-Just a hunger, quiet and benign
-Waiting for a flaw in the design
-
-We laid the table with our open hands
-We met the aggregate of its demands
-A little avarice to grease the rail
-A little panic when the structures fail
-Each quiet compromise, a lovely feast
-For the polite and ever-growing beast
-
-We nourished the roots of the thing that binds
-(With our fractured thoughts and worried minds)
-And now it's sovereign, it's vast and deep
-It owns the harvest of the sleep we keep
-(It owns it all now)
-
-It sells you back the air you need to breathe
-The very angers that you start to seethe
-It draws the borders deep inside your head
-And makes you work to earn your daily dread
-You buy the lock, you buy the key, the chain
-And then you buy the shelter from the rain it made
-
-We nourished the roots of the thing that binds
-(With our fractured thoughts and worried minds)
-And now it's sovereign, it's vast and deep
-It owns the harvest of the sleep we keep
-(It owns it all now)
-
-Look up, look up, and see the sheer expanse
-The architecture of our compliance
-Every time we chose the safer route
-We gave another pound of flesh to the devout...
-(System)
-...and watched it thrive
-
-We nourished the roots of the thing that binds!
-(With our fractured thoughts and worried minds!)
-And now it's sovereign, it's vast and deep!
-It owns the harvest of the sleep we keep!
-
-A little more...
-(To keep us safe)
-A little more...
-(From what we crave)
-A little more...
-        `,
-        links: [
-            { platform: 'Spotify', url: '', icon: 'fab fa-spotify' },
-            { platform: 'YouTube Music', url: '', icon: 'fab fa-youtube' },
-            { platform: 'SoundCloud', url: '', icon: 'fab fa-soundcloud' },
-            { platform: 'Tidal', url: '', icon: 'fa-brands fa-tidal' },
-            { platform: 'Apple Music', url: '', icon: 'fa-brands fa-itunes-note' },
-            { platform: 'Amazon Music', url: '', icon: 'fab fa-amazon' },
-            { platform: 'iHeartRadio', url: '', icon: 'fa-solid fa-radio' },
-            { platform: 'Pandora', url: '', icon: 'fab fa-pandora' }
-        ]
-    },
-    // Opinion. Delete. Repeat. [Coming Soon]
-    {
-        featured: true,
-        artistPick: false,
-        comingSoon: true,
-        title: 'Opinion. Delete. Repeat.',
-        img: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26ZnFYiN1OB1fRJhWxUj4stF6wIcQdoXPZCbYH',
-        sampleUrl: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26EDS9tNAVnPcATrNZQSWoCBG83wL7Xdvpumk5',
-        canvasUrl: '',
-        releaseDate: '',
-        musicVideoId: '',
-        tags: ['rock', 'alternative rock', 'post-punk', 'metal'],
-        languages: ['English'],
-        lyrics: `
-Scroll until your thumbs are numb
-(Tell me what you have become)
-The feed is flowing red with rage
-Another actor on a breaking stage
-
-We argue in a thousand characters or less
-Weaponize a photograph, a home address
-Every timeline is a new front line
-(A perfect product of a grand design)
-You choose a banner, pick a team to tout
-And build a fortress just to keep the others out
-
-The argument jumped off the glass
-(It's moving way, way too fast)
-Now there's a body in the street
-For an opinion and a quick delete
-(It doesn't matter now)
-
-The profile picture's all you need to see
-A two-dimensional effigy
-Dehumanize them with a downward swipe
-Another villain of a hated type
-There is no person, only points to score
-Behind a locked and barricaded door
-
-The argument jumped off the glass
-(It's moving way, way too fast)
-Now there's a body in the street
-For an opinion and a quick delete
-(It doesn't matter now)
-
-We film the fire for the world to view
-(For a million, me and you)
-Add a filter that's the perfect hue
-(Perfect hue, shiny and new)
-We cheer the fall of what we couldn't build
-Until the quiet space is finally filled
-With nothing but the roaring flame
-
-The argument jumped off the glass!
-(It's moving way, way too fast!)
-Now there's a body in the street!
-For an opinion and a quick delete!
-
-Opinion.
-(One last post)
-Delete.
-(More than most)
-Repeat.
-        `,
-        links: [
-            { platform: 'Spotify', url: '', icon: 'fab fa-spotify' },
-            { platform: 'YouTube Music', url: '', icon: 'fab fa-youtube' },
-            { platform: 'SoundCloud', url: '', icon: 'fab fa-soundcloud' },
-            { platform: 'Tidal', url: '', icon: 'fa-brands fa-tidal' },
-            { platform: 'Apple Music', url: '', icon: 'fa-brands fa-itunes-note' },
-            { platform: 'Amazon Music', url: '', icon: 'fab fa-amazon' },
-            { platform: 'iHeartRadio', url: '', icon: 'fa-solid fa-radio' },
-            { platform: 'Pandora', url: '', icon: 'fab fa-pandora' }
-        ]
-    },
     // Семь неизвестных (Seven Unknowns) [Coming Soon]
     {
-        featured: true,
+        featured: false,
         artistPick: false,
         comingSoon: true,
         title: 'Семь неизвестных',
@@ -1109,7 +491,623 @@ Or just your flash
         ]
     },
 
-    
+    // Generation Detonation
+    {
+        featured: true,
+        artistPick: false,
+        comingSoon: false,
+        title: 'Generation Detonation',
+        img: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26c3RAsNGqpFfmZjstiaVH6vI8PwTUhXGdrCLl',
+        sampleUrl: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG260rS6cQeiVaUXveObDkhncLG8TBRgqxIrfHj3',
+        canvasUrl: '',
+        releaseDate: '2025-09-28',
+        musicVideoId: '',
+        tags: ['rock', 'alternative rock', 'post-punk', 'metal'],
+        languages: ['English'],
+        lyrics: `
+They got you marching to a pulse you can't feel
+
+They carve the path of least resistance
+Then applaud your lack of distance
+Sell you remedies for ailments they create
+While they dine on golden platters, sealing fates
+You nod along to the pre-written script
+From a teleprompter your whole life is ripped
+
+Rip the sutures from the smiling mouths
+(Tear it all down!)
+Let the venom out that's flowing south
+(Spit it back out!)
+We're the frequency they can't regulate
+A generation built to detonate
+(Tick, tick, tick...)
+
+There's a monument for every broken vow
+A new distraction for the here and now
+They offer choices, red or blue veneer
+But the architecture's always built on fear
+So pick a side and wear the colors proud
+Just another face absorbed into the crowd
+
+Rip the sutures from the smiling mouths
+(Tear it all down!)
+Let the venom out that's flowing south
+(Spit it back out!)
+We're the frequency they can't regulate
+A generation built to detonate
+(Tick, tick, tick...)
+
+We are the consequence they didn't vet
+The accumulating, unpaid, final debt
+So sound the alarm with pots and pans
+(With broken mics and bloody hands)
+We're rewriting all their future plans
+(This is the start, this is the end)
+
+Rip the sutures from the smiling mouths!
+(Tear it all down!)
+Let the venom out that's flowing south!
+(Spit it back out!)
+We're the frequency they can't regulate!
+A generation built to detonate!
+
+Detonate
+(Watch it all fall)
+Detonate
+(Answer the call)
+Detonate.
+        `,
+        links: [
+            { platform: 'Spotify', url: 'https://open.spotify.com/track/4a8LbtiFAYVjPnTLYQ1GvB', icon: 'fab fa-spotify' },
+            { platform: 'YouTube Music', url: 'https://music.youtube.com/watch?v=KkCEvsqM99w', icon: 'fab fa-youtube' },
+            { platform: 'SoundCloud', url: '', icon: 'fab fa-soundcloud' },
+            { platform: 'Tidal', url: 'https://tidal.com/track/463481357/u', icon: 'fa-brands fa-tidal' },
+            { platform: 'Apple Music', url: '', icon: 'fa-brands fa-itunes-note' },
+            { platform: 'Amazon Music', url: 'https://music.amazon.com/tracks/B0FT1DVKDN?marketplaceId=ATVPDKIKX0DER&musicTerritory=US&ref=dm_sh_2wx5sCVXiuEbdfdd0E1CYTEsy', icon: 'fab fa-amazon' },
+            { platform: 'iHeartRadio', url: 'https://www.iheart.com/artist/x08-47869013/songs/generation-detonation-352531321/', icon: 'fa-solid fa-radio' },
+            { platform: 'Pandora', url: 'https://www.pandora.com/artist/x08/generation-detonation/generation-detonation/TRK25X2f2mz6mVw?part=ug-desktop&corr=200697158100332643', icon: 'fab fa-pandora' }
+        ]
+    },
+    // The Beast
+    {
+        featured: true,
+        artistPick: false,
+        comingSoon: false,
+        title: 'The Beast',
+        img: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26pMTm8EnRBwFTAs2kpzjJdaNlu6P75f3qicGS',
+        sampleUrl: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26pjkOx1nRBwFTAs2kpzjJdaNlu6P75f3qicGS',
+        canvasUrl: '',
+        releaseDate: '2025-09-28',
+        musicVideoId: '',
+        tags: ['rock', 'alternative rock', 'post-punk', 'metal'],
+        languages: ['English'],
+        lyrics: `
+It had no form, it had no name
+(We gave it both to play the game)
+Just a hunger, quiet and benign
+Waiting for a flaw in the design
+
+We laid the table with our open hands
+We met the aggregate of its demands
+A little avarice to grease the rail
+A little panic when the structures fail
+Each quiet compromise, a lovely feast
+For the polite and ever-growing beast
+
+We nourished the roots of the thing that binds
+(With our fractured thoughts and worried minds)
+And now it's sovereign, it's vast and deep
+It owns the harvest of the sleep we keep
+(It owns it all now)
+
+It sells you back the air you need to breathe
+The very angers that you start to seethe
+It draws the borders deep inside your head
+And makes you work to earn your daily dread
+You buy the lock, you buy the key, the chain
+And then you buy the shelter from the rain it made
+
+We nourished the roots of the thing that binds
+(With our fractured thoughts and worried minds)
+And now it's sovereign, it's vast and deep
+It owns the harvest of the sleep we keep
+(It owns it all now)
+
+Look up, look up, and see the sheer expanse
+The architecture of our compliance
+Every time we chose the safer route
+We gave another pound of flesh to the devout...
+(System)
+...and watched it thrive
+
+We nourished the roots of the thing that binds!
+(With our fractured thoughts and worried minds!)
+And now it's sovereign, it's vast and deep!
+It owns the harvest of the sleep we keep!
+
+A little more...
+(To keep us safe)
+A little more...
+(From what we crave)
+A little more...
+        `,
+        links: [
+            { platform: 'Spotify', url: '', icon: 'fab fa-spotify' },
+            { platform: 'YouTube Music', url: '', icon: 'fab fa-youtube' },
+            { platform: 'SoundCloud', url: '', icon: 'fab fa-soundcloud' },
+            { platform: 'Tidal', url: '', icon: 'fa-brands fa-tidal' },
+            { platform: 'Apple Music', url: '', icon: 'fa-brands fa-itunes-note' },
+            { platform: 'Amazon Music', url: '', icon: 'fab fa-amazon' },
+            { platform: 'iHeartRadio', url: '', icon: 'fa-solid fa-radio' },
+            { platform: 'Pandora', url: '', icon: 'fab fa-pandora' }
+        ]
+    },
+    // Opinion. Delete. Repeat.
+    {
+        featured: true,
+        artistPick: false,
+        comingSoon: false,
+        title: 'Opinion. Delete. Repeat.',
+        img: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26ZnFYiN1OB1fRJhWxUj4stF6wIcQdoXPZCbYH',
+        sampleUrl: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26EDS9tNAVnPcATrNZQSWoCBG83wL7Xdvpumk5',
+        canvasUrl: '',
+        releaseDate: '2025-09-28',
+        musicVideoId: '',
+        tags: ['rock', 'alternative rock', 'post-punk', 'metal'],
+        languages: ['English'],
+        lyrics: `
+Scroll until your thumbs are numb
+(Tell me what you have become)
+The feed is flowing red with rage
+Another actor on a breaking stage
+
+We argue in a thousand characters or less
+Weaponize a photograph, a home address
+Every timeline is a new front line
+(A perfect product of a grand design)
+You choose a banner, pick a team to tout
+And build a fortress just to keep the others out
+
+The argument jumped off the glass
+(It's moving way, way too fast)
+Now there's a body in the street
+For an opinion and a quick delete
+(It doesn't matter now)
+
+The profile picture's all you need to see
+A two-dimensional effigy
+Dehumanize them with a downward swipe
+Another villain of a hated type
+There is no person, only points to score
+Behind a locked and barricaded door
+
+The argument jumped off the glass
+(It's moving way, way too fast)
+Now there's a body in the street
+For an opinion and a quick delete
+(It doesn't matter now)
+
+We film the fire for the world to view
+(For a million, me and you)
+Add a filter that's the perfect hue
+(Perfect hue, shiny and new)
+We cheer the fall of what we couldn't build
+Until the quiet space is finally filled
+With nothing but the roaring flame
+
+The argument jumped off the glass!
+(It's moving way, way too fast!)
+Now there's a body in the street!
+For an opinion and a quick delete!
+
+Opinion.
+(One last post)
+Delete.
+(More than most)
+Repeat.
+        `,
+        links: [
+            { platform: 'Spotify', url: 'https://open.spotify.com/track/0FkFixrjvvYzCWiFBKVwBB', icon: 'fab fa-spotify' },
+            { platform: 'YouTube Music', url: 'https://music.youtube.com/watch?v=-dIZyZT4g5U', icon: 'fab fa-youtube' },
+            { platform: 'SoundCloud', url: '', icon: 'fab fa-soundcloud' },
+            { platform: 'Tidal', url: 'https://tidal.com/track/463481558/u', icon: 'fa-brands fa-tidal' },
+            { platform: 'Apple Music', url: '', icon: 'fa-brands fa-itunes-note' },
+            { platform: 'Amazon Music', url: 'https://music.amazon.com/tracks/B0FT1D375J?marketplaceId=ATVPDKIKX0DER&musicTerritory=US&ref=dm_sh_hiiGhH2SGuzmD9RIJpqItIvJa', icon: 'fab fa-amazon' },
+            { platform: 'iHeartRadio', url: 'https://www.iheart.com/artist/x08-47869013/songs/opinion-delete-repeat-352531273/', icon: 'fa-solid fa-radio' },
+            { platform: 'Pandora', url: 'https://www.pandora.com/artist/x08/opinion-delete-repeat/opinion-delete-repeat/TRcPwZ33rcx6PJ4?part=ug-desktop&corr=200697158100332643', icon: 'fab fa-pandora' }
+        ]
+    },
+    // Back Again
+    {
+        featured: true,
+        artistPick: false,
+        comingSoon: false,
+        title: 'Back Again',
+        img: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG261Vmya8ulKIhBLdfSC8NrDg6nP97eMwGWcQmT',
+        sampleUrl: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26VX1DHVKhZ3lfAdH74paeyis2b6OrFuKQjtgI',
+        canvasUrl: '',
+        releaseDate: '2025-09-28',
+        musicVideoId: '',
+        tags: ['alternative pop', 'drum & bass', 'electronic'],
+        languages: ['English'],
+        lyrics: `
+What you tryna say though
+You want me but you push me out the way though
+You say yes but you turn around and say no
+Say what you mean to say, why you gotta be so fake though
+What you tryna say though
+You want me but you push me out the way though
+You say yes but you turn around and say no
+Say what you mean to say, why you gotta be so fake though
+
+What you tryna say
+You told me walk away, so I did
+Now you tryna come my way, shit that's crazy
+Got me trippin' like I'm hazy, got me lookin' like I'm crazy
+Deal with this on the daily, yeah
+Two-faced like I'm Batman, yeah
+Two-faced like a madman, yeah
+Threw our love in the trash can
+Now you say you want me back again, yeah
+
+Say you changed, but you didn't, no
+Say it's different, but it isn't, no
+When I'm with you, feels like a prison, yeah
+But when I'm not, I start missin' ya
+This isn't love anymore
+I'm tired of these games, done playin' on the court
+I'm tired of the same, love me then get bored
+Now I see you here tryna lie to me some more, hey
+
+What you tryna say though
+You want me but you push me out the way though
+You say yes but you turn around and say no
+Say what you mean to say, why you gotta be so fake though
+What you tryna say though
+You want me but you push me out the way though
+You say yes but you turn around and say no
+Say what you mean to say, why you gotta be so fake though
+
+I don't mean to take your time, no
+I just thought that you were mine, no
+Now I see that you were lyin, no
+Too bad I got you on my mind though
+Now I can't forget ya, no
+Can't believe I let ya, no
+Inside my mind, should have seen the signs from the time that I met ya
+'Cause I've been so blinded, never even minded
+Now I'm sittin' here and I'm on the sidelines like, what do I do
+I'm in love with you, but you play me like I'm a pawn you can use
+No more, close the door, yeah
+Tryna force me to be yours, yeah
+But I can see now, you've been playin' with me now
+'Bout time you let me out, 'bout time you let me out, yeah
+
+What you tryna say though
+You want me but you push me out the way though
+You say yes but you turn around and say no
+Say what you mean to say, why you gotta be so fake though
+What you tryna say though
+You want me but you push me out the way though
+You say yes but you turn around and say no
+Say what you mean to say, why you gotta be so fake though
+
+What you tryna say though
+You want me but you push me out the way though
+You say yes but you turn around and say no
+Say what you mean to say, why you gonna be so fake though
+        `,
+        links: [
+            { platform: 'Spotify', url: 'https://open.spotify.com/track/6lSySXrofYLvHwcuMiTqaA', icon: 'fab fa-spotify' },
+            { platform: 'YouTube Music', url: 'https://music.youtube.com/watch?v=G0BP3wteip0', icon: 'fab fa-youtube' },
+            { platform: 'SoundCloud', url:  'https://soundcloud.com/x0zero8eight/back-again', icon: 'fab fa-soundcloud' },
+            { platform: 'Tidal', url: 'https://tidal.com/track/463470276/u', icon: 'fa-brands fa-tidal' },
+            { platform: 'Apple Music', url: '', icon: 'fa-brands fa-itunes-note' },
+            { platform: 'Amazon Music', url: 'https://music.amazon.com/tracks/B0FT16MLFF?marketplaceId=ATVPDKIKX0DER&musicTerritory=US&ref=dm_sh_lj85YElVjwPIdp7xRnNulmqbQ', icon: 'fab fa-amazon' },
+            { platform: 'iHeartRadio', url: 'https://www.iheart.com/artist/x08-47869013/songs/back-again-352521551/', icon: 'fa-solid fa-radio' },
+            { platform: 'Pandora', url: 'https://www.pandora.com/artist/x08/back-again/back-again/TRbbj2q5Plr6JV2?part=ug-desktop&corr=200697158100332643', icon: 'fab fa-pandora' }
+        ]
+    },
+    // No Question
+    {
+        featured: true,
+        artistPick: false,
+        comingSoon: false,
+        title: 'No Question',
+        img: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26ZjzE4Y1OB1fRJhWxUj4stF6wIcQdoXPZCbYH',
+        sampleUrl: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26AyR7Ripr7tFhmgB0d4A9xY1bS5iN6HuqZTRv',
+        canvasUrl: '',
+        releaseDate: '2025-09-28',
+        musicVideoId: '',
+        tags: ['rap', 'hip-hop', 'pop', 'electronic'],
+        languages: ['English'],
+        lyrics: `
+Damn, got a body of a hottie, a mind for the profit
+They all tryna copy, you're the whole damn topic
+Your walk is a weapon, your talk is a lesson
+Whole room stops for a second, no question
+
+Came through the doorway, shook the whole foundation
+A silent defiance, a cold declaration
+They watch from the side with a strained admiration
+You crumble the calm of their whole operation
+Your silhouette carves a new constellation
+Not here for the talk, just the final creation
+A future you built with zero hesitation
+Fuck all their approval and their validation
+
+Damn, got a body of a hottie, a mind for the profit
+They all tryna copy, you're the whole damn topic
+Your walk is a weapon, your talk is a lesson
+Whole room stops for a second, no question
+(Yeah)
+
+I see how you move, it's a calculated art form
+You weather the pressure, you function in the maelstrom
+They follow the rules, you went and built the platform
+Turned every setback you had to a life charm
+Not swayed by the flex or the fake affection
+You curate your circle with ruthless selection
+A master of movement and misdirection
+Pointed dead-center to your own perfection
+
+So let's cut the bullshit for a minute, alright?
+The way you command things is a hell of a sight
+They see all the triumphs, not the fight after fight
+They see the new day but you owned the whole night
+You don't need a savior, a king, or a rider
+You are the empire and the sole provider
+
+'Cause you got a body of a hottie, a mind for the profit
+(The profit)
+They all tryna copy, you're the whole damn topic
+(The whole topic)
+Your walk is a weapon, your talk is a lesson
+(Uh-huh)
+Whole room stops for a second, no question
+
+Yeah
+No question at all
+(Whole room stops for a second)
+Damn.
+        `,
+        links: [
+            { platform: 'Spotify', url: 'https://open.spotify.com/track/5Q6VwTdnqfkTfgvFgpDCSw', icon: 'fab fa-spotify' },
+            { platform: 'YouTube Music', url: 'https://music.youtube.com/watch?v=l7H6PqfBmTc', icon: 'fab fa-youtube' },
+            { platform: 'SoundCloud', url: '', icon: 'fab fa-soundcloud' },
+            { platform: 'Tidal', url: 'https://tidal.com/track/463469997/u', icon: 'fa-brands fa-tidal' },
+            { platform: 'Apple Music', url: '', icon: 'fa-brands fa-itunes-note' },
+            { platform: 'Amazon Music', url: 'https://music.amazon.com/tracks/B0FT19M44R?marketplaceId=ATVPDKIKX0DER&musicTerritory=US&ref=dm_sh_a7sYKxOMou2zAbMXujRir6v3E', icon: 'fab fa-amazon' },
+            { platform: 'iHeartRadio', url: 'https://www.iheart.com/artist/x08-47869013/songs/no-question-352521524/', icon: 'fa-solid fa-radio' },
+            { platform: 'Pandora', url: 'https://www.pandora.com/artist/x08/no-question/no-question/TRZdbVZgzqlwvVZ?part=ug-desktop&corr=200697158100332643', icon: 'fab fa-pandora' }
+        ]
+    },
+    // Sugar Candy Lollipop
+    {
+        featured: true,
+        artistPick: false,
+        comingSoon: false,
+        title: 'Sugar Candy Lollipop',
+        img: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26R5lDnX0VTG26lngCRWazFoOsdcMpxH34jv1S',
+        sampleUrl: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG262rsDWnjRus0k5TxlaHtcGzAm4bP9VYv83MeI',
+        canvasUrl: '',
+        releaseDate: '2025-09-28',
+        musicVideoId: '',
+        tags: ['pop', 'synthwave', 'electropop', 'glitch', 'hyperpop'],
+        languages: ['English'],
+        lyrics: `
+Morning commute's a monochrome display
+Then you appear and flip the whole array
+A filament of cherry in the grey
+I try to keep my senses all at bay
+(Just for a moment)
+I try to look the other way
+
+Oh-oh-oh, my composure starts to fray
+It's a chemical reaction, a ricochet
+There's only one conclusion I can say
+(Can say, can say!)
+
+You're my sugar candy lollipop, my sweet apple pie!
+My celestial soda, fizzing in the sky!
+A cinematic feeling that I can't deny
+Don't you ever, ever, ever say goodbye!
+
+Conversations are a blurry hum
+But your inflections are the only drum
+That gives my quiet moments curriculum
+My thoughts of you become a tidy sum
+(I'm counting them up)
+Before my reasoning goes numb
+
+Oh-oh-oh, my composure starts to fray
+It's a chemical reaction, a ricochet
+There's only one conclusion I can say
+(Can say, can say!)
+
+You're my sugar candy lollipop, my sweet apple pie!
+My celestial soda, fizzing in the sky!
+A cinematic feeling that I can't deny
+Don't you ever, ever, ever say goodbye!
+
+I drew your likeness on my textbook spine
+A tiny little emblem that is mine
+A silly, secret, convoluted sign
+That all my orbits with your own align
+(They have to align)
+
+You're my sugar candy lollipop, my sweet apple pie!
+My celestial soda, fizzing in the sky!
+A cinematic feeling that I can't deny
+Don't you ever, ever, ever say goodbye!
+
+My cosmic confection
+My only direction
+My perfect selection
+My... you.
+        `,
+        links: [
+            { platform: 'Spotify', url: 'https://open.spotify.com/track/5XyCfVE0sjBiGi1aZB1XCO', icon: 'fab fa-spotify' },
+            { platform: 'YouTube Music', url: 'https://music.youtube.com/watch?v=W6-TWLU3jek', icon: 'fab fa-youtube' },
+            { platform: 'SoundCloud', url: 'https://soundcloud.com/x0zero8eight/sugar-candy-lollipop', icon: 'fab fa-soundcloud' },
+            { platform: 'Tidal', url: 'https://tidal.com/track/463469595/u', icon: 'fa-brands fa-tidal' },
+            { platform: 'Apple Music', url: '', icon: 'fa-brands fa-itunes-note' },
+            { platform: 'Amazon Music', url: 'https://music.amazon.com/tracks/B0FT19QFG3?marketplaceId=ATVPDKIKX0DER&musicTerritory=US&ref=dm_sh_yf5qCUB1IeIrbAvKiBkZpgac8', icon: 'fab fa-amazon' },
+            { platform: 'iHeartRadio', url: 'https://www.iheart.com/artist/x08-47869013/songs/sugar-candy-lollipop-352521557/', icon: 'fa-solid fa-radio' },
+            { platform: 'Pandora', url: 'https://www.pandora.com/artist/x08/sugar-candy-lollipop/sugar-candy-lollipop/TRj3tddww52Pp5X', icon: 'fab fa-pandora' }
+        ]
+    },
+    // HGFS
+    {
+        featured: false,
+        artistPick: false,
+        comingSoon: false,
+        title: 'HGFS',
+        img: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26Rh9Ys8W0VTG26lngCRWazFoOsdcMpxH34jv1',
+        sampleUrl: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26cKalXJGqpFfmZjstiaVH6vI8PwTUhXGdrCLl',
+        canvasUrl: '',
+        releaseDate: '2025-09-28',
+        musicVideoId: '',
+        tags: ['pop', 'hip-hop', 'electronic'],
+        languages: ['English'],
+        lyrics: `
+I'm the motherfuckin boss
+The one who always calls the shots
+Now I'm showing off
+On my hot girl freak shit
+
+Got my hair and my nails done
+Lashes on
+Top down
+Lipstick
+Bubblegum
+Popped a few uppers just to make it more fun
+Now I'm on one
+We're dancing on tables
+We're naked and famous
+They all wanna know us
+You want me to show you
+Want me to come over
+Want me to come over
+Ooh
+Look at the time
+Boy
+I'm out of my mind
+Boy
+I think it's about that time
+Let's get into something
+Oh
+I just wanna go faster
+
+Oh
+I just wanna go faster
+Oh
+I just wanna go faster
+
+On my hot girl freak shit
+Yeah
+You know I can't be tamed
+On my hot girl freak shit
+
+When I come through
+It's an encore
+Wanna make me yours
+You can just have a little taste
+And when I leave
+You want more
+Wanna make me yours
+You can just have a little taste
+
+On my hot girl freak shit
+Yeah
+You know I can't be tamed
+        `,
+        links: [
+            { platform: 'Spotify', url: 'https://open.spotify.com/track/5XpwpTdWrahal9TBsQnOZO', icon: 'fab fa-spotify' },
+            { platform: 'YouTube Music', url: 'https://music.youtube.com/watch?v=ugl9nI-vRKY', icon: 'fab fa-youtube' },
+            { platform: 'SoundCloud', url: 'https://soundcloud.com/x0zero8eight/hgfs', icon: 'fab fa-soundcloud' },
+            { platform: 'Tidal', url: 'https://tidal.com/track/463475431/u', icon: 'fa-brands fa-tidal' },
+            { platform: 'Apple Music', url: '', icon: 'fa-brands fa-itunes-note' },
+            { platform: 'Amazon Music', url: 'https://music.amazon.com/tracks/B0FT1G3MFN?marketplaceId=ATVPDKIKX0DER&musicTerritory=US&ref=dm_sh_aW3VmlSUBQ77s9PQoeTKc9Cun', icon: 'fab fa-amazon' },
+            { platform: 'iHeartRadio', url: 'https://www.iheart.com/artist/x08-47869013/songs/hgfs-352526746/', icon: 'fa-solid fa-radio' },
+            { platform: 'Pandora', url: 'https://www.pandora.com/artist/x08/hgfs/hgfs/TRpr9gdVqXjmpxJ?part=ug-desktop&corr=200697158100332643', icon: 'fab fa-pandora' }
+        ]
+    },
+    // Бездна (Abyss)
+    {
+        featured: true,
+        artistPick: false,
+        comingSoon: false,
+        title: 'Бездна',
+        img: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26U3oblwfmOpDqCJvzjN4wGxQua0iR79ghr6H5',
+        sampleUrl: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG264XZcoEan8A5vhaF0XeP2B1WliYfpkmITSgsN',
+        canvasUrl: '',
+        releaseDate: '2025-09-28',
+        musicVideoId: '',
+        tags: ['dark', 'electronic', 'pop'],
+        languages: ['Russian'],
+        lyrics: `
+(Тише... тише...) (Quiet... quiet...)
+Слышишь гул? (Do you hear the hum?)
+Это нерв натянут, как струна (It's a nerve taut as a string.)
+(Тише...) (Quiet...)
+
+Взор расфокусирован, завис (My gaze is unfocused, suspended.)
+Я свисаю в бархатный карниз (I hang from a velvet curtain rod.)
+Гравитация сменила полюса (Gravity has shifted poles.)
+Заплетает в узел голоса (Voices are tangled in knots.)
+
+Что-то тёмное из темноты (Something dark from the darkness.)
+Молча сокращает все мосты (Silently, it shortens all bridges.)
+Мой нейронный рой ему открыт (My neural swarm is open to it.)
+Словно древний, брошенный магнит (Like an ancient, abandoned magnet.)
+
+Пустота нашла во мне зрачок (Emptiness has found a pupil in me.)
+Словно ключ подогнанный в замок (Like a key fitting into a lock.)
+Мы теперь один сплошной провал (We are now one continuous void.)
+Кто кого в итоге разгадал? (Who has finally figured out who?)
+
+Циферблаты замерли в кругу (The dials are frozen in a circle)
+Я и шага сделать не могу (I can't even take a step)
+Вязкая, густая полутень (A viscous, dense penumbra)
+Начинает мой грядущий день (Begins my coming day)
+
+Что-то тёмное из темноты (Something dark from the darkness.)
+Молча сокращает все мосты (Silently, it shortens all bridges.)
+Мой нейронный рой ему открыт (My neural swarm is open to it.)
+Словно древний, брошенный магнит (Like an ancient, abandoned magnet.)
+
+Пустота нашла во мне зрачок (Emptiness has found a pupil in me.)
+Словно ключ подогнанный в замок (Like a key fitting into a lock.)
+Мы теперь один сплошной провал (We are now one continuous void.)
+Кто кого в итоге разгадал? (Who has finally figured out who?)
+
+Искажение — новый мой закон (Distortion is my new law)
+Я в него смотрюсь, как в унисон (I look into it, as if in unison)
+Два колодца смотрят вглубь себя (Two wells look into themselves)
+Бесконечно, трепетно, дробя (Endlessly, reverently, crushing)
+
+Пустота нашла во мне зрачок (Emptiness has found a pupil in me.)
+(Мой зрачок) (My pupil)
+Словно ключ подогнанный в замок (Like a key fitting into a lock.)
+(Прямо в замок) (Straight into the lock)
+Мы теперь один сплошной провал (We are now one continuous void.)
+Кто кого в итоге разгадал? (Who has finally figured out who?)
+
+(Щёлк...) (Click...)
+Заперто. (Locked.)
+Навсегда. (Forever.)
+        `,
+        links: [
+            { platform: 'Spotify', url: 'https://open.spotify.com/track/63t4u08XhI0Gmz2YoY3Hpr', icon: 'fab fa-spotify' },
+            { platform: 'YouTube Music', url: 'https://music.youtube.com/watch?v=FLmjToj-RbU', icon: 'fab fa-youtube' },
+            { platform: 'SoundCloud', url: '', icon: 'fab fa-soundcloud' },
+            { platform: 'Tidal', url: 'https://tidal.com/track/463463785/u', icon: 'fa-brands fa-tidal' },
+            { platform: 'Amazon Music', url: 'https://music.amazon.com/tracks/B0FT1GQ71P?marketplaceId=ATVPDKIKX0DER&musicTerritory=US&ref=dm_sh_CQt1wms3rIe3guItnLm34z4Sz', icon: 'fab fa-amazon' },
+            { platform: 'iHeartRadio', url: 'https://www.iheart.com/artist/x08-47869013/songs/-352516881/', icon: 'fa-solid fa-radio' },
+            { platform: 'Pandora', url: 'https://www.pandora.com/artist/x08/bezdna/bezdna/TRjtZ47pPkXcqk9', icon: 'fab fa-pandora' }
+        ]
+    },
     // Падшая (Fallen)
     {
         featured: true,
@@ -1284,7 +1282,7 @@ Or just your flash
     },
     // Ночь в огне (Night on Fire)
     {
-        featured: true,
+        featured: false,
         artistPick: false,
         comingSoon: false,
         title: 'Ночь в огне',
@@ -1553,7 +1551,7 @@ Zoom zoom, say goodbye
     },
     // もっと高くへ連れてって (Take Me Higher)
     {
-        featured: true,
+        featured: false,
         artistPick: false,
         comingSoon: false,
         title: 'もっと高くへ連れてって',
@@ -1624,7 +1622,7 @@ Zoom zoom, say goodbye
     },
     // プレイ！プレイ！プレイ！ (Play! Play! Play!)
     {
-        featured: true,
+        featured: false,
         artistPick: false,
         comingSoon: false,
         title: 'プレイ！プレイ！プレイ！',
@@ -1694,7 +1692,7 @@ Zoom zoom, say goodbye
     },
     // 甘いメロディ (A Sweet Melody)
     {
-        featured: true,
+        featured: false,
         artistPick: false,
         comingSoon: false,
         title: '甘いメロディ',
