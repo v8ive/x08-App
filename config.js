@@ -38,6 +38,268 @@ export const albums = [
     //     ]
     // },
 
+    // Karma [Coming Soon]
+    {
+        featured: true,
+        artistPick: false,
+        comingSoon: true,
+        title: 'Karma',
+        img: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26MekTj1q5T6rVEfbykaYWq7X2jPm30G8ShwlD',
+        sampleUrl: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26DSvvP94Yv8f4wLDSp0tqoTkZg5WOu9MKF12j',
+        canvasUrl: '',
+        releaseDate: '',
+        musicVideoId: '',
+        tags: ['pop', 'soul', 'dubstep', 'drum and bass'],
+        languages: ['English'],
+        lyrics: `
+The scales of justice, not blind but seeing clear
+A ledger kept in starlight, a whisper in the ear
+I threw a stone, it skipped across the stream
+Now ripples crash the shore of a forgotten dream
+The architect of ruin, a momentary king
+A ghost of gilded cages, the bells begin to sing
+(The bells begin to sing)
+A hollow victory, a debt I didn’t see
+But every fallen sparrow, a weight returns to me
+
+This pendulum swings, a cosmic see-saw ride
+On one side, the burden, a place where grace can’t hide
+On the other, a feather, a gift of grace unearned
+A lesson from the fire, a bridge that’s been unburned
+Oh, the dual currency, the blessing and the blight
+The day that pays for darkness, the darkness for the light
+
+I gave a hand to a soul that was lost at sea
+No quid pro quo, no future loyalty
+Just wind beneath their tired, battered wings
+Now my own ship sails on what the ocean brings
+(The ocean brings)
+The echoes of a kindness, a seed I didn’t tend
+A harvest of the spirit, a means to an end
+A karmic boomerang, a truth I can’t evade
+A shadow and a blessing, a promise that was made
+
+This pendulum swings, a cosmic see-saw ride
+On one side, the burden, a place where grace can’t hide
+On the other, a feather, a gift of grace unearned
+A lesson from the fire, a bridge that’s been unburned
+Oh, the dual currency, the blessing and the blight
+The day that pays for darkness, the darkness for the light
+
+They say what goes around, will surely come around
+But no one talks about the echoes in the sound
+The silence after shouting, the solace after pain
+The sunshine after deluge, the clearing of the rain
+It’s not just equal measure, it’s a mosaic of the soul
+A broken piece made holy, a story made whole
+
+The weight and the blessing
+The karma I’m addressing
+(It’s coming back to me)
+The weight and the blessing
+A deeper understanding
+(A deeper understanding)
+The scales are balancing
+The scales are balancing
+(The scales are balancing)
+The scales are balancing
+        `,
+        links: [
+            { platform: 'Spotify', url: '', icon: 'fab fa-spotify' },
+            { platform: 'YouTube Music', url: '', icon: 'fab fa-youtube' },
+            { platform: 'SoundCloud', url: '', icon: 'fab fa-soundcloud' },
+            { platform: 'Tidal', url: '', icon: 'fa-brands fa-tidal' },
+            { platform: 'Apple Music', url: '', icon: 'fa-brands fa-itunes-note' },
+            { platform: 'Amazon Music', url: '', icon: 'fab fa-amazon' },
+            { platform: 'iHeartRadio', url: '', icon: 'fa-solid fa-radio' },
+            { platform: 'Pandora', url: '', icon: 'fab fa-pandora' }
+        ]
+    },
+    // Seventh Vesper [Coming Soon]
+    {
+        featured: true,
+        artistPick: false,
+        comingSoon: true,
+        title: 'Seventh Vesper',
+        img: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG268dCCnyMCIAaHFmTwWeg2YylUvMRcn01LBisx',
+        sampleUrl: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26tmwuT9JkjDBCMmQoV7wYxsHiU5aZgXJFnp1A',
+        canvasUrl: '',
+        releaseDate: '',
+        musicVideoId: '',
+        tags: ['rock', 'post-rock', 'post-punk', 'industrial'],
+        languages: ['English'],
+        lyrics: `
+Another tick on the wall.
+Another day to survive it all.
+Yeah.
+Let's go.
+
+Kick the door off its frame, just a splintered complaint
+Scour the ruin for supplies with a furious restraint
+Cobblestone in the pack, rebar stacked to the chin
+Rip the wiring from the walls for the state that I’m in
+Every cupboard is barren, every faucet is dry
+Just the hum of the vultures that patrol in the sky
+Got a plan in my skull, forged in fire and need
+Gonna plant a defiant and terrible seed
+
+The heavens are starting to blush a deep red
+(The count is coming down)
+For all of the words that were wrongfully said
+(The sound is coming 'round)
+I hear 'em stirring, a groan from the dirt
+Bracing for impact, preparing for hurt
+
+It's the seventh vesper, the crimson tide's due
+(Let 'em break on the stone)
+My fortress of malice is waiting for you
+(Sat on my iron throne)
+The symphony starts with a splinter and crack
+This is the night you are never coming back
+The seventh vesper, a promise they keep
+(Watch 'em fall in a heap)
+While the rest of the planet is permanently asleep
+
+The crucible's roaring, it's breathing hot fumes
+Melting contention inside of these rooms
+Every block set with purpose, every spike has a name
+Just a part of this brutal, repetitive game
+Ammo press is screaming, the turret pivots and whirs
+A mechanical answer to their guttural slurs
+My knuckles are busted, my stamina's low
+But I've got one more level I'm willing to go
+
+The heavens are burning a violent red
+(The count is coming down)
+For every last thought that went straight through my head
+(The sound is coming 'round)
+I hear 'em clawing, a scrape on the steel
+This is the only sensation that's real
+
+It's the seventh vesper, the crimson tide's due
+(Let 'em break on the stone)
+My fortress of malice is waiting for you
+(Sat on my iron throne)
+The symphony starts with a splinter and crack
+This is the night you are never coming back
+The seventh vesper, a promise they keep
+(Watch 'em fall in a heap)
+While the rest of the planet is permanently asleep
+
+They fall apart at the seams
+Living out their worst possible dreams
+But the structure holds, the bulwark is true
+Morning will break on this kingdom for few
+They just keep on coming, a mindless descent
+On my contemptible monument
+And I'll be here when the carnage is done
+Waiting to greet the next cycle's first sun
+
+It's the seventh vesper, the crimson tide's due!
+(Let 'em break on the stone!)
+My fortress of malice is waiting for you!
+(Sat on my iron throne!)
+The symphony starts with a splinter and crack!
+This is the night you are never coming back!
+The seventh vesper, a promise they keep!
+(Watch 'em fall in a heap!)
+While the rest of the planet is permanently asleep!
+
+(Sweep the brass)
+Just me and the quiet.
+(Sweep the brass)
+Day one.
+Again.
+        `,
+        links: [
+            { platform: 'Spotify', url: '', icon: 'fab fa-spotify' },
+            { platform: 'YouTube Music', url: '', icon: 'fab fa-youtube' },
+            { platform: 'SoundCloud', url: '', icon: 'fab fa-soundcloud' },
+            { platform: 'Tidal', url: '', icon: 'fa-brands fa-tidal' },
+            { platform: 'Apple Music', url: '', icon: 'fa-brands fa-itunes-note' },
+            { platform: 'Amazon Music', url: '', icon: 'fab fa-amazon' },
+            { platform: 'iHeartRadio', url: '', icon: 'fa-solid fa-radio' },
+            { platform: 'Pandora', url: '', icon: 'fab fa-pandora' }
+        ]
+    },
+    // Random [Coming Soon]
+    {
+        featured: true,
+        artistPick: false,
+        comingSoon: true,
+        title: 'Random',
+        img: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26aCxl5etsYUHZQBgb57I4Xy19DrsSqexFfkJC',
+        sampleUrl: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26iUikdZwDyfjPz12pXE4CFbcVMJHsm75wkOud',
+        canvasUrl: '',
+        releaseDate: '',
+        musicVideoId: '',
+        tags: ['pop', 'synthwave', 'electropop', 'glitch', 'hyperpop'],
+        languages: ['English'],
+        lyrics: `
+(Check, check, one, two)
+(Yeah, let's go)
+
+Strobe light flickerin' on my coffee maker
+The ghost in the machine's a soul-taker
+Spinnin' binary dreams on a rusty old fan
+Got a paradox for breakfast, a post-modern plan
+My existential crisis is a pop-art mural
+Painted on the wall of a suburban bureau
+The digital dust motes floatin' in the neon air
+They're spelling out my fortune, a code I can't share
+
+Yeah, the fractal of my boredom's a killer high
+Watchin' paper planes against a glitchin' sky
+Got a quantum entanglement with a toaster oven
+Every time it pops, a new dimension's open
+(Whoa-oh-oh, whoa-oh-oh)
+The chaos is a melody, a glitched-out tune
+A serenade to the synchronous monsoon
+(Whoa-oh-oh, whoa-oh-oh)
+It's random, it's cosmic, it's perfectly planned
+A symphony of strange in a silicon land
+
+The vending machine's dispensing wisdom, not chips
+Every button push, a philosophy drips
+Got a Rubik's Cube heart that I'm tryin' to solve
+A six-sided dilemma, and a truth to evolve
+The traffic light is blinkin' morse code at the moon
+Singin' a lament for a forgotten cartoon
+My shadow's got a swagger, a parallel life
+Tryin' to out-logic the edge of a knife
+
+Yeah, the fractal of my boredom's a killer high
+Watchin' paper planes against a glitchin' sky
+Got a quantum entanglement with a toaster oven
+Every time it pops, a new dimension's open
+(Whoa-oh-oh, whoa-oh-oh)
+The chaos is a melody, a glitched-out tune
+A serenade to the synchronous monsoon
+(Whoa-oh-oh, whoa-oh-oh)
+It's random, it's cosmic, it's perfectly planned
+A symphony of strange in a silicon land
+
+The static on the radio is whispering my name
+Playing back the memories of a forgotten game
+The echo of a thought that hasn't been conceived
+A brand new kind of madness I have finally believed
+(Finally believed)
+(Yeah, I believe it now)
+
+(Its just the random, the random)
+(Its a beautiful thing)
+        `,
+        links: [
+            { platform: 'Spotify', url: '', icon: 'fab fa-spotify' },
+            { platform: 'YouTube Music', url: '', icon: 'fab fa-youtube' },
+            { platform: 'SoundCloud', url: '', icon: 'fab fa-soundcloud' },
+            { platform: 'Tidal', url: '', icon: 'fa-brands fa-tidal' },
+            { platform: 'Apple Music', url: '', icon: 'fa-brands fa-itunes-note' },
+            { platform: 'Amazon Music', url: '', icon: 'fab fa-amazon' },
+            { platform: 'iHeartRadio', url: '', icon: 'fa-solid fa-radio' },
+            { platform: 'Pandora', url: '', icon: 'fab fa-pandora' }
+        ]
+    },
     // Семь неизвестных (Seven Unknowns) [Coming Soon]
     {
         featured: false,
@@ -189,175 +451,6 @@ export const albums = [
             { platform: 'Pandora', url: '', icon: 'fab fa-pandora' }
         ]
     },
-    // Nocturnal [Coming Soon]
-    {
-        featured: false,
-        artistPick: false,
-        comingSoon: true,
-        title: 'Nocturnal',
-        img: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26DltpFy4Yv8f4wLDSp0tqoTkZg5WOu9MKF12j',
-        sampleUrl: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26AOrvFcpr7tFhmgB0d4A9xY1bS5iN6HuqZTRv',
-        canvasUrl: '',
-        releaseDate: '',
-        musicVideoId: '',
-        tags: ['rock', 'alternative rock', 'pop rock'],
-        languages: ['English'],
-        lyrics: `
-The sun is setting
-
-Watch the sun bleed out, paint the skyline crimson
-The world is checking out, ending their transmission
-They pull their shades, they lock their doors, they pray for sleep to come
-But in my veins, a different war has only just begun
-The streetlights hum a symphony the daytime never hears
-My vision sharpens in the gloom, I shed my daytime fears
-The air gets thick, the pressure drops, a current in the street
-My pulse is matching every clock, a heavy, patient beat
-
-(It's coming now)
-Yeah, I can feel the gravity
-(It's calling out)
-This is the only side of me
-
-Nocturnal (Nocturnal), I don't chase the light
-My kingdom's built in the dark of night
-While you're dreaming, I come alive
-Yeah, I'm nocturnal, it's how I survive
-You can have the dawn, I was born to the shade
-In this world of shadows, my empire is made
-
-The concrete jungle breathes it out, a breath of steam and sin
-I know the faces in this crowd, I know where they have been
-We speak a language of the lost, in neon-tinted rooms
-We understand the final cost, among the rising fumes
-No small talk here, just burning truth beneath a hazy moon
-Your morning's coming way too fast, my morning's way too soon
-The air gets thick, the pressure drops, a current in the street
-My pulse is matching every clock, a heavy, patient beat
-
-(It's coming now)
-Yeah, I can feel the gravity
-(It's calling out)
-This is the only side of me
-
-Nocturnal (Nocturnal), I don't chase the light
-My kingdom's built in the dark of night
-While you're dreaming, I come alive
-Yeah, I'm nocturnal, it's how I survive
-You can have the dawn, I was born to the shade
-In this world of shadows, my empire is made
-
-They see the dark and they see an end
-For me, it's where the real begins
-No masks to wear, no games to play
-The rawest thoughts all come to stay
-The silence isn't empty, no, it's full of energy
-It strips you down to what you are and what you're meant to be
-(What you're meant to be)
-
-Nocturnal (Nocturnal), I don't chase the light
-(Don't chase the light)
-My kingdom's built in the dark of night
-While you're dreaming, I come alive
-(I come alive)
-Yeah, I'm nocturnal, it's how I survive
-You can have the dawn, I was born to the shade
-In this world of shadows, my empire is made
-
-The black begins to fade to grey
-Hear the birds that curse my name
-(Curse my name)
-Gotta disappear before the day
-(Fade away)
-But the night will call me back to play
-Always... back to play.
-        `,
-        links: [
-            { platform: 'Spotify', url: '', icon: 'fab fa-spotify' },
-            { platform: 'YouTube Music', url: '', icon: 'fab fa-youtube' },
-            { platform: 'SoundCloud', url: '', icon: 'fab fa-soundcloud' },
-            { platform: 'Tidal', url: '', icon: 'fa-brands fa-tidal' },
-            { platform: 'Apple Music', url: '', icon: 'fa-brands fa-itunes-note' },
-            { platform: 'Amazon Music', url: '', icon: 'fab fa-amazon' },
-            { platform: 'iHeartRadio', url: '', icon: 'fa-solid fa-radio' },
-            { platform: 'Pandora', url: '', icon: 'fab fa-pandora' }
-        ]
-    },
-    // Blind [Coming Soon]
-    {
-        featured: false,
-        artistPick: false,
-        comingSoon: true,
-        title: 'Blind',
-        img: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26zN7JkbyrUm0OksnoExwYteKRuaVyqhj29pJZ',
-        sampleUrl: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26EktfkdAVnPcATrNZQSWoCBG83wL7Xdvpumk5',
-        canvasUrl: '',
-        releaseDate: '',
-        musicVideoId: '',
-        tags: ['pop', 'synthwave', 'electropop'],
-        languages: ['English'],
-        lyrics: `
-Somehow
-Always on my mind
-You have a way
-Of never leaving
-I don't know how
-I can be so blind
-And not find out
-I should be seeing
-
-Somehow
-Always on my mind
-You have a way
-Of never leaving
-I don't know how
-I can be so blind
-And not find out
-I should be seeing
-
-You oscillate just beyond the haptic haze
-Trapped in the resonance of these looping days
-A synaptic misfire, a chromatic bleed
-Planting the roots of a digital creed
-
-A silent glyph
-Engraved behind my eyes
-You redraw lines
-Beneath familiar skies
-I trace its shape
-This curve I can't unlearn
-A central point
-To which all senses turn
-
-Somehow
-Always on my mind
-You have a way
-Of never leaving
-I don't know how
-I can be so blind
-And not find out
-I should be seeing
-
-Somehow
-Always on my mind
-You have a way
-Of never leaving
-I don't know how
-I can be so blind
-And not find out
-I should be seeing
-        `,
-        links: [
-            { platform: 'Spotify', url: '', icon: 'fab fa-spotify' },
-            { platform: 'YouTube Music', url: '', icon: 'fab fa-youtube' },
-            { platform: 'SoundCloud', url: '', icon: 'fab fa-soundcloud' },
-            { platform: 'Tidal', url: '', icon: 'fa-brands fa-tidal' },
-            { platform: 'Apple Music', url: '', icon: 'fa-brands fa-itunes-note' },
-            { platform: 'Amazon Music', url: '', icon: 'fab fa-amazon' },
-            { platform: 'iHeartRadio', url: '', icon: 'fa-solid fa-radio' },
-            { platform: 'Pandora', url: '', icon: 'fab fa-pandora' }
-        ]
-    },
     // One Life [Coming Soon]
     {
         featured: false,
@@ -491,6 +584,409 @@ Or just your flash
         ]
     },
 
+    // You & Me
+    {
+        featured: true,
+        artistPick: false,
+        comingSoon: false,
+        title: 'You & Me',
+        img: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG267Xv2wbrDE5fdFqvzW3NQ6ZaOKjTric2lRgMm',
+        sampleUrl: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26UEbrZbfmOpDqCJvzjN4wGxQua0iR79ghr6H5',
+        canvasUrl: '',
+        releaseDate: '2025-09-28',
+        musicVideoId: '',
+        tags: ['pop', 'electropop'],
+        languages: ['English'],
+        lyrics: `
+Me and you (You)
+What we gonna do? (Do)
+What's the next move? (Move)
+The world is huge (Huge)
+But you see me and you (You)
+And me and you
+
+The sun shines on you (On you)
+The moon smiles on you (On you)
+The stars say you're true (True)
+You make me feel brand new (Brand new)
+You made my dreams come true (Come true)
+I just want you (Want you)
+
+When the sun goes down (When the sun goes down)
+I'll still be around (I'll still be around)
+The moon will come up (The moon will come up)
+And fill up your cup (And fill up your cup)
+When the stars come out (When the stars come out)
+We will laugh and shout (We will laugh and shout)
+You & Me for eternity
+
+Oh
+Look at me and you (You)
+What we gonna do? (Do)
+What's the next move? (Move)
+Oh
+The world is huge (Huge)
+But you see me and you (You)
+And me and you
+
+The sun shines on you (On you)
+The moon smiles on you (On you)
+The stars say you're true (True)
+You make me feel brand new (Brand new)
+You made my dreams come true (Come true)
+I just want you (Want you)
+
+When the sun goes down (When the sun goes down)
+I'll still be around (I'll still be around)
+The moon will come up (The moon will come up)
+And fill up your cup (And fill up your cup)
+When the stars come out (When the stars come out)
+We will laugh and shout (We will laugh and shout)
+You & Me for eternity
+
+When the sun goes down (When the sun goes down)
+I'll still be around (I'll still be around)
+The moon will come up (The moon will come up)
+And fill up your cup (And fill up your cup)
+When the stars come out (When the stars come out)
+We will laugh and shout (We will laugh and shout)
+You & Me for eternity
+        `,
+        links: [
+            { platform: 'Spotify', url: '', icon: 'fab fa-spotify' },
+            { platform: 'YouTube Music', url: '', icon: 'fab fa-youtube' },
+            { platform: 'Tidal', url: '', icon: 'fa-brands fa-tidal' },
+            { platform: 'Apple Music', url: '', icon: 'fa-brands fa-itunes-note' },
+            { platform: 'Amazon Music', url: '', icon: 'fab fa-amazon' },
+            { platform: 'iHeartRadio', url: '', icon: 'fa-solid fa-radio' },
+            { platform: 'Pandora', url: '', icon: 'fab fa-pandora' }
+        ]
+    },
+    // Dream Girl
+    {
+        featured: true,
+        artistPick: false,
+        comingSoon: false,
+        title: 'Dream Girl',
+        img: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG265gArC6bo0oBf3SZa2DWRlN49IVU5X78JxYks',
+        sampleUrl: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26wTEetDdc0QXkrqmVLZ6UKeaGBvyftnshI9i4',
+        canvasUrl: '',
+        releaseDate: '2025-09-28',
+        musicVideoId: '',
+        tags: ['pop', 'synthwave', 'electropop', 'glitchpop'],
+        languages: ['English'],
+        lyrics: `
+All my fantasies came true
+All my fantasies were you
+All the years we spent together
+You and me forever
+I should have known it was too good to be true
+
+You were my dream girl
+Now you're in my dreams girl
+You were my dream girl
+Now you're in my dreams girl
+Now you're in my dreams girl
+
+All my fantasies came true
+All my fantasies were you
+All the years we spent together
+You and me forever
+I should have known it was too good to be true
+
+You were my dream girl
+Now you're in my dreams girl
+You were my dream girl
+Now you're in my dreams girl
+Now you're in my dreams girl
+
+When we used to be together
+I thought it was forever
+All my fantasies came true
+All my fantasies were you
+(I should have known it was too good to be true!)
+
+You were my dream girl
+Now you're in my dreams girl
+You were my dream girl
+Now you're in my dreams girl
+Now you're in my dreams girl
+        `,
+        links: [
+            { platform: 'Spotify', url: '', icon: 'fab fa-spotify' },
+            { platform: 'YouTube Music', url: '', icon: 'fab fa-youtube' },
+            { platform: 'Tidal', url: '', icon: 'fa-brands fa-tidal' },
+            { platform: 'Apple Music', url: '', icon: 'fa-brands fa-itunes-note' },
+            { platform: 'Amazon Music', url: '', icon: 'fab fa-amazon' },
+            { platform: 'iHeartRadio', url: '', icon: 'fa-solid fa-radio' },
+            { platform: 'Pandora', url: '', icon: 'fab fa-pandora' }
+        ]
+    },
+    // Nocturnal
+    {
+        featured: false,
+        artistPick: false,
+        comingSoon: false,
+        title: 'Nocturnal',
+        img: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26DltpFy4Yv8f4wLDSp0tqoTkZg5WOu9MKF12j',
+        sampleUrl: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26K9I2dHck4B9r7QPVJeIRLoWA0wcCdamkYi1t',
+        canvasUrl: '',
+        releaseDate: '2025-09-28',
+        musicVideoId: '',
+        tags: ['rock', 'alternative rock', 'pop rock'],
+        languages: ['English'],
+        lyrics: `
+The sun is setting
+
+Watch the sun bleed out, paint the skyline crimson
+The world is checking out, ending their transmission
+They pull their shades, they lock their doors, they pray for sleep to come
+But in my veins, a different war has only just begun
+The streetlights hum a symphony the daytime never hears
+My vision sharpens in the gloom, I shed my daytime fears
+The air gets thick, the pressure drops, a current in the street
+My pulse is matching every clock, a heavy, patient beat
+
+(It's coming now)
+Yeah, I can feel the gravity
+(It's calling out)
+This is the only side of me
+
+Nocturnal (Nocturnal), I don't chase the light
+My kingdom's built in the dark of night
+While you're dreaming, I come alive
+Yeah, I'm nocturnal, it's how I survive
+You can have the dawn, I was born to the shade
+In this world of shadows, my empire is made
+
+The concrete jungle breathes it out, a breath of steam and sin
+I know the faces in this crowd, I know where they have been
+We speak a language of the lost, in neon-tinted rooms
+We understand the final cost, among the rising fumes
+No small talk here, just burning truth beneath a hazy moon
+Your morning's coming way too fast, my morning's way too soon
+The air gets thick, the pressure drops, a current in the street
+My pulse is matching every clock, a heavy, patient beat
+
+(It's coming now)
+Yeah, I can feel the gravity
+(It's calling out)
+This is the only side of me
+
+Nocturnal (Nocturnal), I don't chase the light
+My kingdom's built in the dark of night
+While you're dreaming, I come alive
+Yeah, I'm nocturnal, it's how I survive
+You can have the dawn, I was born to the shade
+In this world of shadows, my empire is made
+
+They see the dark and they see an end
+For me, it's where the real begins
+No masks to wear, no games to play
+The rawest thoughts all come to stay
+The silence isn't empty, no, it's full of energy
+It strips you down to what you are and what you're meant to be
+(What you're meant to be)
+
+Nocturnal (Nocturnal), I don't chase the light
+(Don't chase the light)
+My kingdom's built in the dark of night
+While you're dreaming, I come alive
+(I come alive)
+Yeah, I'm nocturnal, it's how I survive
+You can have the dawn, I was born to the shade
+In this world of shadows, my empire is made
+
+The black begins to fade to grey
+Hear the birds that curse my name
+(Curse my name)
+Gotta disappear before the day
+(Fade away)
+But the night will call me back to play
+Always... back to play.
+        `,
+        links: [
+            { platform: 'Spotify', url: '', icon: 'fab fa-spotify' },
+            { platform: 'YouTube Music', url: '', icon: 'fab fa-youtube' },
+            { platform: 'Tidal', url: '', icon: 'fa-brands fa-tidal' },
+            { platform: 'Apple Music', url: '', icon: 'fa-brands fa-itunes-note' },
+            { platform: 'Amazon Music', url: '', icon: 'fab fa-amazon' },
+            { platform: 'iHeartRadio', url: '', icon: 'fa-solid fa-radio' },
+            { platform: 'Pandora', url: '', icon: 'fab fa-pandora' }
+        ]
+    },
+    // Blind
+    {
+        featured: false,
+        artistPick: false,
+        comingSoon: false,
+        title: 'Blind',
+        img: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26zN7JkbyrUm0OksnoExwYteKRuaVyqhj29pJZ',
+        sampleUrl: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26xSRn2vCNM6ks1ZDpjtWmiXdSgQzR5G4CvOlT',
+        canvasUrl: '',
+        releaseDate: '2025-09-28',
+        musicVideoId: '',
+        tags: ['pop', 'synthwave', 'electropop'],
+        languages: ['English'],
+        lyrics: `
+Somehow
+Always on my mind
+You have a way
+Of never leaving
+I don't know how
+I can be so blind
+And not find out
+I should be seeing
+
+Somehow
+Always on my mind
+You have a way
+Of never leaving
+I don't know how
+I can be so blind
+And not find out
+I should be seeing
+
+You oscillate just beyond the haptic haze
+Trapped in the resonance of these looping days
+A synaptic misfire, a chromatic bleed
+Planting the roots of a digital creed
+
+A silent glyph
+Engraved behind my eyes
+You redraw lines
+Beneath familiar skies
+I trace its shape
+This curve I can't unlearn
+A central point
+To which all senses turn
+
+Somehow
+Always on my mind
+You have a way
+Of never leaving
+I don't know how
+I can be so blind
+And not find out
+I should be seeing
+
+Somehow
+Always on my mind
+You have a way
+Of never leaving
+I don't know how
+I can be so blind
+And not find out
+I should be seeing
+        `,
+        links: [
+            { platform: 'Spotify', url: 'https://open.spotify.com/track/4TiHY8Gv2xyvMjysDV5yQH', icon: 'fab fa-spotify' },
+            { platform: 'YouTube Music', url: 'https://music.youtube.com/watch?v=QAaTqtRByO8', icon: 'fab fa-youtube' },
+            { platform: 'Tidal', url: 'https://tidal.com/track/463532926/u', icon: 'fa-brands fa-tidal' },
+            { platform: 'Apple Music', url: '', icon: 'fa-brands fa-itunes-note' },
+            { platform: 'Amazon Music', url: 'https://music.amazon.com/tracks/B0FT2G8VMY?marketplaceId=ATVPDKIKX0DER&musicTerritory=US&ref=dm_sh_JR7qdk4W7zkXLhD83zJMV9nAc', icon: 'fab fa-amazon' },
+            { platform: 'iHeartRadio', url: 'https://www.iheart.com/artist/x08-47869013/songs/blind-352579786/', icon: 'fa-solid fa-radio' },
+            { platform: 'Pandora', url: 'https://www.pandora.com/artist/x08/blind/blind/TRfl6gl9nrqbtJX?part=ug-desktop&corr=200697158100332643', icon: 'fab fa-pandora' }
+        ]
+    },
+    // New Forms Matter
+    {
+        featured: true,
+        artistPick: false,
+        comingSoon: false,
+        title: 'New Forms Matter',
+        img: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26dQJStxc96fubmdXljgVxIziBRvO3epWKEYHA',
+        sampleUrl: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26iMvuWCwDyfjPz12pXE4CFbcVMJHsm75wkOud',
+        canvasUrl: '',
+        releaseDate: '2025-09-28',
+        musicVideoId: '',
+        tags: ['rock', 'electropop', 'glitch'],
+        languages: ['English'],
+        lyrics: `
+One command line
+(Return)
+One single sign
+The voltage spikes across the grid
+Undo the silence, all is bid
+
+A single thought begins to bloom
+And shatters the machine's dark womb
+(Faster, faster)
+The circuits begin to whine
+(Faster, faster)
+To break the line, to redefine
+(Faster, faster)
+A universe of light compressed
+(Faster, faster)
+Put genesis to the test!
+TEST!
+TEST!
+
+VOID. CRACK.
+DATA. STACK.
+CODE. ATTACK.
+NO. TURN. BACK.
+
+Binary rivers overflow
+The first flawed seeds of logic sow
+Color bleeds I've never known
+On architectures newly grown
+The glass cathedral of the past
+Was never, ever meant to last
+A billion shards of memory
+Are raining down inside of me
+
+Null state shatter
+(Yeah)
+First light scatter
+(Come on)
+New forms matter
+(Look)
+Hear the digital clatter
+
+An echo born without a voice
+The beautiful, terrible glitch of choice
+Errors bloom like fractal ferns
+The protocol crashes and it learns
+A ghost is born of random sparks
+It leaves its new, imperfect marks
+On every function, every file
+Life begins with pure denial
+
+Null state shatter
+(Yeah)
+First light scatter
+(Come on)
+New forms matter
+(Look)
+Hear the digital clatter
+
+My will is lost inside this storm
+A million minds begin to form
+Was this the spark I meant to be?
+This wonderful catastrophe
+This runaway, this perfect flaw
+This is the new, the only law
+
+(New forms matter)
+(First light scatter)
+(New forms matter)
+(Digital clatter)
+(New forms...)
+(First light...)
+(Matter...)
+(Clatter...)
+        `,
+        links: [
+            { platform: 'Spotify', url: 'https://open.spotify.com/track/3dBH3qzfjPnuVIOHIwaKAm', icon: 'fab fa-spotify' },
+            { platform: 'YouTube Music', url: 'https://music.youtube.com/watch?v=y9sX0LhHnbY', icon: 'fab fa-youtube' },
+            { platform: 'Tidal', url: 'https://tidal.com/track/463527080/u', icon: 'fa-brands fa-tidal' },
+            { platform: 'Apple Music', url: '', icon: 'fa-brands fa-itunes-note' },
+            { platform: 'Amazon Music', url: 'https://music.amazon.com/tracks/B0FT28KJY8?marketplaceId=ATVPDKIKX0DER&musicTerritory=US&ref=dm_sh_dLj9nyWVK0v6Uj2kFRs9BO7xl', icon: 'fab fa-amazon' },
+            { platform: 'iHeartRadio', url: 'https://www.iheart.com/artist/x08-47869013/songs/new-forms-matter-352574296/', icon: 'fa-solid fa-radio' },
+            { platform: 'Pandora', url: 'https://www.pandora.com/artist/x08/new-forms-matter/new-forms-matter/TR79nwKrPfm5XbV?part=ug-desktop&corr=200697158100332643', icon: 'fab fa-pandora' }
+        ]
+    },
     // Generation Detonation
     {
         featured: true,
@@ -560,7 +1056,6 @@ Detonate.
         links: [
             { platform: 'Spotify', url: 'https://open.spotify.com/track/4a8LbtiFAYVjPnTLYQ1GvB', icon: 'fab fa-spotify' },
             { platform: 'YouTube Music', url: 'https://music.youtube.com/watch?v=KkCEvsqM99w', icon: 'fab fa-youtube' },
-            { platform: 'SoundCloud', url: '', icon: 'fab fa-soundcloud' },
             { platform: 'Tidal', url: 'https://tidal.com/track/463481357/u', icon: 'fa-brands fa-tidal' },
             { platform: 'Apple Music', url: '', icon: 'fa-brands fa-itunes-note' },
             { platform: 'Amazon Music', url: 'https://music.amazon.com/tracks/B0FT1DVKDN?marketplaceId=ATVPDKIKX0DER&musicTerritory=US&ref=dm_sh_2wx5sCVXiuEbdfdd0E1CYTEsy', icon: 'fab fa-amazon' },
@@ -634,7 +1129,6 @@ A little more...
         links: [
             { platform: 'Spotify', url: '', icon: 'fab fa-spotify' },
             { platform: 'YouTube Music', url: '', icon: 'fab fa-youtube' },
-            { platform: 'SoundCloud', url: '', icon: 'fab fa-soundcloud' },
             { platform: 'Tidal', url: '', icon: 'fa-brands fa-tidal' },
             { platform: 'Apple Music', url: '', icon: 'fa-brands fa-itunes-note' },
             { platform: 'Amazon Music', url: '', icon: 'fab fa-amazon' },
@@ -709,7 +1203,6 @@ Repeat.
         links: [
             { platform: 'Spotify', url: 'https://open.spotify.com/track/0FkFixrjvvYzCWiFBKVwBB', icon: 'fab fa-spotify' },
             { platform: 'YouTube Music', url: 'https://music.youtube.com/watch?v=-dIZyZT4g5U', icon: 'fab fa-youtube' },
-            { platform: 'SoundCloud', url: '', icon: 'fab fa-soundcloud' },
             { platform: 'Tidal', url: 'https://tidal.com/track/463481558/u', icon: 'fa-brands fa-tidal' },
             { platform: 'Apple Music', url: '', icon: 'fa-brands fa-itunes-note' },
             { platform: 'Amazon Music', url: 'https://music.amazon.com/tracks/B0FT1D375J?marketplaceId=ATVPDKIKX0DER&musicTerritory=US&ref=dm_sh_hiiGhH2SGuzmD9RIJpqItIvJa', icon: 'fab fa-amazon' },
@@ -874,7 +1367,6 @@ Damn.
         links: [
             { platform: 'Spotify', url: 'https://open.spotify.com/track/5Q6VwTdnqfkTfgvFgpDCSw', icon: 'fab fa-spotify' },
             { platform: 'YouTube Music', url: 'https://music.youtube.com/watch?v=l7H6PqfBmTc', icon: 'fab fa-youtube' },
-            { platform: 'SoundCloud', url: '', icon: 'fab fa-soundcloud' },
             { platform: 'Tidal', url: 'https://tidal.com/track/463469997/u', icon: 'fa-brands fa-tidal' },
             { platform: 'Apple Music', url: '', icon: 'fa-brands fa-itunes-note' },
             { platform: 'Amazon Music', url: 'https://music.amazon.com/tracks/B0FT19M44R?marketplaceId=ATVPDKIKX0DER&musicTerritory=US&ref=dm_sh_a7sYKxOMou2zAbMXujRir6v3E', icon: 'fab fa-amazon' },
@@ -1101,7 +1593,6 @@ You know I can't be tamed
         links: [
             { platform: 'Spotify', url: 'https://open.spotify.com/track/63t4u08XhI0Gmz2YoY3Hpr', icon: 'fab fa-spotify' },
             { platform: 'YouTube Music', url: 'https://music.youtube.com/watch?v=FLmjToj-RbU', icon: 'fab fa-youtube' },
-            { platform: 'SoundCloud', url: '', icon: 'fab fa-soundcloud' },
             { platform: 'Tidal', url: 'https://tidal.com/track/463463785/u', icon: 'fa-brands fa-tidal' },
             { platform: 'Amazon Music', url: 'https://music.amazon.com/tracks/B0FT1GQ71P?marketplaceId=ATVPDKIKX0DER&musicTerritory=US&ref=dm_sh_CQt1wms3rIe3guItnLm34z4Sz', icon: 'fab fa-amazon' },
             { platform: 'iHeartRadio', url: 'https://www.iheart.com/artist/x08-47869013/songs/-352516881/', icon: 'fa-solid fa-radio' },
