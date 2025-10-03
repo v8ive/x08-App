@@ -40,7 +40,7 @@ export const albums = [
 
     // Karma [Coming Soon]
     {
-        featured: true,
+        featured: false,
         artistPick: false,
         comingSoon: true,
         title: 'Karma',
@@ -117,7 +117,7 @@ The scales are balancing
     },
     // Seventh Vesper [Coming Soon]
     {
-        featured: true,
+        featured: false,
         artistPick: false,
         comingSoon: true,
         title: 'Seventh Vesper',
@@ -210,84 +210,6 @@ Just me and the quiet.
 (Sweep the brass)
 Day one.
 Again.
-        `,
-        links: [
-            { platform: 'Spotify', url: '', icon: 'fab fa-spotify' },
-            { platform: 'YouTube Music', url: '', icon: 'fab fa-youtube' },
-            { platform: 'SoundCloud', url: '', icon: 'fab fa-soundcloud' },
-            { platform: 'Tidal', url: '', icon: 'fa-brands fa-tidal' },
-            { platform: 'Apple Music', url: '', icon: 'fa-brands fa-itunes-note' },
-            { platform: 'Amazon Music', url: '', icon: 'fab fa-amazon' },
-            { platform: 'iHeartRadio', url: '', icon: 'fa-solid fa-radio' },
-            { platform: 'Pandora', url: '', icon: 'fab fa-pandora' }
-        ]
-    },
-    // Random [Coming Soon]
-    {
-        featured: true,
-        artistPick: false,
-        comingSoon: true,
-        title: 'Random',
-        img: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26aCxl5etsYUHZQBgb57I4Xy19DrsSqexFfkJC',
-        sampleUrl: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26iUikdZwDyfjPz12pXE4CFbcVMJHsm75wkOud',
-        canvasUrl: '',
-        releaseDate: '',
-        musicVideoId: '',
-        tags: ['pop', 'synthwave', 'electropop', 'glitch', 'hyperpop'],
-        languages: ['English'],
-        lyrics: `
-(Check, check, one, two)
-(Yeah, let's go)
-
-Strobe light flickerin' on my coffee maker
-The ghost in the machine's a soul-taker
-Spinnin' binary dreams on a rusty old fan
-Got a paradox for breakfast, a post-modern plan
-My existential crisis is a pop-art mural
-Painted on the wall of a suburban bureau
-The digital dust motes floatin' in the neon air
-They're spelling out my fortune, a code I can't share
-
-Yeah, the fractal of my boredom's a killer high
-Watchin' paper planes against a glitchin' sky
-Got a quantum entanglement with a toaster oven
-Every time it pops, a new dimension's open
-(Whoa-oh-oh, whoa-oh-oh)
-The chaos is a melody, a glitched-out tune
-A serenade to the synchronous monsoon
-(Whoa-oh-oh, whoa-oh-oh)
-It's random, it's cosmic, it's perfectly planned
-A symphony of strange in a silicon land
-
-The vending machine's dispensing wisdom, not chips
-Every button push, a philosophy drips
-Got a Rubik's Cube heart that I'm tryin' to solve
-A six-sided dilemma, and a truth to evolve
-The traffic light is blinkin' morse code at the moon
-Singin' a lament for a forgotten cartoon
-My shadow's got a swagger, a parallel life
-Tryin' to out-logic the edge of a knife
-
-Yeah, the fractal of my boredom's a killer high
-Watchin' paper planes against a glitchin' sky
-Got a quantum entanglement with a toaster oven
-Every time it pops, a new dimension's open
-(Whoa-oh-oh, whoa-oh-oh)
-The chaos is a melody, a glitched-out tune
-A serenade to the synchronous monsoon
-(Whoa-oh-oh, whoa-oh-oh)
-It's random, it's cosmic, it's perfectly planned
-A symphony of strange in a silicon land
-
-The static on the radio is whispering my name
-Playing back the memories of a forgotten game
-The echo of a thought that hasn't been conceived
-A brand new kind of madness I have finally believed
-(Finally believed)
-(Yeah, I believe it now)
-
-(Its just the random, the random)
-(Its a beautiful thing)
         `,
         links: [
             { platform: 'Spotify', url: '', icon: 'fab fa-spotify' },
@@ -451,6 +373,84 @@ A brand new kind of madness I have finally believed
             { platform: 'Pandora', url: '', icon: 'fab fa-pandora' }
         ]
     },
+    // Random [Coming Soon]
+    {
+        featured: false,
+        artistPick: false,
+        comingSoon: true,
+        title: 'Random',
+        img: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26aCxl5etsYUHZQBgb57I4Xy19DrsSqexFfkJC',
+        sampleUrl: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26iUikdZwDyfjPz12pXE4CFbcVMJHsm75wkOud',
+        canvasUrl: '',
+        releaseDate: '',
+        musicVideoId: '',
+        tags: ['pop', 'synthwave', 'electropop', 'glitch', 'hyperpop'],
+        languages: ['English'],
+        lyrics: `
+(Check, check, one, two)
+(Yeah, let's go)
+
+Strobe light flickerin' on my coffee maker
+The ghost in the machine's a soul-taker
+Spinnin' binary dreams on a rusty old fan
+Got a paradox for breakfast, a post-modern plan
+My existential crisis is a pop-art mural
+Painted on the wall of a suburban bureau
+The digital dust motes floatin' in the neon air
+They're spelling out my fortune, a code I can't share
+
+Yeah, the fractal of my boredom's a killer high
+Watchin' paper planes against a glitchin' sky
+Got a quantum entanglement with a toaster oven
+Every time it pops, a new dimension's open
+(Whoa-oh-oh, whoa-oh-oh)
+The chaos is a melody, a glitched-out tune
+A serenade to the synchronous monsoon
+(Whoa-oh-oh, whoa-oh-oh)
+It's random, it's cosmic, it's perfectly planned
+A symphony of strange in a silicon land
+
+The vending machine's dispensing wisdom, not chips
+Every button push, a philosophy drips
+Got a Rubik's Cube heart that I'm tryin' to solve
+A six-sided dilemma, and a truth to evolve
+The traffic light is blinkin' morse code at the moon
+Singin' a lament for a forgotten cartoon
+My shadow's got a swagger, a parallel life
+Tryin' to out-logic the edge of a knife
+
+Yeah, the fractal of my boredom's a killer high
+Watchin' paper planes against a glitchin' sky
+Got a quantum entanglement with a toaster oven
+Every time it pops, a new dimension's open
+(Whoa-oh-oh, whoa-oh-oh)
+The chaos is a melody, a glitched-out tune
+A serenade to the synchronous monsoon
+(Whoa-oh-oh, whoa-oh-oh)
+It's random, it's cosmic, it's perfectly planned
+A symphony of strange in a silicon land
+
+The static on the radio is whispering my name
+Playing back the memories of a forgotten game
+The echo of a thought that hasn't been conceived
+A brand new kind of madness I have finally believed
+(Finally believed)
+(Yeah, I believe it now)
+
+(Its just the random, the random)
+(Its a beautiful thing)
+        `,
+        links: [
+            { platform: 'Spotify', url: '', icon: 'fab fa-spotify' },
+            { platform: 'YouTube Music', url: '', icon: 'fab fa-youtube' },
+            { platform: 'SoundCloud', url: '', icon: 'fab fa-soundcloud' },
+            { platform: 'Tidal', url: '', icon: 'fa-brands fa-tidal' },
+            { platform: 'Apple Music', url: '', icon: 'fa-brands fa-itunes-note' },
+            { platform: 'Amazon Music', url: '', icon: 'fab fa-amazon' },
+            { platform: 'iHeartRadio', url: '', icon: 'fa-solid fa-radio' },
+            { platform: 'Pandora', url: '', icon: 'fab fa-pandora' }
+        ]
+    },
     // One Life [Coming Soon]
     {
         featured: false,
@@ -584,9 +584,545 @@ Or just your flash
         ]
     },
 
-    // You & Me
+    // Our Stories Intertwined
     {
         featured: true,
+        artistPick: false,
+        comingSoon: false,
+        title: 'Our Stories Intertwined',
+        img: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26P3ytFBECahirzxGAgUfSeOkYloRVdK60t9s5',
+        sampleUrl: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26LchGsFUcN5iAt0uJw9nVIj68P1QdsDkoBbZ7',
+        canvasUrl: '',
+        releaseDate: '2025-09-30',
+        musicVideoId: '',
+        tags: ['folk', 'acoustic', 'indie', 'singer-songwriter'],
+        languages: ['English'],
+        lyrics: `
+Worn the leather from my soles
+On paths of shale and river stones
+I've memorized the tunes the wild wind moans
+But your quiet quips
+Are the only songs that grace my lips
+
+Oh, the maps I've held all led astray
+They turn to dust and blow away
+You're the single point where I mean to stay
+My true meridian line
+A story I wish was mine
+
+I've seen the spires that pierce the grey
+Watched banners of old empires fray
+Heard convincing words that betray
+But your steady gaze
+It unwinds my hurried days
+
+Oh, the maps I've held all led astray
+They turn to dust and blow away
+You're the single point where I mean to stay
+My true meridian line
+A story I wish was mine
+
+The world is wide, the inns are warm
+There's shelter in a passing storm
+But I find the comfort in your form
+And the open road
+Feels a heavy, pointless load
+
+'Cause the maps I've held all led astray
+They turn to dust and blow away
+You're the single point where I mean to stay
+My true meridian line
+A story I wish was mine
+
+(A story I wish was mine)
+Let this story be mine
+(A story I wish was mine)
+Let my story be thine
+        `,
+        links: [
+            { platform: 'Spotify', url: '', icon: 'fab fa-spotify' },
+            { platform: 'YouTube Music', url: '', icon: 'fab fa-youtube' },
+            { platform: 'SoundCloud', url: '', icon: 'fab fa-soundcloud' },
+            { platform: 'Tidal', url: '', icon: 'fa-brands fa-tidal' },
+            { platform: 'Apple Music', url: '', icon: 'fa-brands fa-itunes-note' },
+            { platform: 'Amazon Music', url: '', icon: 'fab fa-amazon' },
+            { platform: 'iHeartRadio', url: '', icon: 'fa-solid fa-radio' },
+            { platform: 'Pandora', url: '', icon: 'fab fa-pandora' }
+        ]
+    },
+    // Where to Begin
+    {
+        featured: false,
+        artistPick: false,
+        comingSoon: false,
+        title: 'Where to Begin',
+        img: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26n5clW2R3GFZUAbqODHBP5IEaikjWvcyxrKQg',
+        sampleUrl: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG2622ViG8jRus0k5TxlaHtcGzAm4bP9VYv83MeI',
+        canvasUrl: '',
+        releaseDate: '2025-09-30',
+        musicVideoId: '',
+        tags: ['atompunk', 'jazz', 'swing', 'big band', 'vintage'],
+        languages: ['English'],
+        lyrics: `
+The roads are stretching, black and new
+(Coast to coast!)
+Beneath a great big sky of blue
+The buildings climb another floor
+(More and more!)
+They don't build cities like before!
+
+Oh, what a time to be alive!
+(Hooray!)
+The whole wide world is in high drive!
+So take a great big breath and grin
+Oh tell me, friend, where to begin?
+
+A fella crosses half the land
+(In a plane!)
+With time to spare and shake your hand
+The wife has washers, clean and bright
+(Day and night!)
+That make the daily burdens light!
+
+Oh, what a time to be alive!
+(Hooray!)
+The whole wide world is in high drive!
+So take a great big breath and grin
+Oh tell me, friend, where to begin?
+
+They're drawing plans for silver cones
+On telephones of the future-phones!
+They'll ride a fire to the moon
+Some sunny afternoon real soon!
+
+Oh, what a time to be alive!
+(Hooray!)
+The whole wide world is in high drive!
+So take a great big breath and grin
+Oh tell me, friend, where to begin?
+
+Where do we begin?
+(Let the fun come in!)
+This modern world we're living in!
+(Take it for a spin!)
+Yeah!
+        `,
+        links: [
+            { platform: 'Spotify', url: 'https://open.spotify.com/track/6RRLgHljH3KdkhT6Vm8VQA', icon: 'fab fa-spotify' },
+            { platform: 'YouTube Music', url: 'https://music.youtube.com/watch?v=CWWb7nOp39U', icon: 'fab fa-youtube' },
+            { platform: 'Tidal', url: 'https://tidal.com/track/464651517/u', icon: 'fa-brands fa-tidal' },
+            { platform: 'Apple Music', url: '', icon: 'fa-brands fa-itunes-note' },
+            { platform: 'Amazon Music', url: 'https://music.amazon.com/tracks/B0FTSTLWDN?marketplaceId=ATVPDKIKX0DER&musicTerritory=US&ref=dm_sh_zJ4cOTrH4tSC3ltyeHIxj7Suv', icon: 'fab fa-amazon' },
+            { platform: 'iHeartRadio', url: 'https://www.iheart.com/artist/x08-47869013/songs/where-to-begin-353426379/', icon: 'fa-solid fa-radio' },
+            { platform: 'Pandora', url: '', icon: 'fab fa-pandora' }
+        ]
+    },
+    // Polished Box of Wood
+    {
+        featured: true,
+        artistPick: false,
+        comingSoon: false,
+        title: 'Polished Box of Wood',
+        img: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26n5clW2R3GFZUAbqODHBP5IEaikjWvcyxrKQg',
+        sampleUrl: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26YEfnTQXAManfEe8bSVkQ7spTtxljwD092mNg',
+        canvasUrl: '',
+        releaseDate: '2025-09-30',
+        musicVideoId: '',
+        tags: ['atompunk', 'jazz', 'swing', 'big band', 'vintage'],
+        languages: ['English'],
+        lyrics: `
+The evenings used to be a bore
+(Same old thing)
+We'd read the paper on the floor
+We'd listen to the radio
+And watch the little embers glow
+
+But look here at this polished box of wood!
+(It's electric!)
+The pride of all the neighborhood!
+It's pictures coming through the air
+From goodness knows exactly where!
+
+There's cowboys in a dusty fight
+(Bang! Bang! Bang!)
+A big band playing through the night
+A weatherman in a funny hat
+Who tells us this and tells us that!
+
+Oh, look here at this polished box of wood!
+(It's fantastic!)
+The pride of all the neighborhood!
+It's pictures coming through the air
+From goodness knows exactly where!
+
+No need to ever leave the house again
+We've got the world right here, my friend!
+The future's here for you and me
+For all the wide world now to see!
+
+So look here at this polished box of wood!
+(It's historic!)
+The pride of all the neighborhood!
+It's pictures coming through the air
+From goodness knows exactly where!
+
+From goodness knows exactly where!
+(What a marvelous affair!)
+Yes sir, the future's bright and clear!
+(Right in here!)
+        `,
+        links: [
+            { platform: 'Spotify', url: 'https://open.spotify.com/track/7cqIJ4K1iUnSMV2AvhGMX9', icon: 'fab fa-spotify' },
+            { platform: 'YouTube Music', url: 'https://music.youtube.com/watch?v=oPIUgFpZiyw', icon: 'fab fa-youtube' },
+            { platform: 'Tidal', url: 'https://tidal.com/track/464651518/u', icon: 'fa-brands fa-tidal' },
+            { platform: 'Apple Music', url: '', icon: 'fa-brands fa-itunes-note' },
+            { platform: 'Amazon Music', url: 'https://music.amazon.com/tracks/B0FTSV18QS?marketplaceId=ATVPDKIKX0DER&musicTerritory=US&ref=dm_sh_8r5zbrm8aVixmlBJ1aqRe05nD', icon: 'fab fa-amazon' },
+            { platform: 'iHeartRadio', url: 'https://www.iheart.com/artist/x08-47869013/songs/polished-box-of-wood-353426380/', icon: 'fa-solid fa-radio' },
+            { platform: 'Pandora', url: '', icon: 'fab fa-pandora' }
+        ]
+    },
+    // Spinnin' at the Hop
+    {
+        featured: true,
+        artistPick: false,
+        comingSoon: false,
+        title: 'Spinnin\' at the Hop',
+        img: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26n5clW2R3GFZUAbqODHBP5IEaikjWvcyxrKQg',
+        sampleUrl: 'http://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26hYEU9RtgfNRltsIk3VcnCAeH5qFmD7Xj1B6L',
+        canvasUrl: '',
+        releaseDate: '2025-09-30',
+        musicVideoId: '',
+        tags: ['atompunk', 'jazz', 'swing', 'big band', 'vintage'],
+        languages: ['English'],
+        lyrics: `
+Well, the factory whistle screamed
+Got a feeling like I dreamed
+Scrubbed the workday from my face
+Gonna find a brighter place
+
+Hey! Let's go spinnin' at the hop
+Make the jukebox pop and pop
+'Til our dancin' shoes are worn
+Happy as the day we're born!
+
+When that crimson curtain falls
+And the evening starts its calls
+I see you across the crowd
+Laughin' just a bit too loud
+
+Hey! Let's go spinnin' at the hop
+Make the jukebox pop and pop
+'Til our dancin' shoes are worn
+Happy as the day we're born!
+
+The fella on the stand-up bass
+Slaps a grin right on his face
+The horns all holler out a tune
+Underneath the paper moon
+
+Hey! Let's go spinnin' at the hop
+(Gonna spin!)
+Make the jukebox pop and pop
+(Never stop!)
+'Til our dancin' shoes are worn
+Happy as the day we're born!
+
+Happy as the day we're born!
+(Until the early morn')
+Yeah, the day we're born!
+        `,
+        links: [
+            { platform: 'Spotify', url: 'https://open.spotify.com/track/5hDMK8EUUFXZDDDkp35sQx', icon: 'fab fa-spotify' },
+            { platform: 'YouTube Music', url: 'https://music.youtube.com/watch?v=oxJPMUtmxjY', icon: 'fab fa-youtube' },
+            { platform: 'Tidal', url: 'https://tidal.com/track/464651519/u', icon: 'fa-brands fa-tidal' },
+            { platform: 'Apple Music', url: '', icon: 'fa-brands fa-itunes-note' },
+            { platform: 'Amazon Music', url: 'https://music.amazon.com/tracks/B0FTSV22XY?marketplaceId=ATVPDKIKX0DER&musicTerritory=US&ref=dm_sh_UVvPd7aNGlJOxtxItKpelAQbY', icon: 'fab fa-amazon' },
+            { platform: 'iHeartRadio', url: 'https://www.iheart.com/artist/x08-47869013/songs/spinnin-at-the-hop-353426381/', icon: 'fa-solid fa-radio' },
+            { platform: 'Pandora', url: '', icon: 'fab fa-pandora' }
+        ]
+    },
+    // Booth for Two
+    {
+        featured: true,
+        artistPick: false,
+        comingSoon: false,
+        title: 'Booth for Two',
+        img: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26n5clW2R3GFZUAbqODHBP5IEaikjWvcyxrKQg',
+        sampleUrl: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26rgsmbK2vV1Y8tqGumEPOzgo4pZehACcDnR96',
+        canvasUrl: '',
+        releaseDate: '2025-09-30',
+        musicVideoId: '',
+        tags: ['atompunk', 'jazz', 'swing', 'big band', 'vintage'],
+        languages: ['English'],
+        lyrics: `
+Knocked upon your door at eight
+(Doo-wop, doo-wop)
+Felt my collar getting tight
+(Doo-wop, doo-wop)
+Didn't wanna make you wait
+(Doo-wop, doo-wop)
+For our evening in the light
+
+And oh! The whole world takes a pause
+Just because, my darling, just because
+Every little star's rearranged
+The very moment our two glances changed
+
+We found a corner booth for two
+(Ahh-ahh, ahh-ahh)
+Shared a soda, sweet and cold
+(Ahh-ahh, ahh-ahh)
+Everything felt fresh and new
+(Ahh-ahh, ahh-ahh)
+A story waiting to be told
+
+And oh! The whole world takes a pause
+Just because, my darling, just because
+Every little star's rearranged
+The very moment our two glances changed
+
+Now the band is packing up their gear
+And the sleepy singer's drawing near
+To one last number, sweet and low
+The perfect lazy way to go
+
+And oh! The whole world takes a pause
+(Takes a pause)
+Just because, my darling, just because
+(Just because)
+Every little star's rearranged
+The very moment our two glances changed
+
+The moment that they changed
+(Walking in the rain)
+Yeah, all rearranged
+(Never be the same)
+        `,
+        links: [
+            { platform: 'Spotify', url: 'https://open.spotify.com/track/2bXEznmXYQ33ipXicuf8cV', icon: 'fab fa-spotify' },
+            { platform: 'YouTube Music', url: 'https://music.youtube.com/watch?v=ETQDY_eLsCQ', icon: 'fab fa-youtube' },
+            { platform: 'Tidal', url: 'https://tidal.com/track/464651520/u', icon: 'fa-brands fa-tidal' },
+            { platform: 'Apple Music', url: '', icon: 'fa-brands fa-itunes-note' },
+            { platform: 'Amazon Music', url: 'https://music.amazon.com/tracks/B0FTSRZ4YH?marketplaceId=ATVPDKIKX0DER&musicTerritory=US&ref=dm_sh_tWNxEcQOaIHXghSWuLQzPmJgy', icon: 'fab fa-amazon' },
+            { platform: 'iHeartRadio', url: 'https://www.iheart.com/artist/x08-47869013/songs/booth-for-two-353426382/', icon: 'fa-solid fa-radio' },
+            { platform: 'Pandora', url: '', icon: 'fab fa-pandora' }
+        ]
+    },
+    // Think of Me
+    {
+        featured: false,
+        artistPick: false,
+        comingSoon: false,
+        title: 'Think of Me',
+        img: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26n5clW2R3GFZUAbqODHBP5IEaikjWvcyxrKQg',
+        sampleUrl: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26Yp2hb8XAManfEe8bSVkQ7spTtxljwD092mNg',
+        canvasUrl: '',
+        releaseDate: '2025-09-30',
+        musicVideoId: '',
+        tags: ['atompunk', 'jazz', 'swing', 'big band', 'vintage'],
+        languages: ['English'],
+        lyrics: `
+When your favorite program's done
+And the evening's lost its fun
+When you feel you're out of place
+Without a single friendly face
+
+Why, just you think a thought of me
+(Think of me)
+And that is where I'm bound to be
+(Bound to be)
+I'm the sugar in your cup
+The helping hand to pick you up
+
+Should your happy stride turn slow
+With no direction left to go
+I'll be the penny that you find
+To put your worries out of mind
+
+Why, just you think a thought of me
+(Think of me)
+And that is where I'm bound to be
+(Bound to be)
+I'm the sugar in your cup
+The helping hand to pick you up
+
+Now, other pairs may go astray
+And find new partners 'long the way
+But our two hearts, they beat in time
+A perfect, unaffected rhyme
+We're like a lock that's found its key
+A picture-perfect harmony
+Without your part, my song is flat
+And that's the end of all of that
+
+Why, just you think a thought of me
+(Think of me)
+And that is where I'm bound to be
+(Bound to be)
+I'm the sugar in your cup
+The helping hand to pick you up
+
+The hand to pick you up
+(When you're down)
+Yeah, the sugar in your cup
+(All around)
+Darling, just a thought away
+(Come what may)
+        `,
+        links: [
+            { platform: 'Spotify', url: 'https://open.spotify.com/track/4o4rtKwMmuKBKzmExkseCU', icon: 'fab fa-spotify' },
+            { platform: 'YouTube Music', url: 'https://music.youtube.com/watch?v=AJfMFztW7lk', icon: 'fab fa-youtube' },
+            { platform: 'Tidal', url: 'https://tidal.com/track/464651521/u', icon: 'fa-brands fa-tidal' },
+            { platform: 'Apple Music', url: '', icon: 'fa-brands fa-itunes-note' },
+            { platform: 'Amazon Music', url: 'https://music.amazon.com/tracks/B0FTSVP9DK?marketplaceId=ATVPDKIKX0DER&musicTerritory=US&ref=dm_sh_6GKQKqya9BWwxf6Bard8QyfOd', icon: 'fab fa-amazon' },
+            { platform: 'iHeartRadio', url: 'https://www.iheart.com/artist/x08-47869013/songs/think-of-me-353426383/', icon: 'fa-solid fa-radio' },
+            { platform: 'Pandora', url: '', icon: 'fab fa-pandora' }
+        ]
+    },
+    // Our Official End
+    {
+        featured: false,
+        artistPick: false,
+        comingSoon: false,
+        title: 'Our Official End',
+        img: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26n5clW2R3GFZUAbqODHBP5IEaikjWvcyxrKQg',
+        sampleUrl: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26yV61zUv1Tw7IV4aBQufbXpRO5Cq8tPmDj6EL',
+        canvasUrl: '',
+        releaseDate: '2025-09-30',
+        musicVideoId: '',
+        tags: ['atompunk', 'jazz', 'swing', 'big band', 'vintage'],
+        languages: ['English'],
+        lyrics: `
+The warden's siren starts to weep
+(So low, so low)
+A lonely, crying sound
+They told us all to dig down deep
+But I'm not heading underground
+
+'Cause if the sky begins to bend
+And this is our official end
+Let's put a record on, my friend
+And dance until the world ascends
+
+Let's pull the curtains on the street
+(So tight, so tight)
+Forget what all the drills were for
+I'll pour a final drink that's sweet
+And we won't answer at the door
+
+'Cause if the sky begins to bend
+And this is our official end
+Let's put a record on, my friend
+And dance until the world ascends
+
+Let other folks all run and hide
+I only want you by my side
+And when we see that second sun
+Our final dance will have begun
+
+'Cause if the sky begins to bend
+(My friend, my friend)
+And this is our official end
+Let's put a record on, my friend
+And dance until the world ascends
+
+Until the world ascends
+(Our final dance begins)
+Just me and you.. my friend..
+        `,
+        links: [
+            { platform: 'Spotify', url: 'https://open.spotify.com/track/3blbMvxeqMKhSS0VxzaI4V', icon: 'fab fa-spotify' },
+            { platform: 'YouTube Music', url: 'https://music.youtube.com/watch?v=dW80kABloFw', icon: 'fab fa-youtube' },
+            { platform: 'Tidal', url: 'https://tidal.com/track/464651522/u', icon: 'fa-brands fa-tidal' },
+            { platform: 'Apple Music', url: '', icon: 'fa-brands fa-itunes-note' },
+            { platform: 'Amazon Music', url: 'https://music.amazon.com/tracks/B0FTSV2F17?marketplaceId=ATVPDKIKX0DER&musicTerritory=US&ref=dm_sh_fIWLgyI5dP8UcXg70MiBxfOL8', icon: 'fab fa-amazon' },
+            { platform: 'iHeartRadio', url: 'https://www.iheart.com/artist/x08-47869013/songs/our-official-end-353426384/', icon: 'fa-solid fa-radio' },
+            { platform: 'Pandora', url: '', icon: 'fab fa-pandora' }
+        ]
+    },
+    // Never Let You Go
+    {
+        featured: true,
+        artistPick: false,
+        comingSoon: false,
+        title: 'Never Let You Go',
+        img: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG266VSp6E9ONVrinuc7y2S3wYXLkeDvdTgHfFMt',
+        sampleUrl: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26y2P9Env1Tw7IV4aBQufbXpRO5Cq8tPmDj6EL',
+        canvasUrl: '',
+        releaseDate: '2025-09-30',
+        musicVideoId: '',
+        tags: ['r&b', 'pop', 'jazz', 'soul'],
+        languages: ['English'],
+        lyrics: `
+You arrived, a quiet paradigm shift
+My inner compass went on a continental drift
+All the maps I had were suddenly misdrawn
+A different filament to thread the eon
+
+And now, every second is a souvenir
+The common clamor starts to disappear
+The quiet aura of the things you do
+Has re-aligned my entire point of view
+
+Oh, I'm never gonna, ever gonna let you go
+You're the only current in the flow
+(Never gonna, ever gonna)
+I'm never gonna, ever gonna let you be
+Anything but right here next to me
+
+We build our shelter from the minor sounds
+On consecrated, unfamiliar grounds
+We speak a dialect the cynics miss
+Sealed inside a soft parenthes-is
+
+And now, every moment is a treasured find
+Leaving all the lesser thoughts behind
+The gentle aura of the things you do
+Has made my whole worldview feel true
+
+Oh, I'm never gonna, ever gonna let you go
+You're the only current in the flow
+(Never gonna, ever gonna)
+I'm never gonna, ever gonna let you be
+Anything but right here next to me
+
+They can talk of futures written in the stars
+Of cosmic theories and their memoirs
+But all of that is just talk for fun
+Compared to what we have, what we've become
+A singular event, a perfect fold
+A story that will not grow old
+
+Oh, I'm never gonna, ever gonna let you go
+(Let you go)
+You're the only current in the flow
+(Never gonna, ever gonna)
+I'm never gonna, ever gonna let you be
+(Let you be)
+Anything but right here next to me
+
+(Never gonna)
+No, never gonna let you go
+(Ever gonna)
+Let you be
+(Never gonna)
+Right here next to me
+(Ever gonna)
+No, I'm never gonna let you go
+        `,
+        links: [
+            { platform: 'Spotify', url: 'https://open.spotify.com/track/2UU0gd9gxzyXJDONFjcI3L', icon: 'fab fa-spotify' },
+            { platform: 'YouTube Music', url: 'https://music.youtube.com/watch?v=s16djKImRHg', icon: 'fab fa-youtube' },
+            { platform: 'Tidal', url: 'https://tidal.com/track/464186130/u', icon: 'fa-brands fa-tidal' },
+            { platform: 'Apple Music', url: 'https://music.apple.com/us/song/never-let-you-go/1843742260', icon: 'fa-brands fa-itunes-note' },
+            { platform: 'Amazon Music', url: 'https://music.amazon.com/tracks/B0FTGD13BV?marketplaceId=ATVPDKIKX0DER&musicTerritory=US&ref=dm_sh_CF2jSIGrmyIenG5SqD3h16C8h', icon: 'fab fa-amazon' },
+            { platform: 'iHeartRadio', url: 'https://www.iheart.com/artist/x08-47869013/songs/never-let-you-go-353055546/', icon: 'fa-solid fa-radio' },
+            { platform: 'Pandora', url: '', icon: 'fab fa-pandora' }
+        ]
+    },
+    // You & Me
+    {
+        featured: false,
         artistPick: false,
         comingSoon: false,
         title: 'You & Me',
@@ -653,12 +1189,12 @@ We will laugh and shout (We will laugh and shout)
 You & Me for eternity
         `,
         links: [
-            { platform: 'Spotify', url: '', icon: 'fab fa-spotify' },
-            { platform: 'YouTube Music', url: '', icon: 'fab fa-youtube' },
-            { platform: 'Tidal', url: '', icon: 'fa-brands fa-tidal' },
-            { platform: 'Apple Music', url: '', icon: 'fa-brands fa-itunes-note' },
-            { platform: 'Amazon Music', url: '', icon: 'fab fa-amazon' },
-            { platform: 'iHeartRadio', url: '', icon: 'fa-solid fa-radio' },
+            { platform: 'Spotify', url: 'https://open.spotify.com/track/4v6ngNfXBOv3imEWWh3IUp', icon: 'fab fa-spotify' },
+            { platform: 'YouTube Music', url: 'https://music.youtube.com/watch?v=dSqTRhtTgvg', icon: 'fab fa-youtube' },
+            { platform: 'Tidal', url: 'https://tidal.com/track/463546636/u', icon: 'fa-brands fa-tidal' },
+            { platform: 'Apple Music', url: 'https://music.apple.com/us/song/you-me/1843185655', icon: 'fa-brands fa-itunes-note' },
+            { platform: 'Amazon Music', url: 'https://music.amazon.com/tracks/B0FT2KF2VQ?marketplaceId=ATVPDKIKX0DER&musicTerritory=US&ref=dm_sh_4CrqA2GgZArlfA9UJCzFdxQKI', icon: 'fab fa-amazon' },
+            { platform: 'iHeartRadio', url: 'https://www.iheart.com/artist/x08-47869013/songs/you-me-352592285/', icon: 'fa-solid fa-radio' },
             { platform: 'Pandora', url: '', icon: 'fab fa-pandora' }
         ]
     },
@@ -713,12 +1249,12 @@ Now you're in my dreams girl
 Now you're in my dreams girl
         `,
         links: [
-            { platform: 'Spotify', url: '', icon: 'fab fa-spotify' },
-            { platform: 'YouTube Music', url: '', icon: 'fab fa-youtube' },
-            { platform: 'Tidal', url: '', icon: 'fa-brands fa-tidal' },
-            { platform: 'Apple Music', url: '', icon: 'fa-brands fa-itunes-note' },
-            { platform: 'Amazon Music', url: '', icon: 'fab fa-amazon' },
-            { platform: 'iHeartRadio', url: '', icon: 'fa-solid fa-radio' },
+            { platform: 'Spotify', url: 'https://open.spotify.com/track/3Be9KhHgAg8KlDwzFXAUqI', icon: 'fab fa-spotify' },
+            { platform: 'YouTube Music', url: 'https://music.youtube.com/watch?v=E5aCdCgEacQ', icon: 'fab fa-youtube' },
+            { platform: 'Tidal', url: 'https://tidal.com/track/463545912/u', icon: 'fa-brands fa-tidal' },
+            { platform: 'Apple Music', url: 'https://music.apple.com/us/song/dream-girl/1843243137', icon: 'fa-brands fa-itunes-note' },
+            { platform: 'Amazon Music', url: 'https://music.amazon.com/tracks/B0FT2LJL5X?marketplaceId=ATVPDKIKX0DER&musicTerritory=US&ref=dm_sh_ba0Ye1kPcJj8e8J20E3aD8mcy', icon: 'fab fa-amazon' },
+            { platform: 'iHeartRadio', url: 'https://www.iheart.com/artist/x08-47869013/songs/dream-girl-352592241/', icon: 'fa-solid fa-radio' },
             { platform: 'Pandora', url: '', icon: 'fab fa-pandora' }
         ]
     },
@@ -806,12 +1342,12 @@ But the night will call me back to play
 Always... back to play.
         `,
         links: [
-            { platform: 'Spotify', url: '', icon: 'fab fa-spotify' },
-            { platform: 'YouTube Music', url: '', icon: 'fab fa-youtube' },
-            { platform: 'Tidal', url: '', icon: 'fa-brands fa-tidal' },
-            { platform: 'Apple Music', url: '', icon: 'fa-brands fa-itunes-note' },
-            { platform: 'Amazon Music', url: '', icon: 'fab fa-amazon' },
-            { platform: 'iHeartRadio', url: '', icon: 'fa-solid fa-radio' },
+            { platform: 'Spotify', url: 'https://open.spotify.com/track/6og15pQ1a0BsCaNbfp21LR', icon: 'fab fa-spotify' },
+            { platform: 'YouTube Music', url: 'https://music.youtube.com/watch?v=zNWprsTam-E', icon: 'fab fa-youtube' },
+            { platform: 'Tidal', url: 'https://tidal.com/track/463539361/u', icon: 'fa-brands fa-tidal' },
+            { platform: 'Apple Music', url: 'https://music.apple.com/us/song/nocturnal/1843184092', icon: 'fa-brands fa-itunes-note' },
+            { platform: 'Amazon Music', url: 'https://music.amazon.com/tracks/B0FT2HFZ7N?marketplaceId=ATVPDKIKX0DER&musicTerritory=US&ref=dm_sh_uPYFQuheU5OBASCrUboe5FPh8', icon: 'fab fa-amazon' },
+            { platform: 'iHeartRadio', url: 'http://iheart.com/artist/x08-47869013/songs/nocturnal-352585562/', icon: 'fa-solid fa-radio' },
             { platform: 'Pandora', url: '', icon: 'fab fa-pandora' }
         ]
     },
@@ -883,7 +1419,7 @@ I should be seeing
             { platform: 'Spotify', url: 'https://open.spotify.com/track/4TiHY8Gv2xyvMjysDV5yQH', icon: 'fab fa-spotify' },
             { platform: 'YouTube Music', url: 'https://music.youtube.com/watch?v=QAaTqtRByO8', icon: 'fab fa-youtube' },
             { platform: 'Tidal', url: 'https://tidal.com/track/463532926/u', icon: 'fa-brands fa-tidal' },
-            { platform: 'Apple Music', url: '', icon: 'fa-brands fa-itunes-note' },
+            { platform: 'Apple Music', url: 'https://music.apple.com/us/song/blind/1843043379', icon: 'fa-brands fa-itunes-note' },
             { platform: 'Amazon Music', url: 'https://music.amazon.com/tracks/B0FT2G8VMY?marketplaceId=ATVPDKIKX0DER&musicTerritory=US&ref=dm_sh_JR7qdk4W7zkXLhD83zJMV9nAc', icon: 'fab fa-amazon' },
             { platform: 'iHeartRadio', url: 'https://www.iheart.com/artist/x08-47869013/songs/blind-352579786/', icon: 'fa-solid fa-radio' },
             { platform: 'Pandora', url: 'https://www.pandora.com/artist/x08/blind/blind/TRfl6gl9nrqbtJX?part=ug-desktop&corr=200697158100332643', icon: 'fab fa-pandora' }
@@ -891,7 +1427,7 @@ I should be seeing
     },
     // New Forms Matter
     {
-        featured: true,
+        featured: false,
         artistPick: false,
         comingSoon: false,
         title: 'New Forms Matter',
@@ -981,7 +1517,7 @@ This is the new, the only law
             { platform: 'Spotify', url: 'https://open.spotify.com/track/3dBH3qzfjPnuVIOHIwaKAm', icon: 'fab fa-spotify' },
             { platform: 'YouTube Music', url: 'https://music.youtube.com/watch?v=y9sX0LhHnbY', icon: 'fab fa-youtube' },
             { platform: 'Tidal', url: 'https://tidal.com/track/463527080/u', icon: 'fa-brands fa-tidal' },
-            { platform: 'Apple Music', url: '', icon: 'fa-brands fa-itunes-note' },
+            { platform: 'Apple Music', url: 'https://music.apple.com/us/song/new-forms-matter/1843156813', icon: 'fa-brands fa-itunes-note' },
             { platform: 'Amazon Music', url: 'https://music.amazon.com/tracks/B0FT28KJY8?marketplaceId=ATVPDKIKX0DER&musicTerritory=US&ref=dm_sh_dLj9nyWVK0v6Uj2kFRs9BO7xl', icon: 'fab fa-amazon' },
             { platform: 'iHeartRadio', url: 'https://www.iheart.com/artist/x08-47869013/songs/new-forms-matter-352574296/', icon: 'fa-solid fa-radio' },
             { platform: 'Pandora', url: 'https://www.pandora.com/artist/x08/new-forms-matter/new-forms-matter/TR79nwKrPfm5XbV?part=ug-desktop&corr=200697158100332643', icon: 'fab fa-pandora' }
@@ -1057,7 +1593,7 @@ Detonate.
             { platform: 'Spotify', url: 'https://open.spotify.com/track/4a8LbtiFAYVjPnTLYQ1GvB', icon: 'fab fa-spotify' },
             { platform: 'YouTube Music', url: 'https://music.youtube.com/watch?v=KkCEvsqM99w', icon: 'fab fa-youtube' },
             { platform: 'Tidal', url: 'https://tidal.com/track/463481357/u', icon: 'fa-brands fa-tidal' },
-            { platform: 'Apple Music', url: '', icon: 'fa-brands fa-itunes-note' },
+            { platform: 'Apple Music', url: 'https://music.apple.com/us/song/generation-detonation/1842946302', icon: 'fa-brands fa-itunes-note' },
             { platform: 'Amazon Music', url: 'https://music.amazon.com/tracks/B0FT1DVKDN?marketplaceId=ATVPDKIKX0DER&musicTerritory=US&ref=dm_sh_2wx5sCVXiuEbdfdd0E1CYTEsy', icon: 'fab fa-amazon' },
             { platform: 'iHeartRadio', url: 'https://www.iheart.com/artist/x08-47869013/songs/generation-detonation-352531321/', icon: 'fa-solid fa-radio' },
             { platform: 'Pandora', url: 'https://www.pandora.com/artist/x08/generation-detonation/generation-detonation/TRK25X2f2mz6mVw?part=ug-desktop&corr=200697158100332643', icon: 'fab fa-pandora' }
@@ -1065,7 +1601,7 @@ Detonate.
     },
     // The Beast
     {
-        featured: true,
+        featured: false,
         artistPick: false,
         comingSoon: false,
         title: 'The Beast',
@@ -1127,18 +1663,18 @@ A little more...
 A little more...
         `,
         links: [
-            { platform: 'Spotify', url: '', icon: 'fab fa-spotify' },
-            { platform: 'YouTube Music', url: '', icon: 'fab fa-youtube' },
-            { platform: 'Tidal', url: '', icon: 'fa-brands fa-tidal' },
-            { platform: 'Apple Music', url: '', icon: 'fa-brands fa-itunes-note' },
-            { platform: 'Amazon Music', url: '', icon: 'fab fa-amazon' },
-            { platform: 'iHeartRadio', url: '', icon: 'fa-solid fa-radio' },
+            { platform: 'Spotify', url: 'https://open.spotify.com/track/4cBSGik27VNrqfsGpfy5b7', icon: 'fab fa-spotify' },
+            { platform: 'YouTube Music', url: 'https://music.youtube.com/watch?v=LeOtOkvUkj8', icon: 'fab fa-youtube' },
+            { platform: 'Tidal', url: 'https://tidal.com/track/463653411/u', icon: 'fa-brands fa-tidal' },
+            { platform: 'Apple Music', url: 'https://music.apple.com/us/song/the-beast/1843185276', icon: 'fa-brands fa-itunes-note' },
+            { platform: 'Amazon Music', url: 'https://music.amazon.com/tracks/B0FT422KLZ?marketplaceId=ATVPDKIKX0DER&musicTerritory=US&ref=dm_sh_l9QB3ohMsJlrgZ5ueglRlXbFP', icon: 'fab fa-amazon' },
+            { platform: 'iHeartRadio', url: 'https://www.iheart.com/artist/x08-47869013/songs/the-beast-352668884/', icon: 'fa-solid fa-radio' },
             { platform: 'Pandora', url: '', icon: 'fab fa-pandora' }
         ]
     },
     // Opinion. Delete. Repeat.
     {
-        featured: true,
+        featured: false,
         artistPick: false,
         comingSoon: false,
         title: 'Opinion. Delete. Repeat.',
@@ -1204,7 +1740,7 @@ Repeat.
             { platform: 'Spotify', url: 'https://open.spotify.com/track/0FkFixrjvvYzCWiFBKVwBB', icon: 'fab fa-spotify' },
             { platform: 'YouTube Music', url: 'https://music.youtube.com/watch?v=-dIZyZT4g5U', icon: 'fab fa-youtube' },
             { platform: 'Tidal', url: 'https://tidal.com/track/463481558/u', icon: 'fa-brands fa-tidal' },
-            { platform: 'Apple Music', url: '', icon: 'fa-brands fa-itunes-note' },
+            { platform: 'Apple Music', url: 'https://music.apple.com/us/song/opinion-delete-repeat/1843094587', icon: 'fa-brands fa-itunes-note' },
             { platform: 'Amazon Music', url: 'https://music.amazon.com/tracks/B0FT1D375J?marketplaceId=ATVPDKIKX0DER&musicTerritory=US&ref=dm_sh_hiiGhH2SGuzmD9RIJpqItIvJa', icon: 'fab fa-amazon' },
             { platform: 'iHeartRadio', url: 'https://www.iheart.com/artist/x08-47869013/songs/opinion-delete-repeat-352531273/', icon: 'fa-solid fa-radio' },
             { platform: 'Pandora', url: 'https://www.pandora.com/artist/x08/opinion-delete-repeat/opinion-delete-repeat/TRcPwZ33rcx6PJ4?part=ug-desktop&corr=200697158100332643', icon: 'fab fa-pandora' }
@@ -1212,7 +1748,7 @@ Repeat.
     },
     // Back Again
     {
-        featured: true,
+        featured: false,
         artistPick: false,
         comingSoon: false,
         title: 'Back Again',
@@ -1295,7 +1831,7 @@ Say what you mean to say, why you gonna be so fake though
             { platform: 'YouTube Music', url: 'https://music.youtube.com/watch?v=G0BP3wteip0', icon: 'fab fa-youtube' },
             { platform: 'SoundCloud', url:  'https://soundcloud.com/x0zero8eight/back-again', icon: 'fab fa-soundcloud' },
             { platform: 'Tidal', url: 'https://tidal.com/track/463470276/u', icon: 'fa-brands fa-tidal' },
-            { platform: 'Apple Music', url: '', icon: 'fa-brands fa-itunes-note' },
+            { platform: 'Apple Music', url: 'https://music.apple.com/us/song/back-again/1843009701', icon: 'fa-brands fa-itunes-note' },
             { platform: 'Amazon Music', url: 'https://music.amazon.com/tracks/B0FT16MLFF?marketplaceId=ATVPDKIKX0DER&musicTerritory=US&ref=dm_sh_lj85YElVjwPIdp7xRnNulmqbQ', icon: 'fab fa-amazon' },
             { platform: 'iHeartRadio', url: 'https://www.iheart.com/artist/x08-47869013/songs/back-again-352521551/', icon: 'fa-solid fa-radio' },
             { platform: 'Pandora', url: 'https://www.pandora.com/artist/x08/back-again/back-again/TRbbj2q5Plr6JV2?part=ug-desktop&corr=200697158100332643', icon: 'fab fa-pandora' }
@@ -1368,7 +1904,7 @@ Damn.
             { platform: 'Spotify', url: 'https://open.spotify.com/track/5Q6VwTdnqfkTfgvFgpDCSw', icon: 'fab fa-spotify' },
             { platform: 'YouTube Music', url: 'https://music.youtube.com/watch?v=l7H6PqfBmTc', icon: 'fab fa-youtube' },
             { platform: 'Tidal', url: 'https://tidal.com/track/463469997/u', icon: 'fa-brands fa-tidal' },
-            { platform: 'Apple Music', url: '', icon: 'fa-brands fa-itunes-note' },
+            { platform: 'Apple Music', url: 'https://music.apple.com/us/song/no-question/1843051328', icon: 'fa-brands fa-itunes-note' },
             { platform: 'Amazon Music', url: 'https://music.amazon.com/tracks/B0FT19M44R?marketplaceId=ATVPDKIKX0DER&musicTerritory=US&ref=dm_sh_a7sYKxOMou2zAbMXujRir6v3E', icon: 'fab fa-amazon' },
             { platform: 'iHeartRadio', url: 'https://www.iheart.com/artist/x08-47869013/songs/no-question-352521524/', icon: 'fa-solid fa-radio' },
             { platform: 'Pandora', url: 'https://www.pandora.com/artist/x08/no-question/no-question/TRZdbVZgzqlwvVZ?part=ug-desktop&corr=200697158100332643', icon: 'fab fa-pandora' }
@@ -1443,7 +1979,7 @@ My... you.
             { platform: 'YouTube Music', url: 'https://music.youtube.com/watch?v=W6-TWLU3jek', icon: 'fab fa-youtube' },
             { platform: 'SoundCloud', url: 'https://soundcloud.com/x0zero8eight/sugar-candy-lollipop', icon: 'fab fa-soundcloud' },
             { platform: 'Tidal', url: 'https://tidal.com/track/463469595/u', icon: 'fa-brands fa-tidal' },
-            { platform: 'Apple Music', url: '', icon: 'fa-brands fa-itunes-note' },
+            { platform: 'Apple Music', url: 'https://music.apple.com/us/song/sugar-candy-lollipop/1843001172', icon: 'fa-brands fa-itunes-note' },
             { platform: 'Amazon Music', url: 'https://music.amazon.com/tracks/B0FT19QFG3?marketplaceId=ATVPDKIKX0DER&musicTerritory=US&ref=dm_sh_yf5qCUB1IeIrbAvKiBkZpgac8', icon: 'fab fa-amazon' },
             { platform: 'iHeartRadio', url: 'https://www.iheart.com/artist/x08-47869013/songs/sugar-candy-lollipop-352521557/', icon: 'fa-solid fa-radio' },
             { platform: 'Pandora', url: 'https://www.pandora.com/artist/x08/sugar-candy-lollipop/sugar-candy-lollipop/TRj3tddww52Pp5X', icon: 'fab fa-pandora' }
@@ -1519,7 +2055,7 @@ You know I can't be tamed
             { platform: 'YouTube Music', url: 'https://music.youtube.com/watch?v=ugl9nI-vRKY', icon: 'fab fa-youtube' },
             { platform: 'SoundCloud', url: 'https://soundcloud.com/x0zero8eight/hgfs', icon: 'fab fa-soundcloud' },
             { platform: 'Tidal', url: 'https://tidal.com/track/463475431/u', icon: 'fa-brands fa-tidal' },
-            { platform: 'Apple Music', url: '', icon: 'fa-brands fa-itunes-note' },
+            { platform: 'Apple Music', url: 'https://music.apple.com/us/song/hgfs/1843065781', icon: 'fa-brands fa-itunes-note' },
             { platform: 'Amazon Music', url: 'https://music.amazon.com/tracks/B0FT1G3MFN?marketplaceId=ATVPDKIKX0DER&musicTerritory=US&ref=dm_sh_aW3VmlSUBQ77s9PQoeTKc9Cun', icon: 'fab fa-amazon' },
             { platform: 'iHeartRadio', url: 'https://www.iheart.com/artist/x08-47869013/songs/hgfs-352526746/', icon: 'fa-solid fa-radio' },
             { platform: 'Pandora', url: 'https://www.pandora.com/artist/x08/hgfs/hgfs/TRpr9gdVqXjmpxJ?part=ug-desktop&corr=200697158100332643', icon: 'fab fa-pandora' }
@@ -1601,7 +2137,7 @@ You know I can't be tamed
     },
     // Падшая (Fallen)
     {
-        featured: true,
+        featured: false,
         artistPick: true,
         comingSoon: false,
         title: 'Падшая',
@@ -1960,8 +2496,8 @@ Something more
             { platform: 'YouTube Music', url: 'https://music.youtube.com/watch?v=1wDUbBbM6lM', icon: 'fab fa-youtube' },
             { platform: 'SoundCloud', url: 'https://soundcloud.com/x0zero8eight/something-more', icon: 'fab fa-soundcloud' },
             { platform: 'Tidal', url: 'https://tidal.com/browse/track/460381230/u', icon: 'fa-brands fa-tidal' },
-            { platform: 'Apple Music', url: '', icon: 'fa-brands fa-itunes-note' },
-            { platform: 'Amazon Music', url: '', icon: 'fab fa-amazon' },
+            { platform: 'Apple Music', url: 'https://music.apple.com/us/song/something-more/1839828009', icon: 'fa-brands fa-itunes-note' },
+            { platform: 'Amazon Music', url: 'https://music.amazon.com/tracks/B0FR3YRD2R?marketplaceId=ATVPDKIKX0DER&musicTerritory=US&ref=dm_sh_4kkLGxOWFMK4mpEXF1lhIRQIP', icon: 'fab fa-amazon' },
             { platform: 'iHeartRadio', url: 'https://www.iheart.com/artist/x08-47869013/songs/something-more-350001446/', icon: 'fa-solid fa-radio' },
             { platform: 'Pandora', url: 'https://www.pandora.com/artist/x08/something-more/something-more/TRhJfgbpjbtZxgP?part=ug-desktop&corr=200697158100332643', icon: 'fab fa-pandora' }
         ]
