@@ -584,6 +584,189 @@ Or just your flash
         ]
     },
 
+    // One Last Time
+    {
+        featured: true,
+        artistPick: false,
+        comingSoon: false,
+        title: 'One Last Time',
+        img: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG262JtSmrjRus0k5TxlaHtcGzAm4bP9VYv83MeI',
+        sampleUrl: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26i01p56wDyfjPz12pXE4CFbcVMJHsm75wkOud',
+        canvasUrl: '',
+        releaseDate: '2025-10-04',
+        musicVideoId: '',
+        tags: ['alternative', 'indie', 'folk', 'acoustic', 'singer-songwriter'],
+        languages: ['English'],
+        lyrics: `
+I'm taking down the portraits that were hung inside my skull
+Applying a new finish to the surfaces grown dull
+I'm changing out the fixtures and I'm boarding up the doors
+To the quiet, furnished corridors I can't keep for you anymore
+
+And if I forget you, just know I truly tried
+(Know I tried, know I tried)
+To wash away the watermark your leaving left inside
+But what if I forget to... check one last time?
+The day your ship decides to turn and sail against the tide
+
+I have this apprehension of a knock I will not hear
+A message in a bottle that will wash ashore next year
+You'll find a different tenant here, with unfamiliar keys
+And you'll ask him where I went to, and he'll answer "with the breeze"
+
+So if I forget you, just know I truly tried
+(Know I tried, know I tried)
+To wash away the watermark your leaving left inside
+But what if I forget to... check one last time?
+The day your ship decides to turn and sail against the tide
+
+This whole erasure feels like a betrayal of some kind
+Like I'm plowing under monuments I swore I'd always find
+My way back to in darkness, a promise wearing thin
+Where does the remembrance of you end, and where do I begin?
+
+One last time...
+(If I forget you)
+Just checking on the tide...
+(Just know I tried)
+Just one last time...
+Before I close my eyes.
+        `,
+        links: [
+            { platform: 'Spotify', url: 'https://open.spotify.com/track/2lnRQYtLaR9lY6Ayz8U7ua', icon: 'fab fa-spotify' },
+            { platform: 'YouTube Music', url: 'https://music.youtube.com/watch?v=b3OLb4j6gGc', icon: 'fab fa-youtube' },
+            { platform: 'Tidal', url: 'https://tidal.com/track/464914214/u', icon: 'fa-brands fa-tidal' },
+            { platform: 'Apple Music', url: '', icon: 'fa-brands fa-itunes-note' },
+            { platform: 'Amazon Music', url: 'https://music.amazon.com/tracks/B0FTWNSH85?marketplaceId=ATVPDKIKX0DER&musicTerritory=US&ref=dm_sh_BuEvthcFzvg7oR2GOujz1zGru', icon: 'fab fa-amazon' },
+            { platform: 'iHeartRadio', url: 'https://www.iheart.com/artist/x08-47869013/songs/one-last-time-353651411/', icon: 'fa-solid fa-radio' },
+            { platform: 'Pandora', url: '', icon: 'fab fa-pandora' }
+        ]
+    },
+    // I Wonder
+    {
+        featured: true,
+        artistPick: false,
+        comingSoon: false,
+        title: 'I Wonder',
+        img: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG260WNJAjeiVaUXveObDkhncLG8TBRgqxIrfHj3',
+        sampleUrl: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26YFnCDdXAManfEe8bSVkQ7spTtxljwD092mNg',
+        canvasUrl: '',
+        releaseDate: '2025-10-04',
+        musicVideoId: '',
+        tags: ['alternative', 'indie', 'folk', 'acoustic', 'singer-songwriter'],
+        languages: ['English'],
+        lyrics: `
+There's a well I go to, when the night is thin and drawn
+Where a likeness of your new life has been carefully sketched upon
+I keep my hands behind my back, I don't dip my fingers in
+Just stand there at the precipice where my composure wears thin
+
+And I wonder if your score was written in a different kind of key
+If your harmony was always meant to drift away from me
+Or did I just conduct it wrong, with a tempo out of sync?
+And is your new arrangement full of notes I couldn't think?
+I wonder
+I wonder
+
+I assemble you from hearsay and from optimistic thought
+I assume you found the cadence that you always said you sought
+I picture you with different habits, you fixed that crooked shelf
+You're living in a higher octave of a more authentic self
+
+And I wonder if your score was written in a different kind of key
+If your harmony was always meant to drift away from me
+Or did I just conduct it wrong, with a tempo out of sync?
+And is your new arrangement full of notes I couldn't think?
+I wonder
+I wonder
+
+To know for certain would be like a sudden, clarifying light
+It would burn away these landscapes I invent for you at night
+So I let the questions settle, like dust on unused furniture
+This not-knowing is a bitter, but temporary, cure
+
+I wonder
+Where the currents took your boat
+I wonder
+If you still wear that old coat
+I wonder
+If you ever wonder
+I wonder..
+        `,
+        links: [
+            { platform: 'Spotify', url: 'https://open.spotify.com/track/184yL4HxoOXIVpUh15Auq8', icon: 'fab fa-spotify' },
+            { platform: 'YouTube Music', url: 'https://music.youtube.com/watch?v=wc7m1vPczRk', icon: 'fab fa-youtube' },
+            { platform: 'Tidal', url: 'https://tidal.com/track/464841805/u', icon: 'fa-brands fa-tidal' },
+            { platform: 'Apple Music', url: '', icon: 'fa-brands fa-itunes-note' },
+            { platform: 'Amazon Music', url: 'https://music.amazon.com/tracks/B0FTVPX5H4?marketplaceId=ATVPDKIKX0DER&musicTerritory=US&ref=dm_sh_TyXfa1XrSUjr1VFRBisxulLgs', icon: 'fab fa-amazon' },
+            { platform: 'iHeartRadio', url: 'https://www.iheart.com/artist/x08-47869013/songs/i-wonder-353586622/', icon: 'fa-solid fa-radio' },
+            { platform: 'Pandora', url: '', icon: 'fab fa-pandora' }
+        ]
+    },
+    // The Roots
+    {
+        featured: true,
+        artistPick: false,
+        comingSoon: false,
+        title: 'The Roots',
+        img: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26sgGWHexVEUcn97aRglHvh4O5qYrxF3BTZGKp',
+        sampleUrl: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26xTry8s6CNM6ks1ZDpjtWmiXdSgQzR5G4CvOl',
+        canvasUrl: '',
+        releaseDate: '2025-10-04',
+        musicVideoId: '',
+        tags: ['alternative', 'indie', 'folk', 'acoustic', 'singer-songwriter'],
+        languages: ['English'],
+        lyrics: `
+The calendar's bleeding through the pages now
+Two rotations 'round the star, I'm still not sure how
+The kitchen chair you sat in holds a vacant design
+Feels like you just went out for milk and left me waiting in this line
+
+And I was reading you all wrong, a book held upside down
+Trying to build our kingdom on some unsteady ground
+I tended to the flowers but I never checked the roots
+And this quiet is the harvest of those misdirected pursuits
+(I'm still here, if you turn around)
+
+I'll send a little photograph, a song without a title
+Just a ripple on the surface, a ritual that's vital
+A carrier bird I'm sending to a sky I can't perceive
+Hoping for a single feather that it might choose to leave
+
+Because I was reading you all wrong, a book held upside down
+Trying to build our kingdom on some unsteady ground
+I tended to the flowers but I never checked the roots
+And this quiet is the harvest of those misdirected pursuits
+(I'm still here, if you turn around)
+
+I don't need an explanation, don't need you to rewind
+The film that flickered out inside the theater of my mind
+Just knowing that your current's flowing to a kinder sea
+Is just about enough of a final chapter for me
+
+I know I read you wrong, a book held upside down
+Trying to build our kingdom on some unsteady ground
+I tended to the flowers but I never checked the roots
+And this quiet is the harvest of those misdirected pursuits
+(I'm still here for you now)
+
+The seasons turn on hinges that are rusted shut for me
+(Rusted shut for me)
+Yeah, the seasons turn on hinges...
+You left the front door open
+And I'm still keeping out the cold.
+(Keeping out the cold)
+        `,
+        links: [
+            { platform: 'Spotify', url: 'https://open.spotify.com/track/6AgtfMx2SfBW6nphTL7Jlx', icon: 'fab fa-spotify' },
+            { platform: 'YouTube Music', url: 'https://music.youtube.com/watch?v=XV3yFbrPBtE', icon: 'fab fa-youtube' },
+            { platform: 'Tidal', url: 'https://tidal.com/track/464830221/u', icon: 'fa-brands fa-tidal' },
+            { platform: 'Apple Music', url: '', icon: 'fa-brands fa-itunes-note' },
+            { platform: 'Amazon Music', url: 'https://music.amazon.com/tracks/B0FTVG5VHR?marketplaceId=ATVPDKIKX0DER&musicTerritory=US&ref=dm_sh_VOEK5WNeN6GrfIBRfaptZwpxe', icon: 'fab fa-amazon' },
+            { platform: 'iHeartRadio', url: 'https://www.iheart.com/artist/x08-47869013/songs/the-roots-353577011/', icon: 'fa-solid fa-radio' },
+            { platform: 'Pandora', url: '', icon: 'fab fa-pandora' }
+        ]
+    },
     // Our Stories Intertwined
     {
         featured: true,
@@ -593,9 +776,9 @@ Or just your flash
         img: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26P3ytFBECahirzxGAgUfSeOkYloRVdK60t9s5',
         sampleUrl: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26LchGsFUcN5iAt0uJw9nVIj68P1QdsDkoBbZ7',
         canvasUrl: '',
-        releaseDate: '2025-09-30',
+        releaseDate: '2025-10-03',
         musicVideoId: '',
-        tags: ['folk', 'acoustic', 'indie', 'singer-songwriter'],
+        tags: ['alternative', 'indie', 'folk', 'acoustic', 'singer-songwriter'],
         languages: ['English'],
         lyrics: `
 Worn the leather from my soles
@@ -640,13 +823,12 @@ Let this story be mine
 Let my story be thine
         `,
         links: [
-            { platform: 'Spotify', url: '', icon: 'fab fa-spotify' },
-            { platform: 'YouTube Music', url: '', icon: 'fab fa-youtube' },
-            { platform: 'SoundCloud', url: '', icon: 'fab fa-soundcloud' },
-            { platform: 'Tidal', url: '', icon: 'fa-brands fa-tidal' },
-            { platform: 'Apple Music', url: '', icon: 'fa-brands fa-itunes-note' },
-            { platform: 'Amazon Music', url: '', icon: 'fab fa-amazon' },
-            { platform: 'iHeartRadio', url: '', icon: 'fa-solid fa-radio' },
+            { platform: 'Spotify', url: 'https://open.spotify.com/track/7pbi4Aczdr3SZiQhNC8BwQ', icon: 'fab fa-spotify' },
+            { platform: 'YouTube Music', url: 'https://music.youtube.com/watch?v=gBYf5Q0uBQw', icon: 'fab fa-youtube' },
+            { platform: 'Tidal', url: 'https://tidal.com/track/464675976/u', icon: 'fa-brands fa-tidal' },
+            { platform: 'Apple Music', url: 'https://music.apple.com/us/song/our-stories-intertwined/1844191420', icon: 'fa-brands fa-itunes-note' },
+            { platform: 'Amazon Music', url: 'https://music.amazon.com/tracks/B0FTT3DKHS?marketplaceId=ATVPDKIKX0DER&musicTerritory=US&ref=dm_sh_n4NFFyEjXSHFzcG4nfovpBMqV', icon: 'fab fa-amazon' },
+            { platform: 'iHeartRadio', url: 'https://www.iheart.com/artist/x08-47869013/songs/our-stories-intertwined-353444597/', icon: 'fa-solid fa-radio' },
             { platform: 'Pandora', url: '', icon: 'fab fa-pandora' }
         ]
     },
@@ -659,7 +841,7 @@ Let my story be thine
         img: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26n5clW2R3GFZUAbqODHBP5IEaikjWvcyxrKQg',
         sampleUrl: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG2622ViG8jRus0k5TxlaHtcGzAm4bP9VYv83MeI',
         canvasUrl: '',
-        releaseDate: '2025-09-30',
+        releaseDate: '2025-10-03',
         musicVideoId: '',
         tags: ['atompunk', 'jazz', 'swing', 'big band', 'vintage'],
         languages: ['English'],
@@ -711,7 +893,7 @@ Yeah!
             { platform: 'Spotify', url: 'https://open.spotify.com/track/6RRLgHljH3KdkhT6Vm8VQA', icon: 'fab fa-spotify' },
             { platform: 'YouTube Music', url: 'https://music.youtube.com/watch?v=CWWb7nOp39U', icon: 'fab fa-youtube' },
             { platform: 'Tidal', url: 'https://tidal.com/track/464651517/u', icon: 'fa-brands fa-tidal' },
-            { platform: 'Apple Music', url: '', icon: 'fa-brands fa-itunes-note' },
+            { platform: 'Apple Music', url: 'https://music.apple.com/us/song/where-to-begin/1844208826', icon: 'fa-brands fa-itunes-note' },
             { platform: 'Amazon Music', url: 'https://music.amazon.com/tracks/B0FTSTLWDN?marketplaceId=ATVPDKIKX0DER&musicTerritory=US&ref=dm_sh_zJ4cOTrH4tSC3ltyeHIxj7Suv', icon: 'fab fa-amazon' },
             { platform: 'iHeartRadio', url: 'https://www.iheart.com/artist/x08-47869013/songs/where-to-begin-353426379/', icon: 'fa-solid fa-radio' },
             { platform: 'Pandora', url: '', icon: 'fab fa-pandora' }
@@ -726,7 +908,7 @@ Yeah!
         img: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26n5clW2R3GFZUAbqODHBP5IEaikjWvcyxrKQg',
         sampleUrl: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26YEfnTQXAManfEe8bSVkQ7spTtxljwD092mNg',
         canvasUrl: '',
-        releaseDate: '2025-09-30',
+        releaseDate: '2025-10-03',
         musicVideoId: '',
         tags: ['atompunk', 'jazz', 'swing', 'big band', 'vintage'],
         languages: ['English'],
@@ -775,7 +957,7 @@ Yes sir, the future's bright and clear!
             { platform: 'Spotify', url: 'https://open.spotify.com/track/7cqIJ4K1iUnSMV2AvhGMX9', icon: 'fab fa-spotify' },
             { platform: 'YouTube Music', url: 'https://music.youtube.com/watch?v=oPIUgFpZiyw', icon: 'fab fa-youtube' },
             { platform: 'Tidal', url: 'https://tidal.com/track/464651518/u', icon: 'fa-brands fa-tidal' },
-            { platform: 'Apple Music', url: '', icon: 'fa-brands fa-itunes-note' },
+            { platform: 'Apple Music', url: 'https://music.apple.com/us/song/polished-box-of-wood/1844208829', icon: 'fa-brands fa-itunes-note' },
             { platform: 'Amazon Music', url: 'https://music.amazon.com/tracks/B0FTSV18QS?marketplaceId=ATVPDKIKX0DER&musicTerritory=US&ref=dm_sh_8r5zbrm8aVixmlBJ1aqRe05nD', icon: 'fab fa-amazon' },
             { platform: 'iHeartRadio', url: 'https://www.iheart.com/artist/x08-47869013/songs/polished-box-of-wood-353426380/', icon: 'fa-solid fa-radio' },
             { platform: 'Pandora', url: '', icon: 'fab fa-pandora' }
@@ -790,7 +972,7 @@ Yes sir, the future's bright and clear!
         img: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26n5clW2R3GFZUAbqODHBP5IEaikjWvcyxrKQg',
         sampleUrl: 'http://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26hYEU9RtgfNRltsIk3VcnCAeH5qFmD7Xj1B6L',
         canvasUrl: '',
-        releaseDate: '2025-09-30',
+        releaseDate: '2025-10-03',
         musicVideoId: '',
         tags: ['atompunk', 'jazz', 'swing', 'big band', 'vintage'],
         languages: ['English'],
@@ -835,7 +1017,7 @@ Yeah, the day we're born!
             { platform: 'Spotify', url: 'https://open.spotify.com/track/5hDMK8EUUFXZDDDkp35sQx', icon: 'fab fa-spotify' },
             { platform: 'YouTube Music', url: 'https://music.youtube.com/watch?v=oxJPMUtmxjY', icon: 'fab fa-youtube' },
             { platform: 'Tidal', url: 'https://tidal.com/track/464651519/u', icon: 'fa-brands fa-tidal' },
-            { platform: 'Apple Music', url: '', icon: 'fa-brands fa-itunes-note' },
+            { platform: 'Apple Music', url: 'https://music.apple.com/us/song/spinnin-at-the-hop/1844208830', icon: 'fa-brands fa-itunes-note' },
             { platform: 'Amazon Music', url: 'https://music.amazon.com/tracks/B0FTSV22XY?marketplaceId=ATVPDKIKX0DER&musicTerritory=US&ref=dm_sh_UVvPd7aNGlJOxtxItKpelAQbY', icon: 'fab fa-amazon' },
             { platform: 'iHeartRadio', url: 'https://www.iheart.com/artist/x08-47869013/songs/spinnin-at-the-hop-353426381/', icon: 'fa-solid fa-radio' },
             { platform: 'Pandora', url: '', icon: 'fab fa-pandora' }
@@ -850,7 +1032,7 @@ Yeah, the day we're born!
         img: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26n5clW2R3GFZUAbqODHBP5IEaikjWvcyxrKQg',
         sampleUrl: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26rgsmbK2vV1Y8tqGumEPOzgo4pZehACcDnR96',
         canvasUrl: '',
-        releaseDate: '2025-09-30',
+        releaseDate: '2025-10-03',
         musicVideoId: '',
         tags: ['atompunk', 'jazz', 'swing', 'big band', 'vintage'],
         languages: ['English'],
@@ -902,7 +1084,7 @@ Yeah, all rearranged
             { platform: 'Spotify', url: 'https://open.spotify.com/track/2bXEznmXYQ33ipXicuf8cV', icon: 'fab fa-spotify' },
             { platform: 'YouTube Music', url: 'https://music.youtube.com/watch?v=ETQDY_eLsCQ', icon: 'fab fa-youtube' },
             { platform: 'Tidal', url: 'https://tidal.com/track/464651520/u', icon: 'fa-brands fa-tidal' },
-            { platform: 'Apple Music', url: '', icon: 'fa-brands fa-itunes-note' },
+            { platform: 'Apple Music', url: 'https://music.apple.com/us/song/booth-for-two/1844208831', icon: 'fa-brands fa-itunes-note' },
             { platform: 'Amazon Music', url: 'https://music.amazon.com/tracks/B0FTSRZ4YH?marketplaceId=ATVPDKIKX0DER&musicTerritory=US&ref=dm_sh_tWNxEcQOaIHXghSWuLQzPmJgy', icon: 'fab fa-amazon' },
             { platform: 'iHeartRadio', url: 'https://www.iheart.com/artist/x08-47869013/songs/booth-for-two-353426382/', icon: 'fa-solid fa-radio' },
             { platform: 'Pandora', url: '', icon: 'fab fa-pandora' }
@@ -917,7 +1099,7 @@ Yeah, all rearranged
         img: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26n5clW2R3GFZUAbqODHBP5IEaikjWvcyxrKQg',
         sampleUrl: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26Yp2hb8XAManfEe8bSVkQ7spTtxljwD092mNg',
         canvasUrl: '',
-        releaseDate: '2025-09-30',
+        releaseDate: '2025-10-03',
         musicVideoId: '',
         tags: ['atompunk', 'jazz', 'swing', 'big band', 'vintage'],
         languages: ['English'],
@@ -973,7 +1155,7 @@ Darling, just a thought away
             { platform: 'Spotify', url: 'https://open.spotify.com/track/4o4rtKwMmuKBKzmExkseCU', icon: 'fab fa-spotify' },
             { platform: 'YouTube Music', url: 'https://music.youtube.com/watch?v=AJfMFztW7lk', icon: 'fab fa-youtube' },
             { platform: 'Tidal', url: 'https://tidal.com/track/464651521/u', icon: 'fa-brands fa-tidal' },
-            { platform: 'Apple Music', url: '', icon: 'fa-brands fa-itunes-note' },
+            { platform: 'Apple Music', url: 'https://music.apple.com/us/song/think-of-me/1844208832', icon: 'fa-brands fa-itunes-note' },
             { platform: 'Amazon Music', url: 'https://music.amazon.com/tracks/B0FTSVP9DK?marketplaceId=ATVPDKIKX0DER&musicTerritory=US&ref=dm_sh_6GKQKqya9BWwxf6Bard8QyfOd', icon: 'fab fa-amazon' },
             { platform: 'iHeartRadio', url: 'https://www.iheart.com/artist/x08-47869013/songs/think-of-me-353426383/', icon: 'fa-solid fa-radio' },
             { platform: 'Pandora', url: '', icon: 'fab fa-pandora' }
@@ -988,7 +1170,7 @@ Darling, just a thought away
         img: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26n5clW2R3GFZUAbqODHBP5IEaikjWvcyxrKQg',
         sampleUrl: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26yV61zUv1Tw7IV4aBQufbXpRO5Cq8tPmDj6EL',
         canvasUrl: '',
-        releaseDate: '2025-09-30',
+        releaseDate: '2025-10-03',
         musicVideoId: '',
         tags: ['atompunk', 'jazz', 'swing', 'big band', 'vintage'],
         languages: ['English'],
@@ -1034,7 +1216,7 @@ Just me and you.. my friend..
             { platform: 'Spotify', url: 'https://open.spotify.com/track/3blbMvxeqMKhSS0VxzaI4V', icon: 'fab fa-spotify' },
             { platform: 'YouTube Music', url: 'https://music.youtube.com/watch?v=dW80kABloFw', icon: 'fab fa-youtube' },
             { platform: 'Tidal', url: 'https://tidal.com/track/464651522/u', icon: 'fa-brands fa-tidal' },
-            { platform: 'Apple Music', url: '', icon: 'fa-brands fa-itunes-note' },
+            { platform: 'Apple Music', url: 'https://music.apple.com/us/song/our-official-end/1844208863', icon: 'fa-brands fa-itunes-note' },
             { platform: 'Amazon Music', url: 'https://music.amazon.com/tracks/B0FTSV2F17?marketplaceId=ATVPDKIKX0DER&musicTerritory=US&ref=dm_sh_fIWLgyI5dP8UcXg70MiBxfOL8', icon: 'fab fa-amazon' },
             { platform: 'iHeartRadio', url: 'https://www.iheart.com/artist/x08-47869013/songs/our-official-end-353426384/', icon: 'fa-solid fa-radio' },
             { platform: 'Pandora', url: '', icon: 'fab fa-pandora' }
