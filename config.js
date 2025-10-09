@@ -584,6 +584,95 @@ Or just your flash
         ]
     },
 
+    // If I thought of Me
+    {
+        featured: true,
+        artistPick: false,
+        comingSoon: false,
+        title: 'If I thought of Me',
+        img: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26cruZA8oGqpFfmZjstiaVH6vI8PwTUhXGdrCL',
+        sampleUrl: 'https://t4dyswmdxu.ufs.sh/f/RoBvCo0VTG26nnGXmER3GFZUAbqODHBP5IEaikjWvcyxrKQg',
+        canvasUrl: '',
+        releaseDate: '2025-10-08',
+        musicVideoId: '',
+        tags: ['alternative', 'indie', 'folk', 'acoustic', 'singer-songwriter'],
+        languages: ['English'],
+        lyrics: `
+I am the keeper of your hours
+The ones you've lived and those to come
+I sort the mail, I tend the plants
+For a residence you've long been gone from
+
+And in this strange occupation
+This devotional decay
+A question arrived without permission
+At the closing of the day
+
+What if I tended my own garden with these hands?
+What if I drew my own horizons, my own plans?
+If I gave myself the council I have saved for you
+What kind of person might I be, what could I even do?
+(If I thought of me)
+(As much as I think of you)
+(If I thought of me)
+(As much as I think of you)
+Who could I be?
+What could I even do?
+If I thought of me
+As much as I think of you?
+
+There is a vessel I inhabit
+With ragged sails and splintered wood
+I let the currents pull it sideways
+Just sort of figured that they should
+
+And in this slow surrender
+This deliberate delay
+The question came back louder
+And it wouldn't go away
+
+What if I tended my own garden with these hands?
+What if I drew my own horizons, my own plans?
+If I gave myself the council I have saved for you
+What kind of person might I be, what could I even do?
+(If I thought of me)
+(As much as I think of you)
+(If I thought of me)
+(As much as I think of you)
+Who could I be?
+What could I even do?
+If I thought of me
+As much as I think of you?
+
+I've used my best words to define you
+I've indexed all your chapters in my head
+But the biography that should be mine
+Is just a thousand pages of you instead
+
+Tonight I'll check my own foundation
+Tonight I'll learn my own name
+For just a moment
+Treat myself the same
+(If I thought of me)
+(As much as I think of you)
+(If I thought of me)
+(As much as I think of you)
+Who could I be?
+What could I even do?
+If I thought of me
+As much as I think of you?
+        `,
+        links: [
+            { platform: 'Spotify', url: '', icon: 'fab fa-spotify' },
+            { platform: 'YouTube Music', url: '', icon: 'fab fa-youtube' },
+            { platform: 'SoundCloud', url: '', icon: 'fab fa-soundcloud' },
+            { platform: 'Tidal', url: '', icon: 'fa-brands fa-tidal' },
+            { platform: 'Apple Music', url: '', icon: 'fa-brands fa-itunes-note' },
+            { platform: 'Amazon Music', url: '', icon: 'fab fa-amazon' },
+            { platform: 'iHeartRadio', url: '', icon: 'fa-solid fa-radio' },
+            { platform: 'Pandora', url: '', icon: 'fab fa-pandora' }
+        ]
+    },
     // One Last Time
     {
         featured: true,
@@ -636,7 +725,7 @@ Before I close my eyes.
             { platform: 'Spotify', url: 'https://open.spotify.com/track/2lnRQYtLaR9lY6Ayz8U7ua', icon: 'fab fa-spotify' },
             { platform: 'YouTube Music', url: 'https://music.youtube.com/watch?v=b3OLb4j6gGc', icon: 'fab fa-youtube' },
             { platform: 'Tidal', url: 'https://tidal.com/track/464914214/u', icon: 'fa-brands fa-tidal' },
-            { platform: 'Apple Music', url: '', icon: 'fa-brands fa-itunes-note' },
+            { platform: 'Apple Music', url: 'https://music.apple.com/us/song/one-last-time/1844553878', icon: 'fa-brands fa-itunes-note' },
             { platform: 'Amazon Music', url: 'https://music.amazon.com/tracks/B0FTWNSH85?marketplaceId=ATVPDKIKX0DER&musicTerritory=US&ref=dm_sh_BuEvthcFzvg7oR2GOujz1zGru', icon: 'fab fa-amazon' },
             { platform: 'iHeartRadio', url: 'https://www.iheart.com/artist/x08-47869013/songs/one-last-time-353651411/', icon: 'fa-solid fa-radio' },
             { platform: 'Pandora', url: '', icon: 'fab fa-pandora' }
@@ -697,7 +786,7 @@ I wonder..
             { platform: 'Spotify', url: 'https://open.spotify.com/track/184yL4HxoOXIVpUh15Auq8', icon: 'fab fa-spotify' },
             { platform: 'YouTube Music', url: 'https://music.youtube.com/watch?v=wc7m1vPczRk', icon: 'fab fa-youtube' },
             { platform: 'Tidal', url: 'https://tidal.com/track/464841805/u', icon: 'fa-brands fa-tidal' },
-            { platform: 'Apple Music', url: '', icon: 'fa-brands fa-itunes-note' },
+            { platform: 'Apple Music', url: 'https://music.apple.com/us/song/i-wonder/1844267421', icon: 'fa-brands fa-itunes-note' },
             { platform: 'Amazon Music', url: 'https://music.amazon.com/tracks/B0FTVPX5H4?marketplaceId=ATVPDKIKX0DER&musicTerritory=US&ref=dm_sh_TyXfa1XrSUjr1VFRBisxulLgs', icon: 'fab fa-amazon' },
             { platform: 'iHeartRadio', url: 'https://www.iheart.com/artist/x08-47869013/songs/i-wonder-353586622/', icon: 'fa-solid fa-radio' },
             { platform: 'Pandora', url: '', icon: 'fab fa-pandora' }
@@ -761,7 +850,7 @@ And I'm still keeping out the cold.
             { platform: 'Spotify', url: 'https://open.spotify.com/track/6AgtfMx2SfBW6nphTL7Jlx', icon: 'fab fa-spotify' },
             { platform: 'YouTube Music', url: 'https://music.youtube.com/watch?v=XV3yFbrPBtE', icon: 'fab fa-youtube' },
             { platform: 'Tidal', url: 'https://tidal.com/track/464830221/u', icon: 'fa-brands fa-tidal' },
-            { platform: 'Apple Music', url: '', icon: 'fa-brands fa-itunes-note' },
+            { platform: 'Apple Music', url: 'https://music.apple.com/us/song/the-roots/1844257541', icon: 'fa-brands fa-itunes-note' },
             { platform: 'Amazon Music', url: 'https://music.amazon.com/tracks/B0FTVG5VHR?marketplaceId=ATVPDKIKX0DER&musicTerritory=US&ref=dm_sh_VOEK5WNeN6GrfIBRfaptZwpxe', icon: 'fab fa-amazon' },
             { platform: 'iHeartRadio', url: 'https://www.iheart.com/artist/x08-47869013/songs/the-roots-353577011/', icon: 'fa-solid fa-radio' },
             { platform: 'Pandora', url: '', icon: 'fab fa-pandora' }
